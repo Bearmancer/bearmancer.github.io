@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The collapse, 1985–89 — the annotated deep-dive (self-contained edition)</title>
+<style>
+/* Self-contained edition: everything this document needs is in this file.
+   Shared visual language with the workspace's lessons (assets/lesson.css), inlined
+   so the document opens and prints anywhere, online or off. */
+
+:root {
+  --ink: #201d1a;
+  --ink-soft: #5a544b;
+  --paper: #fbfaf7;
+  --rule: #dbd6ca;
+  --accent: #8a5a2b;
+  --note-bg: #f4f1e8;
+  --quiz-bg: #f6f3ea;
+  --good: #2f6b3a;
+  --good-bg: #e8f2e6;
+  --bad: #8c3b3b;
+  --bad-bg: #f6e7e4;
+  --warn-bg: #fbf5e4;
+  --warn-edge: #c9a94e;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+html { background: var(--paper); }
+
+body {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem 5rem;
+  color: var(--ink);
+  font-family: "Sitka Text", Constantia, Charter, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.62;
+  text-rendering: optimizeLegibility;
+}
+
+.kicker {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+}
+h1 {
+  font-size: 2.05rem;
+  line-height: 1.15;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+h2 {
+  font-size: 1.22rem;
+  font-weight: 600;
+  margin: 2.6rem 0 0.7rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+}
+h3 { font-size: 1.02rem; font-weight: 600; margin: 1.6rem 0 0.4rem; }
+h4 { font-size: 0.95rem; font-weight: 600; margin: 1.2rem 0 0.3rem; }
+
+.meta {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin: 0 0 2rem;
+}
+.lead { font-size: 1.06rem; color: var(--ink-soft); margin: 0 0 1.6rem; }
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(138, 90, 43, 0.35); }
+a:hover { border-bottom-color: var(--accent); }
+strong { font-weight: 600; }
+.t { font-family: var(--mono); font-size: 0.82em; color: var(--accent); white-space: nowrap; }
+.num { font-family: var(--mono); font-size: 0.9em; }
+.small { font-size: 0.86rem; color: var(--ink-soft); }
+.center { text-align: center; }
+
+blockquote {
+  margin: 1.1rem 0 1.1rem 1.2rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--rule);
+  color: var(--ink-soft);
+}
+blockquote p { margin: 0.3rem 0; }
+blockquote cite { font-size: 0.84rem; font-style: normal; }
+
+.box {
+  background: var(--note-bg);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.4rem 0;
+  font-size: 0.95rem;
+}
+.box p:first-child { margin-top: 0; }
+.box p:last-child { margin-bottom: 0; }
+.box .box-title {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+.box-fact { background: var(--warn-bg); border-left: 4px solid var(--warn-edge); }
+.box-source { background: #f0f4f1; border-left: 4px solid #6f8f76; }
+.box-teacher { background: #eef2f7; border-left: 4px solid #5a7ba6; }
+.box-plain { background: #f7f5ee; border-left: 4px solid var(--accent); }
+
+ul.tight li, ol.tight li { margin: 0.25rem 0; }
+
+/* In-page contents */
+.toc {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem 1rem;
+  font-size: 0.92rem;
+}
+.toc ol { margin: 0.3rem 0 0; padding-left: 1.4rem; }
+.toc li { margin: 0.18rem 0; }
+.toc .part { font-weight: 600; }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  margin: 1.2rem 0;
+}
+caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  padding-bottom: 0.35rem;
+}
+th {
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1.5px solid var(--rule);
+  padding: 0.35rem 0.5rem;
+}
+td {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.35rem 0.5rem;
+  vertical-align: top;
+}
+td.n, th.n { text-align: right; font-family: var(--mono); font-size: 0.82rem; white-space: nowrap; }
+
+/* Diagrams: pure text/box layout, prints as-is */
+.diagram {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #fff;
+  padding: 1rem 1.1rem;
+  margin: 1.4rem 0;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+.diagram .d-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+.diagram .row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0.4rem 0; }
+.diagram .node {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  background: var(--note-bg);
+}
+.diagram .node.out { background: #f6e7e4; }
+.diagram .node.in { background: var(--good-bg); }
+.diagram .arrow { color: var(--accent); font-weight: 700; }
+.diagram .cap { color: var(--ink-soft); font-size: 0.78rem; margin-top: 0.5rem; }
+
+/* Term list */
+.kv { display: grid; grid-template-columns: 11rem 1fr; gap: 0.35rem 0.9rem; font-size: 0.92rem; }
+.kv dt { font-weight: 600; }
+.kv dd { margin: 0; }
+
+/* Timeline */
+.tl { list-style: none; margin: 1.2rem 0; padding: 0; }
+.tl li {
+  display: grid;
+  grid-template-columns: 6.2rem 1fr;
+  gap: 0.9rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+.tl .when { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); padding-top: 0.15rem; }
+
+/* Quiz */
+.quiz {
+  background: var(--quiz-bg);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1rem 1.15rem 0.9rem;
+  margin: 1.4rem 0;
+}
+.quiz .quiz-q { font-weight: 600; margin: 0 0 0.6rem; }
+.quiz-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 0.35rem 0;
+  padding: 0.55rem 0.85rem;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #cfc9b8;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.quiz-option:hover:not(:disabled) { background: #fdfbf3; border-color: var(--accent); }
+.quiz-option:disabled { cursor: default; opacity: 0.9; }
+.quiz-option.quiz-correct { background: var(--good-bg); border-color: var(--good); }
+.quiz-option.quiz-wrong { background: var(--bad-bg); border-color: var(--bad); }
+.quiz-explanation { margin: 0.7rem 0 0.2rem; font-size: 0.92rem; color: var(--ink-soft); }
+
+.lesson-footer {
+  margin-top: 3.2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+.lesson-footer nav a { margin-right: 1rem; }
+
+@media (max-width: 640px) {
+  body { padding: 2rem 1.2rem 3rem; font-size: 17px; }
+  .tl li { grid-template-columns: 5rem 1fr; gap: 0.6rem; }
+  .kv { grid-template-columns: 1fr; }
+}
+
+@media print {
+  html, body { background: #fff; color: #000; }
+  body { max-width: none; padding: 0 0.5in; font-size: 11.5pt; }
+  a { color: #000; border-bottom: none; }
+  .box, .quiz, .diagram, table { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  .toc { border: none; padding: 0; }
+}
+</style>
+<script>
+/* Inline quiz widget (same behaviour as the workspace's assets/quiz.js).
+   First click locks the quiz, marks the pick, reveals the correct option and the note. */
+(function () {
+  'use strict';
+  document.querySelectorAll('.quiz').forEach(function (quiz) {
+    var options = Array.prototype.slice.call(quiz.querySelectorAll('.quiz-option'));
+    var explanation = quiz.querySelector('.quiz-explanation');
+    options.forEach(function (option) {
+      option.addEventListener('click', function () {
+        if (quiz.classList.contains('quiz-answered')) return;
+        quiz.classList.add('quiz-answered');
+        var pickedCorrect = option.getAttribute('data-correct') === 'true';
+        options.forEach(function (o) {
+          o.disabled = true;
+          if (o.getAttribute('data-correct') === 'true') o.classList.add('quiz-correct');
+        });
+        if (!pickedCorrect) option.classList.add('quiz-wrong');
+        if (explanation) explanation.hidden = false;
+      });
+    });
+  });
+})();
+</script>
+</head>
+<body>
+
+<p class="kicker">Putin: The Rise To Power · deep-dive reference · self-contained edition</p>
+<h1>The collapse, 1985–89 — the annotated deep-dive</h1>
+<p class="meta">Companion to <a href="../lessons/0001-dresden-kgb-years.html">Lesson 0001</a> §3 · expanded edition 2026-09-17 · <strong>one file, nothing to fetch:</strong> styles, quizzes and definitions live in this page; every claim carries a date, a figure where one exists, and a source link · estimates are flagged wherever scholars or agencies disagree</p>
+
+<p class="lead">Munger compresses five years into ninety seconds of montage. This document unpacks the same sequence bottom-up: each item is the <em>consequence</em> of the one before it. Read it in order and the 1989 cascade stops looking like six coincidences and starts looking like one chain — an overstretched empire tries a controlled reform, the reform unlocks the forces it feared most, and Moscow's decision not to shoot ends the bloc.</p>
+
+<div class="box box-plain">
+  <span class="box-title">What changed in this edition — and how to read it</span>
+  <p>This is the <strong>exhaustive edition</strong>. It folds in every explanation asked for during the earlier walkthroughs — what “buffer” and “depth in space” mean, what the Warsaw Pact was and what its “joint command” actually commanded, what the war plans said, what “80% of hard-currency earnings” is 80% <em>of</em>, how the oil subsidy worked, and why cheap oil for Eastern Europe did not come back to Moscow as orders. It also adds something the earlier version assumed: <strong>a from-zero economics primer</strong> (Part 0), because “international flows of money, trade and balance of payments” is exactly the layer where this story stops making sense without one. Two parts are new in substance: <a href="#part0">Part 0</a> (the money mechanics, in plain language) and <a href="#gdr">the East-Germany section of Part 1</a> (how East Berlin tied into the Soviet economy).</p>
+  <p>Reading order matters less than it used to: if you already have the economics, start at <a href="#patient">Part 1</a>. If any sentence about dollars, debt or “hard currency” has ever slid past you, start at <a href="#part0">Part 0</a> — it is eight minutes and it makes the rest of the file easy.</p>
+</div>
+
+<h2 id="contents">What is in here</h2>
+<div class="toc">
+  <ol>
+    <li class="part"><a href="#part0">Part 0 — The economics you need, from zero</a>
+      <ul class="tight">
+        <li>0.1 Money stops at the border · 0.2 The four taps and two drains · 0.3 The country as a household: what “balance of payments” means · 0.4 Club money that was not money · 0.5 What “subsidy” means · 0.6 Why a huge economy can be broke</li>
+      </ul>
+    </li>
+    <li class="part"><a href="#patient">Part 1 — The patient, and the empire’s two ledgers</a>
+      <ul class="tight">
+        <li>1.1 The home economy in brief · 1.2 What “buffer” means (and “depth in space”) · 1.3 The Warsaw Pact, plainly · 1.4 COMECON, plainly · 1.5 The bloc’s money circuit · 1.6 <a href="#gdr">East Germany’s place</a> — the crown jewel with a Western bank account</li>
+      </ul>
+    </li>
+    <li class="part"><a href="#bill">Part 2 — The bill comes due</a>
+      <ul class="tight">
+        <li>2.1 The oil shock of 1985–86 · 2.2 The hard-currency ledger · 2.3 The subsidy, in numbers · 2.4 The flip: when the bloc started paying above world price · 2.5 The solvency chain · 2.6 Afghanistan, Chernobyl, the arms race · 2.7 The transferable-ruble ledger, and how it ended</li>
+      </ul>
+    </li>
+    <li class="part"><a href="#cascade">Part 3 — The cascade, 1985–89</a></li>
+    <li class="part"><a href="#dresden">Part 4 — Why this matters to the Dresden chapter</a></li>
+    <li class="part"><a href="#kuwait">Part 5 — The Kuwait footnote, explained</a></li>
+    <li class="part"><a href="#faq">Part 6 — Questions that came up (answered in full here)</a></li>
+    <li class="part"><a href="#checks">Part 7 — Fact checks and corrections</a></li>
+    <li class="part"><a href="#timeline">Part 8 — Master timeline</a></li>
+    <li class="part"><a href="#quiz">Part 9 — Check yourself</a></li>
+    <li class="part"><a href="#sources">Part 10 — Sources</a></li>
+  </ol>
+</div>
+
+<h2 id="part0">Part 0 — The economics you need, from zero</h2>
+
+<p>Nothing in this document needs an economics course. It needs five ideas. We will build them one at a time, in the order a person actually needs them, each with the Soviet story attached — because the point of the ideas is to explain <em>that</em> story, not to teach theory.</p>
+
+<h3 id="p0-1">0.1 Money stops at the border</h3>
+<p>Inside a country, people pay with the national money: rubles in the USSR, marks in East Germany, dollars in the United States. <strong>That money stops working at the border.</strong> A Canadian grain company selling wheat to Moscow cannot pay its own workers in rubles, and cannot buy steel with rubles from anyone outside the Soviet bloc. So it insists on being paid in money it can actually spend anywhere: dollars, West German marks, yen, Swiss francs. That family of internationally accepted currencies is what the era called <strong>hard currency</strong> — “hard” because it holds value and is wanted everywhere.</p>
+<p>The ruble was the opposite: <strong>not convertible</strong>. No bank outside the socialist bloc would exchange it, so no foreign seller wanted it. This single fact organises the whole story. It meant the Soviet Union could not buy anything abroad — grain, machines, medicine, technology — with its own money. It had to <em>earn</em> foreign money, or borrow it, or sell gold.</p>
+<div class="box box-plain">
+  <span class="box-title">The one-sentence version</span>
+  <p>For most of its history the USSR had two economies stacked on top of each other: an enormous domestic economy that ran on rubles, and a small, fragile border-crossing economy that ran on dollars and marks. Everything in Part 2 is about the second one collapsing.</p>
+</div>
+
+<h3 id="p0-2">0.2 The four taps and two drains</h3>
+<p>A country’s supply of foreign money has exactly four taps, and exactly two things that drain it. This is the entire machine:</p>
+
+<div class="diagram">
+  <div class="d-title">The foreign-currency account of any country</div>
+  <div class="row"><span class="node in">1 · Exports</span><span class="node in">2 · Loans from abroad</span><span class="node in">3 · Selling gold &amp; diamonds</span><span class="node in">4 · Services (transit, tourism)</span></div>
+  <div class="row"><span class="arrow">→</span><span>pays for →</span><span class="node out">5 · Imports (grain, machines, goods)</span><span class="node out">6 · Interest and repayments on past loans</span></div>
+  <div class="cap">Taps 1 and 4 are <em>earned</em>; taps 2 and 3 are <em>borrowed or sold</em>. Drains 5 and 6 are the reason you need any of it.</div>
+</div>
+
+<p>For the USSR in the 1980s, the four taps looked like this: <strong>exports</strong> were dominated by oil and gas sold to Western Europe (plus gold, timber, diamonds, and a little machinery — Part 2.2 has the exact mix); <strong>loans</strong> came from Western banks, which were happy to lend until they weren’t; <strong>gold sales</strong> were the emergency tap — Moscow sold an estimated 300–350 tonnes of gold in 1986 alone; <strong>services</strong> were minor. The two drains were imports — above all <em>grain</em>, then machinery and steel pipe — and the interest on the debt that taps 2 and 3 had created.</p>
+
+<h3 id="p0-3">0.3 The country as a household: “balance of payments” in plain words</h3>
+<p><strong>Balance of payments</strong> is not complicated. It is a family’s bank statement, written for a whole country’s dealings with the outside world over one year. Rows, in order:</p>
+<table>
+  <caption>How the statement is built — and where each Soviet problem landed</caption>
+  <tr><th>Line</th><th>What it is</th><th>Soviet version, mid-1980s</th></tr>
+  <tr><td>Trade balance</td><td>Exports of goods <span class="num">−</span> imports of goods</td><td>Negative every year from 1983; e.g. <span class="num">$22.1B</span> out vs <span class="num">$25.9B</span> in during 1985</td></tr>
+  <tr><td>+ services, interest</td><td>Shipping fees earned, interest received/paid</td><td>Interest paid on Western debt grew as the debt did</td></tr>
+  <tr><td>= Current account</td><td>What the year’s ordinary business earned or lost</td><td>The deep negative number that made borrowing structural</td></tr>
+  <tr><td>+ loans received</td><td>New borrowing (money in now, owed later)</td><td>The tap that kept imports flowing: external debt roughly <span class="num">$31B</span> (end-1986) → <span class="num">$61B</span> (end-1990)</td></tr>
+  <tr><td>− repayments, gold sold</td><td>Principal repaid; reserves liquidated</td><td>Gold sold to plug gaps — <span class="num">~100t</span> (1984), <span class="num">~180t</span> (1985), <span class="num">300–350t</span> (1986)</td></tr>
+  <tr><td>= Overall balance</td><td>Did the year get through, or run short?</td><td>It got through — by borrowing and selling the family silver. Both taps have limits.</td></tr>
+</table>
+
+<p>Now the part that matters. When a country’s export earnings fall — say the price of its main export halves — nothing on the spending side changes by itself. The same grain, the same machines, the same interest are still due. So a fall in export revenue becomes an immediate, arithmetic choice between three options: <strong>borrow more</strong>, <strong>sell reserves</strong>, or <strong>cut imports</strong>. Rich countries rotate through the first two until a crisis passes. A country with nothing left to sell and no one left to lend must do the third — which is why countries in trouble stop importing machinery and medicine, and why “foreign-exchange crisis” is a polite phrase for real deprivation.</p>
+
+<div class="box box-plain">
+  <span class="box-title">A worked example — the USSR’s 1986, with round numbers</span>
+  <p>Say the year starts with <span class="num">$30</span> of dollar earnings expected, against <span class="num">$28</span> of planned imports and <span class="num">$4</span> of interest — a normal-ish year, covered by <span class="num">$2</span> of fresh borrowing. Then oil crashes and actual earnings come in at <span class="num">$23</span>. The imports and the interest do not move. The gap is now <span class="num">$9</span> instead of <span class="num">$2</span>. You borrow <span class="num">$5</span>, sell <span class="num">$3–4</span> of gold, and quietly cut <span class="num">$1–2</span> of imports. That is not a metaphor: 1986 is the year the IMF-series debt jumped, the gold sales peaked, and grain purchases were cut back after a good harvest made it politically safe. This is what “the oil price collapse gutted the budget” means, mechanically.</p>
+</div>
+
+<h3 id="p0-4">0.4 Club money that was not money</h3>
+<p>The socialist bloc had its own trading club, COMECON, and — this is the part that confuses everyone — its own “money”: the <strong>transferable ruble</strong>. Here is what it actually was:</p>
+<dl class="kv">
+  <dt>An accounting unit</dt><dd>Since January 1964, bloc countries booked their trade with each other in transferable rubles on the ledgers of a Moscow institution, the International Bank for Economic Cooperation (<a href="https://www.elibrary.imf.org/display/book/9789264134683/ch008.xml">IMF Study of the Soviet Economy, ch. III.4</a>).</dd>
+  <dt>Not transferable</dt><dd>Despite the name, a transferable-ruble balance held with one partner could not be spent with another. Debts stayed strictly bilateral — “bilateral debts cannot be cancelled out by transferring transferable roubles from one member account to another” (<a href="https://www.euromoney.com/article/27bjsstsqxhkmh1y5f4ah/banking/moscows-views-on-world-banking/">Euromoney</a>; <a href="https://documents1.worldbank.org/curated/en/686161468752076445/pdf/multi0page.pdf">World Bank</a>).</dd>
+  <dt>Not convertible</dt><dd>It bought nothing outside the club. The official parity was TR&nbsp;0.9 to <span class="num">$1</span> — an administered number, not a market price (<a href="https://www.elibrary.imf.org/display/book/9789264134683/ch008.xml">IMF, ch. III.4</a>).</dd>
+  <dt>What a surplus was</dt><dd>If a country shipped more than it bought, it accumulated a claim in this unit — automatically becoming a credit at the bank. Those claims were the “loans” the USSR gave its allies: real oil out, paper claims on the ledger in return, rolled over year after year (<a href="https://ideas.repec.org/a/pal/imfstp/v38y1991i2p235-267.html">Kenen, IMF Staff Papers 38(2), 1991</a>).</dd>
+</dl>
+<p>Put those four lines together and the conclusion is uncomfortable: <strong>the bloc’s money could not leave the bloc</strong>. The USSR could ship a billion barrels of oil to its allies and receive, in the end, ledger entries that could never buy a bushel of American wheat or a German machine tool. That is why later sections call the trade between Moscow and its allies “barter plus IOUs” rather than trade in the ordinary sense.</p>
+
+<h3 id="p0-5">0.5 What “subsidy” means — and why cheap oil was more expensive than it looked</h3>
+<p>A <strong>subsidy</strong> here means one thing only: <em>selling below the world price</em>. If a barrel of Soviet oil fetched <span class="num">$30</span> from Italy and <span class="num">$13</span> from Poland in the same year, then <span class="num">$17</span> is the subsidy — a gift from the Soviet budget that appears in no budget document, because nobody writes a cheque. You only see it by comparing the two prices.</p>
+<p>Two consequences follow, and both matter for the collapse:</p>
+<ol class="tight">
+  <li><strong>A subsidised barrel is also a barrel not sold for dollars.</strong> The USSR had exactly one big hard-currency earner: hydrocarbons. Oil sent cheaply to the bloc was <em>removed from the pool</em> that would otherwise have paid, at world prices, for Soviet grain imports. The empire was spending its own export capacity on its allies.</li>
+  <li><strong>The gift did not come back as orders.</strong> In a healthy trade relationship, a gift to a customer shows up later as that customer buying your goods. Here it didn’t, for reasons Part 2.5 sets out: the savings were used by the bloc countries to service <em>their own</em> Western debts and to buy <em>Western</em> goods, and the Soviet export catalogue they might have bought instead was largely uncompetitive.</li>
+</ol>
+
+<h3 id="p0-6">0.6 Why a huge economy can be broke</h3>
+<p>The last idea is the one that makes people say “how could the USSR be short of money — it was half a continent?” Because <strong>rubles are not money abroad</strong>, the relevant number is not Soviet GDP. It is the small, specific quantity of hard currency the USSR could earn per year — on the order of <span class="num">$30B</span> in the mid-1980s, from all sources, arms and gold included. Against that small number sat: the world’s largest grain import bill, a technology-import programme, an arms race, an Afghan war, a Chernobyl clean-up, and a bloc whose entire fuel supply was priced as a favour.</p>
+<p>Everything else in this document is that sentence unfolding. Two hundred words, six ideas, done — the rest of the file uses them.</p>
+
+<div class="quiz">
+  <p class="quiz-q">1. Which of these is the reason the USSR needed dollars and marks at all?</p>
+  <button class="quiz-option" data-correct="false">Rubles were rejected by Soviet farms</button>
+  <button class="quiz-option" data-correct="true">Rubles were refused by foreign sellers</button>
+  <button class="quiz-option" data-correct="false">Dollars paid for Soviet army wages</button>
+  <button class="quiz-option" data-correct="false">Marks were cheaper than Soviet gold</button>
+  <p class="quiz-explanation" hidden>The ruble was not convertible: nobody outside the bloc would accept it, so imports had to be paid in currencies foreign sellers could keep and spend.</p>
+</div>
+
+<div class="quiz">
+  <p class="quiz-q">2. In the balance of payments, what does a fall in export earnings force, by itself?</p>
+  <button class="quiz-option" data-correct="false">Imports and interest fall with it</button>
+  <button class="quiz-option" data-correct="true">A choice among borrowing, reserves, cuts</button>
+  <button class="quiz-option" data-correct="false">Automatic loans from trading partners</button>
+  <button class="quiz-option" data-correct="false">A revaluation of the domestic currency</button>
+  <p class="quiz-explanation" hidden>Imports and interest are commitments; revenue is not. The gap must be met by new borrowing, selling reserves (gold), or cutting imports — the USSR did all three from 1986.</p>
+</div>
+
+<div class="quiz">
+  <p class="quiz-q">3. Why is a “transferable ruble” surplus best understood as an IOU rather than money?</p>
+  <button class="quiz-option" data-correct="false">It could be spent anywhere inside the bloc</button>
+  <button class="quiz-option" data-correct="true">It could not be spent outside its account</button>
+  <button class="quiz-option" data-correct="false">It was backed directly by Soviet gold reserves</button>
+  <button class="quiz-option" data-correct="false">It was converted freely at Western banks</button>
+  <p class="quiz-explanation" hidden>Transferable-ruble balances were bilateral and inconvertible — not spendable with other members, not exchangeable outside the club. Real goods went out; ledger entries came back.</p>
+</div>
+
+<div class="quiz">
+  <p class="quiz-q">4. A “subsidy” in this story means the USSR sold oil…</p>
+  <button class="quiz-option" data-correct="false">On credit and was repaid in full</button>
+  <button class="quiz-option" data-correct="true">Below world price to bloc customers</button>
+  <button class="quiz-option" data-correct="false">Above world price to bloc customers</button>
+  <button class="quiz-option" data-correct="false">Only to Western Europe for dollars</button>
+  <p class="quiz-explanation" hidden>The gap between world price and the price charged to COMECON buyers is the subsidy. Until the mid-1980s it was large (see the price table in Part 2.3); after 1984 the formula briefly reversed the gap.</p>
+</div>
+
+<h2 id="patient">Part 1 — The patient, and the empire’s two ledgers</h2>
+
+<h3 id="p1-1">1.1 The home economy in brief</h3>
+<p>By the mid-1980s the Soviet system was not collapsing; it was <strong>corroding</strong>. A command economy that could not reliably feed its cities — the USSR was the <em>world’s largest grain importer</em>, buying an average of roughly 40 million tonnes a year in 1980–84 and a record <span class="num">55.5Mt</span> in 1984/85 (<a href="https://doi.org/10.22004/ag.econ.277849">USDA-ERS</a>; <a href="https://esmis.nal.usda.gov/sites/default/release-files/6t053f96k/qr46r468r/w9505439x/WRS-05-18-1986_USSR.pdf">USDA, 1986</a>) — with permanent shortages, and with a defence sector consuming an estimated 15–25% of output. It was kept stable by repression and by oil revenue.</p>
+<p>Its industry also could not earn abroad. In 1986 <em>less than 5%</em> of Soviet exports to the West consisted of machinery, and in 1987 only about <em>18%</em> of Soviet manufactured goods were judged to meet world technical standards (<a href="http://www.country-data.com/cgi-bin/query/r-12794.html">Library of Congress, <em>Soviet Union: A Country Study</em></a>). Inside the bloc, Soviet factories had a guaranteed market; outside it, they had almost none. Hold on to that fact — it becomes the reason the “subsidy” never came back as orders (§2.5).</p>
+
+<h3 id="p1-2">1.2 What “buffer” means — and what “depth in space” means</h3>
+<p>“Buffer” is a term of political geography. A <strong>buffer zone</strong> is territory kept between a power and its potential enemies: <em>distance, bought with control</em>. In the Soviet case it had a precise military content, and the US Library of Congress country study states it plainly:</p>
+<blockquote>
+  <p>“The Soviet Union intended to use Eastern Europe as a buffer zone for the forward defense of its western borders…”</p>
+  <p>“In this plan, the Warsaw Pact countries would provide forward bases, staging areas, and interior lines of communication for the Soviet Union against NATO.”</p>
+  <cite>— <a href="http://www.country-data.com/frd/cs/soviet_union/su_appnc.html">Library of Congress, <em>Soviet Union: A Country Study</em>, Appendix C</a> (research completed 1989; <a href="https://www.loc.gov/item/90025756/">catalogue record</a>)</cite>
+</blockquote>
+<p><strong>“Depth in space” is the whole idea in three words.</strong> Distance is a weapon: an attacker must cross territory, which costs time, and time is what a defender needs to mobilise. Russia had been invaded from the west twice within living memory (1914–17 and 1941), both times across the European plain; the buffer states were the borrowed thickness of that plain. A Soviet officer would say the USSR wanted to meet an attack <em>in Poland, not in Belarus</em>. That is the shield half of the sentence “the bloc was the empire’s outer layer.”</p>
+<p>The other half is that a layer costs money to keep. A.R. Johnson’s RAND/DTIC study of Soviet military policy in Eastern Europe describes the same territory as “a military staging and buffer zone that could be used for either defensive or <em>offensive</em> purposes,” and adds that the forward build-up “made Western Europe a ‘hostage’ for American nuclear restraint” — forward forces plus the ability to strike west meant any war would be fought <em>on NATO’s</em> territory (<a href="https://apps.dtic.mil/sti/tr/pdf/ADA511838.pdf">Johnson, <em>The Warsaw Pact: Soviet Military Policy in Eastern Europe</em></a>). That is the offensive reading of the same buffer — and it explains why the West treated the Soviet army’s presence in East Germany as the central military fact of the continent.</p>
+<p>The Library of Congress adds the priority ordering, and it is worth reading twice: “Continued control of Eastern Europe became second only to defense of the homeland in the hierarchy of Soviet security priorities.” Cost came second too — which is Part 2’s subject.</p>
+
+<h3 id="p1-3">1.3 The Warsaw Pact, plainly</h3>
+<p>If you have ever half-nodded at the phrase “the Warsaw Pact,” here is the whole institution in one screen.</p>
+<dl class="kv">
+  <dt>What it was</dt><dd>A Soviet-led military alliance, signed in Warsaw on <strong>14 May 1955</strong> and in force from 6 June, formed ostensibly in response to West Germany’s entry into NATO (<a href="https://treaties.un.org/doc/Publication/UNTS/Volume%20219/volume-219-I-2962-English.pdf">UN Treaty Series No. 2962</a>; <a href="https://history.state.gov/milestones/1953-1960/warsaw-treaty">US State Dept.</a>).</dd>
+  <dt>Who signed</dt><dd>Eight parties: the USSR, Poland, Czechoslovakia, Hungary, Romania, Bulgaria, Albania — and the <strong>GDR</strong>, whose premier Otto Grotewohl was a co-signatory. (A common source of confusion: East Germany co-signed in 1955 but had <em>no army</em> yet — the NVA was created on 18 January 1956, so its forces joined the integrated structure only later. Both halves are true; <a href="https://www.cia.gov/readingroom/docs/1966-05-06.pdf">CIA 1966 study</a>; <a href="https://germanhistorydocs.org/en/occupation-and-the-emergence-of-two-states-1945-1961/the-establishment-of-the-national-people-s-army-january-18-1956">GHDI</a>.)</dd>
+  <dt>Where it sat</dt><dd>The Joint Command staff was headquartered in <strong>Moscow</strong>, inside the Soviet Ministry of Defence. (Some accounts say “Warsaw”; the archival and academic sources say Moscow — <a href="https://opil.ouplaw.com/display/10.1093/law:epil/9780199231690/law-9780199231690-e683">Oxford, <em>Max Planck Encyclopedia of Public International Law</em></a>; <a href="https://www.cia.gov/readingroom/docs/1966-05-06.pdf">CIA 1966</a>.)</dd>
+  <dt>Albania</dt><dd>Ceased to cooperate after the 1961 Sino-Soviet split; formally denounced the treaty in September 1968 in protest at the invasion of Czechoslovakia (<a href="https://www.nato.int/en/news-and-events/articles/news/1968/09/12/albania-renounces-its-membership-of-the-warsaw-treaty-organisation">NATO, 12 Sept 1968</a>).</dd>
+  <dt>When it ended</dt><dd>Military structures dissolved effective 31 March/1 April 1991; the political alliance dissolved at the Prague summit, <strong>1 July 1991</strong> (<a href="https://www.nytimes.com/1991/04/01/world/warsaw-pact-formally-ends-36-years-as-a-military-force.html">NYT, 1 Apr 1991</a>; <a href="https://www.nytimes.com/1991/07/02/world/death-knell-rings-for-warsaw-pact.html">NYT, 2 Jul 1991</a>). East Germany had already left by unification, 3 October 1990.</dd>
+</dl>
+
+<h4>What “joint command” actually commanded</h4>
+<p>Your question, exactly: in the Pact, “joint” meant the <em>forces were pooled for war</em>, not that the command was shared. Concretely:</p>
+<ul class="tight">
+  <li>The <strong>Supreme Commander was always a Soviet marshal</strong>, who doubled as a First Deputy Defence Minister of the USSR; the Chief of the Combined Staff was likewise a senior Soviet general. Every holder of the post from 1955 to 1991 was Soviet:</li>
+</ul>
+<table>
+  <caption>Supreme Commanders of the Unified Armed Forces (all Soviet officers)</caption>
+  <tr><th>Marshal</th><th class="n">In post</th><th>Note</th></tr>
+  <tr><td>Ivan Konev</td><td class="n">1955–1960</td><td>Wartime commander, took Berlin</td></tr>
+  <tr><td>Andrei Grechko</td><td class="n">1960–1967</td><td>Later Soviet Defence Minister</td></tr>
+  <tr><td>Ivan Yakubovsky</td><td class="n">1967–1976</td><td>Died in office</td></tr>
+  <tr><td>Viktor Kulikov</td><td class="n">1977–1989</td><td>Held the post through the entire collapse sequence</td></tr>
+  <tr><td>Pyotr Lushev</td><td class="n">1989–1991</td><td>Surrendered the command’s powers in 1991</td></tr>
+</table>
+<ul class="tight">
+  <li><strong>War planning was Soviet planning.</strong> National armies were “earmarked” to the Joint Command, but operational plans were drawn by the Soviet General Staff; as a declassified CIA estimate put it, “unlike NATO, the Warsaw Pact does not have theater headquarters in being in peacetime,” and in war the Soviet commander-in-chief “would control all Pact forces in this theater” (<a href="https://www.cia.gov/readingroom/docs/1979-01-31a.pdf">CIA, NIE, 31 Jan 1979</a>). In other words: a Soviet command with allied flags on it.</li>
+  <li><strong>The one genuinely integrated branch was air defence</strong>, folded into the Soviet national system (<a href="https://opil.ouplaw.com/display/10.1093/law:epil/9780199231690/law-9780199231690-e683">Oxford PIL</a>; <a href="https://www.rand.org/pubs/reports/R3558.html">RAND R3558</a>).</li>
+  <li><strong>It had a political function too.</strong> The Brezhnev Doctrine (1968) declared that socialist countries had only “limited sovereignty” — which is the legal costume worn by the interventions in East Germany (1953), Hungary (1956) and Czechoslovakia (1968). The Pact was the forum in which Moscow told its allies what “limited” meant.</li>
+</ul>
+
+<h4>The war plans</h4>
+<p>What was the Pact actually planning? Offence, on paper and in exercises. A declassified 1979 CIA assessment: Pact planners “intend any future European conflict to take place on Western, not Eastern, territory,” and Soviet strategy “calls for a massive and rapid ground offensive into NATO territory… to defeat NATO forces, disrupt mobilization, and seize or destroy ports and airfields” (<a href="https://www.cia.gov/readingroom/docs/1979-01-31a.pdf">CIA NIE, 1979</a>).</p>
+<p>The famous concrete example is the 1979 exercise plan known as <strong>“Seven Days to the River Rhine.”</strong> It assumed a NATO nuclear first strike (on Polish and Czechoslovak cities) and scripted a Pact nuclear response against targets in West Germany, Belgium, the Netherlands and Denmark, followed by a seven-day advance to the Rhine. It became public only in November 2005, when Poland’s defence minister released thousands of Warsaw Pact files from the national archive (<a href="https://www.theguardian.com/world/2005/nov/26/russia.poland">Guardian</a>; <a href="https://www.telegraph.co.uk/news/worldnews/europe/poland/1504008/World-War-Three-seen-through-Soviet-eyes.html">Telegraph</a>, both 26 Nov 2005). One detail is worth noticing for this course’s method: the map spared France and Britain — because France had left NATO’s integrated command and because nuclear retaliation from either was the assumption the plan’s authors refused to test.</p>
+<p>None of this was ever executed; the plan’s importance here is what it tells you about the buffer’s purpose. The forward territory (East Germany, Poland, Czechoslovakia) was not just a wall. It was a <em>launch ramp</em>.</p>
+
+<h3 id="p1-4">1.4 COMECON, plainly</h3>
+<p>The economic twin of the Warsaw Pact was COMECON (the Council for Mutual Economic Assistance, 1949–1991). It is usually described as “the Soviet bloc’s common market.” It was not one. What it actually was:</p>
+<dl class="kv">
+  <dt>A trading club</dt><dd>Member states did the bulk of their trade with each other, and the USSR was the hub. For East Germany, intra-bloc trade was the majority of all trade; the USSR was its most important partner by a wide margin (<a href="https://wiiw.ac.at/eastern-europe-before-transition-exploring-historical-trade-data-on-external-economic-relations-in-cesee-s-command-economies-dlp-7078.pdf">wiiw COMECON dataset paper</a>).</dd>
+  <dt>Barter, not markets</dt><dd>Trade ran between state monopolies under annual protocols. Nobody “bought” oil at a market price; ministries agreed quantities, then applied a formula to set the price.</dd>
+  <dt>A formula, not a price</dt><dd>From 1958 the “Bucharest formula” fixed intra-bloc prices for five years at a time, typically well below world levels. In January 1975 it was replaced by the <strong>“Moscow formula”: prices revised every year, each year’s price being the lagged five-year moving average of world market prices</strong> (<a href="https://wiiw.ac.at/forty-years-ago-gorbachev-took-over--why-did-socialism-collapse-n-671.html">wiiw</a>; <a href="https://www.cia.gov/readingroom/docs/CIA-RDP88B00443R001103940160-0.pdf">CIA summary of Marrese &amp; Vanous</a>; <a href="https://www.jstor.org/stable/151775">Lavigne, <em>Soviet Studies</em></a>).</dd>
+  <dt>Why that formula is the whole subsidy story</dt><dd>A lagged average moves <em>slowly</em>. When world oil spiked in 1973–74 and again in 1979–80, the formula kept the bloc’s price far below the world price — a huge implicit gift from Moscow. When world oil <em>collapsed</em> after 1985, the same formula kept the bloc’s price high — and the gift ran backwards. One mechanism, two opposite effects, ten years apart.</dd>
+  <dt>A bank with toy money</dt><dd>Balances cleared in transferable rubles at the International Bank for Economic Cooperation in Moscow — the inconvertible unit explained in §0.4.</dd>
+</dl>
+
+<h3 id="p1-5">1.5 The bloc’s money circuit — and where the dollars went</h3>
+<p>Here is how the empire actually ran as a machine. Read the three flows and you will have the economics of the whole document:</p>
+
+<div class="diagram">
+  <div class="d-title">The bloc’s circuit: goods out, IOUs in, dollars elsewhere</div>
+  <div class="row"><span class="node">USSR</span><span class="arrow">→</span><span class="node out">oil, gas, ore, timber, cotton</span><span class="arrow">→</span><span class="node">Eastern Europe (and GDR industry)</span></div>
+  <div class="row"><span class="node">Eastern Europe</span><span class="arrow">→</span><span class="node out">machinery, ships, rolling stock, food, consumer goods</span><span class="arrow">→</span><span class="node">USSR</span></div>
+  <div class="row"><span class="node">Eastern Europe</span><span class="arrow">→</span><span class="node out">refined products, goods, surplus Soviet crude</span><span class="arrow">→</span><span class="node in">West</span><span class="arrow">→</span><span class="node in">hard currency</span><span class="arrow">→</span><span class="node out">Western banks &amp; Western goods</span></div>
+  <div class="cap">Moscow’s payments for its exports were ledger entries in transferable rubles (flow 2). The hard currency the bloc earned by selling westward (flow 3) stayed with the bloc countries — as debt service to <em>their</em> Western creditors and as purchases of <em>Western</em> goods.</div>
+</div>
+
+<p>Two consequences, both load-bearing later:</p>
+<ol class="tight">
+  <li><strong>The captor was a captive too.</strong> Because Soviet manufactures could not be sold in the West, the bloc was the only market that would take them. Eastern Europe was not merely a defence asset; it was the <em>sales territory</em> that kept Soviet industry’s export line alive.</li>
+  <li><strong>The empire consumed the one export that earned dollars.</strong> Every barrel sent cheaply to the bloc was a barrel not sold at world price to Italy or West Germany. The subsidy was paid in the scarcest resource the USSR had.</li>
+</ol>
+
+<h3 id="gdr">1.6 East Germany’s place — the crown jewel with a Western bank account</h3>
+<p>This section answers the “East Berlin → Europe” half of the question directly. East Germany mattered to the Soviet economy in three distinct ways, and the third is the one nobody expects.</p>
+
+<h4>(a) The biggest customer and the best supplier</h4>
+<p>The CIA judged that East Germany and the USSR were “each other’s largest trade partner throughout most of the post-WWII period,” with the GDR acting as “the USSR’s leading supplier of machinery and consumer goods, receiving in return a sizable share of Soviet exports of energy and raw material” (<a href="https://www.cia.gov/readingroom/docs/CIA-RDP08S01350R000601980002-2.pdf">CIA, declassified</a>). The physical form of that bargain was the <strong>Druzhba (“Friendship”) pipeline</strong>: Soviet crude flowed west; East German machine tools, ships, rail vehicles, chemicals and consumer goods flowed east. When the GDR hit a payments crisis in 1982, Moscow supplied an <em>extra</em> 2.1 million tonnes of oil for hard cash (about <span class="num">$520m</span>) — which the GDR refined and resold westward within short payment terms, precisely to raise the liquidity to service its Western debts (<a href="https://www.tandfonline.com/doi/full/10.1080/07075332.2019.1641542">Graf, “Before Strauß,” 2019</a>).</p>
+
+<h4>(b) The Western bank account: the special German–German channel</h4>
+<p>East Germany had something no other bloc member had: a legally privileged trade relationship with <em>West</em> Germany. Because the two German states did not treat each other as foreign countries, their trade ran through a special clearing system — not ordinary foreign exchange — and it generated real Deutschemarks for East Berlin through several channels:</p>
+<table>
+  <caption>How West German money reached East Berlin</caption>
+  <tr><th>Channel</th><th>Mechanism</th><th>Scale (examples)</th></tr>
+  <tr><td>Intra-German trade</td><td>Goods settled in clearing units (Verrechnungseinheiten, VE), duty-free under the EEC’s protocol on German internal trade</td><td>GDR earned <span class="num">412m DM</span> in 1982 alone by reselling such imports for hard currency (<a href="https://www.tandfonline.com/doi/full/10.1080/07075332.2019.1641542">Graf 2019</a>)</td></tr>
+  <tr><td>The “Swing”</td><td>An interest-free overdraft the GDR could run inside the clearing system — free working capital</td><td>Cap <span class="num">850m VE</span> (from 1976); pushed to <span class="num">919m VE</span> when overused; Bonn’s 1982 threat to cut it to <span class="num">200m</span> would have cost the GDR ≥<span class="num">60m DM</span> a year in interest alone (<a href="https://www.tandfonline.com/doi/full/10.1080/07075332.2019.1641542">Graf 2019</a>)</td></tr>
+  <tr><td>Guaranteed loans</td><td>Two bank credits arranged by Franz Josef Strauß, backed by the Federal Government and secured on the transit lump sum</td><td><span class="num">DM 1.0bn</span> (1 July 1983) + <span class="num">DM 950m</span> (25 July 1984); “DM 3bn” in some accounts conflates other credits (<a href="https://www.bundesarchiv.de/themen-entdecken/online-entdecken/themenbeitraege/von-strauss-und-schalck-golodkowski-eingefaedelt">Bundesarchiv</a>; <a href="https://www.tandfonline.com/doi/full/10.1080/07075332.2019.1641542">Graf 2019</a>)</td></tr>
+  <tr><td>Transit, visas, phones</td><td>Lump-sum transit payments, road/rail/waterway tolls, compulsory currency exchange, telephone and visa fees</td><td>“Hundreds of millions of DM annually,” renegotiated stepwise; estimated at a double-digit share of GDR hard-currency export earnings (<a href="https://access.gesis.org/dbk/33417">GESIS/Bundesbank-based review</a>)</td></tr>
+  <tr><td>Prisoner releases</td><td><em>Häftlingsfreikauf</em>: political prisoners bought out, with family-exit visas as a separate flow</td><td><span class="num">33,755</span> prisoners, <span class="num">DM 3.44bn</span> nominal, 1964–89; price per head rose from about <span class="num">DM 40,000</span> to <span class="num">DM 95,847</span> (<a href="https://www.bbc.com/news/magazine-29889706">BBC</a>; <a href="https://en.wikipedia.org/wiki/Trading_of_East_German_political_prisoners">overview</a>)</td></tr>
+</table>
+<p>Read that table as a sentence about the bloc’s economics: <strong>the most important hard-currency earner in the Soviet empire was a state that earned its dollars from the other half of Germany.</strong> Its clearing privileges, its interest-free overdraft, its transit fees and its prisoner sales were all channels unavailable to Warsaw, Prague or Budapest. This is what made the GDR the crown jewel — and, as Part 3 shows, what made its wobble in 1989 a Moscow problem.</p>
+
+<h4>(c) The debt underneath</h4>
+<p>The jewel was borrowed. In October 1989 the GDR’s own planners (the “Schürer paper”) told the Politburo the country had external obligations of <span class="num">49bn Valutamark</span> — roughly <span class="num">$26bn</span> — and faced imminent insolvency; Western reporting at the time put the figure at about <span class="num">$20bn</span>. Later Bundesbank reconstruction and IMF estimates put the <em>net</em> position far lower — around <span class="num">20bn VM</span> (<span class="num">~$11bn</span>) net, or <span class="num">M32bn</span> (<span class="num">~$18.5bn</span>) depending on the measure — because gross liabilities were being counted against assets not netted (<a href="https://www.diw.de/documents/publikationen/73/diw_01.c.510026.de/diw_econ_bull_2015-27-3.pdf">DIW synthesis</a>; <a href="https://www.mdr.de/geschichte/ddr/wirtschaft/pleite-gerhard-schuerer-staatliche-plankomission-100.html">MDR summary</a>; <a href="https://www.nytimes.com/1989/11/16/world/clamor-easst-bleak-fiscal-picture-grim-state-east-germany-s-economy-disclosed.html">NYT, 16 Nov 1989</a>; <a href="https://www.elibrary.imf.org/display/book/9781557752000/C03.xml">IMF, <em>German Unification</em>, ch. 3</a>). The disagreement is a fact-check in itself (see <a href="#fc-debt">Part 7</a>): the famous “East Germany was bankrupt” memo overstated a gross number. But even the net figures were crushing against a single year’s hard-currency earnings — and they made an economic rescue by Moscow unthinkable.</p>
+
+<h4>(d) Why the 1989 exodus was an economic event, not only a moral one</h4>
+<p>Part 3 tells the political story of 1989 month by month. Here is the labour-market side of it, because it explains why the East German state could not simply wait the crisis out. In 1989 alone, <span class="num">343,854</span> East Germans were recorded as resettlers, refugees or escapees (plus <span class="num">1,775</span> ransomed prisoners counted separately); 1990 added another <span class="num">238,384</span> — roughly <span class="num">600,000</span> people, about <span class="num">3.7%</span> of the population, in two years (<a href="https://germanhistorydocs.org/en/two-germanies-1961-1989/statistics-on-east-german-resettlers-refugees-and-escapees-1961-1990">GHDI statistics</a>; <a href="https://www.elibrary.imf.org/display/book/9781557752000/C08.xml">IMF, <em>German Unification</em>, ch. 8</a>; <a href="https://www.demographic-research.org/volumes/vol11/7/11-7.pdf">Demographic Research</a>). Over 1989–92 about <span class="num">870,000</span> moved west — close to <span class="num">10%</span> of the East German workforce, with the IMF warning explicitly that “migration of skilled workers… would have adverse effects on the east German economy” (<a href="https://www.elibrary.imf.org/display/book/9781557752000/C08.xml">IMF</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/12344744">Demographic Research summary</a>).</p>
+<p>The people who left were disproportionately young and skilled — and the East German export machine was skilled-labour-intensive by design. So the exodus was not only a political humiliation and a propaganda catastrophe; it was a steady subtraction from the workforce that earned the GDR its place in the Soviet system. The state’s answer <em>was</em> the Wall, and its travel rules; once Hungary opened a hole in the border in September 1989 (§3.3), that answer stopped working.</p>
+
+<h2 id="bill">Part 2 — The bill comes due</h2>
+
+<h3 id="p2-1">2.1 The oil shock of 1985–86 — the shock absorber removed</h3>
+<p>Munger’s one-line economics: Soviet oil had finally come online in volume just as the market glutted and prices crashed. The mechanics underneath are worth having in numbers.</p>
+<p><strong>The trigger was a policy choice in Riyadh.</strong> Saudi Arabia had spent the early 1980s cutting production to defend the price — down from roughly 10 million barrels a day in 1979–81 to about 2–2.5 mmbd by late 1985. In the summer and autumn of 1985 it reversed: netback pricing and rising output (toward 4.3 mmbd and beyond), which pushed OPEC’s total up by roughly 4 mmbd between August 1985 and mid-1986. A benchmark crude of about <span class="num">$27–30</span> in November 1985 fell to under <span class="num">$10</span> by April 1986 — a halving in four months (<a href="https://fraser.stlouisfed.org/files/docs/historical/frbsf/frbsf_let/frbsf_let_19860606.pdf">Federal Reserve Bank of San Francisco, 1986</a>; <a href="https://www.brookings.edu/wp-content/uploads/1986/06/1986b_bpea_gately_adelman_griffin.pdf">Brookings, Gately et al. 1986</a>).</p>
+<p><strong>Why it was existential for Moscow:</strong> oil and gas were, by every measure, the USSR’s main source of hard currency (the exact share is §2.2 — the answer has a range, and the range is the point). Convertible-currency earnings from oil fell from <span class="num">$15.1bn</span> (1984) to <span class="num">$11.4bn</span> (1985) to about <span class="num">$7bn</span> (1986) — <em>despite export volumes rising</em> (<a href="https://archives.nato.int/uploads/r/nato-archives-online/6/0/c/60ce3a054cb21e911f8ddb6e33a4d7b97fb732aca343eade529e90cfed55846d/C-M_86_84_ENG_NHQL517433.pdf">NATO C-M(86)84</a>; <a href="https://archives.nato.int/uploads/r/nato-archives-online/f/b/2/fb293eb21389a22739c5c3fa20e667348245ee907b2dfd792385d3cbf3e5d167/C-M_88_1_ENG_NHQL504160.pdf">NATO C-M(88)1</a>). A second series puts oil earnings at <span class="num">$13.5bn</span> (1985) falling to <span class="num">$7.9bn</span> (1986) — same shape, different accounting treatment of re-exports (<a href="https://www.upi.com/Archives/1987/03/03/The-Soviet-Unions-crude-oil-and-petroleum-product-exports/9705541746000/">Petroleum Economist via UPI, 3 Mar 1987</a>).</p>
+<p><strong>How big was the hole?</strong> Estimates differ by what they count, and the difference is instructive:</p>
+<table>
+  <caption>One shock, three numbers — pick the one that matches the question</caption>
+  <tr><th>Measure</th><th class="n">1986 loss</th><th>What it counts</th><th>Source</th></tr>
+  <tr><td>Oil earnings, cash, net of higher volume</td><td class="n">~$4bn</td><td>Only oil sold to the West; volume gains offset some price loss</td><td><a href="https://archives.nato.int/uploads/r/nato-archives-online/6/0/c/60ce3a054cb21e911f8ddb6e33a4d7b97fb732aca343eade529e90cfed55846d/C-M_86_84_ENG_NHQL517433.pdf">NATO C-M(86)84</a></td></tr>
+  <tr><td>All hydrocarbon shortfall vs expectation</td><td class="n">~$7bn</td><td>“Shortfall for 1986 alone… about one-third of hard-currency revenue” (the figure this document used in its first edition)</td><td><a href="https://www.washingtonpost.com/archive/politics/1986/01/31/moscow-feels-hard-currency-pinch/7b52234c-57fa-47cc-b895-e0a0394c314c/">EC Commission, via Washington Post, Jan 1986</a></td></tr>
+  <tr><td>Energy valued at full world price (entitlement)</td><td class="n">up to $15bn</td><td>Assumes ~1bn barrels of energy exports valued at world prices — includes gas and intra-bloc barrels, so it overstates the <em>Western cash</em> loss</td><td><a href="https://www.commentary.org/articles/edward-epstein-3/petropower-and-soviet-expansion/">Epstein, <em>Commentary</em></a> (flagged, not adopted)</td></tr>
+</table>
+<p>For this document’s purposes, the honest formulation is the one the agencies converge on: <strong>a loss on the order of $4–7bn in 1986</strong>, roughly a third of the annual hard-currency inflow, arriving in a single year against fixed commitments.</p>
+<p>Three amplifiers made it worse than the price alone:</p>
+<ul class="tight">
+  <li><strong>The currency mismatch.</strong> The USSR sold oil and gas for US dollars but bought most of its imports from Western Europe in marks and other currencies. Between the price crash and the dollar’s fall, the <em>purchasing power</em> of a Soviet barrel measured in West German goods fell to about a third by 1987 compared with 1984 — an extra hit of roughly <span class="num">$2bn</span> in 1986 alone (<a href="http://www.country-data.com/cgi-bin/query/r-12794.html">Loc. cit.</a>; <a href="https://archives.nato.int/uploads/r/nato-archives-online/f/b/2/fb293eb21389a22739c5c3fa20e667348245ee907b2dfd792385d3cbf3e5d167/C-M_88_1_ENG_NHQL504160.pdf">NATO C-M(88)1</a>).</li>
+  <li><strong>The reserves tap opened wide.</strong> Gold sales rose from about <span class="num">100 tonnes</span> (1984) and <span class="num">180t</span> (1985) to <span class="num">300–350t</span> in 1986 — roughly <span class="num">$3–4bn</span> of the family silver in a single year (<a href="https://archives.nato.int/uploads/r/nato-archives-online/6/0/c/60ce3a054cb21e911f8ddb6e33a4d7b97fb732aca343eade529e90cfed55846d/C-M_86_84_ENG_NHQL517433.pdf">NATO C-M(86)84</a>; <a href="https://archives.nato.int/uploads/r/nato-archives-online/f/b/2/fb293eb21389a22739c5c3fa20e667348245ee907b2dfd792385d3cbf3e5d167/C-M_88_1_ENG_NHQL504160.pdf">C-M(88)1</a>).</li>
+  <li><strong>The borrowing tap became structural.</strong> External convertible debt — which had been modest precisely because the USSR was a good credit — went from <span class="num">$31.4bn</span> at end-1986 to <span class="num">$39.2bn</span> (1987), <span class="num">$43.0bn</span> (1988), <span class="num">$54.6bn</span> (1989) and <span class="num">$61.1bn</span> by end-1990 (<a href="https://www.elibrary.imf.org/display/book/9781557753717/ch004.xml">IMF, <em>A Study of the Soviet Economy</em>, Table 6</a>). <em>Definitional flag:</em> NATO/BIS figures for bank debt alone are a different, smaller universe — don’t mix series.</li>
+</ul>
+
+<h3 id="p2-2">2.2 The hard-currency ledger — what earned, what spent</h3>
+<p>This section answers the question “‘80% of hard-currency earnings’ — as opposed to what?” It is the balance-of-payments statement from §0.3, filled in with real numbers.</p>
+
+<table>
+  <caption>The Soviet hard-currency year, mid-1980s — money in and money out</caption>
+  <tr><th>IN — the four taps</th><th class="n">Scale</th><th>Notes and sources</th></tr>
+  <tr>
+    <td><strong>Oil &amp; gas</strong></td>
+    <td class="n">55–80% of the total</td>
+    <td>The range is real and measure-dependent: ~<span class="num">55%</span> of hard-currency revenues in 1984 (a Gosplan fuel-energy institute-based figure), with oil alone <span class="num">38.8%</span> (1985) and <span class="num">33.5%</span> (1987) — <a href="https://eng.globalaffairs.ru/articles/unrelenting-oil-addiction/">Global Affairs</a>; ~<span class="num">60%</span>-plus from crude alone and ~<span class="num">80%</span> from energy sales to the West — <a href="https://www.upi.com/Archives/1987/03/03/The-Soviet-Unions-crude-oil-and-petroleum-product-exports/9705541746000/">Petroleum Economist 1987</a>; about three-quarters of <em>Eastern bloc</em> hard-currency revenue from energy — EC <em>Energy in Europe</em>, Oct 1987. Standard academic anchor: <a href="https://press.princeton.edu/books/paperback/9780691608228/crisis-amid-plenty">Gustafson, <em>Crisis amid Plenty</em> (1989)</a>.</td>
+  </tr>
+  <tr>
+    <td>Gold and diamonds</td>
+    <td class="n">~$1bn (diamonds, 1984) + gold sales</td>
+    <td>Diamonds about <span class="num">$1bn</span> in 1984; gold the emergency tap (§2.1). <a href="https://archives.nato.int/uploads/r/nato-archives-online/f/b/2/fb293eb21389a22739c5c3fa20e667348245ee907b2dfd792385d3cbf3e5d167/C-M_88_1_ENG_NHQL504160.pdf">NATO C-M(88)1</a></td>
+  </tr>
+  <tr>
+    <td>Timber, chemicals, metals</td>
+    <td class="n">~$7–8bn combined</td>
+    <td>Non-oil/gas convertible exports were about <span class="num">$7.0bn</span> (1984), recovering to <span class="num">$8.3bn</span> (1986) on diamonds, metals and chemicals — never enough to offset oil. Timber went mainly to Japan. <a href="https://www.gao.gov/assets/nsiad-90-209br.pdf">GAO</a>; <a href="http://www.country-data.com/cgi-bin/query/r-12794.html">Country Study</a></td>
+  </tr>
+  <tr>
+    <td>Arms</td>
+    <td class="n">cash ~$1.9–2.0bn/yr</td>
+    <td>The headline arms figures (~$6bn) were mostly <em>credit</em>; cash received was far smaller, and some customers paid in oil that Moscow then re-exported. <a href="https://archives.nato.int/uploads/r/nato-archives-online/f/b/2/fb293eb21389a22739c5c3fa20e667348245ee907b2dfd792385d3cbf3e5d167/C-M_88_1_ENG_NHQL504160.pdf">NATO C-M(88)1</a>; <a href="https://www.sipri.org/sites/default/files/files/books/SIPRI98An/SIPRI98An04.pdf">SIPRI</a></td>
+  </tr>
+  <tr>
+    <td>Machinery</td>
+    <td class="n">under 5%</td>
+    <td>“In 1986 less than 5 percent of Soviet exports to the West consisted of machinery.” <a href="http://www.country-data.com/cgi-bin/query/r-12794.html">Country Study</a></td>
+  </tr>
+  <tr><th>OUT — the two drains</th><th class="n">Scale</th><th>Notes</th></tr>
+  <tr>
+    <td><strong>Grain and food</strong></td>
+    <td class="n">~$5.3bn (1985)</td>
+    <td>World’s largest importer, ~20% of world grain trade; agricultural imports totalled about <span class="num">$17.6bn</span> in calendar 1985; the grain bill fell to ~<span class="num">$2.4bn</span> in 1986 only because of a good harvest and low prices. <a href="https://esmis.nal.usda.gov/sites/default/release-files/6t053f96k/qr46r468r/w9505439x/WRS-05-18-1986_USSR.pdf">USDA 1986</a>; <a href="https://archives.nato.int/uploads/r/nato-archives-online/f/b/2/fb293eb21389a22739c5c3fa20e667348245ee907b2dfd792385d3cbf3e5d167/C-M_88_1_ENG_NHQL504160.pdf">NATO C-M(88)1</a></td>
+  </tr>
+  <tr>
+    <td>Machinery &amp; equipment</td>
+    <td class="n">~25% of imports from the West</td>
+    <td>“Industrial equipment formed one-quarter of Soviet imports from the West, and iron and steel products, particularly steel tubes for pipeline construction, made up most of the rest.” <a href="http://www.country-data.com/cgi-bin/query/r-12794.html">Country Study</a></td>
+  </tr>
+  <tr>
+    <td>Debt service</td>
+    <td class="n">rising with the debt</td>
+    <td>The drain that grows without anyone deciding anything (§2.1).</td>
+  </tr>
+</table>
+
+<p>Two structural facts complete the picture. First, <strong>imports exceeded exports every year of the 1980s</strong> — convertible merchandise exports/imports ran <span class="num">$22.1bn/$25.9bn</span> in 1985 and <span class="num">$18.9bn/$23.1bn</span> in 1986 (<a href="https://archives.nato.int/uploads/r/nato-archives-online/f/b/2/fb293eb21389a22739c5c3fa20e667348245ee907b2dfd792385d3cbf3e5d167/C-M_88_1_ENG_NHQL504160.pdf">NATO</a>). Second, <strong>the scale is small</strong>: total dollar inflow from all taps was on the order of <span class="num">$30bn</span> a year in 1983–84 and about <span class="num">$28bn</span> in 1985 — to run a superpower, buy the world’s largest grain imports, chase an arms race and fund a war (<a href="https://www.cia.gov/readingroom/docs/DOC_0000498823.pdf">CIA balance-of-payments tables</a>; <a href="https://www.rand.org/content/dam/rand/pubs/reports/2008/R2956.pdf">RAND R2956</a>). That number — not Soviet GDP — is the constraint that decides Part 3.</p>
+
+<h3 id="p2-3">2.3 The subsidy, in numbers</h3>
+<p>The mechanism is §1.4’s formula. Here is what it produced, in the only units that matter: dollars per barrel.</p>
+
+<table>
+  <caption>Soviet oil price to COMECON vs world price, $/bbl (CIA series, 90% crude / 10% products mix)</caption>
+  <tr><th>Year</th><th class="n">World price</th><th class="n">CMEA contract price</th><th>What Moscow was doing</th></tr>
+  <tr><td>1980</td><td class="n">31.67</td><td class="n">13.47</td><td>Subsidy at its peak — the bloc paid ~43% of world</td></tr>
+  <tr><td>1981</td><td class="n">35.01</td><td class="n">17.60</td><td>Poland paid about half the OPEC rate</td></tr>
+  <tr><td>1982</td><td class="n">33.75</td><td class="n">22.24</td><td>Lagged formula still ~34% below world</td></tr>
+  <tr><td>1983</td><td class="n">29.49</td><td class="n">26.39</td><td>Converging as the average caught up</td></tr>
+  <tr><td>1984</td><td class="n">~28.5</td><td class="n">~28.5</td><td><strong>Crossover</strong> — the formula’s lag pushed the bloc price to/above world</td></tr>
+</table>
+<p class="small">Source: <a href="https://www.cia.gov/readingroom/docs/CIA-RDP85T00313R000200010002-9.pdf">CIA, <em>Soviet Oil Trade in 1982–83</em></a>, Table 5; parallel series in <a href="https://www.cia.gov/readingroom/docs/CIA-RDP85T00287R001001260003-1.pdf">CIA, <em>Eastern Europe’s Oil Trade</em></a>. <em>Flag:</em> a West German (DIW) study claimed the GDR was moved to a three-year average from 1982; CIA analysis of Polish and Hungarian price series found no evidence, and a Soviet official said the idea was “merely under study for 1986.” Treat the three-year variant as disputed.</p>
+
+<p>Convert those per-barrel gaps into annual flows and the empire’s bill appears:</p>
+<ul class="tight">
+  <li><strong>The running subsidy:</strong> CIA estimates averaged <span class="num">$5.8bn</span> a year in 1974–78, then <span class="num">$10.4bn</span> in 1979 and <span class="num">$21.7bn</span> in 1980 (<a href="https://www.cia.gov/readingroom/docs/CIA-RDP88B00443R001103940160-0.pdf">CIA, <em>Soviet Subsidies to Eastern Economies</em></a>).</li>
+  <li><strong>Who got it (1980, $m):</strong> East Germany <span class="num">7,200</span>; Czechoslovakia <span class="num">4,100</span>; Bulgaria <span class="num">4,100</span>; Poland <span class="num">3,500</span>; Hungary <span class="num">2,600</span>; Romania <span class="num">200</span>. Note the top line: the GDR — the richest bloc member — received the largest subsidy, because it bought the most oil.</li>
+  <li><strong>Poland’s crisis package, 1980–81:</strong> about <span class="num">$10.1bn</span> in total — <span class="num">$6.5bn</span> of trade subsidy, <span class="num">$0.8bn</span> of direct Soviet hard-currency loans, <span class="num">$0.5bn</span> of COMECON-bank loans and <span class="num">$2.7bn</span> of ruble credits (≈<span class="num">$2.3bn</span>) (<a href="https://www.cia.gov/readingroom/docs/CIA-RDP88B00443R001103940160-0.pdf">ibid.</a>; <a href="https://www.jstor.org/stable/2706633">International Organization</a>).</li>
+</ul>
+<div class="box box-fact">
+  <span class="box-title">Fact check — “tens of billions” vs the number you may see quoted</span>
+  <p>The most-cited scholarly total is from Marrese &amp; Vanous (1983), whose opportunity-cost method produced a cumulative figure often quoted as <strong>$87bn</strong> to the COMECON Six from 1960 through the late 1970s/early 1980s (a <strong>$115bn</strong> variant circulates in some summaries). Josef Brada’s 1985 review articles argued the method overstates the true burden, because opportunity cost assumes the USSR could actually have sold every subsidised barrel at world price — which it could not, given pipeline and contract constraints. This document therefore uses the <strong>agency annual figures</strong> for magnitudes and cites the Marrese–Vanous/Brada dispute as a dispute (<a href="https://www.sciencedirect.com/science/article/pii/0014292186900346">Desai 1986</a>; <a href="https://www.sciencedirect.com/science/article/abs/pii/014759678590006X">Brada 1985</a>; <a href="https://www.jstor.org/stable/2706643">Brada, <em>International Organization</em></a>; <a href="https://www.rand.org/content/dam/rand/pubs/notes/2007/N2861.pdf">RAND N2861 summary table</a>).</p>
+</div>
+
+<h3 id="p2-4">2.4 The flip: when the bloc started paying <em>above</em> world price</h3>
+<p>Notice what the 1984 crossover in that table means. From 1985 onward, the lagged formula did to the bloc exactly what it had done to Moscow in 1974: it made the contract price <em>higher</em> than the spot market, because it was still averaging in the boom years. Eastern Europe spent the second half of the 1980s paying above-world prices for Soviet oil — while simultaneously losing the ability to re-sell it at a profit (<a href="https://www.marines.mil/Portals/1/Publications/Soviet%20Union%20Study_9.pdf">US Marines, <em>Soviet Union Study_9</em></a>, which notes that “in 1985 the fall in the world price left Comecon members paying above-market prices for Soviet oil”).</p>
+<p>Moscow’s response to its own squeeze was to try to convert the bloc from a charity into a customer:</p>
+<ul class="tight">
+  <li><strong>Demand hard currency and quality.</strong> At the 27th Party Congress (Feb–Mar 1986) Gorbachev and Premier Ryzhkov called for more trade with COMECON members — and, increasingly, for payment in hard goods and hard currency rather than ledger entries. CIA reporting records Moscow rejecting planned East European deliveries on quality grounds (<a href="https://www.cia.gov/readingroom/docs/CIA-RDP90T00100R000600430001-0.pdf">CIA</a>; <a href="https://www.csmonitor.com/1987/0218/oeast2.html">CS Monitor, 18 Feb 1987</a>).</li>
+  <li><strong>Cut the concessionary volumes.</strong> In autumn 1981 Moscow served notice of a 10% cut in concessionary deliveries from 1982 to Czechoslovakia, the GDR, Hungary and Bulgaria (Poland was spared for political reasons). In 1982 it cut CMEA deliveries by about <span class="num">131,000 barrels a day</span> — worth roughly <span class="num">$1.5bn</span> of extra hard-currency earnings at the prices of the day (<a href="https://www.cia.gov/readingroom/docs/CIA-RDP85T00313R000200010002-9.pdf">CIA, <em>Soviet Oil Trade in 1982–83</em></a>; <a href="https://www.cia.gov/readingroom/docs/CIA-RDP85T00287R001001260003-1.pdf">CIA, <em>Eastern Europe’s Oil Trade</em></a>).</li>
+  <li><strong>Watch the re-export arbitrage.</strong> Here is the part that infuriated Soviet planners. Bloc countries were refining cheap Soviet crude and selling the products — or the crude itself — to the West for dollars. By 1981 the GDR had doubled product exports to over <span class="num">80,000 b/d</span>; Czechoslovakia ran over <span class="num">20,000 b/d</span>; Hungary rose ~40% to about <span class="num">18,000 b/d</span>; Bulgaria about <span class="num">30,000 b/d</span>. In early 1983 Bulgaria, Hungary and Poland were buying roughly <span class="num">60,000 b/d</span> of <em>Libyan</em> crude (none a year earlier) so they could keep re-exporting the Soviet barrel; Polish and Hungarian hard-currency oil exports tripled (<a href="https://www.cia.gov/readingroom/docs/CIA-RDP85T00287R001001260003-1.pdf">CIA, <em>Eastern Europe’s Oil Trade</em></a>). Romania, meanwhile, had been made to pay world prices in hard currency years earlier. The subsidy, in other words, was partially being converted into the bloc’s own hard-currency income — the mirror image of what Moscow intended.</li>
+</ul>
+
+<h3 id="p2-5">2.5 The solvency chain — why cheap oil did not come back as Soviet orders</h3>
+<p>The sentence that puzzled you was: <em>“Subsidised Soviet oil kept foreign jurisdictions solvent — it didn’t come back as demand for Soviet industry; it went out as solvency for actors with their own creditors.”</em> Here is the mechanism, piece by piece.</p>
+<ol class="tight">
+  <li><strong>The bloc was carrying heavy hard-currency debt to Western banks.</strong> By the late 1980s: Poland about <span class="num">$38.9bn</span> (1989; ~<span class="num">$48bn</span> by 1990), Hungary <span class="num">$16.6bn</span> convertible liabilities at end-1988 rising to a gross <span class="num">$20.4bn</span> in 1989, East Germany about <span class="num">$20–26bn</span> gross (see §1.6c) (<a href="https://www.eib.org/files/publications/general/archives/51_en.pdf">EIB archive country note</a>; <a href="https://www.elibrary.imf.org/display/book/9781557755193/ch03.xml">IMF</a>; <a href="https://www.earth.columbia.edu/sitefiles/file/about/director/documents/polbigbang.pdf">Sachs, “Poland’s Big Bang”</a>).</li>
+  <li><strong>The interest bill exploded independently of any Soviet decision.</strong> Socialist borrowers who had paid around 6% in the 1970s faced rates near 19% in 1981 after the Volcker shock; debt-service ratios in Poland and Hungary approached or exceeded 100% of their convertible-currency export earnings. Their debt was mostly short-term and needed frequent refinancing (<a href="https://wiiw.ac.at/forty-years-ago-gorbachev-took-over--why-did-socialism-collapse-n-671.html">wiiw synthesis</a>).</li>
+  <li><strong>So the dollars saved on Soviet oil had a pre-existing destination.</strong> Hard-currency savings became debt service to Western banks — and, where the countries had any freedom, purchases of Western goods. They did not become orders for Soviet machinery, because (a) they were owed to someone else, and (b) where choice existed, Soviet goods lost: Soviet manufactures were under 5% of exports to the West and only ~18% met world standards, and Moscow itself was rejecting bloc deliveries for quality (<a href="http://www.country-data.com/cgi-bin/query/r-12794.html">Country Study</a>; <a href="https://www.cia.gov/readingroom/docs/CIA-RDP90T00100R000600430001-0.pdf">CIA</a>).</li>
+  <li><strong>Result: a closed loop with no Soviet benefit.</strong> Moscow shipped real resources; the bloc converted part of the value into Western-creditor solvency; the West got paid; Moscow’s own hard-currency position worsened anyway. The subsidy bought loyalty, not commerce — and from 1985 it was buying loyalty for a bloc whose debts Moscow could not afford to inherit.</li>
+</ol>
+<div class="box box-fact">
+  <span class="box-title">Evidence discipline — what is documented and what is inference</span>
+  <p>The individual pieces above are documented (subsidy per barrel; bloc debt stocks; interest rates; the re-export flows; the quality problem; CIA noting that “the outlook for hard-currency import capacity remains poor because of sluggish export growth, large debt service obligations…” — <a href="https://www.cia.gov/readingroom/docs/CIA-RDP85T00287R001001260003-1.pdf">CIA</a>). What no single declassified document states as a headline is the join: “the oil subsidy serviced the bloc’s Western debts.” That join is a <strong>reasoned synthesis</strong> from the four facts — and this document marks it as such, rather than dressing it as a quotation. If you want the sharpest scholarly framing of the same loop, see <a href="https://www.cambridge.org/core/journals/international-organization/article/interpreting-the-soviet-subsididzation-of-eastern-europe/69DFCDCC8F760ECE10858AA98A192284">Brada’s critique</a> and the <a href="https://www.rand.org/content/dam/rand/pubs/reports/2009/R3201.pdf">RAND study of East European creditworthiness</a>.</p>
+</div>
+
+<h3 id="p2-6">2.6 The other bills: Afghanistan, Chernobyl, the arms race, the harvest</h3>
+<p>The oil squeeze did not arrive alone. The ledger in the mid-1980s had four other permanent lines, and each one foreclosed a different escape route:</p>
+<ul class="tight">
+  <li><strong>Afghanistan (from 1979).</strong> Gorbachev called it a “bleeding wound” in his first conversation with the Afghan leader Babrak Karmal on 14 March 1985 — within days of taking office — and the Politburo reached a decision in principle to disengage on 17 October 1985 (<a href="https://nsarchive2.gwu.edu/NSAEBB/NSAEBB272/index.htm">National Security Archive</a>). By the end: about <span class="num">14,453</span> Soviet combat dead and roughly <span class="num">50,000</span> permanently disabled, for an estimated <span class="num">$2–3bn</span> a year and no path to victory (<a href="https://www.cia.gov/readingroom/docs/DOC_0000499320.pdf">CIA cost estimate</a>).</li>
+  <li><strong>Chernobyl (26 April 1986).</strong> The disaster worked through three channels: <em>money</em> (clean-up, resettlement of over 100,000 people, lost generation — billions of rubles on top of the oil squeeze); <em>credibility</em> (days of official silence until Swedish monitoring stations detected the plume on 28 April; Kyiv’s May Day parade went ahead as scheduled); and <em>politics</em> (it forced the regime toward glasnost, because honest accounting became a survival strategy, and it demoralised the Party’s self-image as scientific). Book-length treatment: <a href="https://en.wikipedia.org/wiki/Chernobyl:_History_of_a_Tragedy">Plokhy, <em>Chernobyl: History of a Tragedy</em></a>.</li>
+  <li><strong>The arms race.</strong> Competing with the Reagan build-up — including SDI, which Moscow read as an attempt to make its arsenal obsolete — kept 15–25% of national output in the defence sector and blocked conversion of the factories that might have produced exportable goods.</li>
+  <li><strong>The harvest.</strong> The grain bill (§2.2) was the price of agricultural failure, and it was denominated in the same scarce dollars as everything else. When the harvest was good, the bill fell — 1986 shows exactly that — which is precisely how one sees that these lines competed for one small pool.</li>
+</ul>
+<p>This is the arithmetic that Munger compresses into “the empire faced a problem its ideology had no answer for.” The precise sense: <strong>every fix that actually worked was unsayable in the ideology.</strong> Charge the bloc real prices. Cut commitments. Borrow from capitalists. Sell the gold. Reform. Gorbachev ended up doing all four; hardliners heard surrender in each one.</p>
+
+<h3 id="p2-7">2.7 The transferable-ruble ledger, and how it ended</h3>
+<p>Part 0.4 explained what transferable rubles were not. Here is how the story closed — and one correction this edition owes its readers.</p>
+<ul class="tight">
+  <li><strong>The official rate was not a settlement price.</strong> The administered parity was TR&nbsp;0.9 = <span class="num">$1</span> (i.e. about <span class="num">$1.11</span> per transferable ruble) — an accounting convention (<a href="https://www.elibrary.imf.org/display/book/9789264134683/ch008.xml">IMF, <em>Study of the Soviet Economy</em>, ch. III.4</a>). The earlier edition of this document described the 1991 unwind as settling “at roughly $0.90 per TR.” On the archival record available, that looks like a <strong>conflation of the old official parity with a settlement discount</strong>: legacy clearing balances were widely treated as unpayable at par and were written down or negotiated country by country. The accurate statement is: <em>the club’s accumulated claims could not be honoured at anything like their booked value; the official parity was TR 0.9 = $1; a single bloc-wide settlement rate is not documented.</em> Treat any “$0.90 settlement” line — including this document’s own earlier version — with suspicion (see <a href="#fc-tr">Part 7</a>).</li>
+  <li><strong>The end came on 1 January 1991.</strong> After agreeing in principle at the Sofia CMEA meeting in January 1990, member states replaced artificial CMEA prices with world market prices and the transferable ruble with settlement in convertible currencies, effective 1 Jan 1991 (<a href="https://www.elibrary.imf.org/view/journals/024/1991/001/article-A001-en.xml">Kenen, IMF Staff Papers, 1991</a>; <a href="https://www.econstor.eu/bitstream/10419/166670/1/cesifo-forum-v17-y2016-i4-p48-53.pdf">CESifo summary</a>).</li>
+  <li><strong>What the switch did.</strong> The IMF’s own assessment is the neatest summary of the whole club’s economics: trade at world prices and in convertible currency “will worsen Eastern Europe’s terms of trade and drive it into current account deficit with the U.S.S.R.” The bloc had been paying above-world prices under the formula; moving to world prices exposed how much of the trade had been valued at numbers nobody could change, and how much of the USSR’s “market” had been captive rather than competitive (<a href="https://www.elibrary.imf.org/view/journals/024/1991/001/article-A001-en.xml">ibid.</a>).</li>
+</ul>
+
+<h2 id="cascade">Part 3 — The cascade, 1985–89</h2>
+<p>Now the political spine of Munger’s montage, with the economics of Parts 1–2 attached where it belongs. Each step is the consequence of the one before it.</p>
+
+<h3 id="p3-1">3.1 1985 — a reformer, and why hardliners panicked</h3>
+<p>Gorbachev takes power in March 1985: a generation younger than his predecessors, and — Munger’s framing — at least smart enough to know that <em>some</em> economic reform was necessary to save the system. His first slogan was “acceleration” (<em>uskorenie</em>): grow faster, with better technology, before loosening anything. Reality intruded within a year — growth did not respond, and the word was quietly retired in favour of the two tracks in §3.2. One early own-goal stands for the atmosphere: the 1985 anti-alcohol campaign, well-intentioned, cut state liquor revenue the budget could not afford to lose, and drove distilling underground.</p>
+<p>The hardliners’ reaction is the chapter’s subtext, and it is worth understanding on its own terms rather than as villainy. Any hint of reform, they believed, would tear down the whole Eastern bloc. Their fear was rational <em>within their premises</em>: the system’s legitimacy rested on total control, not on results. A concession to prices, or speech, or elections was an admission that the system needed loosening — and nothing stays small once loosened. Munger’s dry verdict: the hardliners turned out to be right. The orthodoxy even went on record while it still could: at the Warsaw COMECON summit in mid-1985, Politburo No. 2 Yegor Ligachev was reported saying there would be “no leaning toward a market economy or private enterprise” — a line he would spend the next four years watching being overtaken (<a href="https://www.latimes.com/archives/la-xpm-1985-08-25-mn-24815-story.html">LA Times, 25 Aug 1985</a>).</p>
+
+<h3 id="p3-2">3.2 1987 — two reform tracks, and one leap of trust</h3>
+<p>By 1987 Gorbachev is running two parallel tracks, both named by Munger:</p>
+<ul class="tight">
+  <li><strong>Perestroika</strong> — “restructuring”: the Law on State Enterprises (1987) gave managers more scope; the Law on Cooperatives (1988) legalised private business in niches. A controlled concession to the market — not a market.</li>
+  <li><strong>Glasnost</strong> — “openness”: censorship loosened, buried history surfaced, and — most important for this story — relations with the West dropped several degrees in temperature.</li>
+</ul>
+<p>The third item, December 1987: the <strong>INF Treaty</strong> with Reagan — the first agreement to eliminate an entire class of nuclear weapons (all ground-launched ballistic and cruise missiles in the 500–5,500 km range) rather than cap one, with intrusive verification far beyond anything previously accepted. Its role here is atmospheric: it told Eastern Europe that Moscow was now the West’s negotiating partner, not its permanent adversary. Munger notes Putin — “not yet overtly political” — was broadly supportive of the whole reform direction.</p>
+
+<h3 id="p3-3">3.3 The hinge: 7 December 1988, the UN speech</h3>
+<p>Munger calls this “perhaps more than anything else” the floodgate-opener, and the mechanics justify it. Gorbachev told the General Assembly, in his own words:</p>
+<blockquote>
+  <p>“Force and the threat of force can no longer be, and should not be, instruments of foreign policy.”</p>
+  <p>“Freedom of choice is a universal principle to which there should be no exceptions.”</p>
+  <cite>— Gorbachev, 7 Dec 1988 · <a href="https://web.viu.ca/davies/H102/Gorbachev.UNspeech.Dec1988.htm">full text</a></cite>
+</blockquote>
+<p>He attached numbers: a unilateral 500,000-man troop cut, and by 1991 the withdrawal of six tank divisions from the GDR, Czechoslovakia and Hungary, plus 50,000 troops and 5,000 tanks from Soviet forces on allied territory.</p>
+<p>In Warsaw Pact code, this said: <strong>the Brezhnev Doctrine is dead.</strong> Moscow would not use force to keep satellites in line. Reformists in Eastern Europe read it exactly that way — and for the hardliners in East Berlin (§3.5) it read as something else entirely. The doctrine acquired a nickname in 1989: the “Sinatra Doctrine” — they do it their way — coined by Gorbachev’s spokesman Gennadi Gerasimov. Everything that follows in 1989 is downstream of this sentence.</p>
+
+<h3 id="p3-4">3.4 1989 — the buffer falls, month by month</h3>
+
+<h4>Poland: the first domino, and a correction Munger owes it</h4>
+<p>Economic crisis and strikes force the regime to the <strong>Round Table</strong> (talks February–April 1989; final agreement signed 5 April); Solidarity is relegalised on 17 April. The <strong>4 June elections</strong> are only semi-free by design — 65% of Sejm seats reserved for the communist bloc, all Senate seats and the rest of the Sejm openly contested. Solidarity wins <em>everything it is allowed to contest</em>: all 161 free Sejm seats and 99 of 100 Senate seats. Communist allies defect; the regime’s own candidate for premier fails; on <strong>24 August Tadeusz Mazowiecki becomes prime minister</strong> — the first non-communist government in the Eastern bloc (<a href="https://eng.ipn.gov.pl/en/digital-resources/articles/7364,The-elections-of-4-June-1989-The-defeat-of-the-communist-system-and-the-triumph-.html">IPN</a>).</p>
+<div class="box box-fact">
+  <span class="box-title">Fact check</span>
+  <p>Munger’s version — “free elections in Poland brought non-communist Lech Wałęsa to power” — compresses three things. The elections were <em>June</em>, not August; they were not fully free (the 65% carve-out); and Wałęsa’s personal turn at the top came in December 1990, when he won the presidency. In 1989 he was Solidarity’s leader, endorsing the Mazowiecki government. The underlying point — Poland’s regime was finished — stands. The details matter because catching exactly this kind of compression is what this course trains.</p>
+</div>
+
+<h4>Hungary: cutting the fence, then opening the gate</h4>
+<p>In <strong>May 1989</strong> Hungary begins dismantling the barbed wire on its Austrian border. The decision predates the crowds: in March, Prime Minister Miklós Németh told Gorbachev he planned to take down the border fortifications, and Gorbachev treated border security as Hungary’s own business — read in Budapest as a green light. On <strong>19 August</strong> the Pan-European Picnic at Sopron: a border gate opened for a symbolic event, and several hundred East Germans walked through — press accounts at the time called it the biggest mass escape since the Wall went up (<a href="https://www.theguardian.com/world/from-the-archive-blog/2019/jun/12/hungary-austria-open-border-june-1989">Guardian archive</a>). On <strong>10–11 September</strong> Hungary suspends its treaty with the GDR and lets the “tourists” go: roughly 60,000 East Germans are in the country, and about 7,000 cross on the first night, with tens of thousands following (<a href="https://www.rferl.org/a/hungary-1989-east-germany/30156892.html">RFE/RL</a>; <a href="https://archive.nytimes.com/www.nytimes.com/library/world/europe/091189hungary-germany.html">NYT archive, 11 Sep 1989</a>; <a href="https://www.spiegel.de/international/europe/hungary-s-peaceful-revolution-cutting-the-fence-and-changing-history-a-627632.html">Spiegel</a>). It is the first time a Warsaw Pact country stops blocking its neighbours’ citizens from leaving — and, per §1.6d, it is the moment the GDR starts bleeding the skilled labour its economy ran on.</p>
+
+<h4>The embassies and the trains — including through Dresden</h4>
+<p>Prague’s West German embassy becomes the other escape valve. <strong>30 September</strong>: the first wave leaves by special train (~6,000 — Hans-Dietrich Genscher’s balcony announcement, telling the refugees they could go). <strong>4–5 October</strong>: a second wave (8,270 people, eight trains) rolls <em>through East German territory</em> — and here the story brushes our chapter directly: at <strong>Dresden station</strong>, crowds tried to board the trains and clashed with police. Putin’s city, six weeks before his own December night. By 10 November, the New York Times was reporting roughly <span class="num">50,000</span> people had left via Czechoslovakia, with a fourteen-mile queue of cars (<a href="https://www.nytimes.com/1989/11/10/world/clamor-east-east-germany-opens-frontier-west-for-migration-travel-thousands.html">NYT, 10 Nov 1989</a>); the annual total would reach <span class="num">343,854</span> (§1.6d). For the KGB office in Dresden this was not a news item; it was street chaos outside the window (<a href="https://nsarchive2.gwu.edu/NSAEBB/NSAEBB294/precan_prague_to_freedom.pdf">National Security Archive, “Through Prague to Freedom”</a>).</p>
+
+<h4>Moscow stays silent, then the regime inverts</h4>
+<p>Honecker asked for Soviet help; Gorbachev refused — and the half-million-strong Soviet force in the country stayed in its barracks. When Gorbachev visited East Berlin for the 40th-anniversary parade (6–7 October 1989), the streets chanted “Gorby!” and he privately told the SED Politburo to its face that “life punishes us when we are late,” with a barely-veiled hint that Honecker was past his sell-by date. <em>Source-critical note:</em> the famous phrase “those who are late will be punished by history” is a press rendering of his spokesman’s remark, not a quotation aimed at Honecker — Hannes Adomeit’s study is the canonical debunk (<a href="https://www.platformraam.nl/artikelen/1451-did-gorbachev-push-honecker-to-embark-on-comprehensive-reform">Adomeit, RAAM, 2019</a>). What is not disputed: no orders came to shoot, and everyone noticed. The rest is rapid: Honecker resigns <strong>18 October</strong>; the Berlin Alexanderplatz demonstration brings out half a million people on <strong>4 November</strong>; the Politburo (and Krenz) resign <strong>3 December</strong>; the government resigns <strong>7 December</strong>. That is the “East German government fell” of Munger’s sentence — which is why the following Monday, 5 December, Dresden’s crowds meet no organised state force worth the name.</p>
+
+<h4>9 November — the Wall</h4>
+<p>The Wall opens by a mechanism worth knowing, because it was half accident: at the 9 November press conference, spokesman Günter Schabowski was asked when the new travel rules took effect and answered, about papers he had not been briefed on, that they applied “immediately.” It went out on the wires, crowds went to the checkpoints (the first crossing, Bornholmer Straße, opened around 23:30 under sheer queue pressure), and the overwhelmed guards let people through. Munger’s line is fair: not the first act of the collapse, nor the most important, but certainly “the most photogenic.”</p>
+
+<h3 id="p3-5">3.5 The hinge Munger names at 61:08 — abandonment, read from inside</h3>
+<p>The East German leadership watched Poland and Hungary go and read the same events Gorbachev had just authorised — and concluded: <em>abandonment</em>. From inside, Soviet non-intervention did not look like reform; it looked like the shield being pulled away. That fear is why the Politburo’s internal debates hardened, why the state kept trying to save itself with half-measures, and why — when the test came — nobody was willing to shoot for a system the patron had already stopped funding. Later appeals for rescue, including the new leadership’s approaches to Moscow in November, came back with the same answer: the problem was theirs. The people in the street, meanwhile, kept discovering, city by city, that the state would not fire. Each 1989 escalation was cheaper than the last one. By December, it was a matter of pace, not outcome.</p>
+<div class="box box-plain">
+  <span class="box-title">Why “the patron had stopped funding” is literal, not rhetorical</span>
+  <p>Add the two ledgers together. Moscow’s own hard-currency income was down roughly a third (§2.1); its debt was climbing toward <span class="num">$40bn</span> and beyond (§2.1); the bloc’s price formula had already flipped to above-world (§2.4); and Moscow was already demanding hard goods instead of ledger entries. A rescue of East Germany in 1989 would have meant assuming a <span class="num">$20–26bn</span> gross hard-currency debt (§1.6c) — at exactly the moment the USSR was selling its gold to meet its own bills. “No money, and no willingness to shoot” is not a contradiction; it is one policy.</p>
+</div>
+
+<h3 id="p3-6">3.6 The economy underneath 1989 — the part usually left out</h3>
+<p>The cascade is normally told as politics. Here is the economic layer running in parallel, because it explains both the speed and the silence:</p>
+<ul class="tight">
+  <li><strong>The GDR was losing the workers that made it valuable.</strong> 343,854 departures in 1989, another 238,384 in 1990; by 1992 roughly 870,000 — about 10% of the East German workforce — with the young and skilled over-represented (§1.6d). An export machine built on skilled labour does not shrug that off.</li>
+  <li><strong>The bloc’s trade club was already dissolving.</strong> The COMECON system’s pricing and payments rules — the ones that made intra-bloc trade possible at all — were being abandoned as members demanded world prices and convertible money (the Sofia agreement of January 1990; implementation 1 January 1991). Once the bloc traded in hard currency, the subsidy disappeared <em>and</em> the captive market disappeared with it (§2.7).</li>
+  <li><strong>Moscow lost its sales territory precisely when it needed it.</strong> The bloc was the only market that reliably took Soviet manufactures (§1.1, §1.5). Its collapse converted a geopolitical loss into an industrial one — the two chapters after Dresden (Sobchak, 1991) are the story of what that did inside the USSR itself.</li>
+  <li><strong>And the West got a demonstration it could bank.</strong> A bloc that could not pay in dollars and would not shoot in 1989 was, to Western creditors and governments, a set of countries to be re-financed on new terms. The money that had flowed east as loans and subsidies now began flowing as emergency credits and advice — with conditions. That is the bridge from this document’s period to the next chapter of the course.</li>
+</ul>
+
+<h2 id="dresden">Part 4 — Why this matters to the Dresden chapter</h2>
+<p>Putin lived at the centre of this montage. The Prague trains ran through his city. The Stasi building across the river fell to people power. The crowd pressure he witnessed in October was the direct prelude to 5 December. And the “abandonment” that terrified Honecker’s circle is the same abandonment the KGB men experienced as <a href="../reference/glossary.html#moscow-silent">“Moscow is silent.”</a> Add the economic layer, and the December night becomes even less mysterious: a middle-ranking officer in a city whose industry was bleeding workers, whose patron was selling gold to buy grain, whose bloc’s money system was quietly ending — standing outside a building while a crowd tests whether the state still exists. Section 3 of the lesson is not background. It is the loading screen for the chapter’s finale, and the reason one strange night could matter so much to a man whose actual job, most days, was busywork.</p>
+
+<h2 id="kuwait">Part 5 — The Kuwait footnote, explained</h2>
+<p>The same 1985–86 crash that gutted Moscow’s hard-currency earnings gutted Baghdad’s. Iraq had just fought the 1980–88 Iran war on Gulf loans — debt by 1990 usually estimated at about <span class="num">$80bn</span>: <span class="num">$40bn</span> to Gulf states who expected write-offs, <span class="num">$40bn</span> to everyone else, of which roughly <span class="num">$14bn</span> to Kuwait alone (<a href="https://www.files.ethz.ch/isn/6844/doc_6846_290_en.pdf">Gause, <em>Iraq and the Gulf War: Decision-Making in Baghdad</em></a>). Iraq needed higher oil prices to pay; Kuwait overproduced above its OPEC quota (commonly cited as ~700,000 b/d over in 1989) and refused to forgive. Saddam read it as “economic warfare” — claiming each <span class="num">$1</span> per barrel drop cost Iraq <span class="num">$1bn</span> a year, some <span class="num">$14bn</span>/yr in total overproduction losses, plus the Rumaila slant-drilling claim (<span class="num">$2.4bn</span>) and the island-access dispute. One detail from the declassified record: since 1982, revenue from Kuwaiti and Saudi oil production in the Neutral Zone — roughly <span class="num">650,000 b/d</span> — had been “loaned” to Iraq for the war effort, and the payments stopped when the fighting did (<a href="https://www.files.ethz.ch/isn/6844/doc_6846_290_en.pdf">Gause</a>; <a href="https://adst.org/2016/09/sparking-iraqs-invasion-kuwait-loans-land-oil-access/">ADST oral history</a>). The July 1990 OPEC compromise came days too late. “Indirectly” is the right word — no Soviet hand, same commodity, same decade.</p>
+
+<h2 id="faq">Part 6 — Questions that came up (answered in full here)</h2>
+<p>These are the questions raised during the earlier walkthroughs, collected and answered properly — the short chat answers are folded in and expanded, so nothing is left to memory or to a chat window.</p>
+
+<h3>Q1. What does “buffer” mean — and why “depth in space”?</h3>
+<p>A <strong>buffer</strong> is territory kept between you and your enemies: distance, bought with control. <strong>“Depth in space”</strong> is the same idea stated as a military asset — an attacker has to cross ground, and crossing ground takes time, and time is what a defender needs. The USSR read the plains of Poland, East Germany, Czechoslovakia and Hungary as the layered ground an invasion from the west would have to cross before reaching Soviet soil. Both halves matter: the buffer was also a <em>launch ramp</em>, since the same depth that absorbs an attack permits a forward counter-offensive. Full treatment with sources: <a href="#p1-2">§1.2</a>.</p>
+
+<h3>Q2. What was the Warsaw Pact, and what did “joint command” actually control?</h3>
+<p>Signed 14 May 1955 in Warsaw, eight members (the GDR co-signed, though its army came later), headquartered in Moscow, dissolved in 1991. “Joint” meant the forces were <em>pooled for war</em>, not that command was shared: the Supreme Commander was always a Soviet marshal, war plans came from the Soviet General Staff, and in wartime the Pact commander-in-chief would have controlled all Pact forces in the theatre. Full treatment, including the list of Supreme Commanders and the air-defence exception: <a href="#p1-3">§1.3</a>.</p>
+
+<h3>Q3. What did the war plans actually say?</h3>
+<p>Offensive, on the assumption that any war would be fought on Western territory. The best-documented example is the 1979 plan “<strong>Seven Days to the River Rhine</strong>”: after a presumed NATO nuclear first strike, a Pact nuclear response on West German, Belgian, Dutch and Danish targets, then a seven-day advance to the Rhine. It was released from Polish archives only in November 2005 — which is why it is now citable at all. Full treatment: <a href="#p1-3">§1.3</a>.</p>
+
+<h3>Q4. “Oil and gas were ~80% of hard-currency earnings” — 80% of <em>what</em>, as opposed to what?</h3>
+<p>Of all the hard currency the USSR earned from selling things to the outside world in a year. “As opposed to” the other earners: gold and diamond sales, timber (mainly to Japan), chemicals and metals, arms sales (whose <em>cash</em> component was far smaller than the headline contracts), and machinery — which was under 5% of Soviet exports to the West in 1986. The important precision: the energy share is not one number but a range, roughly <strong>55% to 80%</strong> depending on whose measure and which year — 55% of hard-currency revenues in 1984 on a Gosplan-based series, with oil alone at 38.8% (1985) and 33.5% (1987); about 60%-plus from crude on the Petroleum Economist’s series; up to ~80% for energy sales to the West on others. What every series agrees on is the ranking and the consequence: oil and gas were the export line that mattered, so the price crash was a budget event, not a market wobble. Full ledger: <a href="#p2-2">§2.2</a>.</p>
+
+<h3>Q5. Unpack: “Subsidised Soviet oil kept foreign jurisdictions solvent…”</h3>
+<p>In plain words: the bloc countries had large debts to Western banks. Cheap Soviet oil saved them dollars — and those saved dollars went to the Western banks, not to Soviet factories. So Moscow’s gift bought <em>solvency</em> (for countries with their own creditors) rather than <em>custom</em> (for Soviet industry). The chain has four documented links — bloc debt stocks, the post-1981 interest explosion, the re-export arbitrage, and the uncompetitiveness of Soviet manufactures — and one synthesis link this document flags honestly: no single declassified document states the join out loud. Full mechanics and the evidence flag: <a href="#p2-5">§2.5</a>.</p>
+
+<h3>Q6. Why didn’t cheap oil for Eastern Europe come back as orders for Soviet factories?</h3>
+<p>Three reasons, all documented. (1) <strong>The savings were already owed</strong> — bloc debt service absorbed them (§2.5). (2) <strong>The bloc could profit by selling westward instead</strong> — refining and re-exporting Soviet crude was earning it dollars directly, which is why Moscow cut deliveries and demanded hard currency (§2.4). (3) <strong>Soviet manufactures lost on quality whenever there was a choice</strong> — under 5% of exports to the West, ~18% meeting world standards in 1987, and Moscow itself rejecting bloc deliveries for quality. Add them up and the bloc was a captive market, not a competitive one: the subsidy maintained a customer who could not pay in anything Moscow could use. Full treatment: <a href="#p2-5">§2.5</a>.</p>
+
+<h3>Q7. How does East Berlin tie into the Soviet economy running?</h3>
+<p>Three links, and the third is the surprise. (1) <strong>Trade:</strong> East Germany and the USSR were each other’s largest trade partner for most of the post-war period; the GDR was the USSR’s leading supplier of machinery and consumer goods, and received Soviet oil and raw materials in return — physically via the Druzhba pipeline. (2) <strong>Industry:</strong> the GDR was the bloc’s industrial core, so it was both the most valuable customer and the most valuable supplier. (3) <strong>Hard currency:</strong> uniquely, the GDR earned Deutschemarks from West Germany through the special intra-German trade system — clearing units, the interest-free “Swing,” transit fees, visa and phone charges, prisoner releases, and two Strauß-arranged loans — making the bloc’s best hard-currency earner a state whose dollars came from the other half of Germany. And the ending: when 343,854 people left in 1989, the skill base of that industrial core walked out, and Moscow had no dollars to buy it back. Full treatment: <a href="#gdr">§1.6</a>.</p>
+
+<h3>Q8. What does “balance of payments” mean, and why does it decide whether cities get fed?</h3>
+<p>It is a country’s bank statement for a year’s dealings with the outside world: exports minus imports (the trade balance), plus services and interest (the current account), plus loans taken and repaid and reserves sold. When export earnings fall, imports and interest do <em>not</em> fall automatically — so the gap must be met by borrowing, selling reserves, or cutting imports. The USSR did all three from 1986: debt climbed, gold sales peaked, and grain purchases were cut when the harvest allowed. That is the mechanism by which a distant price crash becomes empty shelves. Full primer: <a href="#part0">Part 0</a>, especially <a href="#p0-3">§0.3</a>.</p>
+
+<h3>Q9. Was the bloc really the USSR’s “outer skin”?</h3>
+<p>An earlier explanation used a body metaphor: the bloc states as the empire’s <em>outer skin</em> — the layer enemies touch first. It captures the defence-in-depth idea well and misleads in one way: <strong>skin is free to the body it protects, and the bloc was not.</strong> It had to be fed — oil below market, credits never repaid, and a payments system in toy money. A layer that consumes more than it shields is better pictured as a second mouth than as skin. That is why this document prefers the two-ledger picture (Part 1: the shield ledger and the bill ledger) to any body metaphor.</p>
+
+<h3>Q10. Why is “Moscow is silent” an economic sentence as well as a political one?</h3>
+<p>Because silence was the only affordable answer. In 1989 Moscow could not pay to keep the GDR solvent, could not supply it at the old concessionary prices without hurting its own dollar earnings, and could not assume its debt. It could, however, <em>not shoot</em> — that was free. “Moscow is silent” is what a no-money policy sounds like through a telephone line. Putin’s own account (First Person, 2000) supplies the phrase; the arithmetic above supplies the reason it was true.</p>
+
+<h2 id="checks">Part 7 — Fact checks and corrections</h2>
+<p>This course’s method: keep what the source says and what the record shows visibly separate. These are the points where the film, the first edition of this document, or common retellings needed adjusting.</p>
+<ol class="tight">
+  <li><strong>Munger’s Poland sentence</strong> — “free elections in Poland brought non-communist Lech Wałęsa to power.” Elections were June 1989, not August; they were semi-free by design; Wałęsa’s presidency came in December 1990, and in 1989 the premier was Mazowiecki. The claim’s substance (the regime was finished) survives. See <a href="#p3-4">§3.4</a>.</li>
+  <li><strong>The Dresden date</strong> — Munger says the Stasi storming was “December 4th 1989”; most accounts, including Putin’s own retellings, date it 5 December. Minor, but the kind of detail this course trains you to notice. See Lesson 0001, §4.</li>
+  <li><strong>The “late” quip</strong> — “those who are late will be punished by history” is a press rendering of Gorbachev’s spokesman’s remark, not a quotation aimed at Honecker. What is undisputed: no orders to shoot came. See <a href="#p3-4">§3.4</a>; <a href="https://www.platformraam.nl/artikelen/1451-did-gorbachev-push-honecker-to-embark-on-comprehensive-reform">Adomeit</a>.</li>
+  <li><strong>“~80% of hard-currency earnings”</strong> — a real range, not a single figure: 55–80% depending on measure and year; and “oil and gas alone” vs “energy” vs “crude alone” are three different numbers. Use the range, and say which one you mean. See <a href="#p2-2">§2.2</a>.</li>
+  <li id="fc-tr"><strong>“The 1991 settlement was ~$0.90 per transferable ruble”</strong> — <em>corrected in this edition.</em> The old administered parity was TR 0.9 = $1 (≈$1.11 per TR). Legacy clearing balances were effectively unpayable at par and were negotiated or written down country by country; no single bloc-wide settlement rate is documented in the sources consulted. Any “$0.90 settlement” line conflates the official parity with a discount. See <a href="#p2-7">§2.7</a>.</li>
+  <li id="fc-debt"><strong>“East Germany was bankrupt” (October 1989)</strong> — the Schürer paper’s <span class="num">49bn VM</span> (~$26bn) figure was <em>gross</em>; Bundesbank reconstruction put the net position near <span class="num">20bn VM</span> (~$11bn), and IMF estimates near <span class="num">M32bn</span> (~$18.5bn). The crisis was real; the headline was gross. See <a href="#gdr">§1.6c</a>.</li>
+  <li><strong>Afghanistan’s “bleeding wound”</strong> — used privately from 14 March 1985 (his first conversation with Karmal); the Politburo’s decision in principle to disengage came 17 October 1985; the phrase’s public career dates from the 1986 party congress. See <a href="#p2-6">§2.6</a>.</li>
+  <li><strong>GDR oil volumes</strong> — the often-quoted “17–19 million tonnes a year” intake for the early 1980s varies by source and by year after the 1981 cuts. This document uses the solidly documented figure instead: the extra <span class="num">2.1Mt</span> supplied in 1982 for about <span class="num">$520m</span> in hard currency. See <a href="#gdr">§1.6a</a>.</li>
+  <li><strong>Subsidy totals</strong> — agency annual figures ($5.8bn/yr 1974–78; $10.4bn 1979; $21.7bn 1980) are used for magnitude; the Marrese–Vanous cumulative estimates (~$87bn, with a $115bn variant) and Brada’s counter-argument are presented as a live scholarly dispute, not a settled number. See <a href="#p2-3">§2.3</a>.</li>
+  <li><strong>First-edition figures replaced</strong> — the earlier version’s “~70,000 left via Hungary within days” and “62,500 direct departures by 10 November” could not be verified as written. This edition uses: ~7,000 crossing on the first night after 10–11 September; roughly <span class="num">50,000</span> via Czechoslovakia by 10 November (NYT); and <span class="num">343,854</span> departures for 1989 as a whole (GHDI; IMF). See <a href="#p3-4">§3.4</a> and <a href="#gdr">§1.6d</a>.</li>
+  <li><strong>Kuwait’s overproduction</strong> — the ~700,000 b/d over-quota figure is commonly cited but contested; the solidly documented adjacent fact is the Neutral Zone’s ~650,000 b/d whose revenue was “loaned” to Iraq from 1982 until the war ended. Both are flagged. See <a href="#kuwait">Part 5</a>.</li>
+</ol>
+
+<h2 id="timeline">Part 8 — Master timeline, 1949–1991</h2>
+<ul class="tl">
+  <li><span class="when">1949</span><span>COMECON founded — the bloc’s trading club (a barter system, not a common market).</span></li>
+  <li><span class="when">14 May 1955</span><span>Warsaw Pact signed; eight parties including the GDR (which had no army until January 1956).</span></li>
+  <li><span class="when">1958</span><span>“Bucharest formula”: intra-bloc prices fixed for five-year periods, typically below world levels.</span></li>
+  <li><span class="when">Jan 1964</span><span>Transferable ruble introduced: intra-bloc balances cleared at the IBEC in Moscow — not transferable, not convertible.</span></li>
+  <li><span class="when">1968</span><span>Brezhnev Doctrine: socialist states have only “limited sovereignty.” Albania formally leaves the Pact in protest at the invasion of Czechoslovakia.</span></li>
+  <li><span class="when">1973–74 · 1979–80</span><span>World oil spikes. Under the five-year lag, Soviet oil flows to the bloc far below market — the subsidy at its peak.</span></li>
+  <li><span class="when">Jan 1975</span><span>“Moscow formula”: intra-bloc prices revised annually, each year the lagged five-year average of world prices — the mechanism that later reverses.</span></li>
+  <li><span class="when">1979</span><span>“Seven Days to the River Rhine” war plan drawn up. Soviet troops enter Afghanistan (Dec).</span></li>
+  <li><span class="when">1980</span><span>CIA-estimated subsidy peaks at $21.7bn for the year; GDR receives the largest share ($7.2bn).</span></li>
+  <li><span class="when">1980–81</span><span>Poland’s crisis package: ~$10.1bn in trade subsidy, loans and credits. Poland charged about half the OPEC rate for Soviet oil in 1981.</span></li>
+  <li><span class="when">1981–82</span><span>Interest rates on socialist debt hit ~19%; Moscow serves notice of 10% cuts in concessionary oil to the bloc and cuts ~131,000 b/d in 1982. GDR buys an extra 2.1Mt for ~$520m cash.</span></li>
+  <li><span class="when">1 Jul 1983 · 25 Jul 1984</span><span>Strauß-arranged loans to the GDR: DM 1.0bn, then DM 950m — federal guarantees secured on the transit lump sum.</span></li>
+  <li><span class="when">1984</span><span><strong>Crossover:</strong> the CMEA contract price reaches/breaks the world price. The subsidy turns into its opposite.</span></li>
+  <li><span class="when">Mar 1985</span><span>Gorbachev takes power. “Bleeding wound” used privately on 14 March. Anti-alcohol campaign.</span></li>
+  <li><span class="when">summer 1985</span><span>Saudi Arabia abandons price defence; oil begins its slide. Ligachev: no leaning toward a market economy.</span></li>
+  <li><span class="when">Nov 1985</span><span>Benchmark crude near $30 — before a four-month halving.</span></li>
+  <li><span class="when">26 Apr 1986</span><span>Chernobyl. Clean-up costs, credibility collapse, the push to glasnost.</span></li>
+  <li><span class="when">Feb–Mar 1986</span><span>27th Party Congress: Gorbachev calls for more trade with COMECON — and for hard goods and hard currency.</span></li>
+  <li><span class="when">1986</span><span>Oil under $10. Hard-currency hit on the order of $4–7bn; gold sales peak at 300–350t (~$3–4bn); external debt begins its climb from $31.4bn.</span></li>
+  <li><span class="when">Dec 1987</span><span>INF Treaty — the first agreement eliminating a class of nuclear weapons.</span></li>
+  <li><span class="when">7 Dec 1988</span><span>Gorbachev at the UN: force is not an instrument of policy; freedom of choice with “no exceptions.” The Brezhnev Doctrine is dead.</span></li>
+  <li><span class="when">May 1989</span><span>Hungary begins dismantling the border fence with Austria.</span></li>
+  <li><span class="when">4 Jun 1989</span><span>Poland’s semi-free elections: Solidarity wins everything it is allowed to contest.</span></li>
+  <li><span class="when">19 Aug 1989</span><span>Pan-European Picnic at Sopron; hundreds cross.</span></li>
+  <li><span class="when">24 Aug 1989</span><span>Mazowiecki becomes the bloc’s first non-communist prime minister.</span></li>
+  <li><span class="when">10–11 Sep 1989</span><span>Hungary opens the border: ~7,000 cross the first night, tens of thousands follow.</span></li>
+  <li><span class="when">30 Sep · 4–5 Oct 1989</span><span>Prague-embassy trains: ~6,000, then 8,270 people — the second wave rolls through Dresden, where crowds clash with police.</span></li>
+  <li><span class="when">6–7 Oct 1989</span><span>Gorbachev in East Berlin; “Gorby!” chants; no orders for force.</span></li>
+  <li><span class="when">18 Oct 1989</span><span>Honecker resigns. (30 Oct: the Schürer paper tells the Politburo the GDR is near insolvency.)</span></li>
+  <li><span class="when">4 Nov 1989</span><span>Half a million at Alexanderplatz.</span></li>
+  <li><span class="when">9 Nov 1989</span><span>The Wall opens — via Schabowski’s “immediately”; Bornholmer Straße opens ~23:30.</span></li>
+  <li><span class="when">3–7 Dec 1989</span><span>Politburo resigns (3rd), government resigns (7th).</span></li>
+  <li><span class="when">5 Dec 1989</span><span>Dresden: Stasi district HQ stormed; the KGB-house confrontation. “Moscow is silent.”</span></li>
+  <li><span class="when">Jan 1990</span><span>Sofia CMEA meeting agrees in principle: world prices, convertible currencies.</span></li>
+  <li><span class="when">3 Oct 1990</span><span>German unification; the GDR leaves the Pact (formally 24 September).</span></li>
+  <li><span class="when">1 Jan 1991</span><span>COMECON trade switches to world prices and hard-currency settlement — the subsidy system ends.</span></li>
+  <li><span class="when">31 Mar / 1 Apr 1991</span><span>Warsaw Pact military structures dissolve; the commanders surrender their powers.</span></li>
+  <li><span class="when">1 Jul 1991</span><span>Prague summit dissolves the Warsaw Pact politically.</span></li>
+</ul>
+
+<h2 id="quiz">Part 9 — Check yourself</h2>
+<p class="small">Answer from memory — effortful recall is the point, not fluency. Immediate feedback appears below each question.</p>
+
+<div class="quiz">
+  <p class="quiz-q">1. A country’s “balance of payments” is best described as which of these?</p>
+  <button class="quiz-option" data-correct="true">Its yearly statement of foreign dealings</button>
+  <button class="quiz-option" data-correct="false">Its annual budget of domestic spending</button>
+  <button class="quiz-option" data-correct="false">Its list of state enterprise debts</button>
+  <button class="quiz-option" data-correct="false">Its tally of military personnel abroad</button>
+  <p class="quiz-explanation" hidden>Exports and imports, services and interest, loans and reserves — a bank statement for the country’s dealings with the outside world (§0.3).</p>
+</div>
+
+<div class="quiz">
+  <p class="quiz-q">2. Which of these is a drain out of the foreign-currency account, not a tap into it?</p>
+  <button class="quiz-option" data-correct="false">Exporting goods to foreign buyers</button>
+  <button class="quiz-option" data-correct="false">Borrowing loans from banks abroad</button>
+  <button class="quiz-option" data-correct="false">Selling gold from state reserves</button>
+  <button class="quiz-option" data-correct="true">Paying interest to past lenders</button>
+  <p class="quiz-explanation" hidden>Exports, borrowing and reserve sales bring hard currency in; interest and imports take it out (§0.2).</p>
+</div>
+
+<div class="quiz">
+  <p class="quiz-q">3. The five-year-average pricing formula meant the bloc’s oil price…</p>
+  <button class="quiz-option" data-correct="true">Tracked lagged world prices, slowly</button>
+  <button class="quiz-option" data-correct="false">Matched the world price immediately</button>
+  <button class="quiz-option" data-correct="false">Ignored all world prices completely</button>
+  <button class="quiz-option" data-correct="false">Followed OPEC quota decisions exactly</button>
+  <p class="quiz-explanation" hidden>The lag kept the price far below market during the 1970s spikes — and above market after the 1985–86 crash (§1.4, §2.3).</p>
+</div>
+
+<div class="quiz">
+  <p class="quiz-q">4. Where did the bloc’s savings from cheap Soviet oil largely go?</p>
+  <button class="quiz-option" data-correct="true">To Western banks and Western goods</button>
+  <button class="quiz-option" data-correct="false">Back to Moscow as machine orders</button>
+  <button class="quiz-option" data-correct="false">Into pensions for East German workers</button>
+  <button class="quiz-option" data-correct="false">To the Soviet army’s occupation costs</button>
+  <p class="quiz-explanation" hidden>Debt service to Western creditors and purchases from the West — the “solvency, not custom” chain of §2.5, with its inference flagged.</p>
+</div>
+
+<div class="quiz">
+  <p class="quiz-q">5. What did the 1984 crossover mean for the bloc?</p>
+  <button class="quiz-option" data-correct="true">It began paying above world price</button>
+  <button class="quiz-option" data-correct="false">It received crude without any charge</button>
+  <button class="quiz-option" data-correct="false">It switched to dollar cash payments</button>
+  <button class="quiz-option" data-correct="false">It stopped importing Soviet crude oil</button>
+  <p class="quiz-explanation" hidden>After 1984 the lagged formula put the contract price at or above spot — the subsidy briefly ran in reverse (see the price table in §2.3).</p>
+</div>
+
+<div class="quiz">
+  <p class="quiz-q">6. Why did East Germany matter more to Moscow than the other allies?</p>
+  <button class="quiz-option" data-correct="true">Its industry and Western currency earnings</button>
+  <button class="quiz-option" data-correct="false">Its large and largely modern armed forces</button>
+  <button class="quiz-option" data-correct="false">Its leadership of the non-aligned movement</button>
+  <button class="quiz-option" data-correct="false">Its oil fields on the Baltic coastline</button>
+  <p class="quiz-explanation" hidden>Biggest trade partner, leading supplier of machinery — and the only bloc member earning Deutschemarks through the special intra-German channel (§1.6).</p>
+</div>
+
+<h2 id="sources">Part 10 — Sources</h2>
+<p class="small">Every claim above is cited inline at the point of use. This is the index, grouped by tier, so you can find the primary material behind any sentence.</p>
+
+<h3>Primary and declassified</h3>
+<ul class="tight">
+  <li><a href="https://treaties.un.org/doc/Publication/UNTS/Volume%20219/volume-219-I-2962-English.pdf">Warsaw Pact treaty text, UN Treaty Series No. 2962</a> · <a href="https://avalon.law.yale.edu/20th_century/warsaw.asp">Yale Avalon text</a></li>
+  <li><a href="https://web.viu.ca/davies/H102/Gorbachev.UNspeech.Dec1988.htm">Gorbachev’s UN speech, 7 December 1988 (full text)</a></li>
+  <li><a href="https://www.cia.gov/readingroom/docs/CIA-RDP88B00443R001103940160-0.pdf">CIA, <em>Soviet Subsidies to Eastern Economies</em> (declassified; the $5.8bn/$10.4bn/$21.7bn series and country split)</a></li>
+  <li><a href="https://www.cia.gov/readingroom/docs/CIA-RDP85T00313R000200010002-9.pdf">CIA, <em>Soviet Oil Trade in 1982–83</em> (the COMECON-vs-world price table)</a> · <a href="https://www.cia.gov/readingroom/docs/CIA-RDP85T00287R001001260003-1.pdf">CIA, <em>Eastern Europe’s Oil Trade</em> (re-export figures)</a></li>
+  <li><a href="https://www.cia.gov/readingroom/docs/1979-01-31a.pdf">CIA, National Intelligence Estimate, 31 January 1979 (Warsaw Pact doctrine and command)</a> · <a href="https://www.cia.gov/readingroom/docs/1966-05-06.pdf">CIA 1966 study (Joint Command structures)</a></li>
+  <li><a href="https://www.cia.gov/readingroom/docs/CIA-RDP08S01350R000601980002-2.pdf">CIA assessment of GDR–USSR trade (largest partners; machinery supplier)</a></li>
+  <li><a href="https://www.cia.gov/readingroom/docs/DOC_0000499320.pdf">CIA, <em>Costs of Soviet Involvement in Afghanistan</em></a> · <a href="https://nsarchive2.gwu.edu/NSAEBB/NSAEBB272/index.htm">National Security Archive, Afghanistan briefing book</a></li>
+  <li><a href="https://nsarchive2.gwu.edu/NSAEBB/NSAEBB294/precan_prague_to_freedom.pdf">National Security Archive, “Through Prague to Freedom”</a></li>
+  <li><a href="https://archives.nato.int/uploads/r/nato-archives-online/6/0/c/60ce3a054cb21e911f8ddb6e33a4d7b97fb732aca343eade529e90cfed55846d/C-M_86_84_ENG_NHQL517433.pdf">NATO C-M(86)84</a> · <a href="https://archives.nato.int/uploads/r/nato-archives-online/f/b/2/fb293eb21389a22739c5c3fa20e667348245ee907b2dfd792385d3cbf3e5d167/C-M_88_1_ENG_NHQL504160.pdf">NATO C-M(88)1</a> (oil earnings, gold sales, debt, hard-currency trade)</li>
+  <li><a href="https://www.elibrary.imf.org/display/book/9781557753717/ch004.xml">IMF, <em>A Study of the Soviet Economy</em>, external debt tables</a> · <a href="https://www.elibrary.imf.org/display/book/9789264134683/ch008.xml">IMF, ch. III.4 (transferable ruble and IBEC mechanics)</a></li>
+  <li><a href="https://esmis.nal.usda.gov/sites/default/release-files/6t053f96k/qr46r468r/w9505439x/WRS-05-18-1986_USSR.pdf">USDA, USSR grain situation, 1986</a> · <a href="https://doi.org/10.22004/ag.econ.277849">USDA-ERS import data</a> · <a href="https://www.gao.gov/assets/nsiad-90-209br.pdf">GAO, Soviet trade composition</a></li>
+  <li><a href="https://www.bundesarchiv.de/themen-entdecken/online-entdecken/themenbeitraege/von-strauss-und-schalck-golodkowski-eingefaedelt">German Federal Archives, the Strauß–Schalck loans</a></li>
+</ul>
+
+<h3>Scholarship and institutional studies</h3>
+<ul class="tight">
+  <li><a href="https://apps.dtic.mil/sti/tr/pdf/ADA511838.pdf">A.R. Johnson, <em>The Warsaw Pact: Soviet Military Policy in Eastern Europe</em> (DTIC/RAND)</a> · <a href="https://www.rand.org/pubs/reports/R3558.html">RAND R3558</a></li>
+  <li><a href="http://www.country-data.com/frd/cs/soviet_union/su_appnc.html">Library of Congress, <em>Soviet Union: A Country Study</em>, Appendix C (the Warsaw Pact)</a> · <a href="http://www.country-data.com/cgi-bin/query/r-12794.html">same study, economy chapters</a></li>
+  <li><a href="https://www.elibrary.imf.org/view/journals/024/1991/001/article-A001-en.xml">Peter B. Kenen, “Transitional Arrangements for Trade and Payments Among the CMEA Countries,” <em>IMF Staff Papers</em> 38(2), 1991</a></li>
+  <li><a href="https://www.tandfonline.com/doi/full/10.1080/07075332.2019.1641542">Maximilian Graf, “Before Strauß: The East German Struggle to Avoid Bankruptcy…” (2019)</a></li>
+  <li><a href="https://wiiw.ac.at/eastern-europe-before-transition-exploring-historical-trade-data-on-external-economic-relations-in-cesee-s-command-economies-dlp-7078.pdf">wiiw COMECON trade dataset</a> · <a href="https://wiiw.ac.at/forty-years-ago-gorbachev-took-over--why-did-socialism-collapse-n-671.html">wiiw, four decades of COMECON pricing and debt</a></li>
+  <li><a href="https://eng.globalaffairs.ru/articles/unrelenting-oil-addiction/">Global Affairs on the fuel share of hard-currency revenues</a> · <a href="https://press.princeton.edu/books/paperback/9780691608228/crisis-amid-plenty">Thane Gustafson, <em>Crisis amid Plenty</em> (1989)</a></li>
+  <li><a href="https://www.files.ethz.ch/isn/6844/doc_6846_290_en.pdf">F. Gregory Gause III, <em>Iraq and the Gulf War: Decision-Making in Baghdad</em></a></li>
+  <li>Marrese &amp; Vanous, <em>Soviet Subsidization of Trade with Eastern Europe</em> (1983) — cumulative estimates via <a href="https://www.sciencedirect.com/science/article/pii/0014292186900346">Desai (1986)</a> and <a href="https://www.rand.org/content/dam/rand/pubs/notes/2007/N2861.pdf">RAND N2861</a>; the critique: <a href="https://www.sciencedirect.com/science/article/abs/pii/014759678590006X">Brada (1985)</a>, <a href="https://www.jstor.org/stable/2706643">Brada in <em>International Organization</em></a></li>
+  <li><a href="https://opil.ouplaw.com/display/10.1093/law:epil/9780199231690/law-9780199231690-e683">Oxford, <em>Max Planck Encyclopedia of Public International Law</em>: Warsaw Pact</a></li>
+  <li><a href="https://germanhistorydocs.org/en/two-germanies-1961-1989/statistics-on-east-german-resettlers-refugees-and-escapees-1961-1990">GHDI, East German resettler/refugee statistics 1961–90</a> · <a href="https://www.elibrary.imf.org/display/book/9781557752000/C08.xml">IMF, <em>German Unification</em>, ch. 8</a> · <a href="https://www.demographic-research.org/volumes/vol11/7/11-7.pdf">Demographic Research on migration scale</a></li>
+  <li><a href="https://www.diw.de/documents/publikationen/73/diw_01.c.510026.de/diw_econ_bull_2015-27-3.pdf">DIW on the Schürer paper and GDR debt</a> · <a href="https://access.gesis.org/dbk/33417">GESIS/Bundesbank-based review of GDR hard-currency inflows</a></li>
+  <li><a href="https://www.platformraam.nl/artikelen/1451-did-gorbachev-push-honecker-to-embark-on-comprehensive-reform">Hannes Adomeit on the October 1989 Berlin visit</a></li>
+</ul>
+
+<h3>Contemporary press (used for dates, numbers and colour)</h3>
+<ul class="tight">
+  <li><a href="https://archive.nytimes.com/www.nytimes.com/library/world/europe/091189hungary-germany.html">NYT, 11 Sept 1989 (Hungary)</a> · <a href="https://www.nytimes.com/1989/11/10/world/clamor-east-east-germany-opens-frontier-west-for-migration-travel-thousands.html">NYT, 10 Nov 1989 (exodus via Czechoslovakia)</a> · <a href="https://www.nytimes.com/1989/11/16/world/clamor-easst-bleak-fiscal-picture-grim-state-east-germany-s-economy-disclosed.html">NYT, 16 Nov 1989 (GDR debt)</a></li>
+  <li><a href="https://www.nytimes.com/1991/04/01/world/warsaw-pact-formally-ends-36-years-as-a-military-force.html">NYT, 1 Apr 1991</a> · <a href="https://www.nytimes.com/1991/07/02/world/death-knell-rings-for-warsaw-pact.html">NYT, 2 Jul 1991</a> (Pact dissolution)</li>
+  <li><a href="https://www.theguardian.com/world/2005/nov/26/russia.poland">Guardian</a> and <a href="https://www.telegraph.co.uk/news/worldnews/europe/poland/1504008/World-War-Three-seen-through-Soviet-eyes.html">Telegraph</a>, 26 Nov 2005 (release of the war plans)</li>
+  <li><a href="https://www.spiegel.de/international/europe/hungary-s-peaceful-revolution-cutting-the-fence-and-changing-history-a-627632.html">Spiegel on Hungary’s fence</a> · <a href="https://www.rferl.org/a/hungary-1989-east-germany/30156892.html">RFE/RL on the border opening</a> · <a href="https://www.theguardian.com/world/from-the-archive-blog/2019/jun/12/hungary-austria-open-border-june-1989">Guardian archive, June 1989</a></li>
+  <li><a href="https://www.upi.com/Archives/1987/03/03/The-Soviet-Unions-crude-oil-and-petroleum-product-exports/9705541746000/">UPI, 3 Mar 1987 (Petroleum Economist oil earnings)</a> · <a href="https://www.washingtonpost.com/archive/politics/1986/01/31/moscow-feels-hard-currency-pinch/7b52234c-57fa-47cc-b895-e0a0394c314c/">Washington Post, 31 Jan 1986 (hard-currency pinch)</a> · <a href="https://www.csmonitor.com/1987/0218/oeast2.html">CS Monitor, 18 Feb 1987</a></li>
+  <li><a href="https://www.latimes.com/archives/la-xpm-1985-08-25-mn-24815-story.html">LA Times, 25 Aug 1985 (Ligachev)</a> · <a href="https://www.bbc.com/news/magazine-29889706">BBC on prisoner releases</a> · <a href="https://adst.org/2016/09/sparking-iraqs-invasion-kuwait-loans-land-oil-access/">ADST oral history on Iraq’s debts</a> · <a href="https://www.mdr.de/geschichte/ddr/wirtschaft/pleite-gerhard-schuerer-staatliche-plankomission-100.html">MDR on the Schürer memo</a></li>
+  <li><a href="https://eng.ipn.gov.pl/en/digital-resources/articles/7364,The-elections-of-4-June-1989-The-defeat-of-the-communist-system-and-the-triumph-.html">Polish IPN on the 4 June elections</a> · <a href="https://www.nato.int/en/news-and-events/articles/news/1968/09/12/albania-renounces-its-membership-of-the-warsaw-treaty-organisation">NATO, 12 Sept 1968 (Albania)</a></li>
+</ul>
+
+<div class="box box-teacher">
+  <span class="box-title">Ask your teacher</span>
+  <p>Anything here unclear — a term, a table, a number that feels off, or a thread you want pulled further (the GDR’s refining industry, why the Volcker shock happened, what the next chapter’s Sobchak years owe to this collapse) — ask. This document is the response to your questions; the next edition is written the same way.</p>
+</div>
+
+<footer class="lesson-footer">
+  <nav>
+    <a href="../lessons/0001-dresden-kgb-years.html">Lesson 0001 — Dresden</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+  <p>Workspace: putin-rise-to-power · deep-dive reference, self-contained edition · expanded 2026-09-17 · styles, quiz behaviour and definitions embedded in this file; nothing external required to read or print it.</p>
+</footer>
+
+</body>
+</html>
