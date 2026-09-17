@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Condensed for the video — the economics each chapter needs</title>
+<style>
+/* Self-contained condensed study aid. Same visual language as the workspace's
+   other reference docs; deliberately shorter and filtered to what the video's
+   remaining chapters actually require. */
+:root {
+  --ink: #201d1a; --ink-soft: #5a544b; --paper: #fbfaf7; --rule: #dbd6ca;
+  --accent: #8a5a2b; --note-bg: #f4f1e8; --quiz-bg: #f6f3ea;
+  --good: #2f6b3a; --good-bg: #e8f2e6; --bad: #8c3b3b; --bad-bg: #f6e7e4;
+  --warn-bg: #fbf5e4; --warn-edge: #c9a94e;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+html { background: var(--paper); }
+body {
+  max-width: 46rem; margin: 0 auto; padding: 3.5rem 2.5rem 5rem;
+  color: var(--ink); font-family: "Sitka Text", Constantia, Charter, Georgia, serif;
+  font-size: 18px; line-height: 1.62; text-rendering: optimizeLegibility;
+}
+.kicker { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: .72rem;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 .6rem; }
+h1 { font-size: 2rem; line-height: 1.15; font-weight: 600; margin: 0 0 .5rem; letter-spacing: -.01em; }
+h2 { font-size: 1.2rem; font-weight: 600; margin: 2.4rem 0 .7rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 .35rem; }
+.meta { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: .78rem;
+  color: var(--ink-soft); margin: 0 0 2rem; }
+.lead { font-size: 1.05rem; color: var(--ink-soft); margin: 0 0 1.5rem; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(138,90,43,.35); }
+a:hover { border-bottom-color: var(--accent); }
+.t { font-family: var(--mono); font-size: .82em; color: var(--accent); white-space: nowrap; }
+.num { font-family: var(--mono); font-size: .9em; }
+.small { font-size: .86rem; color: var(--ink-soft); }
+blockquote { margin: 1rem 0 1rem 1.1rem; padding-left: 1rem; border-left: 2px solid var(--rule); color: var(--ink-soft); }
+blockquote p { margin: .3rem 0; }
+ul.tight li, ol.tight li { margin: .25rem 0; }
+.box { background: var(--note-bg); border: 1px solid var(--rule); border-radius: 6px;
+  padding: .9rem 1.1rem; margin: 1.3rem 0; font-size: .95rem; }
+.box p:first-child { margin-top: 0; } .box p:last-child { margin-bottom: 0; }
+.box .box-title { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: .72rem;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .35rem; }
+.box-plain { background: #f7f5ee; border-left: 4px solid var(--accent); }
+.box-fact { background: var(--warn-bg); border-left: 4px solid var(--warn-edge); }
+.box-teacher { background: #eef2f7; border-left: 4px solid #5a7ba6; }
+table { width: 100%; border-collapse: collapse; font-size: .86rem; margin: 1.1rem 0; }
+caption { caption-side: top; text-align: left; font-size: .78rem; color: var(--ink-soft); padding-bottom: .35rem; }
+th { text-align: left; font-weight: 600; border-bottom: 1.5px solid var(--rule); padding: .35rem .5rem; }
+td { border-bottom: 1px solid var(--rule); padding: .35rem .5rem; vertical-align: top; }
+td.n, th.n { text-align: right; font-family: var(--mono); font-size: .82rem; white-space: nowrap; }
+.tl { list-style: none; margin: 1.1rem 0; padding: 0; }
+.tl li { display: grid; grid-template-columns: 6.2rem 1fr; gap: .9rem; padding: .4rem 0; border-bottom: 1px dotted var(--rule); }
+.tl .when { font-family: var(--mono); font-size: .8rem; color: var(--accent); padding-top: .15rem; }
+.quiz { background: var(--quiz-bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1rem 1.15rem .9rem; margin: 1.3rem 0; }
+.quiz .quiz-q { font-weight: 600; margin: 0 0 .6rem; }
+.quiz-option { display: block; width: 100%; text-align: left; margin: .35rem 0; padding: .55rem .85rem;
+  font: inherit; font-size: .95rem; color: var(--ink); background: #fff; border: 1px solid #cfc9b8;
+  border-radius: 6px; cursor: pointer; }
+.quiz-option:hover:not(:disabled) { background: #fdfbf3; border-color: var(--accent); }
+.quiz-option:disabled { cursor: default; opacity: .9; }
+.quiz-option.quiz-correct { background: var(--good-bg); border-color: var(--good); }
+.quiz-option.quiz-wrong { background: var(--bad-bg); border-color: var(--bad); }
+.quiz-explanation { margin: .7rem 0 .2rem; font-size: .92rem; color: var(--ink-soft); }
+.lesson-footer { margin-top: 3rem; padding-top: 1.1rem; border-top: 1px solid var(--rule);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: .8rem; color: var(--ink-soft); }
+.lesson-footer nav a { margin-right: 1rem; }
+@media (max-width: 640px) { body { padding: 2rem 1.2rem 3rem; font-size: 17px; } .tl li { grid-template-columns: 5rem 1fr; gap: .6rem; } }
+@media print {
+  html, body { background: #fff; color: #000; }
+  body { max-width: none; padding: 0 .5in; font-size: 11.5pt; }
+  a { color: #000; border-bottom: none; }
+  .box, .quiz, table { break-inside: avoid; } h2, h3 { break-after: avoid; }
+}
+</style>
+<script>
+(function () {
+  'use strict';
+  document.querySelectorAll('.quiz').forEach(function (quiz) {
+    var options = Array.prototype.slice.call(quiz.querySelectorAll('.quiz-option'));
+    var explanation = quiz.querySelector('.quiz-explanation');
+    options.forEach(function (option) {
+      option.addEventListener('click', function () {
+        if (quiz.classList.contains('quiz-answered')) return;
+        quiz.classList.add('quiz-answered');
+        var pickedCorrect = option.getAttribute('data-correct') === 'true';
+        options.forEach(function (o) {
+          o.disabled = true;
+          if (o.getAttribute('data-correct') === 'true') o.classList.add('quiz-correct');
+        });
+        if (!pickedCorrect) option.classList.add('quiz-wrong');
+        if (explanation) explanation.hidden = false;
+      });
+    });
+  });
+})();
+</script>
+</head>
+<body>
+
+<p class="kicker">Putin: The Rise To Power · condensed study aid · self-contained</p>
+<h1>Condensed for the video — the economics each chapter needs</h1>
+<p class="meta">Filtered from <a href="../reference/the-collapse-1985-89.html">The collapse, 1985–89 — the annotated deep-dive</a> · nothing here that the video’s chapters don’t use · every figure carries a source · companion to <a href="../lessons/0001-dresden-kgb-years.html">Lesson 0001</a></p>
+
+<p class="lead">The deep-dive answers “what actually happened, and how do we know.” This document answers a narrower question: <strong>what is the minimum economics you need to follow each remaining chapter of the video, in order?</strong> Read the section for a chapter before you watch it. Where the deep-dive goes deeper, it is linked; nothing is duplicated that the video does not need.</p>
+
+<div class="box box-plain">
+  <span class="box-title">Reading order</span>
+  <p><a href="#ideas">Part 0 — six ideas (one screen)</a> → <a href="#ch7">Chapter 7 · Dresden</a> (watched) → <a href="#ch8">Chapter 8 · Sobchak</a> → <a href="#ch9-18">Chapters 9–18 · the 1990s</a>. If you already know the six ideas, skip to the chapter you are about to watch.</p>
+</div>
+
+<h2 id="ideas">Part 0 — Six ideas, in one screen</h2>
+<ol class="tight">
+  <li><strong>Money stops at the border.</strong> Rubles bought nothing abroad. Anything imported — grain, machines, medicine — had to be paid in “hard currency”: dollars, marks, yen. So the USSR needed to <em>earn</em> foreign money, <em>borrow</em> it, or sell gold. (<a href="../reference/the-collapse-1985-89.html#part0">deep-dive §0.1</a>)</li>
+  <li><strong>A country’s books work like a household’s.</strong> Exports in, imports and interest out; if exports fall, the gap is covered by borrowing, reserves, or cutting imports. Nothing else adjusts on its own. (<a href="../reference/the-collapse-1985-89.html#p0-3">§0.3</a>)</li>
+  <li><strong>The bloc’s money was not money.</strong> COMECON settled trade in “transferable rubles”: bilingual ledgers, not spendable, not convertible. Real goods went out; paper claims came back — that is why bloc trade is called a subsidy. (<a href="../reference/the-collapse-1985-89.html#p0-4">§0.4</a>, <a href="../reference/the-collapse-1985-89.html#p0-4b">§0.4b</a>)</li>
+  <li><strong>A subsidy here means selling below world price.</strong> Same barrel: $30 to Italy, $13 to Poland. The $17 is a gift that appears in no budget — and it is also a barrel not sold for dollars. (<a href="../reference/the-collapse-1985-89.html#p0-5">§0.5</a>)</li>
+  <li><strong>Big economy ≠ ability to buy abroad.</strong> The relevant number is not Soviet GDP but the roughly <span class="num">$30 billion</span> a year of hard currency the USSR could earn. Against that sat grain imports, an arms race, a war and a bloc. (<a href="../reference/the-collapse-1985-89.html#p0-6">§0.6</a>)</li>
+  <li><strong>An empire has two ledgers.</strong> A shield ledger (defence in depth, the Warsaw Pact) and a bill ledger (oil below market, credits never repaid). By the mid-1980s the bill had outgrown the payer. (<a href="../reference/the-collapse-1985-89.html#patient">Part 1</a>)</li>
+</ol>
+<p class="small">That is the whole apparatus. Everything below applies it — nothing new is introduced without being defined.</p>
+
+<h2 id="ch7">Chapter 7 · Dresden (55:00–1:04:57) — what you need</h2>
+<p>The chapter is set inside the collapse. These are the economic facts that make its scenes legible — and nothing else.</p>
+<ul class="tight">
+  <li><strong>The bloc was an economic machine, not just a frontier.</strong> The USSR shipped oil, gas, ore and timber to Eastern Europe; the bloc shipped machinery, ships, food and consumer goods back. Prices between them were set by a lagged five-year average of world prices — so when oil spiked in the 1970s the bloc paid far below market, and the difference was Moscow’s gift: the <em>subsidy</em>. (<a href="../reference/the-collapse-1985-89.html#p1-4">§1.4</a>, <a href="../reference/the-collapse-1985-89.html#p2-3">§2.3</a>)</li>
+  <li><strong>East Germany was the crown jewel.</strong> The USSR’s biggest trade partner and leading machinery supplier — and uniquely able to earn Deutschemarks from West Germany through the special intra-German trade channel. (<a href="../reference/the-collapse-1985-89.html#gdr">§1.6</a>)</li>
+  <li><strong>Moscow’s dollars came from oil and gas.</strong> Half to four-fifths of hard-currency earnings, depending on the measure. Grain was the biggest single import — the USSR was the world’s largest grain importer. (<a href="../reference/the-collapse-1985-89.html#p2-2">§2.2</a>)</li>
+  <li><strong>1985–86: the price collapsed.</strong> A barrel near $30 in late 1985 fell under $10 by April 1986. The hit was on the order of <span class="num">$4–7 billion</span> in 1986 — about a third of hard-currency revenue. (<a href="../reference/the-collapse-1985-89.html#p2-1">§2.1</a>)</li>
+  <li><strong>The response was borrowing and selling the family silver.</strong> Gold sales peaked at 300–350 tonnes in 1986; external debt climbed from <span class="num">$31.4 billion</span> (end-1986) to <span class="num">$61.1 billion</span> (end-1990). (<a href="../reference/the-collapse-1985-89.html#p2-1">§2.1</a>)</li>
+  <li><strong>The bloc was already a liability.</strong> The same formula that had subsidised the bloc pushed its prices <em>above</em> world after 1984; Moscow started demanding hard currency and cutting deliveries. (<a href="../reference/the-collapse-1985-89.html#p2-4">§2.4</a>)</li>
+  <li><strong>1989: the labour left before the state did.</strong> <span class="num">343,854</span> East Germans left during 1989 alone — disproportionately young and skilled, from the workforce that made the GDR valuable. (<a href="../reference/the-collapse-1985-89.html#gdr">§1.6d</a>)</li>
+  <li><strong>Moscow’s silence had a price tag.</strong> No dollars to bail out East Berlin; no willingness to shoot. “Moscow is silent” is a no-money policy heard down a telephone line. (<a href="../reference/the-collapse-1985-89.html#faq">Q10</a>)</li>
+  <li><strong>The chapter’s own scenes, decoded:</strong> the Prague trains through Dresden were part of that exodus; the Stasi HQ that fell was an economic as well as a police institution; and the man watching had spent five years in a posting the system itself barely needed. (<a href="../reference/the-collapse-1985-89.html#p3-4">§3.4</a>, <a href="../reference/the-collapse-1985-89.html#dresden">Part 4</a>)</li>
+</ul>
+<div class="box box-plain">
+  <span class="box-title">The one thing to carry into the next chapter</span>
+  <p>The system Putin served did not lose a war. It ran out of money — specifically, of dollars it could not earn — and then discovered it could not afford either its empire or its ideology. Chapter 8 begins in the wreckage of that realisation.</p>
+</div>
+
+<h2 id="ch8">Chapter 8 · Sobchak (1:04:57–1:12:03) — what you need</h2>
+<p>The chapter covers February 1990 to 1991: Putin comes home to Leningrad, shadows the reformist law professor Anatoly Sobchak for the KGB, and then goes to work for him. The backdrop is a state that is losing the ability to pay for itself. Condensed to what the chapter needs:</p>
+<ul class="tight">
+  <li><strong>The budget broke.</strong> The adjusted Soviet deficit ran about <span class="num">8% of GDP</span> in 1990; Russian finance data put it at <span class="num">15–16%</span> by 1991 (a retrospective estimate reaches 34% on incomplete accounts — definitions differ) (<a href="https://www.elibrary.imf.org/display/book/9789264134683/ch005.xml">IMF <em>Study of the Soviet Economy</em></a>; <a href="https://www.iep.ru/files/persona/sinelnikov/S_5.pdf">Sinelnikov</a>; <a href="https://www.ifo.de/DocDL/forum-2016-4-aslund-ruble-zone-collapse-december.pdf">Åslund</a>).</li>
+  <li><strong>So it printed money.</strong> The state printed more rubles in 1991 than in the previous thirty years combined; people held cash while shelves emptied — the “ruble overhang,” about a third of all financial assets by 1991 (<a href="https://pure.iiasa.ac.at/id/eprint/3507/1/ER-91-019.pdf">IIASA, 1991</a>; <a href="https://www.brookings.edu/wp-content/uploads/1991/06/1991b_bpea_shleifer_vishny.pdf">Shleifer–Vishny, Brookings 1991</a>).</li>
+  <li><strong>The supply system stopped delivering.</strong> Contract non-delivery jumped from <span class="num">2 billion rubles</span> (1988) to <span class="num">17.7 billion</span> (1990) as firms broke contracts, hoarded and bartered. The 1990 harvest was <em>good</em> (218m tonnes) — the failure was distribution (<a href="https://www.brookings.edu/wp-content/uploads/1991/06/1991b_bpea_shleifer_vishny.pdf">Brookings</a>; <a href="https://archives.nato.int/uploads/r/nato-archives-online/1/b/9/1b96c8aa865f91c916d9909490ce5d5a4ddef3bb7167e5ad5e9eea810ce6284c/C-M_91_22_ENG_NHQP845408.pdf">NATO C-M(91)22</a>).</li>
+  <li><strong>Leningrad rationed food.</strong> From <span class="num">1 December 1990</span> — the first rationing since 1947 — roughly 1.5kg of meat, 1kg of sausage, 0.5kg of butter, 10 eggs, 1kg of cereal, 0.5kg of flour per person per month, by card and coupon, lasting to May 1992; the city reportedly offered tanks in barter because it had no food to trade (<a href="https://www.latimes.com/archives/la-xpm-1990-11-30-mn-5767-story.html">LA Times, 30 Nov 1990</a>; <a href="https://www.deseret.com/1990/12/2/18894191/soviets-begin-rationing-food-in-many-cities/">AP/Deseret, 2 Dec 1990</a>; <a href="https://www.csmonitor.com/1990/1212/olen.html">CS Monitor, 12 Dec 1990</a>).</li>
+  <li><strong>The bloc’s trade vanished.</strong> On <span class="num">1 January 1991</span> COMECON trade was repriced to world prices and hard-currency settlement (the §2.7 switch). USSR–Eastern Europe trade collapsed from <span class="num">77.5bn</span> to <span class="num">31.4bn</span> rubles between 1990 and 1991; Poland’s exports to the USSR fell about 80% in the first quarter of 1991. The organisation itself was dissolved on 28 June 1991 (<a href="https://doi.org/10.21638/11701/spbu02.2022.213">Fujisawa, 2022</a>).</li>
+  <li><strong>Hard currency ran out.</strong> Foreign debt was about <span class="num">$52bn</span> at end-1990 and $60–70bn by late 1991, with arrears to suppliers above $5bn. Gold reserves fell to roughly <span class="num">240 tonnes</span> by September 1991 after about 470 tonnes were sold in a year. By November 1991 the state had roughly <span class="num">$500m</span> in cash against <span class="num">$4.5bn</span> due by 31 December; the G7 deferred $3.6bn and offered a $1bn bridge loan against gold (<a href="https://documents1.worldbank.org/curated/en/187491468769887526/pdf/multi-page.pdf">World Bank</a>; <a href="https://www.washingtonpost.com/archive/politics/1991/09/28/much-of-soviet-gold-is-sold-economist-says/cbc030c2-116c-4e61-a10b-5131f9da10ee/">Washington Post, 28 Sept 1991</a>; <a href="https://www.latimes.com/archives/la-xpm-1991-11-22-mn-47-story.html">LA Times, 22 Nov 1991</a>).</li>
+  <li><strong>Money and sovereignty fused.</strong> In the “war of laws,” Russia declared its laws supreme (12 June 1990) and claimed the oil, diamonds and gold (9 Aug 1990 — annulled by Gorbachev on 23 Aug); the Union budget received only about half its planned republic contributions in the first half of 1991. Yeltsin was elected Russian president on 12 June 1991; the hardliners’ coup of 19–21 August 1991 — KGB chief Kryuchkov among its leaders — failed and finished the Union (<a href="https://www.upi.com/Archives/1990/08/23/Gorbachev-annuls-Russian-economic-sovereignty/6405651384000/">UPI, 23 Aug 1990</a>; <a href="https://en.wikipedia.org/wiki/War_of_Laws">overview</a>).</li>
+  <li><strong>The KGB was being economised too.</strong> Advisers floated a 20% budget cut for the security services in September 1990; after the coup the KGB’s troops were transferred to the army, its collegium dissolved and its chief jailed. Officers faced split loyalties and exits into business and city government — the door Putin walked through, from the residency to Sobchak’s office (<a href="https://ftp.unz.com/PDF/PERIODICAL/ProblemsCommunism-1990nov/24-38/">Problems of Communism, Nov 1990</a>; <a href="https://www.washingtonpost.com/archive/politics/1991/08/27/kgb-targeted-for-major-reform/6bf9c712-2e63-45b8-b2ed-5a3affab734c/">Washington Post, 27 Aug 1991</a>).</li>
+  <li><strong>Western money came with conditions, and never in the size promised.</strong> Germany lent DM5bn in June 1990, then DM12bn plus a DM3bn interest-free credit in September 1990 (unification diplomacy). The 1991 “Grand Bargain” — the Harvard–Yavlinsky plan for $15–30bn a year against market reform — was taken to the G7 in London and declined; it died with the coup (<a href="https://transatlanticrelations.org/wp-content/uploads/2019/10/11-Kieninger.pdf">Kieninger</a>; <a href="https://www.belfercenter.org/publication/grand-bargain">Belfer Center</a>).</li>
+</ul>
+<div class="box box-plain">
+  <span class="box-title">Why an officer would take the Sobchak job</span>
+  <p>Seen through money, the move is not mysterious. The institution that employed him was having its budget cut, its chief jailed, its troops reassigned — while the politicians who controlled real resources in Leningrad were rising. Sobchak’s office sat closer to money and power than a dissolving residency did.</p>
+</div>
+
+<h2 id="ch9-18">Chapters 9–18 · the 1990s — the toolkit</h2>
+<p>The rest of the video runs from the Union’s end to Putin’s coronation. Nine economic facts carry all of it. Watch the arc they describe: a planned economy collapses, the money it leaves behind is destroyed, the state’s assets are handed to private owners, the state stops collecting taxes, it defaults, and then oil saves it — with Putin arriving at the moment the oil begins.</p>
+
+<h3>Chapter 9 · “1991” — the collapse and the inflation</h3>
+<ul class="tight">
+  <li><strong>The deepest peacetime collapse on record.</strong> Official GDP fell about <span class="num">35%</span> in 1991–94 and about <span class="num">40–45%</span> across 1989–98; industry, transport and construction fell by more than half, and fixed investment by about <span class="num">57%</span> (1990–93, constant prices) (<a href="https://www.elibrary.imf.org/view/journals/002/1997/063/article-A001-en.xml">IMF, 1997</a>; <a href="https://documents1.worldbank.org/curated/en/221711468777947099/pdf/multi0page.pdf">World Bank</a>; <a href="https://carleton.ca/vpopov/wp-content/uploads/Output-collapse-June-2017.pdf">Popov</a>). <em>Flag:</em> some reconstructions argue the official series overstate it (hidden private activity), putting the real fall nearer a third (<a href="https://doi.org/10.5089/9781451921847.001">Gavrilenkov–Koen, IMF</a>).</li>
+  <li><strong>Prices were freed on 2 January 1992</strong> (Gaidar): about 90% of retail and 80% of producer prices. Consumer prices rose <span class="num">245%</span> in January alone; households’ real money balances fell by about <span class="num">75%</span> (<a href="https://doi.org/10.5089/9781451851564.001">IMF, Koen–Phillips</a>; <a href="https://www.brookings.edu/wp-content/uploads/1992/06/1992b_bpea_lipton_sachs_mau_phelps.pdf">Lipton–Sachs, Brookings 1992</a>).</li>
+  <li><strong>Inflation, year by year</strong> — the single table that explains why salaries, pensions and savings meant nothing by mid-decade:</li>
+</ul>
+<table>
+  <caption>Russian consumer inflation, annual (measures differ; EBRD series)</caption>
+  <tr><th>Year</th><th class="n">1992</th><th class="n">1993</th><th class="n">1994</th><th class="n">1995</th><th class="n">1996</th><th class="n">1997</th><th class="n">1998</th><th class="n">1999</th></tr>
+  <tr><td>%</td><td class="n">~2,500</td><td class="n">875</td><td class="n">308</td><td class="n">197</td><td class="n">48</td><td class="n">15</td><td class="n">28</td><td class="n">86</td></tr>
+</table>
+<p class="small">Sources: <a href="https://publications.bof.fi/server/api/core/bitstreams/d87f0821-031c-4bcb-b8d6-942caab8453b/content">Bank of Finland</a>; <a href="https://www.statista.com/statistics/271376/inflation-rate-in-russia/">series</a>. On 1 January 1998 the ruble was redenominated (1,000 old = 1 new) — a cosmetic change that did not prevent the August crisis below.</p>
+<ul class="tight">
+  <li><strong>What it did to people:</strong> about <span class="num">35%</span> of the population was below the official poverty line by end-1995; male life expectancy fell from <span class="num">63.4</span> years (1991) to <span class="num">57.4</span> (1994), with an estimated 2.5–3 million extra adult deaths in 1992–2001 against 1991 rates (<a href="https://documents1.worldbank.org/curated/en/292841468095055404/pdf/766160JRN0WBRO00Box374385B00PUBLIC0.pdf">World Bank/RLMS</a>; <a href="https://www.bmj.com/content/327/7421/964">BMJ, 2003</a>).</li>
+</ul>
+
+<h3>Chapter 10 · “The Big Swindle” — privatization</h3>
+<ul class="tight">
+  <li><strong>The voucher phase (1992–94).</strong> Every citizen received one voucher, face value <span class="num">10,000 rubles</span> for a 25-ruble fee — 151.1 million printed, about 144 million collected between October 1992 and March 1993. Through voucher auctions (December 1992–June 1994) some 24,000 enterprises were corporatised and more than 16,500 privatised (<a href="http://www.brookings.edu/~/media/projects/bpea/1993-2/1993b_bpea_boycko_shleifer_vishny_fischer_sachs.pdf">Boycko–Shleifer–Vishny, Brookings</a>; <a href="https://www.files.ethz.ch/isn/140194/021.pdf">Jermakowicz</a>).</li>
+  <li><strong>How it really worked.</strong> The dominant variant handed <span class="num">51%</span> of shares to workers and managers at 1.7 times the July 1992 book value — so ownership went to insiders, the state collected almost nothing, and many voucher funds turned out to be scams (<a href="https://www.columbia.edu/~pd5/privatization.pdf">overview</a>).</li>
+  <li><strong>The verdict is genuinely two-sided</strong> (keep both sides): it transferred more than half of industry into private hands fast, which was the stated goal — and it produced no restructuring and an ownership pattern most Russians considered illegitimate. That grievance is the chapter’s subject.</li>
+</ul>
+
+<h3>Chapter 11 · “Putin’s Rolodex” — what “money” meant in the 1990s</h3>
+<ul class="tight">
+  <li><strong>Cash became scarce, so favours became the currency.</strong> By 1998, 50–70% of enterprise sales were non-cash; arrears reached about 40% of GDP (from ~15% in 1994); Gazprom and the electricity monopoly took cash for only 12–13% of domestic sales in summer 1998 (<a href="https://www.foreignaffairs.com/articles/russia-fsu/1998-09-01/russias-virtual-economy">Gaddy–Ickes, <em>Foreign Affairs</em>, 1998</a>).</li>
+  <li><strong>So networks were the economy.</strong> Access to a city post, a licence, an export quota, a customs channel — that is what a “rolodex” was worth. Putin’s St Petersburg contacts were an economic asset long before they were a political one.</li>
+</ul>
+
+<h3>Chapter 12 · “The Time Of Troubles” — the state stops collecting</h3>
+<ul class="tight">
+  <li><strong>Tax collection decayed:</strong> federal revenue fell from <span class="num">16.2%</span> of GDP (1995) to <span class="num">12.4%</span> (1998); total tax take fell from 39% (1992) to 33.5% (1998); the enlarged government deficit averaged about <span class="num">8% of GDP</span> in 1995–98 (<a href="https://www.imf.org/external/pubs/ft/staffp/2006/01/pdf/odling.pdf">IMF, Odling-Smee</a>).</li>
+  <li><strong>The IMF was the stopgap, with conditions:</strong> roughly $1bn (1992), $1.5bn plus a $1.5bn tranche (1993–94), a $6.5bn stand-by (1995), an EFF of about $10bn (1996) — about <span class="num">$22bn</span> disbursed in total 1992–99, against inflation targets, deficit cuts and tax reform (<a href="https://www.imf.org/external/pubs/ft/staffp/2006/01/pdf/odling.pdf">ibid.</a>; <a href="https://www.elibrary.imf.org/display/book/9781589062078/ch04.xml">IMF</a>).</li>
+  <li><strong>This is the world of unpaid wages, barter and the “virtual economy”</strong> the chapter describes — and the reason later chapters treat the 1990s as a trauma rather than a transition.</li>
+</ul>
+
+<h3>Chapter 13 · “1996” — loans-for-shares</h3>
+<ul class="tight">
+  <li><strong>The mechanism (November–December 1995):</strong> the cash-starved state “borrowed” about <span class="num">$800 million</span> from banks, with shares in twelve large companies as collateral; the loans were never repaid on schedule, so by September 1996 the lenders kept the shares. The idea is credited to Vladimir Potanin, backed by Chubais and Soskovets, signed by Yeltsin (<a href="https://www.nber.org/system/files/working_papers/w15819/w15819.pdf">Treisman, NBER 2010</a>; <a href="https://www.themoscowtimes.com/archive/loans-for-the-sharks">Moscow Times, Dec 1995</a>).</li>
+  <li><strong>The prices, for the record:</strong> Yukos 45% — <span class="num">$159 million</span>; Sibneft 51% — $100.3m; Norilsk Nickel 38–51% — $170.1m; Surgutneftegaz 40% — $88.9m; Sidanko 51% — $130m; Lukoil 5% — $35–141m.</li>
+  <li><strong>Rigged? Yes on process; debated on price.</strong> Auctions were frequently won by a front bidder at barely above the starting price, rivals were disqualified and foreigners barred. But measured against October 1995 market prices the discounts (13% to 89%) were within the range seen in other emerging-market sales, and the largest discounts went to old industrial directors, not to the three bankers, whose share of the total was about $185m of $0.73bn (<a href="https://doi.org/10.3386/w15819">Treisman</a>). Critics cite the gap between the auction price and what the assets later proved to be worth — e.g. Yukos, later valued in the billions, sold for $310m — hence “the Big Swindle.”</li>
+  <li><strong>Oligarch scale, corrected:</strong> the revenues of the seven banker-owned groups in 1996 were about <span class="num">6% of GDP</span> (at most 10–15% counting trade arrangements) — not the half of the economy often claimed in the 1990s press (<a href="https://doi.org/10.2747/1060-586x.26.3.207">Treisman</a>).</li>
+</ul>
+
+<h3>Chapter 14 · “At Yeltsin’s Court” — budget politics</h3>
+<ul class="tight">
+  <li>The economic content is the same deficit-and-conditionality story from Chapter 12, now with the oligarchs inside the room: loans in exchange for election support, and state decisions — customs, licences, privatisation rounds — as the currency of court politics.</li>
+  <li>Everything the chapter’s players fight over is scarce because <strong>the state’s revenue is a third of what it was designed for</strong> — the single fact that explains why influence, not ideology, was the prize.</li>
+</ul>
+
+<h3>Chapter 15 · “Endgame For Power” — the 1998 default</h3>
+<ul class="tight">
+  <li><strong>The pyramid.</strong> To plug the deficit the state issued short-term bonds (GKOs): about <span class="num">$70 billion</span> of them, with yields rising from 39% (15 May 1998) to 102% (13 July) and 145% (14 August). Foreigners held roughly $17bn of the ~$40bn frozen stock; domestic banks held them as collateral (<a href="https://documents1.worldbank.org/curated/en/192921468105280891/pdf/575520BRI0Box31mise0No103701PUBLIC1.pdf">World Bank, Pinto et al.</a>; <a href="http://congressionalresearch.com/98-578/document.php">CRS, 1998</a>).</li>
+  <li><strong>17 August 1998:</strong> the currency band was widened, GKOs were restructured/deferred, and a 90-day moratorium was placed on private external payments; the ruble was floated on 2 September and fell from 6.29 to about 9 per dollar by 21 September — two-thirds of its value in five weeks. GDP fell <span class="num">4.9%</span> in 1998; inflation hit <span class="num">84–86%</span>; major banks (Inkombank, Oneximbank, Tokobank, SBS-Agro) failed or froze (<a href="https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1333&context=journal-of-financial-crises">Yale/Journal of Financial Crises</a>).</li>
+  <li><strong>The recovery was fast — and it is the hinge of the whole story.</strong> GDP grew about <span class="num">6.4%</span> in 1999 and <span class="num">10%</span> in 2000 (earlier estimates were lower), driven by a 43.8% real devaluation (import substitution), spare industrial capacity, and oil rising from roughly $12 a barrel (Urals, 1998) to about $30 (2000) (<a href="https://documents1.worldbank.org/curated/en/517901468094172564/pdf/323080RU.pdf">World Bank, 2004</a>; <a href="https://cbr.ru/Collection/Collection/File/8331/ar_1999_e.pdf">Central Bank of Russia, 1999</a>).</li>
+</ul>
+
+<h3>Chapter 16 · “The Apartment Bombings”</h3>
+<p class="small">No new economics is needed for this chapter. Carry forward one line: the bombs fell in August–September 1999, in the first year of an economic rebound — a state with money again, and a new war in Chechnya to pay for.</p>
+
+<h3>Chapter 17 · “Coronation” — what Putin inherited</h3>
+<ul class="tight">
+  <li><strong>A recovering economy and a broke government.</strong> Growth of about <span class="num">21%</span> across 1999–2001, reserves up from <span class="num">$7.8bn</span> (December 1999) to <span class="num">$36.6bn</span> (end-2001), and the federal budget swinging from −4.9% of GDP (1998) to +3% (2001) — but foreign debt of roughly <span class="num">$160bn</span>, with $12–17bn a year falling due in 2001–05, more than half the federal budget (<a href="https://documents1.worldbank.org/curated/en/274511468336001105/pdf/multi0page.pdf">World Bank, 2002</a>; <a href="https://www.imf.org/external/pubs/ft/fandd/2000/09/nesteren.htm">IMF, <em>F&amp;D</em>, 2000</a>).</li>
+  <li><strong>And an oil tailwind just beginning.</strong> The same commodity whose price collapse had finished the Soviet Union now began restoring the Russian state — the neatest irony in the video’s whole arc.</li>
+</ul>
+
+<h3>Chapter 18 · “Conclusion” — the arc in one paragraph</h3>
+<p class="small">A state that could not pay its own officers in 1990 (Chapter 8) becomes one that cannot spend its oil revenue fast enough in 2000 (Chapter 17). Between those two points sit hyperinflation, a privatisation that transferred the country’s assets at a fraction of their worth, a decade of barter and unpaid wages, a default, and a devaluation that accidentally made Russian industry competitive again. Putin’s career rides exactly that turning point.</p>
+
+<h2 id="quiz">Check yourself (three questions)</h2>
+<div class="quiz">
+  <p class="quiz-q">1. Why did Leningrad begin rationing food in December 1990?</p>
+  <button class="quiz-option" data-correct="false">The national grain harvest had failed badly</button>
+  <button class="quiz-option" data-correct="true">Distribution collapsed despite a good harvest</button>
+  <button class="quiz-option" data-correct="false">Western sanctions blocked all food imports</button>
+  <button class="quiz-option" data-correct="false">The army had requisitioned the city’s supplies</button>
+  <p class="quiz-explanation" hidden>1990’s harvest was good (218m tonnes). The failure was the supply system: broken contracts, hoarding, barter, and republics withholding deliveries.</p>
+</div>
+<div class="quiz">
+  <p class="quiz-q">2. What did loans-for-shares actually involve?</p>
+  <button class="quiz-option" data-correct="false">Citizens received vouchers for company shares</button>
+  <button class="quiz-option" data-correct="true">Banks lent the state, keeping shares as collateral</button>
+  <button class="quiz-option" data-correct="false">Foreign firms bought stakes in Russian industry</button>
+  <button class="quiz-option" data-correct="false">The IMF bought Russian state bonds directly</button>
+  <p class="quiz-explanation" hidden>1995–96: the state borrowed about $800m against shares in twelve large firms; the loans went unpaid and the lenders kept the shares.</p>
+</div>
+<div class="quiz">
+  <p class="quiz-q">3. What ended the 1998 crisis and revived the Russian economy?</p>
+  <button class="quiz-option" data-correct="false">A large IMF package restored investor confidence</button>
+  <button class="quiz-option" data-correct="true">Devaluation, spare capacity and rising oil prices</button>
+  <button class="quiz-option" data-correct="false">Privatisation revenue repaid the state’s debts</button>
+  <button class="quiz-option" data-correct="false">Foreign banks resumed lending after the default</button>
+  <p class="quiz-explanation" hidden>The ruble’s fall made imports expensive and domestic production competitive; idle factories restarted, and oil rose from about $12 to $30 a barrel.</p>
+</div>
+
+<div class="box box-teacher">
+  <span class="box-title">Ask your teacher</span>
+  <p>Anything above unclear — or a chapter whose economics you want expanded before watching — ask. The full treatment of 1985–89 lives in the <a href="../reference/the-collapse-1985-89.html">deep-dive</a>; this page stays condensed on purpose and grows only when a chapter needs it.</p>
+</div>
+
+<footer class="lesson-footer">
+  <nav>
+    <a href="../reference/the-collapse-1985-89.html">Deep-dive: the collapse, 1985–89</a>
+    <a href="../lessons/0001-dresden-kgb-years.html">Lesson 0001 — Dresden</a>
+    <a href="../reference/glossary.html">Glossary</a>
+  </nav>
+  <p>Workspace: putin-rise-to-power · condensed study aid, self-contained · generated 2026-09-17 · figures carry inline sources; where estimates disagree, both are shown</p>
+</footer>
+
+</body>
+</html>
