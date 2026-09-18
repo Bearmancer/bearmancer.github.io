@@ -119,6 +119,14 @@ blockquote cite { font-size: 0.84rem; font-style: normal; }
 /* Simple lists with tight spacing */
 ul.tight li, ol.tight li { margin: 0.25rem 0; }
 
+/* Cast-block tables (match sibling courses) */
+table.course-map { width: 100%; border-collapse: collapse; font-size: 0.93rem; margin: 1rem 0 1.4rem; }
+table.course-map thead th { text-align: left; border-bottom: 1.5px solid var(--rule); padding: 0.4rem 0.5rem;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 0.78rem; letter-spacing: 0.06em; }
+table.course-map td { border-bottom: 1px solid var(--rule); padding: 0.45rem 0.5rem; vertical-align: top; }
+table.course-map tbody tr:last-child td { border-bottom: none; }
+table.course-map td:first-child { white-space: nowrap; }
+
 /* Quiz */
 .quiz {
   background: var(--quiz-bg);

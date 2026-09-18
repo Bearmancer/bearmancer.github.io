@@ -6,6 +6,13 @@
 <title>Lesson 0001 — Dresden: the spy who watched an empire die</title>
 <link rel="stylesheet" href="../assets/lesson.css">
 <script src="../assets/quiz.js" defer></script>
+<style>
+figure.map svg { width: 100%; height: auto; }
+@media (min-width: 1380px) { figure.map { max-width: 900px; margin-left: auto; margin-right: auto; } }
+table.cast { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+table.cast th, table.cast td { border: 1px solid #dbd6ca; padding: 0.45rem 0.6rem; text-align: left; vertical-align: top; }
+table.cast th { background: #f4f1e8; font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
 </head>
 <body>
 
@@ -15,7 +22,91 @@
 
 <p class="lead">Sean Munger's Dresden chapter covers five years (1985–90) of Putin's life as a KGB officer watching East Germany — and the Soviet bloc — come apart. It is the most-retold origin story of his worldview, and the one where "what Putin says happened" and "what the record shows" drift furthest apart. This lesson walks the chapter, then sorts the three layers: <strong>Munger's telling</strong>, <strong>Putin's own account</strong>, and <strong>what historians can corroborate</strong>.</p>
 
-<h2>1. The job that wasn't a spy thriller</h2>
+<div class="box box-fact">
+  <span class="box-title">Boundary</span>
+  <p>This lesson covers chapter 7 only (video 55:00–1:04:57): Putin's Dresden posting, 1985–90, and the five-year collapse of the bloc around it. The chapter's closing question — why the recall came so suddenly — is carried below as the chapter's own open point.</p>
+</div>
+
+<h2>1. Cast — who's on stage this chapter</h2>
+<p>Everyone below acts in this chapter; the course starts here, so every role line is written in full. The diagram shows only this chapter's active relationships. Companion: <a href="../reference/cast-map.html">cast map (as of chapter 7)</a>; terms: <a href="../reference/glossary.html">glossary</a>.</p>
+
+<table class="cast">
+<thead><tr><th>Name</th><th>Role as of this chapter</th><th>First appearance</th></tr></thead>
+<tbody>
+<tr id="cast-putin"><td>Vladimir Putin</td><td>KGB officer on Line N in Dresden, 1985–90, under translator cover; watches the bloc collapse from a bureaucratic backwater</td><td>first appears ch7</td></tr>
+<tr id="cast-lyudmila"><td>Lyudmila Putina</td><td>Putin's wife; lives in Dresden 1985–90; second daughter Katerina born there 31 Aug 1986</td><td>first appears ch7</td></tr>
+<tr id="cast-gorbachev"><td>Mikhail Gorbachev</td><td>Soviet leader 1985–91; reformer whose perestroika, glasnost and 1988 non-intervention signal unravel the bloc</td><td>first appears ch7</td></tr>
+<tr id="cast-honecker"><td>Erich Honecker</td><td>East German leader; reads Gorbachev's reforms as abandonment and fears for his own head</td><td>first appears ch7</td></tr>
+<tr id="cast-reagan"><td>Ronald Reagan</td><td>US president; signs the INF treaty with Gorbachev, Dec 1987</td><td>first appears ch7</td></tr>
+<tr id="cast-walesa"><td>Lech Wałęsa</td><td>Polish non-communist leader; the June 1989 semi-free elections carry his side into government</td><td>first appears ch7</td></tr>
+<tr id="cast-usoltsev"><td>Vladimir Usoltsev (documents: Agartanov)</td><td>Dresden office-mate; later memoirist (<em>Sosluzhivets</em>); source of the "wasting its time on trifles" verdict</td><td>first appears ch7</td></tr>
+<tr id="cast-schmidt-eenboom"><td>Erich Schmidt-Eenboom</td><td>German intelligence journalist; source of the 2011 "Lenchen" allegations Munger discusses</td><td>first appears ch7</td></tr>
+<tr id="cast-lenchen"><td>? "Lenchen"</td><td>Alleged BND informant close to the Putin household; identity unknown — teach as allegation, never fact</td><td>first appears ch7</td></tr>
+<tr id="cast-sonntag"><td>Rainer Sonntag</td><td>Dresden-era recruitment case: neo-Nazi handled via Stasi channels (CORRECTIV archive reporting)</td><td>first appears ch7</td></tr>
+<tr id="cast-doris"><td>Doris G.</td><td>Alleged affair partner, daughter of a Stasi official — the video's account only, relationship "didn't last long"</td><td>first appears ch7</td></tr>
+</tbody>
+</table>
+
+<figure class="map">
+<svg viewBox="0 0 900 500" role="img" aria-label="Chapter 7 relationship subgraph">
+<defs>
+<marker id="ah-family" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c2185b"></path></marker>
+<marker id="ah-testimony" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0e7c7b"></path></marker>
+<marker id="ah-recruit" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fa8"></path></marker>
+<marker id="ah-rupture" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"></path></marker>
+<marker id="ah-disputed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6f6a60"></path></marker>
+</defs>
+<rect x="40" y="40" width="170" height="56" fill="#ffffff" stroke="#8a8478" stroke-width="1.5"></rect>
+<text x="48" y="64" font-size="12" text-anchor="start">Lyudmila Putina (ch7)</text>
+<text x="48" y="82" font-size="10" text-anchor="start">wife, Dresden 1985–90</text>
+<rect x="365" y="40" width="170" height="56" fill="#ffffff" stroke="#8a8478" stroke-width="1.5"></rect>
+<text x="373" y="64" font-size="12" text-anchor="start">Vladimir Putin (ch7)</text>
+<text x="373" y="82" font-size="10" text-anchor="start">Line N officer</text>
+<rect x="690" y="40" width="170" height="56" fill="#ffffff" stroke="#8a8478" stroke-width="1.5"></rect>
+<text x="698" y="64" font-size="12" text-anchor="start">V. Usoltsev (ch7)</text>
+<text x="698" y="82" font-size="10" text-anchor="start">office-mate, memoirist</text>
+<rect x="40" y="220" width="170" height="56" fill="#eceae2" stroke="#6f6a60" stroke-width="1.5"></rect>
+<text x="48" y="244" font-size="12" text-anchor="start">? Lenchen (ch7)</text>
+<text x="48" y="262" font-size="10" text-anchor="start">alleged informant</text>
+<rect x="365" y="220" width="170" height="56" fill="#ffffff" stroke="#8a8478" stroke-width="1.5"></rect>
+<text x="373" y="244" font-size="12" text-anchor="start">R. Sonntag (ch7)</text>
+<text x="373" y="262" font-size="10" text-anchor="start">recruitment case</text>
+<rect x="690" y="220" width="170" height="56" fill="#ffffff" stroke="#8a8478" stroke-width="1.5"></rect>
+<text x="698" y="244" font-size="12" text-anchor="start">E. Honecker (ch7)</text>
+<text x="698" y="262" font-size="10" text-anchor="start">East German leader</text>
+<rect x="40" y="400" width="170" height="56" fill="#ffffff" stroke="#8a8478" stroke-width="1.5"></rect>
+<text x="48" y="424" font-size="12" text-anchor="start">M. Gorbachev (ch7)</text>
+<text x="48" y="442" font-size="10" text-anchor="start">Soviet leader 1985–91</text>
+<rect x="365" y="400" width="170" height="56" fill="#ffffff" stroke="#8a8478" stroke-width="1.5"></rect>
+<text x="373" y="424" font-size="12" text-anchor="start">Schmidt-Eenboom (ch7)</text>
+<text x="373" y="442" font-size="10" text-anchor="start">journalist, 2011 claims</text>
+<line x1="210" y1="68" x2="365" y2="68" stroke="#c2185b" stroke-width="2.2" marker-end="url(#ah-family)"></line>
+<text x="222" y="60" font-size="11" text-anchor="start">wife in Dresden</text>
+<line x1="535" y1="68" x2="690" y2="68" stroke="#0e7c7b" stroke-width="2.2" marker-end="url(#ah-testimony)"></line>
+<text x="560" y="60" font-size="11" text-anchor="start">office-mate</text>
+<line x1="450" y1="96" x2="450" y2="220" stroke="#1f5fa8" stroke-width="2.2" marker-end="url(#ah-recruit)"></line>
+<text x="458" y="160" font-size="11" text-anchor="start">recruitment work</text>
+<line x1="125" y1="96" x2="125" y2="220" stroke="#6f6a60" stroke-width="2.2" marker-end="url(#ah-disputed)"></line>
+<text x="133" y="160" font-size="11" text-anchor="start">informed on household</text>
+<polyline points="450,400 450,320 125,320 125,276" fill="none" stroke="#0e7c7b" stroke-width="2.2" marker-end="url(#ah-testimony)"></polyline>
+<text x="250" y="312" font-size="11" text-anchor="start">published her claims</text>
+<polyline points="125,456 125,486 775,486 775,276" fill="none" stroke="#b3261e" stroke-width="2.2" marker-end="url(#ah-rupture)"></polyline>
+<text x="400" y="470" font-size="11" text-anchor="start">reforms read as abandonment</text>
+</svg>
+<figcaption class="small">Chapter 7 subgraph. Magenta: family. Teal: testimony &amp; reporting. Blue: recruitment. Grey: disputed link. Red: rupture. Full cumulative map: <a href="../reference/cast-map.html">cast map</a>; dates: <a href="../reference/timeline.html">timeline</a>; terms: <a href="../reference/glossary.html">glossary</a>.</figcaption>
+</figure>
+
+<h2>2. What matters — and what you can skip</h2>
+<p><strong>Keep these four essentials:</strong></p>
+<ol class="tight">
+<li><strong>The drone verdict, held loosely.</strong> Line N collected dossiers the FCD mostly discarded; Munger finds no valuable product in five years — but archive journalism documents real recruitment work at the edges (see §8).</li>
+<li><strong>The 1985–89 cascade.</strong> Gorbachev's reforms → the December 1988 non-intervention signal → Poland, Hungary, the Wall. This sequence is the chapter's real subject; the mechanics live in <a href="../reference/the-collapse-1985-89.html">the deep-dive</a>.</li>
+<li><strong>Two Dresden nights.</strong> Munger's fishy walk-on part versus Putin's "Moscow is silent" abandonment story — plus the one-word date correction (5 December, not the 4th).</li>
+<li><strong>The allegation model.</strong> The 2011 Lenchen flap shows how to carry a single-sourced claim: source chain flagged, lurid element dismissed, rest kept as allegation.</li>
+</ol>
+<p><strong>What can be skimmed:</strong> the villa's present-day use as a teacher-training centre; the INF-treaty mechanics; the illegitimate-daughter detail, which Munger himself calls far-fetched; the oil-price-to-Kuwait causal chain, which belongs to the deep-dive, not to memory.</p>
+
+<h2>3. The job that wasn't a spy thriller</h2>
 <p>The chapter opens at the office: a villa at <strong>4 Angelikastraße in Dresden</strong>, where Putin worked from 1985, on the upper floor <span class="t">55:03</span>. The Stasi's district headquarters sat a few blocks away; a Soviet tank regiment was parked across the river. It was the USSR's main compound in the city.</p>
 <p>His cover was "translator." His actual unit — per the biographies Munger draws on — did recruiting work: find East Germans or foreigners with plausible reasons to travel west and put them forward as potential agents, vetted by the KGB's First Chief Directorate <span class="t">56:02</span>. Munger's point is how little of that pipeline ever produced anything. Most dossiers were thrown away. He quotes a colleague:</p>
 <blockquote>
@@ -25,14 +116,14 @@
 <p>Munger's verdict on the five years, delivered as a list <span class="t">57:04</span>: no evidence Putin gathered useful intelligence, ran a field operation, interfered with a foreign operation, exposed a Western spy, stole a document, or recruited an agent himself. "He was a drone, a worker bee… what we would today call a bull[shit] job" <span class="t">57:20</span>. The perks were real, though: East Germany's living standard was higher than the Soviet Union's, and the Putins lived better in Dresden than they ever had in Leningrad <span class="t">57:27</span>.</p>
 <div class="box box-fact">
   <span class="box-title">Hold that verdict loosely</span>
-  <p>Munger's "recruited nobody" claim is his shorthand, and it is contested at the edges — see §6 below before you repeat it.</p>
+  <p>Munger's "recruited nobody" claim is his shorthand, and it is contested at the edges — see §8 below before you repeat it.</p>
 </div>
 
-<h2>2. The file from Bonn (2011)</h2>
+<h2>4. The file from Bonn (2011)</h2>
 <p>Mid-chapter, Munger detours into a 2011 press flap: reports, sourced to German intelligence journalist Erich Schmidt-Eenboom, that Bonn's BND had an informant ("Lenchen") close to the Putin household in Dresden, and that she reported Putin as a domestic tyrant who beat his wife and had affairs <span class="t">57:49</span>.</p>
 <p>Munger's handling is a good model: he flags the source chain, calls the story's most lurid element — an illegitimate daughter — far-fetched, says the affairs are plausible and the violence "in line with his personality," and closes the item. Treat it exactly that way: <strong>allegations</strong>, single-sourced, reported as a press flap — not as established fact. The primary document trail is in <a href="https://www.rferl.org/a/putin_spy_affairs_wife_beating_philanderer/24383939.html">RFE/RL's 2011 writeup</a> (in Resources).</p>
 
-<h2>3. The empire starts to crack (1985–89)</h2>
+<h2>5. The empire starts to crack (1985–89)</h2>
 <p>The chapter's real subject is the backdrop against which a middle-ranking officer lived: the five-year sequence in which the system he served died. Munger's version, in order:</p>
 <p class="small">Munger compresses years into seconds here. For the full mechanics — dates, quotes, corrections — see the deep-dive: <a href="../reference/the-collapse-1985-89.html">The collapse, 1985–89, annotated</a>.</p>
 <ul class="tl">
@@ -45,7 +136,7 @@
 </ul>
 <p>Meanwhile the East German leadership — Honecker's circle — saw Gorbachev's reforms not as rescue but as abandonment, and feared for their own heads. That fear is the hinge of the chapter's finale <span class="t">61:08</span>.</p>
 
-<h2>4. The night of December 5, 1989</h2>
+<h2>6. The night of December 5, 1989</h2>
 <p>After the East German government fell, Dresden's crowds marched on the Stasi district HQ and stormed it; the Stasi was disbanded shortly after <span class="t">63:47</span>. Then the part that made this story famous: Putin has said that a group broke off and moved on the KGB building, that he went out and talked them down, and that he called the nearby Soviet tank regiment for guards, who eventually came.</p>
 <p>Munger tells this skeptically, and the skepticism is the most interesting thing in the chapter <span class="t">64:15</span>:</p>
 <ul class="tight">
@@ -62,10 +153,10 @@
   <p>Munger says the storming happened "December 4th 1989." Most accounts — the BBC, and Putin's own retellings — date the Stasi storming and the KGB-house confrontation to <strong>5 December 1989</strong>. Minor, but it's the kind of detail worth noticing while learning to read this literature.</p>
 </div>
 
-<h2>5. The cliffhanger: why Moscow pulled him home</h2>
-<p>The chapter ends on 3 February 1990: the Putins leave Dresden for Leningrad, reassigned "quite suddenly," reason unknown — with Munger promising a "leading theory" next chapter <span class="t">64:37</span>. It is resolved in the first minute after 1:04:57: <strong>Putin was sent back to Leningrad to shadow the reformist politician Anatoly Sobchak</strong> for the KGB <span class="t">65:03</span>. Watching a rising politician beats collecting discarded dossiers: the Dresden posting ends, and the political Putin begins. (That chapter gets its own lesson — 0002, pending.)</p>
+<h2>7. The cliffhanger: the sudden recall</h2>
+<p>The chapter ends on 3 February 1990: the Putins leave Dresden for Leningrad, reassigned "quite suddenly," reason unknown — with Munger promising a "leading theory" in what follows <span class="t">64:37</span>. That unanswered why is the chapter's own open point: a mid-level officer with a thin file is pulled home just as the posting collapses, and the chapter does not say by whom or for what.</p>
 
-<h2>6. Reading it three ways</h2>
+<h2>8. Reading it three ways</h2>
 <p>Munger's chapter is best understood as <em>demythologizing</em> — cutting a legendary five years down to size. But three readings coexist in the literature, and all three are worth holding:</p>
 <ol class="tight">
   <li><strong>Munger's read:</strong> a mediocre officer at a bureaucratic backwater, whose famous confrontation is dubious. The takeaway is the mediocrity — and the fact that history washed over him while he watched.</li>
@@ -77,7 +168,7 @@
   <p>Archive journalism (<a href="https://correctiv.org/en/latest-stories/the-system-of-putin/2015/07/30/putins-early-years/">CORRECTIV, 2015</a>) documents Dresden-era recruitment work among Stasi officers and characters like the neo-Nazi Rainer Sonntag. Biographers (Short; Gessen) agree there were <em>no valuable Western agents</em> and no significant intelligence product — his most-cited "get" is an unclassified US Army training manual. So Munger's claim is true at the level that matters (nothing of value) and slightly overbroad as an absolute.</p>
 </div>
 
-<h2>7. Check yourself</h2>
+<h2>9. Check yourself</h2>
 <p class="small">Answer from memory — effortful recall is the point. Immediate feedback below each question.</p>
 
 <div class="quiz">
@@ -99,17 +190,22 @@
 </div>
 
 <div class="quiz">
-  <p class="quiz-q">3. Munger ends the chapter teasing why Putin was recalled in February 1990. The resolution (opening of the next chapter): he was sent…</p>
-  <button class="quiz-option" data-correct="true">To shadow politician Anatoly Sobchak</button>
-  <button class="quiz-option" data-correct="false">To quietly resign from KGB</button>
-  <button class="quiz-option" data-correct="false">To lead Leningrad's KGB office</button>
-  <button class="quiz-option" data-correct="false">To teach law at University</button>
-  <p class="quiz-explanation" hidden>KGB assignment: observe the reformist Sobchak. That connection put Putin next to power in Leningrad — the bridge into politics.</p>
+  <p class="quiz-q">3. What does the chapter establish about February 1990?</p>
+  <button class="quiz-option" data-correct="true">Recalled suddenly, reason still unknown</button>
+  <button class="quiz-option" data-correct="false">Promoted to lead Leningrad KGB</button>
+  <button class="quiz-option" data-correct="false">Ordered to resign from service</button>
+  <button class="quiz-option" data-correct="false">Sent to teach university law</button>
+  <p class="quiz-explanation" hidden>3 February 1990: sudden reassignment to Leningrad, reason unknown — Munger's "leading theory" is the chapter's own open point, not a finding taught here.</p>
 </div>
 
-<h2>8. Primary source &amp; next steps</h2>
+<h2>10. Primary source &amp; next steps</h2>
 <p><strong>Primary source:</strong> rewatch the chapter itself — <a href="https://www.youtube.com/watch?v=2vTh4eB33EE&amp;t=3300s">55:00–1:04:57</a> — then read the <a href="https://www.bbc.com/news/magazine-32066222">BBC's 2015 Dresden piece</a> for the canonical version of the December night. Compare how each tells the crowd scene; that comparison is the skill this course is building.</p>
-<p class="small">Anchors: <a href="../reference/glossary.html">Glossary</a> · Resources · Transcript slice (257 cues) · Mission</p>
+<p class="small">Anchors: <a href="../reference/glossary.html">Glossary</a> · <a href="../reference/cast-map.html">Cast map</a> · <a href="../reference/timeline.html">Timeline</a> · Resources · Transcript slice (257 cues) · Mission</p>
+
+<div class="box box-source">
+  <span class="box-title">Method — how this lesson was built</span>
+  <p>Chapter boundaries come from the video's own chapter markers (yt-dlp metadata, cross-checked against the description's time list; see Notes). The transcript slice keeps only cues in 55:00–1:04:57 with rolling-caption duplicates removed; known auto-caption garbling (names, places) was corrected against the sources in Resources. Claims were checked claim-by-claim in the fact-check boxes above; anything single-sourced is labelled as allegation, never as fact.</p>
+</div>
 
 <div class="box box-teacher">
   <span class="box-title">Ask your teacher</span>
