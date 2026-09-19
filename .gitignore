@@ -1,0 +1,21 @@
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# --- env / secrets ---
+.env
+.envrc
+
+# --- tooling cruft that has no business in a static-hosting repo ---
+node_modules/
+.omc/
+.cache/
+
+# --- temp ---
+*.tmp
+*.bak
