@@ -144,3 +144,33 @@ ul.tight li, ol.tight li { margin: 0.25rem 0; }
   .box { break-inside: avoid; }
   h2 { break-after: avoid; }
 }
+
+/* Sources block (per-chapter) */
+.sources {
+  margin: 2rem 0 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.92rem;
+}
+.sources .sources-title {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.sources ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+.sources li { margin: 0.3rem 0; }
+.sources .verdict { font-weight: 600; }
+
+/* Cast map figure + cast table + legend (centralized; was duplicated per lesson) */
+figure.map svg { width: 100%; height: auto; }
+@media (min-width: 1380px) { figure.map { max-width: 900px; margin-left: auto; margin-right: auto; } }
+table.cast { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+table.cast th, table.cast td { border: 1px solid #dbd6ca; padding: 0.45rem 0.6rem; text-align: left; vertical-align: top; }
+table.cast th { background: #f4f1e8; font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+ul.legend-sub { list-style: none; padding: 0; font-size: 0.86rem; color: var(--ink-soft); }
+ul.legend-sub li { margin: 0.2rem 0; }
+.swatch { display: inline-block; width: 1.6rem; height: 0.18rem; vertical-align: middle; margin-right: 0.4rem; }
