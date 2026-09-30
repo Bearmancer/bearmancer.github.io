@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why wifi printers are so unreliable</title>
+<link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<header class="A-bar">
+			<div class="row">
+				<span class="title">Verdict</span>
+				<select aria-label="Chapter index" data-index data-base="../">
+					<option value="../index.html">Home</option>
+				</select>
+				<div class="type-panel">
+					<select aria-label="Font" data-font-select>
+						<option>Literata</option>
+						<option>Source Serif 4</option>
+						<option>Newsreader</option>
+						<option>Crimson Pro</option>
+						<option>EB Garamond</option>
+						<option>Merriweather</option>
+						<option>Lora</option>
+						<option>Libre Baskerville</option>
+						<option>Atkinson Hyperlegible</option>
+						<option>Inter</option>
+						<option>IBM Plex Sans</option>
+						<option selected>Charter</option>
+					</select>
+					<select aria-label="Size" data-size-select>
+						<option>S</option>
+						<option selected>M</option>
+						<option>L</option>
+						<option>XL</option>
+					</select>
+				</div>
+			</div>
+		</header>
+  <p class="kicker">Verdict</p>
+  <h1>Why wifi printers are so unreliable</h1>
+  <p class="surtitle">2026-09-30</p>
+<p><strong>Bottom line:</strong> Your printer is not haunted — three separately documented failure layers stack on one cheap device: a fragile multicast discovery protocol (mDNS), a driver model Microsoft itself is now retiring, and an ink business model that deliberately disables third-party cartridges. Confidence: high, every layer confirmed by primaries (IETF RFCs, Microsoft Learn, HP's own FAQ, federal court filings). What would change it: public warranty-return or field-failure data showing hardware defects dominate over these layers — no such dataset was findable.</p>
+
+<h2>Verdicts</h2>
+
+<table>
+<thead><tr><th>Claim</th><th>Verdict</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr>
+<td>Wifi discovery (mDNS/Bonjour/DNS-SD) is a core cause of the flakiness</td>
+<td><strong>Confirmed</strong></td>
+<td><a href="https://datatracker.ietf.org/doc/html/rfc6762">RFC 6762</a>: after "a sudden power failure or other abrupt disconnection from the network, its name may continue to appear in DNS-SD browser lists" — stale entries are spec-level, not a bug. <a href="https://datatracker.ietf.org/doc/html/rfc6763">RFC 6763</a> itself warns that even "hardware which is otherwise perfectly capable may have low-power and sleep modes that are more limited." <a href="https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/226301-configure-best-recommended-design-as.html">Cisco's controller design guide</a> treats mDNS breakage as routine: multicast forwarding and Bonjour advertisements must be verified "end-to-end" or AirPrint across VLANs silently fails.</td>
+</tr>
+<tr>
+<td>Sleep/power-save drops the printer off the network until woken</td>
+<td><strong>Confirmed</strong></td>
+<td><a href="https://support.hp.com/us-en/document/ish_11051136-11051180-16">HP documents</a> sleep mode kicking in after idle and only returning "when you send another print or scan job." A sleeping host stops answering multicast; recovery depends on a <a href="https://en.wikipedia.org/wiki/Bonjour_Sleep_Proxy">Bonjour Sleep Proxy</a> that "continues to advertise the services in Multicast DNS (mDNS) on behalf of the sleeping host" — home routers usually lack one, so the printer just vanishes.</td>
+</tr>
+<tr>
+<td>DHCP address churn breaks queued jobs and OS queues</td>
+<td><strong>Confirmed</strong></td>
+<td>HP's own offline-printer fix: <a href="https://support.hp.com/us-en/document/ish_2026537-1681507-16">"Select Manual IP"</a> — the vendor's prescribed remedy for address loss, plus <a href="https://support.hp.com/ie-en/document/c05574219">"If a DHCP server assigned an IP address, change it to a static IP address"</a> and "Disable the SNMP feature." Field guidance agrees: "A printer that keeps going offline is almost always losing its network address, not failing" (<a href="https://castleink.com/blogs/printer-help/why-does-my-printer-keep-going-offline-how-to-fix-it-for-good">Castle Ink</a>, ink seller — labeled vendor blog).</td>
+</tr>
+<tr>
+<td>Band/router quirks (2.4 GHz-only printers, AP isolation) cause silent failures</td>
+<td><strong>Confirmed</strong></td>
+<td>Many printers refuse 5 GHz outright — <a href="https://h30434.www3.hp.com/t5/Printer-Wireless-Networking-Internet/Printer-2-4-ghz/td-p/9584854">HP's own community thread</a>: "The printer could not connect because it only functions using 2.4 ghz." The same Cisco design guide requires multicast/Bonjour verification per VLAN — client isolation and VLAN splits block discovery without any error on the printer.</td>
+</tr>
+<tr>
+<td>The driver/spooler stack is a major failure layer</td>
+<td><strong>Confirmed</strong></td>
+<td>Microsoft's own <a href="https://learn.microsoft.com/en-us/universal-print/fundamentals/universal-print-connector-with-ipp">Universal Print docs</a> list what the driver path causes: "crashes, memory leaks, and translation failures." <a href="https://learn.microsoft.com/en-us/troubleshoot/windows-server/printing/print-spooler-service-not-running">Microsoft: "Outdated drivers and print components might cause the Print Spooler service to stop responding"</a> and "Corrupted files in the Spool folder can cause Print Spooler service problems." Microsoft is deleting the model: as of <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/print/end-of-servicing-plan-for-third-party-printer-drivers-on-windows">July 1, 2026 the printer driver ranking prefers the Windows IPP inbox class driver</a>, retiring third-party printer drivers.</td>
+</tr>
+<tr>
+<td>Ink economics (razor-and-blades + DRM) makes it worse</td>
+<td><strong>Confirmed</strong></td>
+<td><a href="https://www.hp.com/us-en/printers/hp-plus/faq.html">HP's FAQ states it openly</a>: printers "use dynamic security measures to block cartridges using a non-HP chip or circuitry. Periodic firmware updates will maintain the effectiveness of these measures and block cartridges that previously worked." Court record: 2010–2015 firmware "functionally prevented some consumers from using non-HP ink cartridges" (<a href="https://storage.courtlistener.com/recap/gov.uscourts.ilnd.449874/gov.uscourts.ilnd.449874.96.0.pdf">N.D. Ill. filing</a>), 2018 class settlement. Economics: supplies revenue <a href="https://truthinadvertising.org/wp-content/uploads/2022/02/Mobile-Emergency-Housing-Corp-v-HP-3rd-amended-complaint.pdf">$12.9B vs hardware $7.1B (2019, per HP annual report as quoted in complaint)</a> — the printer is the loss-leader; the ink is the product. The Canon suit adds the scanner hostage trick: printers "do not function as scanners if the devices have low or empty ink cartridges" (<a href="https://storage.courtlistener.com/recap/gov.uscourts.nyed.470665/gov.uscourts.nyed.470665.1.0.pdf">E.D.N.Y. filing</a>).</td>
+</tr>
+<tr>
+<td>Firmware updates have removed function (the "worked yesterday" cases)</td>
+<td><strong>Confirmed</strong></td>
+<td>2016: <a href="https://www.bbc.com/news/technology-37503139">BBC — "A controversial firmware change ... meant HP printer owners using unofficial, usually cheaper, cartridges discovered they would no longer work"</a>; <a href="https://arstechnica.com/information-technology/2016/09/hp-to-issue-optional-firmware-update-allowing-3rd-party-ink/">Ars Technica confirms</a> the update "prevented some untested third-party cartridges that use cloned security chips from working, even if they had previously functioned." Epson: firmware updates "purposely disabled those printers with non-Epson printer cartridges installed" (<a href="https://www.courthousenews.com/wp-content/uploads/2019/10/Epson.CA_.pdf">2019 class complaint</a>). HP later reversed under pressure — the counter-evidence: an optional update "removes the restriction."</td>
+</tr>
+<tr>
+<td>"No discernible pattern" — the failures are random</td>
+<td><strong>Wrong</strong></td>
+<td>Every layer above has a repeatable trigger and a documented fix; practitioner guidance converges on the same four (static IP, same band/SSID, wake/disable sleep, driverless path). Scale of the burden: printer issues drive <a href="https://www.marconet.com/blog/how-have-managed-print-services-changed">23% of help desk calls and 15% of IT time</a> (managed-print vendor blog — advocacy-labeled). Reliability does vary by brand: Consumer Reports modelled <a href="https://www.consumerreports.org/electronics-computers/printers/most-and-least-reliable-printer-brands-a2254123160">69,886 printers bought 2016–2024</a> into 4-year reliability scores (Brother ranked best in the 2026 summary). What you experience as randomness is <em>several independent intermittent layers whose triggers differ</em> — each failure is patterned; the combination is not.</td>
+</tr>
+<tr>
+<td>It's getting better</td>
+<td><strong>Partially correct</strong></td>
+<td>Driverless is real: <a href="https://mopria.org/what-is-mopria">Mopria certifies 120M+ devices, 10,000+ models</a> for a consistent driverless path, Windows now prefers the IPP inbox driver (above), and HP reversed its 2016 block. But the discovery layer is still mDNS, sleep-proxy coverage is still absent in most homes, and ink DRM is still policy. Improvement touches the driver layer, not the network layer.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>What the evidence says to actually do</h2>
+
+<ul>
+<li><strong>Give the printer a reserved/static IP</strong> — HP's prescribed fix for the offline loop; kills the DHCP-churn layer.</li>
+<li><strong>Put printer and devices on the same band and SSID</strong> — many printers are 2.4 GHz-only; no error, just silence.</li>
+<li><strong>Disable sleep or wake it before jobs</strong> — without a Bonjour sleep proxy the sleeping printer leaves the network by design.</li>
+<li><strong>Use the driverless path</strong> (IPP/AirPrint/Mopria) instead of vendor driver bundles — Microsoft's own docs call the driver path the crash source.</li>
+<li><strong>Budget for the ink model</strong> — cartridge-chip blocking is written into HP's FAQ and enforced by firmware updates; a cheaper printer is a loan you repay in ink.</li>
+</ul>
+
+<h2>Unverified</h2>
+
+<ul>
+<li>Captive portals breaking printer connections — asserted in guides, no page fetched this run to hold it.</li>
+<li>Printer network stacks are buggy or never updated — update guidance is documented, teardown proof of buggy stacks not found.</li>
+<li>Warranty-return rates / teardown lifespan figures — only Consumer Reports predicted 4-year scores exist publicly.</li>
+<li>Genuine nondeterminism (batch firmware bugs, intermittent hardware defects) supporting the "no pattern" side — unfindable this run.</li>
+<li>India-specific printer reliability, service-network, or support-experience data — unfindable; global sources used.</li>
+<li>FTC order or Italian-regulator fine against HP Dynamic Security — not located this run; the class-action settlements are verified, the regulatory actions are not.</li>
+<li>The 23% help-desk figure comes from a managed-print-services vendor; treat as vendor-advocacy, not independent measurement.</li>
+</ul>
+
+  <footer class="lesson-footer">
+    <nav><a href="../index.html">Home</a></nav>
+  </footer>
+		<script src="../assets/course-index.js"></script>
+		<script src="../assets/shell.js"></script>
+</body>
+</html>
