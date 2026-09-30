@@ -7,15 +7,15 @@
 <link rel="stylesheet" href="assets/lesson.css">
 </head>
 <body>
-		<header class="A-bar">
+		<header class="A-bar" data-state="home">
 			<div class="row">
-				<span class="title">Ark Nova: The Short Version</span>
-				<select aria-label="Chapter index" data-index data-base="lessons/">
-					<option value="../../index.html">Home</option>
-					<option value="reference/icons.html">Icon Reference</option>
-					<option value="reference/cheat-sheet.html">Cheat Sheet</option>
-				</select>
+				<label class="grp"><span class="lbl">Topic</span><select aria-label="Topic" data-topic data-feed="../assets/course-index.js" data-base="../" data-placeholder="Select a topic"></select></label>
+				<label class="grp"><span class="lbl">Chapter</span><select aria-label="Chapter" data-index data-placeholder="Select a chapter" data-base="lessons/">
+
+				</select></label>
+				<span class="sep" aria-hidden="true"></span>
 				<div class="type-panel">
+					<span class="aa" aria-hidden="true">Aa</span>
 					<select aria-label="Font" data-font-select>
 						<option>Literata</option>
 						<option>Source Serif 4</option>
