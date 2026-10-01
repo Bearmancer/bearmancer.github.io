@@ -41,7 +41,8 @@
 		</header>
 
 		<h1>Why WiFi Printers Are Unreliable</h1>
-<p>Your printer is not haunted. Inside one cheap device, three failure layers stack: a fragile multicast discovery protocol, a driver model Microsoft is now retiring, and an ink business that deliberately blocks third-party cartridges. Each layer has a repeatable trigger and a documented fix — what feels random is several independent intermittent layers whose triggers differ.</p>
+
+		<p>Your printer is not haunted. Inside one cheap device, three failure layers stack: a fragile multicast discovery protocol, a driver model Microsoft is now retiring, and an ink business that deliberately blocks third-party cartridges. Each layer has a repeatable trigger and a documented fix — what feels random is several independent intermittent layers whose triggers differ.</p>
 <h2>Discovery Breaks First</h2>
 <p>WiFi printers announce themselves with multicast DNS — mDNS, Apple's Bonjour, DNS-SD. The protocol itself expects ghosts: <a href="https://datatracker.ietf.org/doc/html/rfc6762">RFC 6762</a> notes that after "a sudden power failure or other abrupt disconnection from the network, its name may continue to appear in DNS-SD browser lists" — stale entries are spec-level behavior, not a bug. <a href="https://datatracker.ietf.org/doc/html/rfc6763">RFC 6763</a> warns that even "hardware which is otherwise perfectly capable may have low-power and sleep modes that are more limited." Network vendors treat this breakage as routine: <a href="https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/226301-configure-best-recommended-design-as.html">Cisco's controller design guide</a> says multicast forwarding and Bonjour advertisements must be checked "end-to-end", or AirPrint across VLANs silently fails.</p>
 <h2>Sleep Drops the Printer Off the Network</h2>
@@ -74,9 +75,10 @@
 <h2>What the Numbers Do Not Cover</h2>
 <p>India-specific printer reliability, service-network, and complaint-volume data could not be found: IDC India publishes shipments and share only (for example <a href="https://www.daijiworld.com/news/newsDisplay?newsID=834702">Q1 2021 market shares</a>), reviews are single-model one-month impressions, and complaint aggregators hold <a href="https://www.consumercomplaints.in/search/printer-complaints">a handful of printer complaints</a>. No source was found for a regional difference or for global-SKU sameness either; HP's region-locked cartridge and firmware behavior suggests region can matter. The picture above rests on global evidence.</p>
 
+
 		<footer class="lesson-footer">
 			<nav>
-				<a href="../index.html">Home</a>
+				
 			</nav>
 		</footer>
 
