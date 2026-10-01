@@ -7,13 +7,15 @@
 <link rel="stylesheet" href="assets/lesson.css">
 </head>
 <body>
-<header class="A-bar">
+<header class="A-bar" data-state="home">
 			<div class="row">
-				<span class="title">Index</span>
-				<select aria-label="Chapter index" data-index>
+				<label class="grp"><span class="lbl">Topic</span><select aria-label="Topic" data-topic data-placeholder="Select a topic"></select></label>
+				<label class="grp"><span class="lbl">Chapter</span><select aria-label="Chapter" data-index data-placeholder="Select a chapter" data-follows-topic>
 
-				</select>
+				</select></label>
+				<span class="sep" aria-hidden="true"></span>
 				<div class="type-panel">
+					<span class="aa" aria-hidden="true">Aa</span>
 					<select aria-label="Font" data-font-select>
 						<option>Literata</option>
 						<option>Source Serif 4</option>
@@ -38,20 +40,13 @@
 			</div>
 		</header>
   <h1>Index</h1>
-  <p class="meta">Published from the local course workspaces · 2026-09-30 15:00 · pick a book/video, then its chapters</p>
   <table class="hub-table">
-    <tr><th>Book / Video</th><th>Chapters</th></tr>
+    <tr><th>Topic</th><th>Chapters</th></tr>
     <tr><td><a href="afghanistan-turning-against-taliban/index.html">Afghanistan Turning Against Taliban</a></td><td>7</td></tr>
     <tr><td><a href="ark-nova/index.html">Ark Nova</a></td><td>9</td></tr>
     <tr><td><a href="russia-military-morale-crisis/index.html">Russia Military Morale Crisis</a></td><td>14</td></tr>
-    <tr><td><a href="saudi-military-paradox/index.html">Saudi Military Paradox</a></td><td>6</td></tr>
-  </table>
-  <h2>Answers</h2>
-  <table class="hub-table">
-    <tr><th>Page</th><th>Kind</th></tr>
-    <tr><td><a href="answers/verdict-how-accurate-is-warfronts-the-gulf-state-militaries-are-a-jo.html">How accurate is WarFronts&#x27; &#x27;The Gulf State Militaries Are a Joke—For Now&#x27;?</a></td><td>Verdict</td></tr>
-    <tr><td><a href="answers/verdict-saudi-military-video-fact-check-is-the-warfronts-video-full.html">Saudi military video fact-check: is the WarFronts video full of shite?</a></td><td>Verdict</td></tr>
-    <tr><td><a href="answers/verdict-why-wifi-printers-are-so-unreliable.html">Why wifi printers are so unreliable</a></td><td>Verdict</td></tr>
+    <tr><td><a href="saudi-military-paradox/index.html">Saudi Military Paradox</a></td><td>9</td></tr>
+    <tr><td><a href="why-wifi-printers-fail/index.html">Why Wifi Printers Fail</a></td><td>1</td></tr>
   </table>
 		<script src="assets/course-index.js"></script>
 		<script src="assets/shell.js"></script>
