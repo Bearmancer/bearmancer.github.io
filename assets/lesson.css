@@ -412,7 +412,6 @@ select, button {
 	font-family: var(--font-ui);
 	font-size: var(--size-kicker);
 	letter-spacing: 0.12em;
-	text-transform: uppercase;
 	border: 1px solid var(--rule);
 	border-radius: 4px;
 	padding: 0.05rem 0.45rem;
