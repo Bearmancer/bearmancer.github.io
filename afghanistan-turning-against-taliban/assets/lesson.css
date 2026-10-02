@@ -361,3 +361,20 @@ select, button {
 		margin: 0 0 1rem;
 	}
 }
+
+/* Course index: rows "N · name", then Cast, Glossary, Timeline */
+.index-rows {
+	list-style: none;
+	margin: 1rem 0;
+	padding: 0;
+}
+.index-extras {
+	display: flex;
+	gap: 1.2rem;
+	flex-wrap: wrap;
+	margin: 1.2rem 0 0;
+	padding-top: 0.8rem;
+	border-top: 1px solid var(--rule);
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+}

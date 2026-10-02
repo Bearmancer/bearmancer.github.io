@@ -5,4 +5,7 @@
 .slim/worktrees.json
 # END oh-my-opencode-slim worktrees
 
+# deepwork state (local only)
+.slim/deepwork/
+
 work/
