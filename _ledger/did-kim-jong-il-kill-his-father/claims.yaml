@@ -1,0 +1,2207 @@
+schema: 1
+claims:
+- id: c1
+  text: Kim Il-sung died at a villa on Mount Myohyang.
+  hash: a62504556dfc94ad
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s6
+    locator: Article body, 1994-07-17
+    quote: Kim Il-sung became ill on July 7 at his villa in a summer resort on Mt.
+      Myohyang.
+    stance: supports
+    independence_rationale: UPI (US wire) and Korea Herald (Seoul daily) are separate
+      publishers with separate reporting chains, both citing Korean/Asian sources.
+    note: fetched via firecrawl.scrape
+  - source: s59
+    locator: 'Column [Lee Kyong-hee] North Korean nuclear arms: A long, tangled history'
+    quote: Three helicopters took off from Pyongyang, flying through a torrential
+      downpour to Kim Il-sung’s villa in the Myohyang Mountains
+    stance: supports
+    note: fetched via direct.fetch
+  anchors:
+  - '12:47'
+- id: c2
+  text: Kim Il-sung died on July 7, 1994.
+  hash: 36a625016ef54eb7
+  status: untrue
+  origin: extracted-from-input
+  rounds: 4
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - scholarly-archive
+  - semantic
+  evidence:
+  - source: s2
+    locator: medical report passage, 9 July 1994
+    quote: had suffered a heart attack Thursday night and died at 2 a.m. Friday.
+    stance: contradicts
+    independence_rationale: Three independent publishers on two continents (UPI 1994
+      US wire relaying the official KCNA medical statement, JoongAng Ilbo 1994 Seoul,
+      Korea Herald 2023 Seoul) all give death at 2 a.m. on 8 July 1994.
+    note: fetched via exa.fetch
+  - source: s62
+    locator: 2023 retrospective
+    quote: Kim had collapsed two days earlier, on July 7, and passed away in the early
+      morning of the following day, July 8.
+    stance: contradicts
+  - source: s92
+    locator: 1994 wire text
+    quote: 『위대한 수령 김일성주석이 8일 새벽2시 사망했다』
+    stance: contradicts
+  - source: s61
+    locator: calendar entry
+    quote: In the early morning of July 8, 1994 North Korean leader Kim Il-Sung died
+      of a sudden heart attack
+    stance: contradicts
+  anchors:
+  - 03:03
+- id: c3
+  text: Kim Il-sung died at 2:00 a.m. on July 8, 1994.
+  hash: f814550bd533da87
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: article body paragraph 1
+    quote: He was reported to have died around 2:00 a.m. the previous day.
+    stance: supports
+    independence_rationale: South Korean national daily, independent of UPI wire reporting
+    note: fetched via exa.fetch
+  - source: s2
+    locator: article body Radio Pyongyang paragraph
+    quote: had suffered a heart attack Thursday night and died at 2 a.m. Friday.
+    stance: supports
+    note: fetched via exa.fetch
+  anchors:
+  - '15:50'
+- id: c4
+  text: North Korea's official announcement attributed Kim Il-sung's death to a sudden
+    heart attack (myocardial infarction) caused by mental overwork and long-term heart
+    disease, despite all possible treatment.
+  hash: f00f079bd66e1296
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s33
+    locator: Obituary 'Kim Il Sung Dead at Age 82' (July 9, 1994), medical-announcement
+      paragraph
+    quote: on July 7 he suffered from a serious myocardial infarction) owing to heavy
+      mental strains, which was followed by a heart shock.
+    stance: supports
+    independence_rationale: NYT (US daily, Tokyo monitoring) and UPI (US wire, KCNA
+      via Xinhua) are separate publishers reporting the same KCNA text through independent
+      channels.
+    note: fetched via direct.fetch; same paragraph says he 'had been disagnoed as
+      suffering from arteriosclerosis' [sic, digitization typo]
+  - source: s60
+    locator: Article 'N. Korea's Kim Il-sung, 82, dies' (July 9, 1994), medical report
+      passage
+    quote: Kim had received treatment for heart disease and suffered a heart attack
+    stance: supports
+    note: followed by 'All medical treatment was immediately given to him. But the
+      heart shock took a turn for the worse'
+  anchors:
+  - 06:24
+- id: c5
+  text: Kim Il-sung's death was announced at noon on July 9, 1994, about 34 hours
+    after it happened.
+  hash: c55b8daebfca68a2
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s59
+    locator: Column [Lee Kyong-hee], death-episode paragraph
+    quote: A solemn news anchor announced the Great Leader’s demise on state television
+      34 hours later, at noon on July 9.
+    stance: supports
+    independence_rationale: Seoul daily independent of the US wires; corroborates
+      both the noon-July-9 timing and the 34-hour delay in one sentence.
+    note: fetched via direct.fetch
+  - source: s33
+    locator: Obituary (July 9, 1994), opening and announcement paragraph
+    quote: At shortly after noon, the Korean Central News Agency, the country's official
+      news organization, issued a seven-page announcement of Kim's death
+    stance: supports
+    note: also states 'the announcement, which was delayed by Pyongyang for 34 hours'
+  anchors:
+  - 09:56
+- id: c6
+  text: A 10-day national mourning period was declared from July 8 to July 17, 1994.
+  hash: 21416b9414e9f69c
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s60
+    locator: Article 'N. Korea's Kim Il-sung, 82, dies' (July 9, 1994)
+    quote: Pyongyang has declared July 8 through July 17 the official period of mourning.
+    stance: supports
+    independence_rationale: UPI wire and Monash University are unrelated publishers
+      (commercial wire vs academic institution page).
+    note: fetched via direct.fetch
+  - source: s61
+    locator: Korean Studies Research Hub, '#14 - 7.8 Death of Kim Il-Sung'
+    quote: An official period of mourning was immediately announced, lasting for ten
+      days between July 8-17
+    stance: supports
+    note: fetched via exa.fetch; captured as page text
+  anchors:
+  - 06:54
+- id: c7
+  text: During the mourning period, entertainment and dancing were banned, and bright
+    clothes, makeup and weddings were discouraged.
+  hash: 74a863cefd51dcfc
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s33
+    locator: Obituary (July 9, 1994), State Funeral Committee announcement
+    quote: All songs and dances, games and amusement will be banned
+    stance: supports
+    independence_rationale: NYT and Korea Herald are separate publishers on separate
+      continents reporting distinct source chains.
+    note: 'fetched via exa.fetch; Monash (T2) independently: ''all songs, dances,
+      games and amusement were officially banned'''
+  - source: s62
+    locator: '''In 1994, news from Pyongyang shocks the world'' (Aug 2, 2023), defector-recall
+      passage'
+    quote: No weddings were allowed.
+    stance: supports
+    note: Seoul daily drawing on a radio interview with a defector; fetched via exa.fetch
+  - source: s63
+    locator: '''The Rules of Mourning, c.1994'' (Dec 28, 2011)'
+    quote: We were only allowed to wear black or white clothing
+    stance: supports
+    note: T3 context only for dress restriction; no contemporaneous T1/T2 found for
+      'makeup'.
+  anchors:
+  - 07:04
+- id: c8
+  text: The funeral procession was broadcast as a three-and-a-half-hour event.
+  hash: 723db05c4931c7de
+  status: untrue
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s133
+    locator: 1994-07-20, '소요우려 TV생중계도 안해'
+    quote: 이날 장례식장면도 동시생중계를 하지 않고 사전에 검열과 편집을 거친 녹화화면을 3∼4시간뒤 공개했다
+    stance: contradicts
+    independence_rationale: Contemporaneous domestic daily monitoring its own feeds;
+      independent of US wire and Pyongyang communiqué below.
+    note: 'same article: for about five hours only funeral music aired; funeral report
+      recorded at noon, first footage transmission at 3 p.m.'
+  - source: s134
+    locator: 19 July 1994
+    quote: Radio Pyongyang reports monitored here said the parade through streets
+      lined with mourning citizens could take as long as five hours
+    stance: contradicts
+  - source: s135
+    locator: '[김일성 영결식 스케치-2], 1994-07-19 15:56'
+    quote: 약 1시간에 걸쳐 거행됐다고 동경에서 수신된 북한 관영 중앙통신(KCNA)이 보도했다
+    stance: contradicts
+  anchors:
+  - 07:35
+- id: c9
+  text: The funeral procession took place on July 19, 1994.
+  hash: 6cda2fa236d29a00
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s65
+    locator: '''Crying by numbers at Kim''s state funeral'' (July 20, 1994), opening'
+    quote: TENS of thousands of North Koreans lined the streets of Pyongyang yesterday
+      to watch the funeral cortege of President Kim Il Sung pass by
+    stance: supports
+    independence_rationale: UK daily and US daily have separate correspondents and
+      syndication chains; both independently date the cortege to 19 July.
+    note: dated 20 July 1994, so 'yesterday' = 19 July 1994; fetched via exa.fetch
+  - source: s64
+    locator: '''MILLIONS WEEP AS N. KOREAN LEADER''S FUNERAL BEGINS'', dateline TOKYO,
+      JULY 19'
+    quote: A long funeral cortege carried the body of the "Great Leader," Kim Il Sung,
+      past millions of weeping, wailing North Koreans this morning
+    stance: supports
+    note: 'LA Times (July 16): funeral postponed ''from Sunday to Tuesday'' — Tuesday
+      = 19 July'
+  anchors:
+  - 07:38
+- id: c10
+  text: During the state mourning, ordinary people postponed their own funerals.
+  hash: 8599c951eb29e074
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s139
+    locator: article '94년 김일성 애도기간, 온 나라가 멈춰섰다', section 관혼상제 금지령 (defector 황정하)
+    quote: '''애도기간'' 결혼식, 환갑식, 심지어 조상제사도 금지되었다.'
+    stance: supports
+  - source: s139
+    locator: same article, same section
+    quote: '''애도기간''에 죽은 사람들은 친척들의 곡성 한번 들어보지 못하고 다음날로 한적한 산야로 실려갔다.'
+    stance: contradicts
+  anchors:
+  - 07:12
+  positions:
+  - text: 'Postponement applied to weddings and ceremonies: the mourning bans covered
+      weddings, sixtieth-birthday parties and ancestral rites, with weddings pushed
+      back until the mourning ended.'
+    holders:
+    - Daily NK (defector account)
+    sources:
+    - s139
+  - text: 'Funerals were not postponed: people who died during the mourning were buried
+      the next day, without wailing.'
+    holders:
+    - Daily NK (defector account)
+    sources:
+    - s139
+- id: c11
+  text: In Pyongyang, workers, students and soldiers lined up to wail before the bronze
+    statue of Kim Il-sung on Mansu Hill.
+  hash: ff4df354fd81fc22
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s66
+    locator: '''DEATH OF A LEADER: THE SCENE'' (July 10, 1994)'
+    quote: about 15,000 people were at the 70-foot bronze statue, as people continued
+      to arrive in orderly columns
+    stance: supports
+    independence_rationale: NYT/Reuters wire copy and Independent correspondence are
+      separate publisher chains covering the same scene days apart.
+    note: 'same article: mourners ''fell to their knees and prostrated themselves'';
+      fetched via direct.fetch'
+  - source: s67
+    locator: '''The Korean Succession'' (July 10, 1994)'
+    quote: NORTH KOREANS yesterday mourned Kim Il Sung by laying wreaths in front
+      of his statues across the country
+    stance: supports
+    note: 'Mansu Hill identification via Independent (Nov 20, 1994): ''millions of
+      near-hysterical North Koreans came to offer flowers and mourn'' (snippet) '
+  anchors:
+  - 07:23
+- id: c12
+  text: Kim Il-sung was 82 years old when he died.
+  hash: aa946ff653e77cb6
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s33
+    locator: Obituary opening (July 9, 1994)
+    quote: died at 2 a.m. on Friday at the age of 82
+    stance: supports
+    independence_rationale: NYT, UPI and Independent are three unrelated publishers
+      with separate wire/monitoring chains.
+    note: 'headline: ''Kim Il Sung Dead at Age 82''; fetched via direct.fetch'
+  - source: s60
+    locator: Article 'N. Korea's Kim Il-sung, 82, dies' (July 9, 1994)
+    quote: Kim, 82, who came to power with Soviet assistance in 1948
+    stance: supports
+    note: 'Independent (July 9): ''the death on Friday of Kim Il Sung, aged 82'''
+  anchors:
+  - 06:26
+- id: c13
+  text: Kim Il-sung's body lay at the presidential palace, later the Kumsusan Memorial
+    Palace and then the Kumsusan Palace of the Sun, where his embalmed body is displayed
+    under glass.
+  hash: 13fc336864add34c
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s33
+    locator: State Funeral Committee announcement, 1994-07-09
+    quote: the leader's coffin was lying in state at the Kumsusan Assembly Hall in
+      central Pyongyang
+    stance: supports
+    independence_rationale: 1994 wire copy of KCNA/funeral-committee statement; separate
+      2012 AP report is a different publisher and newsroom.
+    note: fetched via exa.fetch
+  - source: s34
+    locator: para. on enshrining Kim Jong-il, 2012-01-12
+    quote: where the embalmed body of Kim Il Sung has been lying since 1995, a year
+      after he died.
+    stance: supports
+    independence_rationale: AP report from Seoul in 2012, independent of the 1994
+      NYT/KCNA source.
+    note: fetched via tavily.extract
+  - source: s35
+    locator: History section
+    quote: Following Kim Il Sung's death in 1994, the building was renovated and transformed
+      into his mausoleum.
+    stance: supports
+    note: T3 context only for the renaming.
+  anchors:
+  - 08:05
+- id: c14
+  text: Kim Il-sung was known to have heart problems before his death.
+  hash: be1d309b15d0075d
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s36
+    locator: declassified ROK MOFA records, para. 2, 2025-03-29
+    quote: Chinese medical experts visited North Korea two to three times in 1993
+      to treat Kim's heart condition
+    stance: supports
+    independence_rationale: Seoul foreign-ministry cable read by Dong-A's newsroom;
+      Guardian's 2014 account rests on a separate Western source chain.
+    note: substance support
+  - source: s37
+    locator: section on 1994 diplomatic documents, 2025-03-28
+    quote: 1993년에는 김일성의 심장병을 고치려 중국 의료진들이 방북했고
+    stance: supports
+    independence_rationale: Different Korean broadcaster/newsroom reporting the same
+      declassified release separately from Dong-A.
+    note: fetched via exa.fetch
+  - source: s38
+    locator: author's account of April 1994 meeting, 2014-07-11
+    quote: I later learned he suffered from heart disease
+    stance: supports
+    independence_rationale: Independent first-hand Western account, not derived from
+      the 2025 ROK document release.
+  anchors:
+  - 08:48
+- id: c15
+  text: Kim Il-sung had never been publicly identified as a heart patient, nor had
+    there been signs of imminent death.
+  hash: bab197c7fda68a90
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s33
+    locator: obituary, para. on Carter meeting, 1994-07-09
+    quote: Kim was last seen, apparently healthy, during a remarkable two-day meeting
+      with President Jimmy Carter
+    stance: supports
+    independence_rationale: NYT reporting on the eve of the announcement; UPI's 17
+      July dispatch is a separate wire/newsroom chain.
+    note: fetched via exa.fetch
+  - source: s39
+    locator: lede-adjacent line, 1994-07-17
+    quote: Kim's death was unexpected despite his age, raised new uncertaintities
+      over stability
+    stance: supports
+    independence_rationale: Independent UPI wire account based on Seoul/Dong-A sourcing,
+      distinct from the NYT/KCNA chain.
+  - source: s2
+    locator: Carter quote, 1994-07-09
+    quote: vigorous, intelligent and completely in charge of government
+    stance: supports
+    note: Contemporaneous Carter assessment; same publisher as above.
+  anchors:
+  - '11:26'
+- id: c16
+  text: Chinese declassified diplomatic cables indicate Kim Il-sung had serious cardiovascular
+    disease, and Chinese doctors were called to Pyongyang several times in 1993.
+  hash: 24c7ff47300c59a9
+  status: untrue
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s40
+    locator: lede, 2025-03-28
+    quote: The declassified dossiers of 1994, released by Seoul's foreign ministry
+    stance: contradicts
+    independence_rationale: Yonhap, Dong-A Ilbo and TV Chosun are separate publishers;
+      all three report the March 2025 dossiers as South Korea's own declassification,
+      contradicting the claim's 'Chinese cables' sourcing.
+    note: Establishes ROK provenance, contradicting 'Chinese declassified'.
+  - source: s36
+    locator: article framing, 2025-03-29
+    quote: Chinese medical experts visited North Korea two to three times in 1993
+      to treat Kim's heart condition
+    stance: contradicts
+    note: Article context is the ROK MOFA 2025 release, not a Chinese declassification;
+      quote supports substance only.
+  - source: s37
+    locator: section on 10 July 1994 cable, 2025-03-28
+    quote: 중국의 전문 의료진이 1993년 김일성의 심장병 치료를 위해 2~3차례 방북한 사실도 확인된다
+    stance: contradicts
+    note: Supports substance (1993 visits) only.
+  anchors:
+  - 08:59
+- id: c17
+  text: Kim Il-sung collapsed from a heart attack at his mountain residence around
+    midday on July 7, 1994, and was officially pronounced dead 14 hours later.
+  hash: 35bfc0ae6430f93e
+  status: untrue
+  origin: extracted-from-input
+  rounds: 4
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - scholarly-archive
+  - semantic
+  evidence:
+  - source: s2
+    locator: lede
+    quote: had suffered a heart attack Thursday night and died at 2 a.m. Friday
+    stance: contradicts
+    independence_rationale: UPI (US wire relaying Radio Pyongyang, July 1994) and
+      The Korea Herald (Seoul daily, 2023 retrospective) are separate publishers with
+      separate collection chains.
+  - source: s62
+    locator: 2023 retrospective
+    quote: His death was declared 34 hours later.
+    stance: contradicts
+    note: announcement 34h after death, not 14h after collapse
+  - source: s5
+    locator: Background section
+    quote: On the late morning just before 12:00 noon of 7 July 1994, Kim Il Sung
+      collapsed
+    stance: supports
+    note: T3 context only; the sole 'midday' wording found
+  anchors:
+  - 09:43
+- id: c18
+  text: The day before the announcement, senior cadres disappeared from public view
+    and the usual flood of Kim Il-sung quotes thinned out of newspapers.
+  hash: a4612edf2f29b81a
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s41
+    locator: article body
+    quote: North Korean state media treated Kim Il-sung as alive even after his death,
+      until they announced his death the following day.
+    stance: contradicts
+    note: Media analysis; retrieved via firecrawl.agent.
+    independence_rationale: The Asan Forum (policy journal) and JoongAng Ilbo (Seoul
+      daily, July 1994) are separate publishers reporting independently.
+  - source: s42
+    locator: 1994-07-09 article on death circumstances
+    quote: 金日成은 지난 2일 이후 일체 공식석상에 모습을 나타내지 않은 것으로 전해진다
+    stance: contradicts
+    note: Frames pre-announcement silence as about Kim himself, not cadres.
+  anchors:
+  - 05:35
+  positions:
+  - text: 'The ''quotes thinned'' detail has no support: state media kept quoting
+      Kim Il-sung and treating him as alive until the death announcement.'
+    holders:
+    - The Asan Forum
+    sources:
+    - s41
+  - text: 'The only documented gap is Kim Il-sung''s own: no public appearance after
+      July 2.'
+    holders:
+    - JoongAng Ilbo
+    sources:
+    - s42
+- id: c19
+  text: In 2004, non-fiction author Hagiwara Rio published 'Kim Jong-il's Hidden War.'
+  hash: 47349e45d5ced502
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s3
+    locator: Roman Transliteration field
+    quote: Hagiwara, Ryo, 1937-2017
+    stance: supports
+    independence_rationale: National library authority, independent of commercial
+      publisher
+    note: fetched via exa.fetch
+  - source: s4
+    locator: title header
+    quote: 金正日 隠された戦争 金日成の死と大量餓死の謎を解く
+    stance: supports
+    note: fetched via exa.fetch
+  - source: s4
+    locator: product info table
+    quote: 発売日 2004年11月
+    stance: supports
+    note: fetched via exa.fetch
+  anchors:
+  - '10:25'
+- id: c20
+  text: The book argues Kim Il-sung's mysterious death and the later famine were not
+    misfortune but two sides of a hidden war waged by Kim Jong-il to secure and exercise
+    power.
+  hash: d3a99a3e288124d9
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s4
+    locator: publisher blurb
+    quote: 金日成の謎の突然死の意味と、その後続く「飢餓殲滅」政策を明るみに出す問題作
+    stance: supports
+    independence_rationale: Publisher's own product copy is the primary statement
+      of the book's thesis; independent note.com review supplies the 'hidden war'
+      = war-against-domestic-enemies gloss.
+    note: fetched via exa.fetch
+  - source: s101
+    locator: editor's note
+    quote: それは、金正日が考えの違う父から権力を継承するのに必要な犠牲であった
+    stance: supports
+    note: fetched via exa.fetch
+  - source: s102
+    locator: review body
+    quote: 表題の「隠された戦争」とは、国内の敵に対する戦争という意味である。
+    stance: supports
+    note: T3, gloss only
+  anchors:
+  - '10:49'
+- id: c21
+  text: The book claims Kim Jong-il had a secret plot and murdered his father.
+  hash: bd6cb7900955e30d
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s4
+    locator: publisher blurb
+    quote: 金日成と金正日は深刻な路線対立にあった。金日成の謎の突然死の意味と
+    stance: supports
+    independence_rationale: 1xT1 (publisher's own description of the book's thesis)
+      corroborated by three unrelated reader-review platforms describing the explicit
+      murder claim.
+    note: fetched via exa.fetch
+  - source: s103
+    locator: review body
+    quote: ついに対米交渉での発電所問題のこじれで彼を殺害。大胆な推論を、取材で補強。
+    stance: supports
+  - source: s104
+    locator: review body
+    quote: 実父である金日成まで謀殺したと断言する
+    stance: supports
+  - source: s105
+    locator: review body
+    quote: １．金日成は金正日に殺された。
+    stance: supports
+  - source: s106
+    locator: customer review
+    quote: （断定は避けつつも）金日成は金正日に消されたのではないか？
+    stance: supports
+  anchors:
+  - '11:05'
+- id: c22
+  text: Hwang Jang-yop was the real inventor of the Juche idea.
+  hash: f4084d3fa9530b30
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s107
+    locator: obituary of Hwang Jang-yop
+    quote: was known as the chief architect of North Korea’s guiding “juche” philosophy
+      of self-reliance
+    stance: supports
+  - source: s108
+    locator: podcast title (2022)
+    quote: The man who invented North Korea's Juche ideology
+    stance: supports
+  - source: s109
+    locator: article body
+    quote: Kim Il-Sung, North Korea's leader from 1948 until his death in 1994, developed
+      the Juche ideology
+    stance: contradicts
+  - source: s110
+    locator: quotation of official text
+    quote: was created by Kim Il-sung in 1930 when the ever-victorious general was
+      18 years old
+    stance: contradicts
+    note: T3 rendering of the official position
+  - source: s111
+    locator: '''Juche'' article, authorship section'
+    quote: Western scholars generally agree that Hwang Jang-yop, Kim Il Sung's top
+      adviser on philosophy, was responsible for the conceptualization and early development
+      of Juche.
+    stance: supports
+    note: T3; summarizes Lankov/Meyers (specialists credit Hwang with rediscovering
+      and systemizing the 1955 term)
+  anchors:
+  - '12:07'
+  positions:
+  - text: Hwang Jang-yop was the real author/architect of Juche
+    sources:
+    - s107
+    - s108
+    holders:
+    - Los Angeles Times
+    - NK News
+    - Western scholarly mainstream
+  - text: Kim Il-sung created Juche (official North Korean position)
+    sources:
+    - s109
+    - s110
+    holders:
+    - Britannica
+    - DPRK state line
+- id: c23
+  text: Hwang Jang-yop later claimed Kim Il-sung showed symptoms such as incontinence,
+    and that during the Carter meeting his hands reportedly trembled.
+  hash: 06122e13f41a4697
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s112
+    locator: chapter on Kim Il-sung's death
+    quote: 1994年，金日成虽然还能与我们见面聊天，但是连放屁都不能自行控制了，我们都猜测他的日子不多了。
+    stance: supports
+    independence_rationale: Two independently hosted copies of the memoir text plus
+      a 2013 Epoch Times article quoting the same passages confirm the passage is
+      authentic to Hwang's memoir; hosts are unofficial, so tier capped at T2.
+    note: full text fetch via firecrawl.scrape
+  - source: s112
+    locator: Carter meeting passage
+    quote: 与卡特会面时，金日成抖的厉害，为了博得卡特的好感，金日成强忍着装出镇定的样子，非常辛苦。
+    stance: supports
+    note: second locator, same source
+  - source: s113
+    locator: quoting the memoir
+    quote: 但恰好赶上卡特访问朝鲜，金日成过度疲劳，病情更加严重了，与卡特会面时，金日成抖得厉害
+    stance: supports
+    note: fetched via exa.fetch
+  - source: s114
+    locator: text mirror
+    quote: 与卡特会面时，金日成抖的厉害
+    stance: supports
+    note: T3 mirror
+  anchors:
+  - '12:07'
+- id: c24
+  text: At a meeting, Kim Il-sung ordered the release of military grain to alleviate
+    food scarcity.
+  hash: b59f05e1f8303172
+  status: untrue
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s43
+    locator: Concluding Speech at a Consultative Meeting of the Senior Officials in
+      the Economic Sector, July 6, 1994
+    quote: We must on all accounts do good farming so as to find a solution to the
+      problem of food for the people
+    stance: contradicts
+    independence_rationale: Primary DPRK-published text of the very meeting in question;
+      the words 'army', 'military' and a grain-release order do not occur in it.
+    note: fetched via tavily.extract
+  - source: s44
+    locator: 1995-04-23 article
+    quote: 평양은 지난해 7월 김일성사망 직후 비축미를 풀었다
+    stance: contradicts
+    note: Dates the reserve-grain release to immediately after his death.
+  - source: s45
+    locator: 1994-07-14 article
+    quote: 6일 광업부 간부들을 만나 경제지도사업에 나섰다가
+    stance: contradicts
+    note: Describes the 6 July meeting as guidance to mining officials, no grain order.
+  anchors:
+  - '12:50'
+- id: c25
+  text: On July 6, 1994, Kim Il-sung asked subordinates about railway construction,
+    because Kim Young-sam was expected to come by train for summit preparations.
+  hash: 8cb5133d48979e86
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s43
+    locator: Concluding Speech, Consultative Meeting of Senior Officials in the Economic
+      Sector, July 6, 1994
+    quote: The solution to the problem of railway transport depends on an adequate
+      supply of steel.
+    stance: supports
+    note: 'Primary record: railway questions raised with subordinates that day.'
+  - source: s45
+    locator: 1994-07-14 article
+    quote: 6일 광업부 간부들을 만나 경제지도사업에 나섰다가
+    stance: supports
+    note: Contemporaneous account of the 6 July meeting.
+  - source: s46
+    locator: 2026-08-29 article
+    quote: 김영삼 대통령이 탑승할 전용 열차를 위한 철도 개보수 작업을 지시하는 과정에서
+    stance: supports
+    note: Only source linking rail repairs to Kim Young-sam's train; context only.
+  anchors:
+  - '12:56'
+- id: c26
+  text: Kim Young-sam was the President of South Korea.
+  hash: 3d29b0679405f64b
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s68
+    locator: 'article FAQ/infobox, ''Title / Office: president (1993-1998)'''
+    quote: Kim Young-Sam was president of South Korea from 1993 to 1998.
+    stance: supports
+    independence_rationale: Encyclopaedia Britannica and EBSCO Research Starters are
+      separate reference publishers with independent editorial sourcing.
+    note: fetched via firecrawl.scrape
+  - source: s69
+    locator: Key Figures list
+    quote: (b. 1927), president of the Republic of Korea, 1993-1998
+    stance: supports
+    note: fetched via tavily.extract
+  anchors:
+  - '13:05'
+- id: c27
+  text: The first inter-Korean summit was being prepared and was supposed to be held
+    by the end of July 1994.
+  hash: 77260f85a39dd713
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s70
+    locator: article body, July 11 1994
+    quote: President Kim Young Sam of South Korea had been scheduled to visit the
+      North Korean capital from July 25 to 27.
+    stance: supports
+    independence_rationale: Los Angeles Times and UPI are distinct news organizations
+      reporting contemporaneously in 1994.
+    note: fetched via tavily.extract
+  - source: s2
+    locator: article body
+    quote: The future of a scheduled first summit meeting in Pyongyang between the
+      two Koreas July 25-27 was unclear.
+    stance: supports
+    note: fetched via tavily.extract
+  - source: s71
+    locator: lead
+    quote: the first inter-Korean summit was planned to take place on 25 July 1994
+    stance: supports
+    note: T3 context only
+  anchors:
+  - '13:52'
+- id: c28
+  text: South Korea's newly declassified diplomatic records confirm that the planned
+    summit was well prepared.
+  hash: 24d3e72592716348
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s72
+    locator: press release '30년 전 외교현장 속으로', 17 Mar 2025
+    quote: △남북한 정상회담 개최 추진 △김영삼 대통령 중국, 일본 및 러시아 방문 등이 포함되어 있습니다
+    stance: supports
+    independence_rationale: Republic of Korea Ministry of Foreign Affairs is the primary
+      releasing authority; Monday Times, Dong-A Ilbo and Korea Herald are independent
+      publishers covering the same release.
+    note: fetched via tavily.extract
+  - source: s73
+    locator: article body (summary of declassified records)
+    quote: Preparations continued, including gathering and analyzing materials related
+      to the East-West German summits, such as participant lists, event precedents,
+      and joint declarations
+    stance: supports
+    note: fetched via tavily.extract
+  - source: s74
+    locator: sub-headline on declassified 1994 records
+    quote: 남북정상회담 추진, 북핵 문제, 무라야마 담화 관련 비밀문서 등도 공개
+    stance: supports
+  anchors:
+  - '13:59'
+- id: c29
+  text: The Soviet Union had disintegrated three years before Kim Il-sung's death,
+    in 1991.
+  hash: 0e4422ccab8c4878
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s69
+    locator: Summary of Event
+    quote: China, North Korea's primary trade partner after the fall of the Soviet
+      Union in 1991, severely limited its foreign exchange
+    stance: supports
+  - source: s75
+    locator: body, dissolution timeline
+    quote: in its ultimate session, voting the USSR out of existence, 26 December
+      1991
+    stance: supports
+    note: T3 context only
+  - source: s137
+    locator: 'Milestones: The Collapse of the Soviet Union, 1989-1992'
+    quote: On December 25, 1991, the Soviet hammer and sickle flag lowered for the
+      last time over the Kremlin, thereafter replaced by the Russian tricolor.
+    stance: supports
+    independence_rationale: Official US government history; independent of the EBSCO
+      reference entry already held.
+  anchors:
+  - '14:07'
+- id: c30
+  text: North Korea was on the brink of a great famine in 1994.
+  hash: a804af9a2d19f9e9
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s69
+    locator: Summary of Event
+    quote: even before the flooding of 1995
+    stance: supports
+  - source: s69
+    locator: Summary of Event
+    quote: In 1995, severe flooding weakened an already vulnerable economy and hastened
+      a devastating famine
+    stance: supports
+    note: same publisher, second locator
+  - source: s76
+    locator: lead sentence / infobox Period
+    quote: from 1994 to 1999
+    stance: supports
+    note: T3 context only
+  - source: s138
+    locator: '''North Korea''s 1990s Famine in Historical Perspective'''
+    quote: In 1994, North Korea approached Japan on food aid yet did so without any
+      display of urgency.
+    stance: supports
+    independence_rationale: Scholarly teaching journal of the Association for Asian
+      Studies; different publisher from the EBSCO reference entry already held.
+  - source: s138
+    locator: same article, on the pre-flood decline
+    quote: The result of failed agricultural policies was a slow deterioration in
+      the diet of North Koreans that preceded the terrible floods of 1995.
+    stance: supports
+    note: second locator, same source
+  anchors:
+  - '14:11'
+- id: c31
+  text: Three days after Kim Il-sung died, North Korea formally notified Seoul that
+    all high-level talks would be postponed.
+  hash: fe6f66563520d7c1
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s77
+    locator: cable 111211Z JUL 94, para. 11
+    quote: ON THE MORNING OF JULY 11, THE DPRK SENT A VERY BRIEF MESSAGE TO THE ROKG
+    stance: supports
+    independence_rationale: Primary US government cable plus independent 1994 wire
+      coverage (LA Times) and Korean press outlets.
+    note: fetched
+  - source: s73
+    locator: article body (declassified records summary)
+    quote: three days after Kim Il-sung's death, on July 11, 1994, North Korea's notification
+      of postponing the highest-level inter-Korean talks led to the summit's ultimate
+      cancellation
+    stance: supports
+  - source: s70
+    locator: article body, dateline July 11 1994
+    quote: North Korea today notified the South that it would have to postpone what
+      would have been a first-ever meeting
+    stance: supports
+  anchors:
+  - '14:54'
+- id: c32
+  text: The planned 1994 inter-Korean summit never took place.
+  hash: 31c2f6dd9410ac84
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s78
+    locator: Carter remarks, Korea University
+    quote: IN JUNE 2000 THE POSTPONED SUMMIT TALKS WERE HELD IN PYONGYANG, THE FIRST
+      SUCH CONTACT IN 50 YEARS
+    stance: supports
+    independence_rationale: Carter Center (participant account) plus press coverage
+      are independent publishers.
+    note: fetched via tavily.extract
+  - source: s73
+    locator: article body
+    quote: North Korea's notification of postponing the highest-level inter-Korean
+      talks led to the summit's ultimate cancellation
+    stance: supports
+  anchors:
+  - '15:06'
+- id: c33
+  text: Even official North Korean material admits that when Kim Il-sung collapsed
+    in the villa, the medical response was not ideal.
+  hash: 133f1ef08767094b
+  status: untrue
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s2
+    locator: Article body, 9 July 1994
+    quote: All medical treatment was immediately given to him. But the heart shock
+      took a turn for the worse
+    stance: contradicts
+    independence_rationale: UPI wire and NYT are separate publishers relaying the
+      official DPRK announcement through independent channels.
+    note: fetched via exa.fetch
+  - source: s33
+    locator: Mid-article official announcement passage
+    quote: on July 7 he suffered from a serious myocardial infarction) owing to heavy
+      mental strains, which was followed by a heart shock.
+    stance: contradicts
+    note: fetched via exa.fetch
+  anchors:
+  - '15:52'
+- id: c34
+  text: Kim Jong-il ordered the best doctors in the country brought from Pyongyang,
+    and a special medical helicopter was dispatched to ferry them in.
+  hash: 0d5c84145bfd3f55
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s39
+    locator: paras on 7 July collapse, 1994-07-17
+    quote: whose arrival was delayed because of an accident during their 95 miles
+      (153 km) helicopter flight
+    stance: supports
+    independence_rationale: UPI wire using a Dandong source; the Korean account below
+      rests on Yonhap plus a Chinese biographer, a separate chain.
+    note: fetched via exa.fetch
+  - source: s47
+    locator: 2007-01-26 article citing Ye Yonglie
+    quote: 긴급히 헬기를 불러야 했다. 하지만 날이 어두운데다 짙은 안개와 폭우 등 기상상황이 좋지않아 헬기가 묘향산에 추락하고 말았다
+    stance: supports
+    independence_rationale: Korean daily reporting a Chinese biographer's account;
+      independent of the UPI/Dong-A sourcing.
+  - source: s5
+    locator: Background section
+    quote: arranged for the country's best doctors to be flown in from Pyongyang
+    stance: supports
+    note: T3 wording context only; fetched via exa.fetch
+  anchors:
+  - '16:11'
+- id: c35
+  text: Kim Il-sung was moved to the Ponghwa Clinic in the capital, where he was pronounced
+    dead at 2:00 a.m.
+  hash: a5c3e6a09234fcec
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s47
+    locator: 2007-01-26, citing biographer Ye Yonglie
+    quote: 두 번째 헬기가 간신히 김일성 주석을 평양 봉화의원으로 옮겼지만 심장은 이미 멈춘 상태였다
+    stance: supports
+    independence_rationale: Only located source supporting relocation to a Pyongyang
+      clinic before death declaration.
+  - source: s39
+    locator: lede, 1994-07-17
+    quote: after three nights of policy meetings with his son and top aides and died
+      before doctors arrived
+    stance: contradicts
+    independence_rationale: 1994 UPI wire on Dong-A's Dandong source, independent
+      of the later Yonhap/Chinese-biographer chain.
+    note: fetched via exa.fetch
+  - source: s48
+    locator: source quote in article
+    quote: Kim Il Sung fell ill at the Hyang San Villa in 1994
+    stance: contradicts
+    independence_rationale: In-North-Korea source network, separate from UPI and from
+      the Chinese biographer account.
+  - source: s33
+    locator: opening line, 1994-07-09
+    quote: died at 2 a.m. on Friday at the age of 82, Pyongyang Radio said
+    stance: supports
+    independence_rationale: Establishes the 2:00 a.m. element that all accounts share;
+      location disputed.
+    note: fetched via exa.fetch
+  anchors:
+  - '16:22'
+  positions:
+  - text: Moved to Pyongyang's Ponghwa Clinic and pronounced dead there
+    sources:
+    - s47
+    holders:
+    - Kyunghyang Shinmun via Yonhap (citing Ye Yonglie)
+  - text: Died at the Mt. Myohyang villa before doctors arrived
+    sources:
+    - s39
+    - s48
+    holders:
+    - UPI/Dong-A
+    - Daily NK
+- id: c36
+  text: On the night Kim Il-sung collapsed, only two of his usual eight-person medical
+    team were present, and the cardiologist was absent.
+  hash: 24178dfc8841b0ab
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 4
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - scholarly-archive
+  - semantic
+  evidence:
+  - source: s93
+    locator: weekly program '김일성의 주치의사들(2)'
+    quote: 사망한 김일성과 김정일에겐 심혈관과 신장을 비롯해 인체의 주요 장기들을 항시적으로 관찰하는 주치의사가 7~8명이나 따라 다녔습니다.
+    stance: supports
+    independence_rationale: US-funded broadcaster interviewing a defector physician;
+      independent of Korean print outlets.
+    note: 'also: ''당시 김일성에게 필요한 심장과 혈관계통의 유명한 주치 의사들이 묘향산에 없었던 것입니다'''
+  - source: s94
+    locator: subhead, '金日成 죽음의 비밀을 벗기다'
+    quote: 심장 관련 의료진은 묘향산에 가지 않았다
+    stance: supports
+    note: also claims Kim Jong-il kept the German heart-machine team from Myohyang
+  - source: s97
+    locator: ch. 102, Oh Young-nam's account
+    quote: Only a young doctor was there.
+    stance: contradicts
+    note: 'chain: ''asked for the main doctor. But Kim Jong-il had fired that doctor,
+      saying he was too old. Only a young doctor was there.'''
+  anchors:
+  - 01:20
+  positions:
+  - text: 'Several doctors were on hand but the heart specialists were kept away:
+      the usual retinue was 7-8 physicians and the cardiac team did not go to Myohyang.'
+    holders:
+    - Radio Free Asia
+    - Monthly Chosun
+    sources:
+    - s93
+    - s94
+  - text: 'Only one doctor was on hand: a young physician, the regular lead doctor
+      having been dismissed as too old.'
+    holders:
+    - Bradley K. Martin
+    sources:
+    - s97
+- id: c37
+  text: Ali Khamenei died on February 28, 2026, and his death was confirmed on the
+    morning of March 1, 2026.
+  hash: 9142499ed4da020e
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s7
+    locator: lede paragraph
+    quote: Iranian state media confirmed early on March 1 that Supreme Leader Ayatollah
+      Ali Khamenei had been killed
+    stance: supports
+    independence_rationale: US-funded but editorially independent outlet, separate
+      from Guardian/BBC newsrooms
+    note: fetched via exa.fetch
+  - source: s8
+    locator: article body confirmation paragraph
+    quote: Iran’s supreme leader, Ali Khamenei, was killed, Iranian state media has
+      confirmed
+    stance: supports
+    note: fetched via firecrawl.scrape
+  - source: s9
+    locator: article title
+    quote: Iran begins public mourning for Ayatollah killed in February
+    stance: supports
+    note: fetched via exa.fetch
+  anchors:
+  - '17:50'
+- id: c38
+  text: North Korea had about 20 million people.
+  hash: c1f3a6b8c4fdd9e2
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s49
+    locator: population section, citing KINU
+    quote: 북한의 인구는 1990년대에 들어 2,000만 명을 넘어섰고
+    stance: supports
+    independence_rationale: ROK government atlas citing a separate research institute;
+      not derived from the KIHASA census analysis below.
+  - source: s50
+    locator: section on total population size, 1993 census tabulation
+    quote: 1993 년말 현재 약 2121만명
+    stance: supports
+    independence_rationale: Academic/government institute analysis of the DPRK's own
+      1993 census, independent of the national atlas.
+  anchors:
+  - '18:38'
+- id: c39
+  text: Another account claims Kim Jong-il opposed any talk of unification that involved
+    food aid and inspection from the South.
+  hash: 8345240dfa5e16f9
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s131
+    locator: Beijing four-party talks report
+    quote: the North rejected a South Korean offer to link aid with talks on reuniting
+      divided families
+    stance: supports
+    independence_rationale: Contemporaneous 1998 wire report versus 2015 memoir-based
+      reporting; different decades and sourcing.
+    note: 'third-party mirror of the Tribune/AP copy; same report: North Korea ''also
+      rejected a demand by the World Food Program that it give the United Nations
+      organization improved access to monitor the distribution of donated food'''
+  - source: s132
+    locator: 29 January 2015
+    quote: the plans failed because Pyongyang demanded $10 billion and large-scale
+      shipments of food and fertilizer
+    stance: contradicts
+  anchors:
+  - '19:30'
+  positions:
+  - text: 'Pyongyang rejected aid-linked talks: North Korea refused to tie humanitarian
+      aid to negotiations and refused inspection of aid distribution (1998 Beijing
+      round).'
+    sources:
+    - s131
+    holders:
+    - Chicago Tribune / AP
+  - text: 'Kim Jong-il traded aid for talks: Lee Myung-bak''s memoir records repeated
+      Kim Jong-il summit bids explicitly priced in rice, fertilizer and cash.'
+    sources:
+    - s132
+    holders:
+    - Christian Science Monitor (Lee Myung-bak memoir)
+- id: c40
+  text: Someone claimed that on the evening of July 7, 1994, Kim Jong-il personally
+    phoned the villa and ordered the medical team home.
+  hash: 570c5532cfca8902
+  status: untrue
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - answer-agent
+  - crawl-map
+  - keyword
+  - scholarly-archive
+  - semantic
+  evidence:
+  - source: s5
+    locator: Background section, ref [3]
+    quote: His son Kim Jong Il ordered the team of doctors who were constantly at
+      his father's side to leave
+    stance: supports
+    note: confirms an 'order to leave' story with a 1994 NYT citation, but contains
+      no phone call; T3 context only
+  - source: s97
+    locator: ch. 102
+    quote: he had a phone conversation with Kim Jong-il, who said, 'Relax, enjoy your
+      old age. We'll take care of it.'
+    stance: contradicts
+    note: the only documented call that night is father-to-son during a meeting, not
+      a call ordering the medical team home
+  - source: s94
+    locator: defector testimony on the medical team's removal
+    quote: 그 의료팀을 김일성 수행에서 빼라고 호위총국에 지시할 수 있는 사람이 누가 있겠는가. 김정일뿐이다.
+    stance: contradicts
+    independence_rationale: Monthly Chosun's defector testimony (the order came through
+      the bodyguard bureau) and Bradley K. Martin's book (the only documented call
+      that night ran from father to son) are separate publishers, both contradicting
+      the phone-call version.
+  anchors:
+  - '19:42'
+- id: c41
+  text: In some versions of the story, a medical helicopter crashed into Mount Myohyang
+    in heavy rain, killing the emergency team.
+  hash: d88f3182aaffa0c5
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 4
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - scholarly-archive
+  - semantic
+  evidence:
+  - source: s47
+    locator: citing biographer Ye Yonglie
+    quote: 날이 어두운 데다 짙은 안개와 폭우 등 기상상황이 좋지않아 헬기가 묘향산에 추락하고 말았다
+    stance: supports
+    independence_rationale: Four different publishers on two continents — Kyunghyang
+      (Seoul, 2007), eDaily (Seoul, 2024), Hankookilbo (Seoul, 2011) and The Wall
+      Street Journal (2011) — independently report the helicopter-crash version with
+      no shared wire origin.
+    note: fetched via exa.fetch
+  - source: s98
+    locator: article body
+    quote: 결국 의료진은 전원 사망했고, 응급처치 지연으로 김일성은 사망했다
+    stance: supports
+  - source: s6
+    locator: article body
+    quote: whose arrival was delayed because of an accident during their 95 miles
+      (153 km) helicopter flight
+    stance: supports
+  - source: s99
+    locator: Dispatch blog
+    quote: Some accounts of Kim Il Sung's death say that a medical helicopter crashed
+      on its way
+    stance: supports
+  - source: s100
+    locator: article body
+    quote: 북한은 1994년 7월 김일성이 묘향산에서 심근경색으로 쓰러졌을 때 헬기를 띄웠다가 기상 악화로 추락하자 두 번째 헬기를 띄운
+    stance: supports
+  anchors:
+  - '19:56'
+- id: c42
+  text: The 6th Congress of the Workers' Party of Korea was held in 1980 and reviewed
+    successes since the 5th Congress.
+  hash: c2b34591a4b8dbeb
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s115
+    locator: report on the KWP 6th Congress, 16 Oct 1980
+    quote: during the last ten years since the last congress the Korean Worker’s Party
+      achieved significant successes in building socialism
+    stance: supports
+    independence_rationale: Contemporaneous archive document; a different publisher
+      from the LOC country-study mirror already held.
+    note: fetched via tavily.extract
+  - source: s116
+    locator: “Report to the Sixth Congress of the Workers’ Party of Korea on the Work
+      of the Central Committee”, October 10, 1980
+    quote: Ten years have elapsed since the Fifth Congress of the Workers’ Party of
+      Korea.
+    stance: supports
+    independence_rationale: Primary congress record, published by the DPRK's own publishing
+      house.
+  anchors:
+  - '21:25'
+- id: c43
+  text: Kim Jong-il was officially designated as successor during the 1980 party congress.
+  hash: 7119964a254c392f
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s84
+    locator: '''Leader of North Korea'' section'
+    quote: Kim was officially designated his father’s successor in October 1980
+    stance: supports
+    independence_rationale: Britannica and the Taylor & Francis journal article are
+      separate publishers with independent editorial chains.
+    note: fetched via tavily.extract
+  - source: s85
+    locator: '''The Road to Kim Jong-Il'' section'
+    quote: Kim Jong-il was announced at the Sixth Party Congress as the anointed successor
+      of Kim Il-sung
+    stance: supports
+    note: '1974 internal-designation nuance: Wikipedia (T3) records it without contradicting
+      the 1980 public designation'
+  anchors:
+  - '32:43'
+- id: c44
+  text: By the early 1990s, Kim Jong-il held senior posts in the Central Committee,
+    the Politburo, and the Party Secretariat.
+  hash: eef7656bfd31b1e2
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s84
+    locator: '''Leader of North Korea'' section'
+    quote: held high-ranking posts on the Central Committee, in the Politburo, and
+      in the Party Secretariat
+    stance: supports
+    independence_rationale: Britannica, Wikipedia and an academic journal are distinct
+      publishers.
+    note: fetched via tavily.extract
+  - source: s85
+    locator: '''The Road to Kim Jong-Il'' section'
+    quote: membership within the Politburo, the fourth-rank position within the Party
+      Secretariat, and membership within the Military Commission
+    stance: supports
+  anchors:
+  - '32:52'
+- id: c45
+  text: Kim Jong-il became first vice chairman of the National Defense Commission
+    in 1990.
+  hash: 202d78d795cc8ca0
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s117
+    locator: “Method to the Madness – Why North Korea Wants the Bomb”
+    quote: Concurrent with this, Kim Jong-Il was appointed first vice-chairman of
+      the National Defense Commission.
+    stance: supports
+    independence_rationale: University-repository conference paper; unrelated publisher
+      to the HRI academic report already held.
+    note: fetched via tavily.extract
+  - source: s117
+    locator: paragraph dating the appointment
+    quote: held on May 23, 1990, the National Defense Commission became established
+      as its own independent commission
+    stance: supports
+    note: second locator, same source
+  - source: s86
+    locator: main text, military-first politics section
+    quote: Kim Jong Il was appointed the First Deputy Chairman of the National Defense
+      Commission (NDC) in May 1990
+    stance: supports
+  anchors:
+  - '33:36'
+- id: c46
+  text: Kim Jong-il became Supreme Commander of the Korean People's Army in December
+    1991.
+  hash: 587c8d5f0b3aba8f
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s118
+    locator: timeline entry
+    quote: '24 December 1991: Kim Jong-il is named supreme commander of the Korean
+      People''s Army.'
+    stance: supports
+    independence_rationale: Major daily newspaper with its own editorial sourcing;
+      different publisher from the Taylor & Francis article already held.
+    note: fetched via firecrawl.scrape
+  - source: s117
+    locator: “The Transformation of the Korean Peoples Army”
+    quote: Following this on 24 December 1991, Kim Jong-Il was appointed Supreme Commander
+      of the Korean People's Army.
+    stance: supports
+  anchors:
+  - '33:43'
+- id: c47
+  text: Kim Jong-il became chairman of the National Defense Commission in April 1993.
+  hash: d4b5f641d203a0a2
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s118
+    locator: timeline entry
+    quote: 'April 1993: Kim Jong-il is named chairman of the National Defence Commission.'
+    stance: supports
+    independence_rationale: Major daily, independent publisher from the HRI report
+      already held.
+    note: fetched via firecrawl.scrape
+  - source: s117
+    locator: “The Transformation of the Korean Peoples Army”
+    quote: and in 1993 he became the Chairman of the National Defense Commission.
+    stance: supports
+  anchors:
+  - '33:49'
+- id: c48
+  text: A constitutional adjustment made it possible for the National Defense Commission
+    chairmanship to be separated from Kim Il-sung's presidency.
+  hash: 04ce537c906b0252
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s119
+    locator: constitutional history section, on the 1992 amendment
+    quote: The 1992 amendment separated the highest military leadership from the authority
+      of the presi-dent and conferred it on the Chairman of the NDC.
+    stance: supports
+    independence_rationale: Peer-reviewed law journal, different publisher from the
+      HRI report already held.
+    note: fetched via tavily.extract; “presi-dent” is the PDF line-break hyphenation
+      as rendered
+  - source: s119
+    locator: preceding sentence, pre-1992 position
+    quote: Before this revision, the President, as the Chief Commander of the State,
+      held the Chairmanship of the Commission as ex officio, leading State military
+      affairs.
+    stance: supports
+    note: second locator, same source
+  - source: s86
+    locator: main text
+    quote: Since the DPRK constitution had just been amended to transfer control over
+      the KPA from the state president
+    stance: supports
+  anchors:
+  - '33:55'
+- id: c49
+  text: Some internal accounts claimed that in the early 1990s, even some of Kim Il-sung's
+    decisions needed his son's approval.
+  hash: 64c1a4dec3677c02
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 3
+  paradigms_tried:
+  - answer-agent
+  - keyword
+  - semantic
+  evidence:
+  - source: s112
+    locator: narrative on the July 1994 blackout
+    quote: 进入90年代，金日成已经丧失领导力了
+    stance: supports
+    independence_rationale: Primary defector memoir versus a Western magazine profile;
+      different traditions and interview bases.
+    note: full text via dooshu GitHub raw grep
+  - source: s129
+    locator: opening section
+    quote: was all but running the country for years before that. Appointments to
+      any senior post were made by him
+    stance: supports
+  - source: s130
+    locator: Agreed Framework background
+    quote: Former U.S. President Jimmy Carter met with North Korean President Kim
+      Il-Sung, who offered to close the Yŏngbyŏn facility
+    stance: contradicts
+  anchors:
+  - '34:12'
+  positions:
+  - text: 'Real authority had already shifted to the son: by the early 1990s Kim Il-sung
+      had lost the capacity to lead, and Kim Jong-il was all but running the country,
+      making senior appointments and day-to-day decisions.'
+    sources:
+    - s112
+    - s129
+    holders:
+    - Hwang Jang-yop memoir
+    - Peter Maass (NYT Magazine)
+  - text: 'The son''s approval was not required for major decisions: Kim Il-sung continued
+      to decide and commit in his own name, e.g. personally offering to close Yongbyon
+      during Carter''s June 1994 visit.'
+    sources:
+    - s130
+    holders:
+    - Encyclopaedia Britannica
+- id: c50
+  text: Kim Jong-il became the de facto leader of North Korea immediately after his
+    father's death, though it took him years to formalize the top titles.
+  hash: 59be961169c562b4
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s84
+    locator: '''Top Questions'' section'
+    quote: Kim Jong Il became the de facto leader of North Korea after his father,
+      Kim Il-Sung, died in July 1994.
+    stance: supports
+    independence_rationale: Britannica and RFE/RL are separate publishers with independent
+      source chains.
+    note: fetched via tavily.extract
+  - source: s91
+    locator: article body
+    quote: did not assume the title of "state president," as his father was named
+      "eternal president."
+    stance: supports
+  anchors:
+  - '34:25'
+- id: c51
+  text: Kim Jong-il became head of the Workers' Party of Korea in 1997.
+  hash: 34c9212b3d60aa1b
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s118
+    locator: timeline entry
+    quote: '8 October 1997: Kim Jong-il is named general secretary of the Workers''
+      party.'
+    stance: supports
+    independence_rationale: Major daily newspaper, different publisher from Britannica
+      already held.
+    note: fetched via firecrawl.scrape
+  - source: s84
+    locator: '''Leader of North Korea'' section'
+    quote: He was named chairman of the KWP in October 1997
+    stance: supports
+  anchors:
+  - '34:41'
+- id: c52
+  text: In 1998, the presidency was retired from the constitution and reserved posthumously
+    for Kim Il-sung as eternal president.
+  hash: 95e5ec65e3fa08e9
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s120
+    locator: 1998 report, North Korea
+    quote: The presidency was abolished leaving the late Kim Il Sung as the DPRK's
+      only president.
+    stance: supports
+    independence_rationale: Official U.S. government record; independent of Britannica
+      already held.
+    note: fetched via tavily.extract
+  - source: s121
+    locator: '“1998: The ‘Kim Il-sung’ Constitution”'
+    quote: declaring him the “Eternal President,”
+    stance: supports
+  anchors:
+  - '34:45'
+- id: c53
+  text: The National Defense Commission chairmanship became the state's highest office.
+  hash: 510130d98667e95d
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s121
+    locator: '“1998: The ‘Kim Il-sung’ Constitution”, shift to military power'
+    quote: With the presidency abolished, the National Defense Commission (NDC) was
+      elevated to the “highest position of the State.”
+    stance: supports
+    independence_rationale: University law-school publication, independent of the
+      HRI report already held.
+    note: fetched via tavily.extract
+  - source: s120
+    locator: 1998 report, on Kim Jong Il as NDC Chairman
+    quote: declared that position the “highest office of state.”
+    stance: supports
+  anchors:
+  - '34:57'
+- id: c54
+  text: Kim Jong-il organized the first inter-Korean summit in 2000 with South Korean
+    President Kim Dae-jung.
+  hash: 35bfb5ed8d53dcfb
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s10
+    locator: 2000 Inter-Korean Summit, joint declaration text
+    quote: summit talks in Pyongyang from June 13 to June 15, 2000
+    stance: supports
+    independence_rationale: KBS (Korean public broadcaster) and CRS (US Congress)
+      are unrelated publishers with independent reporting lines.
+    note: fetched via tavily.extract
+  - source: s11
+    locator: Background, The Historic June 2000 Summit
+    quote: On June 13, 2000, South Korean President Kim Dae Jung flew to Pyongyang
+      for a three-day summit with North Korea's paramount leader, Kim Jong-il.
+    stance: supports
+    note: fetched via tavily.extract
+  anchors:
+  - '31:47'
+- id: c55
+  text: In 2007, Kim Jong-il held a second inter-Korean summit, with South Korean
+    President Roh Moo-hyun.
+  hash: 7b719d4119fa2f9d
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s122
+    locator: '“In pictures: Historic crossing”, October 2007'
+    quote: South Korean President Roh Moo-hyun has travelled by road to the North
+      Korean capital, Pyongyang, for a summit with leader Kim Jong-il.
+    stance: supports
+    independence_rationale: BBC's own reporting from October 2007, different publisher
+      from KBS World already held.
+    note: fetched via tavily.extract
+  - source: s123
+    locator: 'Factbox: History of inter-Korean summits'
+    quote: crossed the border to the North to meet Kim Jong Il
+    stance: supports
+  anchors:
+  - '30:53'
+- id: c56
+  text: Jimmy Carter came to Pyongyang in June 1994 and met Kim Il-sung for hours.
+  hash: 9e9e2aadbf049cd3
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s78
+    locator: Carter remarks (his 1994 trip narrative)
+    quote: THEN MY WIFE AND I WERE WELCOMED AT THE PANMUNJOM CROSSING IN JUNE, 1994,
+      AND PROCEEDED TO PYONGYANG
+    stance: supports
+    independence_rationale: Carter Center primary account and UPI wire report are
+      independent publishers.
+    note: fetched via tavily.extract
+  - source: s78
+    locator: Carter remarks
+    quote: WE TALKED FOR MANY HOURS
+    stance: supports
+  - source: s2
+    locator: article body
+    quote: Former U.S. President Jimmy Carter, who recently visited Pyongyang to help
+      defuse the nuclear crisis
+    stance: supports
+  anchors:
+  - '26:04'
+- id: c57
+  text: Their agreement eventually became the 1994 Agreed Framework, freezing and
+    replacing North Korea's nuclear power plant program with light-water reactors.
+  hash: 85e1e8837db3ddf9
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s79
+    locator: '''Denuclearization and the Two Koreas, 1993-2001'''
+    quote: private trip to North Korea by President Jimmy Carter in June 1994 averted
+      war and led to U.S.-North Korean bilateral negotiations
+    stance: supports
+    independence_rationale: US State Department Office of the Historian (official)
+      and the Carter Center are independent primary/official publishers.
+    note: fetched via tavily.extract
+  - source: s79
+    locator: Agreed Framework paragraph
+    quote: In exchange, the United States, Japan, and South Korea would provide light
+      water reactors
+    stance: supports
+  - source: s78
+    locator: Carter remarks
+    quote: ALL THE NUCLEAR AGREEMENTS WERE LATER ADOPTED BY KIM JONG IL AND PRESIDENT
+      BILL CLINTON AND PUT INTO EFFECT
+    stance: supports
+  anchors:
+  - '26:15'
+- id: c58
+  text: With subsidized oil and technology transfer, North Korea quickly recovered
+    from the Korean War and made its southern neighbor jealous for a while.
+  hash: f7631b6cbe98b24f
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s124
+    locator: '“After the Fall of the Soviet Union: 1991–Present”, North Korea section'
+    quote: the Soviet Union provided heavily subsidized energy imports and cheap machinery
+      that, together, were worth over 60 percent of North Korea’s gross domestic product
+      (GDP).
+    stance: supports
+    independence_rationale: Think-tank educational publication, different publisher
+      from the Korean Journal of International Studies already held.
+    note: fetched via tavily.extract; 'envious' is rhetorical framing for the North's
+      early lead
+  - source: s125
+    locator: '“South Korea’s Post-Korean War Economic Development: 1953-1961”'
+    quote: North Korea carried out an impressive recovery under a highly organized,
+      purposeful government that appeared to be laying the foundations for a modern
+      industrial society.
+    stance: supports
+  anchors:
+  - '23:19'
+- id: c59
+  text: After the Soviet Union collapsed, North Korea lost its economic life support;
+    China reduced support and increasingly demanded cash payment.
+  hash: c75ecb40478cce02
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s126
+    locator: “The Resurgence of a Market Economy in North Korea”
+    quote: The sudden termination of Soviet and Chinese aid resulted in a deep economic
+      crisis in North Korea.
+    stance: supports
+    independence_rationale: Independent think-tank analysis, different publisher from
+      NCNK already held.
+    note: fetched via firecrawl.scrape
+  - source: s126
+    locator: same article, on the move to paid trade
+    quote: Russia-based trade organizations and companies demanded that their North
+      Korean partners pay international market prices for Russian goods and services.
+    stance: supports
+    note: following sentence notes China adopted a similar position
+  - source: s16
+    locator: China-North Korea Relations briefing, 1990s trade section
+    quote: In 1993, Beijing shifted the terms of its trade with the North from concessional
+      arrangements and bartering to a cash-based market approach
+    stance: supports
+  anchors:
+  - '23:37'
+- id: c60
+  text: The Socialist Federal Republic of Yugoslavia broke up into its constituent
+    members.
+  hash: 53a1eb9c3921d015
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s127
+    locator: “Which modern countries were created from the breakup of Yugoslavia?”
+    quote: The Socialist Federal Republic of Yugoslavia, in addition to these, included
+      Serbia and Montenegro as constituent republics. The federation dissolved in
+      the early 1990s
+    stance: supports
+    independence_rationale: Encyclopedia publisher, different from the BBC timeline
+      already held.
+    note: fetched via tavily.extract
+  - source: s17
+    locator: 'Timeline: Break-up of Yugoslavia, 1991-1992: DISINTEGRATION'
+    quote: 'The constitution established six constituent republics in the federation:
+      Bosnia-Hercegovina, Croatia, Macedonia, Montenegro, Serbia and Slovenia.'
+    stance: supports
+  anchors:
+  - '23:56'
+- id: c61
+  text: Czechoslovakia split into the Czech Republic and Slovakia.
+  hash: a038874d6ca1e1cd
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s128
+    locator: Czechoslovakia article, concluding paragraph
+    quote: On January 1, 1993, Czechoslovakia peacefully separated into two new countries
+    stance: supports
+    independence_rationale: Encyclopedia publisher, different from the EBSCO source
+      already held.
+    note: fetched via tavily.extract
+  - source: s19
+    locator: Lead paragraph
+    quote: The split of Czechoslovakia into two independent republics—Czech Republic
+      and Slovakia—occurred on January 1, 1993
+    stance: supports
+  anchors:
+  - '24:05'
+- id: c62
+  text: Two Germanys were unified.
+  hash: d7e7c42a6a41aaf0
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s21
+    locator: '''2+4'' Talks and the Reunification of Germany, 1990'
+    quote: On October 3, 1990, East Germany officially joined the Federal Republic
+      of Germany in the West, ending 45 years of division
+    stance: supports
+    independence_rationale: US State Department official history and Encyclopaedia
+      Britannica are independent publishers.
+    note: fetched via tavily.extract
+  - source: s22
+    locator: History section
+    quote: The German Democratic Republic integrated into the Federal Republic as
+      five new Länder on October 3, 1990.
+    stance: supports
+    note: fetched via tavily.extract
+  anchors:
+  - '24:07'
+- id: c63
+  text: China had already begun market reform under Deng Xiaoping.
+  hash: 202f36ea5ef286a3
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s23
+    locator: 'Backgrounder: Major events in 30 years of China''s reform, opening-up'
+    quote: December, 1978 -- The Third Plenary Session of the 11th CPC Central Committee
+      was held in Beijing.
+    stance: supports
+    note: fetched via tavily.extract
+  - source: s24
+    locator: Lead paragraph
+    quote: Guided by Deng Xiaoping, who is often credited as the "General Architect",
+      the reforms were launched by the ruling Chinese Communist Party
+    stance: supports
+    note: T3 context only
+  anchors:
+  - '24:11'
+- id: c64
+  text: Vietnam launched Doi Moi in 1986 and moved toward a socialist market economy.
+  hash: fca23874db721107
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s25
+    locator: Article lead
+    quote: The sixth National Party Congress in December 1986 mapped out the Doi Moi
+      (Renewal) policy and initiated the process of Party-led reforms in Vietnam.
+    stance: supports
+    note: fetched via tavily.extract
+  - source: s26
+    locator: Reforms / Creation of the socialist-oriented market economy
+    quote: The Đổi Mới economic reforms were initiated by the Communist Party of Vietnam
+      (CPV) in December 1986 during the party's 6th National Congress.
+    stance: supports
+    note: T3 context only
+  anchors:
+  - '24:16'
+- id: c65
+  text: Cuba suffered badly in the Special Period after losing Soviet subsidies, adjusting
+    through tourism and foreign remittances.
+  hash: dfdef9b711dea717
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s27
+    locator: 'Cuba: Economic Summary'
+    quote: Soviet assistance and subsidies kept the Cuban economy afloat from the
+      1960s until the end of the Soviet Union in 1991.
+    stance: supports
+    note: fetched via tavily.extract
+  - source: s27
+    locator: 'Cuba: Economic Summary, 1993-1996 measures'
+    quote: permitting foreign investment in limited sectors (tourism and mining)
+    stance: supports
+    note: same T1 publisher, second locator
+  - source: s28
+    locator: The Fall and Recovery of the Cuban Economy in the 1990's, Overview
+    quote: national income has been boosted after the use of foreign currency was
+      legalized in 1993 by dollar remittances from abroad
+    stance: supports
+    independence_rationale: US State Department fact sheet and an IMF working paper
+      are independent official publishers.
+    note: fetched via firecrawl.scrape after 429 on tavily.extract
+  anchors:
+  - '24:23'
+- id: c66
+  text: By 1994, North Korea was the most rigid of the surviving socialist states,
+    with very limited foreign investment.
+  hash: ed8a0b5b19f1b05d
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s29
+    locator: II Economic Structure and Conditions
+    quote: North Korea's economic system is perhaps the most highly centralized and
+      rigidly controlled system in the world today
+    stance: supports
+    independence_rationale: Brookings Institution and the Congressional Research Service
+      are independent institutions with separate authorship.
+    note: fetched via tavily.extract
+  - source: s30
+    locator: 'North Korea: Economic Leverage and Policy Analysis, foreign investment
+      section'
+    quote: there were 148 cases of foreign investment worth about $200 million into
+      North Korea
+    stance: supports
+    note: fetched via tavily.extract
+  anchors:
+  - '24:33'
+- id: c67
+  text: Kim Il-sung performed a balancing act between China and the Soviet Union,
+    requiring aid from both while preserving North Korea's autonomy.
+  hash: 841911b3b69bbf42
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s31
+    locator: North Korea Background Note, Relations Outside the Peninsula
+    quote: North Korea balanced its relations with China and the Soviet Union to extract
+      the maximum benefit from the relationships
+    stance: supports
+    independence_rationale: US State Department country background note and the Wilson
+      Center history project are independent publishers.
+    note: fetched via tavily.extract
+  - source: s32
+    locator: China and the Post-War Reconstruction of North Korea, 1953-1958
+    quote: both sides attempted to win the DPRK's support to enhance its own authority
+      and prestige
+    stance: supports
+    note: fetched via tavily.extract
+  anchors:
+  - '23:08'
+- id: c68
+  text: Kim Jong-il opened the Kaesong Industrial Complex and pushed forward the Mount
+    Kumgang tourism project.
+  hash: 13c888e452e2b2e4
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s51
+    locator: History of SEZs in North Korea section
+    quote: In 2004, it would launch its most successful SEZ, the Kaesong Industrial
+      Complex
+    stance: supports
+    independence_rationale: NCNK (specialist committee) and 38 North (Stimson Center
+      program) are separate publishers with independent authorship.
+    note: fetched via exa.fetch
+  - source: s51
+    locator: North Korea's Initial SEZs section
+    quote: In 1998, North Korea began opening to tourists from South Korea at Mount
+      Kumgang
+    stance: supports
+    note: Same publisher, second locator.
+  - source: s52
+    locator: Activity section
+    quote: The Kaesong Industrial Complex was opened in December 2004 as a symbol
+      of efforts to create peace and stability on the Peninsula.
+    stance: supports
+    note: fetched via tavily.extract
+  - source: s53
+    locator: Introduction section
+    quote: was initially opened to foreign tourists, including those from South Korea,
+      in 1998
+    stance: supports
+    note: fetched via tavily.extract
+  anchors:
+  - '47:04'
+- id: c69
+  text: At Kaesong, northern workers stitched and assembled for southern firms while
+    the state collected hard currency.
+  hash: aa1b9f182bbcf254
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s54
+    locator: Wages section, RL34093
+    quote: The wages of North Korean workers are paid in dollars (or other hard currency
+      other than South Korean won)
+    stance: supports
+    independence_rationale: US government CRS report and 38 North are different publishers
+      with separate sourcing.
+    note: fetched via tavily.extract
+  - source: s54
+    locator: Summary, RL34093
+    quote: over 120 medium-sized South Korean companies were employing over 47,000
+      North Korean workers to manufacture products in Kaesong
+    stance: supports
+    note: Same T1 publisher, second locator.
+  - source: s55
+    locator: A Win-Win Arrangement section
+    quote: Because the firms paid North Korean salaries, and because those payments
+      went to the State rather than the workers
+    stance: supports
+    note: fetched via tavily.extract
+  - source: s56
+    locator: Intro / Kaesong Industrial Park section
+    quote: the Kaesŏng industrial park, which operated from 2004 to 2016
+    stance: supports
+    note: T3 context only for the operating dates; fetched via exa.fetch
+  anchors:
+  - '47:11'
+- id: c70
+  text: In 1994, the Clinton administration was pressuring North Korea over inspections
+    and its nuclear program.
+  hash: 5533203bf1af6c2a
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 1
+  paradigms_tried:
+  - keyword
+  evidence:
+  - source: s79
+    locator: crisis paragraphs
+    quote: the United States threatened to call upon the U.N. Security Council to
+      issue an ultimatum threatening North Korea with economic sanctions
+    stance: supports
+    independence_rationale: Official US State Department history and the Carter Center's
+      published remarks are separate official/primary publishers.
+    note: fetched via tavily.extract
+  - source: s79
+    locator: negotiations paragraph
+    quote: The parties returned to negotiations, but these, too, faltered as North
+      Korea resisted IAEA inspections.
+    stance: supports
+  - source: s78
+    locator: Carter remarks (1994 context)
+    quote: THE UNITED STATES AND OTHER NATIONS WERE ATTEMPTING TO IMPLEMENT A U.N.
+      SECURITY COUNCIL RESOLUTION TO CONDEMN NORTH KOREA AND IMPOSE MORE PUNITIVE
+      SANCTIONS
+    stance: supports
+  anchors:
+  - '25:35'
+- id: c71
+  text: Washington was openly discussing harder options against North Korea over the
+    nuclear issue.
+  hash: 4c1ae59adf2dcf26
+  status: 'true'
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s80
+    locator: '''Washington was on brink of war with North Korea 5 years ago'''
+    quote: the U.S. military drew up plans to send cruise missiles and F-117 stealth
+      fighters to strike a small nuclear reactor at Yongbyon
+    stance: supports
+    independence_rationale: CNN news reporting and the National Security Archive briefing
+      book are independent publishers using separate sourcing.
+    note: fetched via tavily.extract
+  - source: s81
+    locator: posting header, 8 Dec 2017
+    quote: The Clinton administration made plans for war against North Korea during
+      the 1994 nuclear crisis.
+    stance: supports
+  anchors:
+  - '25:42'
