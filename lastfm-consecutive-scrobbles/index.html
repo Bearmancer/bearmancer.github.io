@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-size="M">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Repeat Plays: Finding Consecutive Duplicate Scrobbles — Last.fm Findings</title>
+		<link rel="stylesheet" href="../assets/lesson.css">
+	</head>
+	<body>
+		<header class="A-bar">
+			<div class="row">
+				<span class="title"><a href="../index.html">Finding Consecutive Duplicate Scrobbles</a></span>
+				<span class="sep" aria-hidden="true"></span>
+				<div class="type-panel">
+					<span class="aa" aria-hidden="true">Aa</span>
+					<select aria-label="Font" data-font-select>
+						<option>Literata</option>
+						<option>Source Serif 4</option>
+						<option>Newsreader</option>
+						<option>Crimson Pro</option>
+						<option>EB Garamond</option>
+						<option>Merriweather</option>
+						<option>Lora</option>
+						<option>Libre Baskerville</option>
+						<option>Atkinson Hyperlegible</option>
+						<option>Inter</option>
+						<option>IBM Plex Sans</option>
+						<option selected>Charter</option>
+					</select>
+					<select aria-label="Size" data-size-select>
+						<option>S</option>
+						<option selected>M</option>
+						<option>L</option>
+						<option>XL</option>
+					</select>
+				</div>
+			</div>
+		</header>
+
+		<h1>Repeat Plays: Finding Consecutive Duplicate Scrobbles</h1>
+
+		<p>Across 56,007 Last.fm scrobbles, 1,326 adjacent pairs are the same track played back to back — the same episode rewatched, the same live cut replayed. Nothing in the sync pipeline ever looked for them: scrobbles are stored keyed by timestamp and never compared with their neighbors, so repeats were invisible, not broken. A single read-only window query over the play history surfaces every one.</p>
+
+		<h2>What Counts as the Same Track</h2>
+		<p>Two consecutive rows count as the same when their normalized triple matches: lowercased, trimmed track title, artist, and album — with a blank or missing album treated as one empty value. Case and surrounding whitespace never distinguish tracks. Featured-artist tags, punctuation, and extra internal spaces are taken literally, never split or stripped.</p>
+
+		<h2>How the Probe Works</h2>
+		<p>The history table is ordered newest-first by play timestamp, each row is normalized, and every row is compared with its predecessor through a LAG window. No schema change, no new model, no application code: the database engine does the sort and the scan in one pass. A line-by-line cross-check over the same ordering reproduces the pairs on small samples, but the window query stays primary — it never materializes tens of thousands of rows into memory.</p>
+
+		<h2>What the Data Showed</h2>
+		<p>All 56,007 timestamps are distinct, so no two plays ever collided inside one second and no repeat was ever lost to a primary-key overwrite. 365 rows carry a blank album, covered by the empty-album rule. The 1,326 pairs are dominated by rewatched television — the same <i>MacGruber</i> episode three times in a row, repeated <i>Abbott Elementary</i> and <i>Vice Principals</i> episodes — plus replayed live tracks from Bowie to Tchaikovsky.</p>
+
+		<h2>Ruling Out False Pairs</h2>
+		<p>Four artifacts could fake a pair and were each excluded: same-second rows whose order is arbitrary (none exist here), pairs split across an incremental sync boundary (the probe reads the full table, not a slice), the now-playing entry that carries no timestamp and never enters the table, and single-track API responses that cannot form a pair. One caveat survives: the database lowercases ASCII only, so exotic Unicode case differences could slip past — no such rows observed.</p>
+
+		<h2>Where This Belongs</h2>
+		<p>If repeat detection ever becomes a permanent feature, it belongs in the dashboard layer after the scrobble list is loaded — not in the sync step, which should stay a plain upsert pipe. Until then the query is the feature: rerun it any time the history grows.</p>
+
+		<script src="../assets/shell.js"></script>
+	</body>
+</html>
