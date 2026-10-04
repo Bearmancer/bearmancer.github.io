@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OmO Memory — Dream, People, Soul</title>
+<link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<header class="A-bar">
+			<div class="row">
+				<span class="title">OmO Memory — Dream, People, Soul</span>
+				<label class="grp"><span class="lbl">Topic</span><select aria-label="Topic" data-topic data-placeholder="Select a topic" data-base="../"></select></label>
+				<span class="sep" aria-hidden="true"></span>
+				<div class="type-panel">
+					<span class="aa" aria-hidden="true">Aa</span>
+					<select aria-label="Font" data-font-select>
+						<option>Literata</option>
+						<option>Newsreader</option>
+						<option selected>Charter</option>
+						<option>Inter</option>
+					</select>
+					<select aria-label="Size" data-size-select>
+						<option>S</option><option selected>M</option><option>L</option><option>XL</option>
+					</select>
+				</div>
+			</div>
+		</header>
+  <p class="kicker">Report</p>
+  <h1>OmO Memory — Dream, People, Soul</h1>
+  <p class="surtitle">2026-10-04</p>
+
+  <p>OmO's memory subsystem is one configuration block with three sections that do different jobs. <code>memory.soul</code> is the model the agent holds of itself. <code>memory.people</code> is the model it holds of the humans it works with. <code>memory.dream</code> is the background run that maintains both while nobody is watching. Two of the three have tips; the third is only visible in the persona text and in the <code>/sleeptime</code> output.</p>
+
+  <p>Everything below was read from the installed code, not from documentation: the plugin bundle at <code>~/.omo/binary-runtime/&lt;version&gt;/plugin/extensions/omo.js</code> (schemas, defaults, gates, renderers), <code>plugin/extensions/dream-persona.md</code> (the dream run's contract), and the senpi package's tip catalog at <code>&lt;senpi&gt;/dist/modes/interactive/tips/</code>.</p>
+
+  <h2>The three words</h2>
+
+  <table class="hub-table">
+    <tr><th>Word</th><th>Tip</th><th>Where it shows up</th></tr>
+    <tr><td>dream</td><td><code>memory.dream-command</code></td><td>"Memory tidies itself in the background between turns - /dream shows that work and lets you start it yourself."</td></tr>
+    <tr><td>people</td><td><code>memory.people-command</code></td><td>"Use /people to keep notes on teammates - who owns what, who to ask, what they prefer."</td></tr>
+    <tr><td>soul</td><td>none</td><td>In <code>system/persona.md</code> ("this file is your soul") and in <code>/sleeptime</code> as <code>Soul: edit notice on/off</code>.</td></tr>
+  </table>
+
+  <p>The live tip list comes from <code>omo --list-tips</code>. In the catalog file the same three sit under <code>memory.&lt;name&gt;-command</code> ids, each gated by <code>requiresCommand</code>, so a tip only appears when the command it advertises is registered in that install.</p>
+
+  <h2>Soul — the self-model</h2>
+
+  <p>The <code>system/</code> directory is the always-in-context part of memory. Every prompt is rebuilt from it: the projection builder emits <code>&lt;projection&gt;$MEMORY_DIR/system/persona.md&lt;/projection&gt;</code> and the file body inside a <code>&lt;self&gt;</code> block, with <code>human.md</code>, <code>boundaries.md</code> and <code>self-aware.md</code> following in a <code>&lt;memory&gt;</code> block. Every other file in the repo appears only as a name inside <code>&lt;external_projection&gt;</code>; its body is never injected.</p>
+
+  <ul class="tight">
+    <li><code>system/persona.md</code> — the agent's own description of itself, and the only file whose edits always get announced.</li>
+    <li><code>system/identity.md</code> — optional, four lines, and never seeded: created only when a real identity has emerged.</li>
+    <li><code>system/boundaries.md</code> — the user's exact words about what not to do.</li>
+    <li><code>system/human.md</code>, <code>system/self-aware.md</code> — the person card for the primary human, and the outside view of the agent's own behaviour.</li>
+  </ul>
+
+  <p>Three paths form the guarded set: <code>system/persona.md</code>, <code>system/identity.md</code>, <code>system/boundaries.md</code>. A memory write touching any of them changes the tool result it returns — the text "This was a soul edit: announce it to the user in your reply." is appended — and emits an <code>omo-memory:soul-updated</code> message, drawn in the transcript as a "Remembered about myself" notice naming the file, the commit sha and the subject. The gate is <code>memory.soul.edit_notice</code>, on by default; <code>memory.agents.&lt;id&gt;.soul.edit_notice</code> overrides it per identity. A <code>soul-head.json</code> watermark under the notice lock keeps one edit from being announced twice.</p>
+
+  <p>The doctor command also carries a <code>soul-seed</code> check: it sha256s the persona and compares it against the shipped v1 seed hash (<code>ed910679…c0e8e</code>). If they still match, it warns that the file is the untouched seed and should be rewritten against the newer seed.</p>
+
+  <h2>People — the person model</h2>
+
+  <p>People knowledge lives in two layers, and the split is enforced by who is allowed to write where. A <b>card</b> holds what is stable about a person; an <b>observation ledger</b> holds what was noticed and when. The primary human's card is <code>system/human.md</code>; everyone else gets <code>people/&lt;slug&gt;/card.md</code> plus <code>people/&lt;slug&gt;/observations.md</code>.</p>
+
+  <p>Cards are parsed, not free text. Every line carries one of four prefixes — <code>IDENTITY</code>, <code>ATTRIBUTE</code>, <code>RELATIONSHIP</code>, <code>INSTRUCTION</code> — and a <code>RELATIONSHIP</code> line must read <code>&lt;predicate&gt;: &lt;target-slug&gt;</code>. Those lines become nodes and edges, which is what the <code>/people</code> roster and relationship graph are drawn from; a malformed edge is reported rather than dropped.</p>
+
+  <p>Observation ledgers are split into four sections: <code>Explicit</code>, <code>Deductive</code>, <code>Inductive</code>, <code>Contradiction</code>. Authorship is deliberately lopsided:</p>
+
+  <ul class="tight">
+    <li><code>Explicit</code> is written only by the facts extractor.</li>
+    <li><code>Deductive</code>, <code>Inductive</code> and <code>Contradiction</code> are written only by a dream run.</li>
+    <li>A deduction must cite the observation lines it rests on. An induction states the pattern and a confidence level, and never touches a card. A contradiction is flagged <code>status: open</code> and is never resolved by the machine.</li>
+  </ul>
+
+  <p>The limits are configuration, not convention: <code>people.max_entries</code> (default 40, bounds 1-100) and <code>people.max_entry_chars</code> (default 200, bounds 50-500). The gate is <code>people.enabled</code>; with it off, <code>/people</code> answers "people records are disabled (memory.people.enabled)". The command itself is <code>/people [&lt;name&gt;] [--all] [--ask "&lt;question&gt;"]</code> — roster and graph, one card with its observations, or a read-only answer over that person's record.</p>
+
+  <h2>Dream — the consolidation run</h2>
+
+  <p>A dream is not a reflection. A reflection captures one stretch of conversation; a dream works across the whole memory filesystem and many conversations at once. Its contract lives in <code>plugin/extensions/dream-persona.md</code> and runs in six ordered phases: investigate, consolidate, audit skills, maintain people, review, commit. Every run that changes something ends in a git commit stamped <code>Omo-Writer: dream</code>.</p>
+
+  <p>What a run actually does:</p>
+
+  <ul class="tight">
+    <li><b>Dedupe.</b> One home per fact. The best-worded copy survives, the others go, and a <code>[[path]]</code> cross-reference is left where a reader would still look.</li>
+    <li><b>Tier rebalance.</b> A file the agent keeps fetching is promoted into <code>system/</code>; a <code>system/</code> file nothing recent needed is demoted to <code>reference/</code> — moved, never deleted. The usage ledger is the evidence, not a hunch.</li>
+    <li><b>Archiving.</b> Fact entries older than six months are summarized into <code>ARCHIVE.md</code> and the originals removed.</li>
+    <li><b>Skill audit.</b> A skill that is merely unused becomes a report-only deprecation candidate; a skill that evidence shows to be wrong gets fixed in place.</li>
+    <li><b>People.</b> The deduction, induction and contradiction work described above.</li>
+    <li><b>Token budget.</b> If committed <code>system/</code> is over <code>compile_warn_tokens</code> (default 30000), the run must finish under 80% of that budget, trimming the largest files first and <code>self-aware.md</code> before anything else.</li>
+  </ul>
+
+  <p>Automatic dreams pass a four-step gate before they launch:</p>
+
+  <ol class="tight">
+    <li><code>enabled</code> false — rejected.</li>
+    <li>Origin is shutdown and <code>shutdown_launch</code> is false — rejected.</li>
+    <li>The last dream ended within <code>3600000 × min_hours_between</code> ms — rejected as <code>too_soon</code>.</li>
+    <li>Origin is not <code>pressure</code> and unreflected conversation is at or below 8192 bytes — rejected as <code>insufficient_volume</code>.</li>
+  </ol>
+
+  <p>With the defaults — <code>idle_minutes: 30</code>, <code>min_hours_between: 24</code>, <code>shutdown_launch: true</code> — that means a dream needs half an hour of idle, more than 8 KB of unreflected conversation, and a day since the last one. A run's origin is a validated enum, <code>manual | idle | shutdown | pressure</code>, and a throttled run parks rather than dying: it re-probes six hours after it parked.</p>
+
+  <p>Manual runs go through <code>/dream [--auto | --recent N | --conversation &lt;ids&gt; | --from transcript:&lt;path&gt;] [--to &lt;doc&gt;] [focus]</code>, and bypass the idle and volume gates. Automatic selection caps at 5 conversations and 150000 characters per run. Each run works in a real git worktree of the memory repo — the run ledger records <code>worktreeDir</code>, <code>worktreeBranch</code>, <code>baseSha</code> and a snapshot of the repo's git state — and merges back on success. Between runs, state sits in <code>runtime/dream/state.json</code>.</p>
+
+  <h2>Neighbours worth not confusing with these</h2>
+
+  <ul class="tight">
+    <li><code>nudge</code> (<code>every_user_turns: 10</code>) asks the agent to <i>write</i> memory; Kibitzer or <code>recall</code> only <i>reads</i> it and surfaces a hint mid-task.</li>
+    <li><code>facts</code> (<code>debounce_settles: 4</code>) is the explicit-fact extractor — the only writer of <code>## Explicit</code>.</li>
+    <li><code>reflection</code> condenses one conversation; <b>dream</b> condenses many, plus the whole repo.</li>
+    <li><b>people</b> is the model of the human; <b>soul</b> is the model of the agent. Dream maintains both.</li>
+  </ul>
+
+  <h2>Verification</h2>
+
+  <p>Tip text and ids were read from <code>&lt;senpi&gt;/dist/modes/interactive/tips/catalog/memory-tips.js</code>; tip selection from <code>tips/scheduler.js</code>, <code>tips/registry.js</code> and <code>tips/startup-tip.js</code>; the tips toggle default from <code>core/settings-manager.js</code>. The schemas, defaults, dream gate function, soul-file set, soul-updated notice, projection builder and the <code>/sleeptime</code> strings were read from <code>plugin/extensions/omo.js</code>. The six dream phases and their authoring rules were read from <code>plugin/extensions/dream-persona.md</code>. Run state and repository layout were confirmed against <code>runtime/dream/state.json</code>, the memory repo's git log, and its <code>system/</code> and <code>people/</code> trees.</p>
+
+  <footer class="lesson-footer">
+    <nav><a href="../index.html">Home</a></nav>
+  </footer>
+		<script src="../assets/course-index.js"></script>
+		<script src="../assets/shell.js"></script>
+</body>
+</html>
