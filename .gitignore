@@ -1,5 +1,8 @@
 .omc/
 
+# local-markdown issue tracker (local only)
+.scratch/
+
 # BEGIN oh-my-opencode-slim worktrees
 .slim/worktrees/
 .slim/worktrees.json
