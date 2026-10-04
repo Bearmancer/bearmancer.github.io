@@ -11,5 +11,8 @@
 # deepwork state (local only)
 .slim/deepwork/
 
+# local codegraph index
+.codegraph/
+
 work/
 _ledger/**/work/
