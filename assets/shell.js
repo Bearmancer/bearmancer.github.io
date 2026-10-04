@@ -120,10 +120,12 @@
 			if (!follower) return;
 			sel.onchange = function (e) {
 				if (!e.target.value) return;
-				var dir = e.target.value.replace(/[^/]*$/, "");
+				var picked = e.target.value;
+				var dir = picked.replace(/[^/]*$/, "");
 				var mine = ++request;
 				loadFeed(dir + "assets/course-index.js", function (list) {
 					if (mine !== request) return;
+					if (!list.length) { location.href = picked; return; }
 					follower.dataset.current = "";
 					fill(follower, list, dir + "lessons/");
 				});
