@@ -303,7 +303,8 @@ ul.tight li, ol.tight li {
 }
 
 /* Hub/index pages (chapter tables) */
-.hub-table td:last-child {
+.hub-table td:last-child,
+.hub-table td.kind {
 	white-space: nowrap;
 	color: var(--ink-soft);
 	font-family: var(--font-ui);
