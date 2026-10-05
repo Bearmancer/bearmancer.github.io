@@ -65,7 +65,7 @@
 		document.querySelectorAll("[data-size-select]").forEach(function (s) { s.value = savedSize; });
 	}
 
-	function fill(sel, entries, base) {
+	function fill(sel, entries, base, numbered) {
 		while (sel.firstChild) sel.removeChild(sel.firstChild);
 		var frag = document.createDocumentFragment();
 		if (sel.dataset.placeholder) {
@@ -74,10 +74,10 @@
 			p.textContent = sel.dataset.placeholder;
 			frag.appendChild(p);
 		}
-		entries.forEach(function (c) {
+		entries.forEach(function (c, i) {
 			var o = document.createElement("option");
 			o.value = base + c.href;
-			o.textContent = c.label;
+			o.textContent = numbered ? (i + 1) + ". " + c.label : c.label;
 			if (c.id === sel.dataset.current) o.selected = true;
 			frag.appendChild(o);
 		});
@@ -106,10 +106,10 @@
 	var chapters = window.COURSE_INDEX || [];
 	document.querySelectorAll("[data-index]").forEach(function (sel) {
 		if (sel.hasAttribute("data-follows-topic")) {
-			fill(sel, [], "");
+			fill(sel, [], "", true);
 			return;
 		}
-		fill(sel, chapters, sel.dataset.base || "");
+		fill(sel, chapters, sel.dataset.base || "", true);
 	});
 	document.querySelectorAll("[data-topic]").forEach(function (sel) {
 		var base = sel.dataset.base || "";
@@ -127,7 +127,7 @@
 					if (mine !== request) return;
 					if (!list.length) { location.href = picked; return; }
 					follower.dataset.current = "";
-					fill(follower, list, dir + "lessons/");
+					fill(follower, list, dir + "lessons/", true);
 				});
 			};
 		}
