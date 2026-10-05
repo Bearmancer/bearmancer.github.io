@@ -65,7 +65,7 @@
 		document.querySelectorAll("[data-size-select]").forEach(function (s) { s.value = savedSize; });
 	}
 
-	function fill(sel, entries, base, numbered) {
+	function fill(sel, entries, base) {
 		while (sel.firstChild) sel.removeChild(sel.firstChild);
 		var frag = document.createDocumentFragment();
 		if (sel.dataset.placeholder) {
@@ -74,10 +74,10 @@
 			p.textContent = sel.dataset.placeholder;
 			frag.appendChild(p);
 		}
-		entries.forEach(function (c, i) {
+		entries.forEach(function (c) {
 			var o = document.createElement("option");
 			o.value = base + c.href;
-			o.textContent = numbered ? (i + 1) + ". " + c.label : c.label;
+			o.textContent = c.label;
 			if (c.id === sel.dataset.current) o.selected = true;
 			frag.appendChild(o);
 		});
@@ -106,10 +106,10 @@
 	var chapters = window.COURSE_INDEX || [];
 	document.querySelectorAll("[data-index]").forEach(function (sel) {
 		if (sel.hasAttribute("data-follows-topic")) {
-			fill(sel, [], "", true);
+			fill(sel, [], "");
 			return;
 		}
-		fill(sel, chapters, sel.dataset.base || "", true);
+		fill(sel, chapters, sel.dataset.base || "");
 	});
 	document.querySelectorAll("[data-topic]").forEach(function (sel) {
 		var base = sel.dataset.base || "";
@@ -120,14 +120,12 @@
 			if (!follower) return;
 			sel.onchange = function (e) {
 				if (!e.target.value) return;
-				var picked = e.target.value;
-				var dir = picked.replace(/[^/]*$/, "");
+				var dir = e.target.value.replace(/[^/]*$/, "");
 				var mine = ++request;
 				loadFeed(dir + "assets/course-index.js", function (list) {
 					if (mine !== request) return;
-					if (!list.length) { location.href = picked; return; }
 					follower.dataset.current = "";
-					fill(follower, list, dir + "lessons/", true);
+					fill(follower, list, dir + "lessons/");
 				});
 			};
 		}
