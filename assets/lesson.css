@@ -468,11 +468,23 @@ figure.map svg text {
 	margin: 0.15rem 0;
 }
 
-/* Course index: rows "N · name", then Cast, Glossary, Timeline */
-.index-rows {
-	list-style: none;
-	margin: 1rem 0;
-	padding: 0;
+/* Numbered index tables: "#" column, Title column, then Cast, Glossary, Timeline */
+.hub-table.numbered td:first-child,
+.hub-table.numbered th:first-child {
+	width: 2.5rem;
+	text-align: right;
+	font-variant-numeric: tabular-nums;
+}
+.hub-table.numbered td:first-child {
+	color: var(--ink-soft);
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+}
+.hub-table.numbered td:last-child {
+	white-space: normal;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
 }
 .index-extras {
 	display: flex;
