@@ -16,3 +16,6 @@
 
 work/
 _ledger/**/work/
+
+# local agent teamwork artifacts (kept local only)
+.agents/
