@@ -1,6 +1,6 @@
 # bearmancer.github.io
 
-Static GitHub Pages site: one directory per published piece (course, finding, verdict), plus a hub `index.html` and shared assets.
+Static GitHub Pages site: one directory per published piece (course, finding, verdict), a hub `index.html`, shared assets.
 
 ## Agent skills
 
