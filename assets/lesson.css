@@ -26,6 +26,8 @@
 	--d4: #7a3fa0;
 	--d5: #6b6b00;
 	--d6: #0b7270;
+	--d7: #a84700;
+	--d8: #b0206f;
 	--d-neutral: #2b2724;
 
 	/* verification status: text holds >= 4.5:1 on --paper and on its own -bg */
@@ -70,6 +72,8 @@
 		--d4: #cf9cf0;
 		--d5: #e6d040;
 		--d6: #4fc9c6;
+		--d7: #f2a65a;
+		--d8: #f58ac4;
 		--d-neutral: #e6e0d6;
 		--st-true: #6fd09a;
 		--st-true-bg: #17301f;
@@ -100,6 +104,8 @@
 	--d4: #cf9cf0;
 	--d5: #e6d040;
 	--d6: #4fc9c6;
+	--d7: #f2a65a;
+	--d8: #f58ac4;
 	--d-neutral: #e6e0d6;
 	--st-true: #6fd09a;
 	--st-true-bg: #17301f;
@@ -428,17 +434,6 @@ ul.tight li, ol.tight li {
 	flex-wrap: wrap;
 	font-family: var(--font-ui);
 	font-size: var(--size-nav);
-}
-.A-bar .title {
-	font-weight: 600;
-	max-width: 18rem;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.A-bar .title a {
-	color: inherit;
-	border-bottom: none;
 }
 .A-bar .grp {
 	display: flex;
@@ -932,9 +927,6 @@ ol.footnotes a.back {
 	.A-bar .type-panel {
 		margin-left: 0;
 	}
-	.A-bar .title {
-		max-width: 100%;
-	}
 	.tl li {
 		grid-template-columns: 4.6rem minmax(0, 1fr);
 		gap: 0.6rem;
@@ -975,4 +967,76 @@ ol.footnotes a.back {
 	[data-theme-toggle] {
 		display: none;
 	}
+}
+
+/* Mega diagram: country columns x time rows, coloured relationship lines */
+figure.diagram.mega .scroll {
+	overflow-x: auto;
+}
+figure.diagram.mega svg {
+	min-width: 1000px;
+}
+@media (min-width: 1380px) {
+	figure.diagram.mega {
+		width: 1260px;
+		margin-left: calc(50% - 630px);
+	}
+}
+figure.diagram .band {
+	fill: var(--note-bg);
+	opacity: 0.55;
+}
+figure.diagram .box {
+	fill: none;
+	stroke-dasharray: none;
+}
+figure.diagram .e {
+	fill: none;
+	stroke-width: 2.4;
+	stroke-linejoin: round;
+}
+figure.diagram .el {
+	fill: var(--ink);
+	font-size: 10.5px;
+	stroke: var(--paper);
+	stroke-width: 3px;
+	paint-order: stroke;
+}
+figure.diagram .e-acq { stroke: var(--d-neutral); stroke-width: 3; }
+figure.diagram .e-ren { stroke: var(--d3); }
+figure.diagram .e-jv { stroke: var(--d7); stroke-width: 3; }
+figure.diagram .e-tm { stroke: var(--d6); stroke-dasharray: 9 3 2 3; }
+figure.diagram .e-lic { stroke: var(--d4); stroke-dasharray: 7 4; }
+figure.diagram .e-riv { stroke: var(--d8); stroke-dasharray: 3 3; stroke-width: 3; }
+figure.diagram .e-fmt { stroke: var(--d2); stroke-dasharray: 2 4; stroke-width: 3; stroke-linecap: round; }
+figure.diagram .e-spin { stroke: var(--ink-soft); stroke-dasharray: 1 5; stroke-width: 2.4; stroke-linecap: round; }
+figure.diagram .mk-acq { fill: var(--d-neutral); }
+figure.diagram .mk-ren { fill: var(--d3); }
+figure.diagram .mk-jv { fill: var(--d7); }
+figure.diagram .mk-tm { fill: var(--d6); }
+figure.diagram .mk-lic { fill: var(--d4); }
+figure.diagram .mk-riv { fill: var(--d8); }
+figure.diagram .mk-fmt { fill: var(--d2); }
+figure.diagram .mk-spin { fill: var(--ink-soft); }
+.legend-line {
+	display: inline-block;
+	width: 2.6em;
+	height: 0;
+	border-top: 3px solid;
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+figure.diagram .legbox {
+	fill: var(--paper);
+	stroke: var(--rule);
+	stroke-width: 1;
+}
+figure.diagram .lg {
+	fill: var(--ink);
+	font-size: 11px;
+}
+figure.diagram .lglab {
+	fill: var(--ink-soft);
+	font-size: 10px;
+	letter-spacing: 0.08em;
 }
