@@ -1,8 +1,7 @@
-/* lesson.css — shared stylesheet for this workspace's lessons and reference docs.
+/* lesson.css: the one shared stylesheet for every lesson, rules page, verify page and index.
    Tufte-inspired: quiet paper, generous margins, serif text, print-first.
-   Every lesson and reference links this file; do not restyle per-page.
-   All font + size tokens live in this :root block. No other file hardcodes
-   a font-size or font-family. */
+   Pages link the single copy at the site root assets/; never restyle per page.
+   All font and size tokens live in the :root block. No other rule hardcodes a font-size or font-family. */
 
 :root {
 	--ink: #201d1a;
@@ -14,13 +13,13 @@
 	--note-bg: #f4f1e8;
 	--warn-bg: #fbf5e4;
 	--warn-edge: #c9a94e;
+	--source-bg: #f0f4f1;
 	--font-body: "Sitka Text", Constantia, Charter, Georgia, serif;
 	--font-ui: -apple-system, "Segoe UI", system-ui, sans-serif;
 	--font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
 	--mono: var(--font-mono);
 
-	/* diagram palette: one hue per relationship type, chosen per diagram from
-	   this fixed set; every value holds >= 4.5:1 against --paper in its theme */
+	/* diagram palette: one hue per relationship type; every value holds >= 4.5:1 against --paper in its theme */
 	--d1: #b3261e;
 	--d2: #1f5fa8;
 	--d3: #157033;
@@ -28,6 +27,16 @@
 	--d5: #6b6b00;
 	--d6: #0b7270;
 	--d-neutral: #2b2724;
+
+	/* verification status: text holds >= 4.5:1 on --paper and on its own -bg */
+	--st-true: #14662f;
+	--st-true-bg: #e0f2e7;
+	--st-untrue: #a8231b;
+	--st-untrue-bg: #fbe4e1;
+	--st-interp: #7a4f00;
+	--st-interp-bg: #fbefd0;
+	--st-nf: #4f4a42;
+	--st-nf-bg: #e6e3dc;
 
 	/* one knob; every role below is a ratio of it */
 	--size-base: 19px;
@@ -44,7 +53,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root:not([data-theme="light"]) {
 		--ink: #e9e4da;
 		--ink-soft: #b3ac9f;
 		--paper: #1b1a18;
@@ -54,6 +63,7 @@
 		--note-bg: #22201c;
 		--warn-bg: #2c261a;
 		--warn-edge: #b8973f;
+		--source-bg: #1f2622;
 		--d1: #f07167;
 		--d2: #6fa8f0;
 		--d3: #4cc36e;
@@ -61,17 +71,64 @@
 		--d5: #e6d040;
 		--d6: #4fc9c6;
 		--d-neutral: #e6e0d6;
-	}
-	.box-source {
-		background: #1f2622;
+		--st-true: #6fd09a;
+		--st-true-bg: #17301f;
+		--st-untrue: #ff8d84;
+		--st-untrue-bg: #3a1b19;
+		--st-interp: #f0c05a;
+		--st-interp-bg: #3a2d0e;
+		--st-nf: #b3ac9f;
+		--st-nf-bg: #2e2c27;
+		color-scheme: dark;
 	}
 }
 
+:root[data-theme="dark"] {
+	--ink: #e9e4da;
+	--ink-soft: #b3ac9f;
+	--paper: #1b1a18;
+	--panel: #26241f;
+	--rule: #3d3a32;
+	--accent: #dca56b;
+	--note-bg: #22201c;
+	--warn-bg: #2c261a;
+	--warn-edge: #b8973f;
+	--source-bg: #1f2622;
+	--d1: #f07167;
+	--d2: #6fa8f0;
+	--d3: #4cc36e;
+	--d4: #cf9cf0;
+	--d5: #e6d040;
+	--d6: #4fc9c6;
+	--d-neutral: #e6e0d6;
+	--st-true: #6fd09a;
+	--st-true-bg: #17301f;
+	--st-untrue: #ff8d84;
+	--st-untrue-bg: #3a1b19;
+	--st-interp: #f0c05a;
+	--st-interp-bg: #3a2d0e;
+	--st-nf: #b3ac9f;
+	--st-nf-bg: #2e2c27;
+	color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+	color-scheme: light;
+}
+
 /* Size presets: default M. Set data-size on <html> to switch. */
-html[data-size="S"]  { --size-base: 16px; }
-html[data-size="M"]  { --size-base: 19px; }
-html[data-size="L"]  { --size-base: 21px; }
-html[data-size="XL"] { --size-base: 24px; }
+html[data-size="S"] {
+	--size-base: 16px;
+}
+html[data-size="M"] {
+	--size-base: 19px;
+}
+html[data-size="L"] {
+	--size-base: 21px;
+}
+html[data-size="XL"] {
+	--size-base: 24px;
+}
 
 html {
 	background: var(--paper);
@@ -86,6 +143,7 @@ body {
 	font-size: var(--size-body);
 	line-height: 1.62;
 	text-rendering: optimizeLegibility;
+	overflow-wrap: anywhere;
 }
 
 /* Headings */
@@ -95,6 +153,7 @@ body {
 	letter-spacing: 0.14em;
 	color: var(--accent);
 	margin: 0 0 0.6rem;
+	text-transform: uppercase;
 }
 h1 {
 	font-size: var(--size-h1);
@@ -140,22 +199,11 @@ h3 {
 	margin: 0 0 1.4rem;
 }
 
-.crosslinks {
-	font-family: var(--font-ui);
-	font-size: var(--size-nav);
-	color: var(--ink-soft);
-	background: var(--panel);
-	border: 1px solid var(--rule);
-	border-radius: 8px;
-	padding: 0.6rem 0.9rem;
-	margin: 0 0 1.6rem;
-}
-
 /* Links & text */
 a {
 	color: var(--accent);
 	text-decoration: none;
-	border-bottom: 1px solid rgba(138, 90, 43, 0.35);
+	border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
 }
 a:hover {
 	border-bottom-color: var(--accent);
@@ -188,6 +236,16 @@ blockquote cite {
 	font-style: normal;
 }
 
+/* Keyboard focus: one visible ring everywhere */
+a:focus-visible,
+summary:focus-visible,
+select:focus-visible,
+button:focus-visible,
+[data-theme-toggle]:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
+}
+
 /* Boxes */
 .box {
 	background: var(--note-bg);
@@ -216,11 +274,15 @@ blockquote cite {
 	border-left: 4px solid var(--warn-edge);
 }
 .box-source {
-	background: #f0f4f1;
+	background: var(--source-bg);
 	border-left: 4px solid #6f8f76;
 }
 
-/* Tables (reference pages) */
+/* Tables */
+.scroll {
+	overflow-x: auto;
+	max-width: 100%;
+}
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -245,8 +307,10 @@ td {
 figure.map {
 	margin: 1.4rem 0;
 }
-figure.map svg {
+figure.map svg,
+figure.diagram svg {
 	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 @media (min-width: 1380px) {
@@ -256,7 +320,7 @@ figure.map svg {
 	}
 }
 
-/* Palette/legend colour swatch — one shared pattern for cast-map + legend rows */
+/* Palette/legend colour swatch */
 .swatch {
 	display: inline-block;
 	width: 0.85em;
@@ -279,12 +343,13 @@ figure.map svg {
 }
 .tl li {
 	display: grid;
-	grid-template-columns: 5.6rem 1fr;
+	grid-template-columns: 5.6rem minmax(0, 1fr);
 	gap: 0.9rem;
 	padding: 0.45rem 0;
 	border-bottom: 1px dotted var(--rule);
 }
-.tl .when {
+.tl .when,
+.tl time {
 	font-family: var(--font-mono);
 	font-size: var(--size-code);
 	color: var(--accent);
@@ -310,6 +375,27 @@ ul.tight li, ol.tight li {
 	font-size: var(--size-nav);
 }
 
+/* Numbered topic index: the title column wraps, the number column stays narrow */
+.hub-table.numbered td:last-child {
+	white-space: normal;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	overflow-wrap: anywhere;
+}
+.hub-table.numbered td:first-child,
+.hub-table.numbered th:first-child {
+	width: 2.5rem;
+	color: var(--ink-soft);
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+}
+
+/* Home index: one subject heading per numbered table */
+.subject-heading {
+	margin: 2rem 0 0.5rem;
+}
+
 /* Footer */
 .lesson-footer {
 	margin-top: 3.2rem;
@@ -323,9 +409,7 @@ ul.tight li, ol.tight li {
 	margin-right: 1rem;
 }
 
-/* Top bar: two states. Chapter page: topic name, chapter dropdown, then text
-   settings behind "Aa". Home (data-state="home"): Topic picker, Chapter picker,
-   then text settings. */
+/* Top bar: chapter page = topic title, chapter picker, text settings; home = Topic + Chapter pickers. */
 .A-bar {
 	position: sticky;
 	top: 0;
@@ -361,6 +445,9 @@ ul.tight li, ol.tight li {
 	align-items: center;
 	gap: 0.4rem;
 }
+.A-bar .grp[hidden] {
+	display: none;
+}
 .A-bar .lbl {
 	font-size: var(--size-kicker);
 	letter-spacing: 0.07em;
@@ -388,75 +475,21 @@ select, button {
 	border: 1px solid var(--rule);
 	border-radius: 6px;
 	padding: 0.25rem 0.5rem;
-	max-width: 20rem;
+	max-width: 100%;
+	min-width: 0;
 	text-overflow: ellipsis;
 }
-
-/* Verdict and verify pages: claim cards, tags, positions */
-.claims { list-style: none; margin: 1.2rem 0; padding: 0; }
-.claim {
-	background: var(--note-bg);
-	border: 1px solid var(--rule);
-	border-radius: 6px;
-	padding: 0.9rem 1.1rem;
-	margin: 1rem 0;
-	overflow-wrap: anywhere;
+button {
+	cursor: pointer;
 }
-.claim-wrong { border-left: 4px solid var(--d1); }
-.claim-disputed { border-left: 4px solid var(--warn-edge); }
-.claim-head {
-	display: flex; gap: 0.6rem; align-items: baseline;
-	flex-wrap: wrap; margin-bottom: 0.3rem;
-}
-.tag {
+[data-theme-toggle] {
 	font-family: var(--font-ui);
-	font-size: var(--size-kicker);
-	letter-spacing: 0.12em;
-	border: 1px solid var(--rule);
-	border-radius: 4px;
-	padding: 0.05rem 0.45rem;
-	white-space: nowrap;
-}
-.tag-wrong { color: var(--d1); border-color: var(--d1); }
-.tag-disputed { color: var(--accent); border-color: var(--warn-edge); }
-.claim-text { font-weight: 600; }
-.ts {
-	font-family: var(--font-mono);
-	font-size: var(--size-code);
-	color: var(--accent);
-	white-space: nowrap;
-}
-.positions {
-	list-style: none; margin: 0.6rem 0 0.2rem 0.9rem; padding: 0 0 0 0.9rem;
-	border-left: 2px solid var(--rule);
-	font-size: var(--size-table);
-}
-.positions li { margin: 0.25rem 0; }
-.positions .side { font-weight: 600; }
-.claim p { overflow-wrap: anywhere; }
-.appendix {
-	font-size: var(--size-table);
-	color: var(--ink-soft);
-	overflow-wrap: anywhere;
-}
-
-/* Relationship diagram hooks (fills come from SVG attributes; these keep them theme-aware) */
-.node {
-	fill: var(--panel);
-	stroke: var(--ink-soft);
-}
-.edge {
-	stroke-linecap: round;
-}
-.elabel {
-	paint-order: stroke;
-	stroke: var(--paper);
-	stroke-width: 3px;
-	stroke-linejoin: round;
+	font-size: var(--size-nav);
 }
 
 /* Diagram: legend rows, node text */
-figure.map svg text {
+figure.map svg text,
+figure.diagram svg text {
 	font-family: var(--font-ui);
 }
 .legend {
@@ -485,6 +518,357 @@ figure.map svg text {
 	font-size: var(--size-nav);
 }
 
+/* ---- Layout components (ADR 0005) ---- */
+
+.s {
+	display: inline;
+}
+p.answer {
+	font-size: var(--size-lead);
+	margin: 0 0 1.4rem;
+}
+section.layout {
+	min-width: 0;
+}
+details {
+	border: 1px solid var(--rule);
+	border-radius: 6px;
+	padding: 0.4rem 0.9rem;
+	margin: 0.9rem 0;
+	background: var(--note-bg);
+}
+summary {
+	cursor: pointer;
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+	font-weight: 600;
+}
+
+dl.glossary dt,
+dl.qa dt {
+	font-weight: 600;
+	margin-top: 1rem;
+}
+dl.glossary dd,
+dl.qa dd {
+	margin: 0.15rem 0 0;
+}
+dl.glossary dt {
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+	letter-spacing: 0.04em;
+}
+a.term {
+	border-bottom-style: dotted;
+}
+
+ul.tree,
+ul.tree ul {
+	list-style: none;
+	margin: 0.3rem 0;
+	padding-left: 1.1rem;
+	border-left: 2px solid var(--rule);
+}
+ul.tree li {
+	margin: 0.45rem 0;
+}
+ul.tree .q {
+	font-weight: 600;
+}
+ul.tree .branch {
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+	color: var(--accent);
+	margin-right: 0.4rem;
+}
+ul.tree .outcome {
+	background: var(--note-bg);
+	border-radius: 4px;
+	padding: 0.1rem 0.4rem;
+}
+
+ol.steps {
+	padding-left: 1.5rem;
+}
+ol.steps li {
+	padding-left: 0.3rem;
+}
+
+.chain {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	gap: 0.4rem 0.5rem;
+	margin: 1.2rem 0;
+}
+.chain .n {
+	flex: 1 1 11rem;
+	min-width: 0;
+	border: 1px solid var(--rule);
+	border-radius: 6px;
+	padding: 0.5rem 0.7rem;
+	background: var(--note-bg);
+	font-size: var(--size-table);
+}
+.chain .a {
+	align-self: center;
+	color: var(--ink-soft);
+	font-family: var(--font-ui);
+}
+
+.cheat {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+	gap: 1px;
+	background: var(--rule);
+	border: 1px solid var(--rule);
+	font-size: var(--size-table);
+	margin: 1.2rem 0;
+}
+.cheat > div {
+	background: var(--paper);
+	padding: 0.5rem 0.7rem;
+	min-width: 0;
+}
+.cheat b {
+	display: block;
+	font-family: var(--font-ui);
+	font-size: var(--size-kicker);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--accent);
+}
+
+figure.diagram {
+	margin: 1.4rem 0;
+}
+figure.diagram figcaption {
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+	color: var(--ink-soft);
+}
+figure.diagram .node {
+	fill: var(--note-bg);
+	stroke: var(--d-neutral);
+	stroke-width: 1.2;
+}
+figure.diagram .edge {
+	stroke: var(--d-neutral);
+	stroke-width: 1.4;
+	fill: none;
+}
+figure.diagram .arrow {
+	fill: var(--d-neutral);
+}
+figure.diagram text {
+	fill: var(--ink);
+	font-size: 13px;
+}
+figure.diagram .elabel {
+	fill: var(--ink-soft);
+	font-size: 11px;
+}
+
+/* Status pills and boxes: status words appear only in verify cards, debate blocks and errata (ADR 0014). */
+.pill {
+	display: inline-block;
+	font-family: var(--font-mono);
+	font-size: var(--size-kicker);
+	padding: 0.05rem 0.55rem;
+	border-radius: 99px;
+	white-space: nowrap;
+}
+.st-true {
+	background: var(--st-true-bg);
+	color: var(--st-true);
+}
+.st-untrue {
+	background: var(--st-untrue-bg);
+	color: var(--st-untrue);
+}
+.st-interpretive {
+	background: var(--st-interp-bg);
+	color: var(--st-interp);
+}
+.st-not-found {
+	background: var(--st-nf-bg);
+	color: var(--st-nf);
+}
+
+aside.debate,
+aside.errata {
+	border: 1px solid var(--rule);
+	border-radius: 6px;
+	padding: 0.7rem 1rem;
+	margin: 1.2rem 0;
+	min-width: 0;
+}
+aside.debate {
+	background: var(--st-interp-bg);
+	border-left: 4px solid var(--st-interp);
+}
+aside.errata {
+	background: var(--st-untrue-bg);
+	border-left: 4px solid var(--st-untrue);
+}
+aside .box-title {
+	font-family: var(--font-ui);
+	font-size: var(--size-kicker);
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 0.35rem;
+}
+aside.debate .box-title {
+	color: var(--st-interp);
+}
+aside.errata .box-title {
+	color: var(--st-untrue);
+}
+aside .position {
+	margin: 0.5rem 0;
+	padding-left: 0.7rem;
+	border-left: 2px solid var(--rule);
+}
+aside .holders,
+aside .srcs {
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+	color: var(--ink-soft);
+}
+aside a {
+	color: inherit;
+	border-bottom-color: currentColor;
+}
+
+/* Verify page */
+.counts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem 0 1.6rem;
+	padding: 0;
+	list-style: none;
+}
+.counts li {
+	margin: 0;
+	background: var(--note-bg);
+	border: 1px solid var(--rule);
+	border-radius: 6px;
+	padding: 0.3rem 0.7rem;
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+}
+.counts b {
+	font-size: var(--size-lead);
+	margin-right: 0.3rem;
+}
+.cards {
+	list-style: none;
+	margin: 1.2rem 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 0.9rem;
+}
+.card {
+	margin: 0;
+	background: var(--note-bg);
+	border: 1px solid var(--rule);
+	border-radius: 6px;
+	padding: 0.8rem 1rem;
+	min-width: 0;
+}
+.card .claim-head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: var(--font-ui);
+	font-size: var(--size-nav);
+	color: var(--ink-soft);
+}
+.card .claim-text {
+	font-weight: 600;
+	margin: 0.4rem 0;
+}
+.card .ev {
+	margin: 0.4rem 0;
+	font-size: var(--size-table);
+}
+.card .ev q {
+	color: var(--ink-soft);
+}
+.card .loc {
+	font-family: var(--font-mono);
+	font-size: var(--size-code);
+	color: var(--ink-soft);
+}
+
+/* Appendix: sources read and sources failed to grab */
+section.appendix {
+	margin-top: 3rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--rule);
+	font-family: var(--font-ui);
+	font-size: var(--size-footer);
+	color: var(--ink-soft);
+}
+section.appendix h2 {
+	border-top: none;
+	margin-top: 0;
+	padding-top: 0;
+	font-size: var(--size-h3);
+}
+section.appendix h3 {
+	font-size: var(--size-nav);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+/* Footnotes: superscript jumps to the note, the note links back */
+sup.fn {
+	font-family: var(--font-ui);
+	font-size: 0.7em;
+	line-height: 0;
+}
+sup.fn a {
+	color: var(--accent);
+	text-decoration: none;
+	border-bottom: none;
+	padding: 0 0.1em;
+}
+sup.fn + sup.fn::before {
+	content: ",";
+	color: var(--ink-soft);
+}
+section.notes {
+	margin-top: 2.4rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--rule);
+	font-family: var(--font-ui);
+	font-size: var(--size-footer);
+	color: var(--ink-soft);
+}
+section.notes h2 {
+	border-top: none;
+	margin-top: 0;
+	padding-top: 0;
+	font-size: var(--size-h3);
+}
+ol.footnotes li {
+	overflow-wrap: anywhere;
+	margin: 0.4rem 0;
+}
+ol.footnotes li:target {
+	background: var(--note-bg);
+}
+ol.footnotes a.back {
+	margin-left: 0.3em;
+	color: var(--accent);
+	text-decoration: none;
+}
+
 /* Narrow screens */
 @media (max-width: 640px) {
 	body {
@@ -499,9 +883,18 @@ figure.map svg text {
 	.A-bar .type-panel {
 		margin-left: 0;
 	}
+	.A-bar .title {
+		max-width: 100%;
+	}
 	.tl li {
-		grid-template-columns: 4.6rem 1fr;
+		grid-template-columns: 4.6rem minmax(0, 1fr);
 		gap: 0.6rem;
+	}
+	.chain .a {
+		display: none;
+	}
+	.counts li {
+		flex: 1 1 40%;
 	}
 }
 
@@ -520,7 +913,7 @@ figure.map svg text {
 		color: #000;
 		border-bottom: none;
 	}
-	.box {
+	.box, .card, aside, details {
 		break-inside: avoid;
 	}
 	h2 {
@@ -529,5 +922,8 @@ figure.map svg text {
 	.A-bar {
 		position: static;
 		margin: 0 0 1rem;
+	}
+	[data-theme-toggle] {
+		display: none;
 	}
 }
