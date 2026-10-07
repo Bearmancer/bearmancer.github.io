@@ -121,6 +121,14 @@
 			frag.appendChild(o);
 		});
 		sel.appendChild(frag);
+		// A page missing from its own list (a verify page) still shows itself, so the select always names where you are.
+		if (sel.dataset.current && !sel.dataset.placeholder && !entries.some(function(c) { return c.id === sel.dataset.current; })) {
+			var here = document.createElement("option");
+			here.value = "";
+			here.textContent = document.title;
+			here.selected = true;
+			sel.insertBefore(here, sel.firstChild);
+		}
 		sel.onchange = function(e) {
 			if (e.target.value) location.href = e.target.value;
 		};

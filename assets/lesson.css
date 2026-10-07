@@ -435,17 +435,6 @@ ul.tight li, ol.tight li {
 	font-family: var(--font-ui);
 	font-size: var(--size-nav);
 }
-.A-bar .title {
-	font-weight: 600;
-	max-width: 18rem;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.A-bar .title a {
-	color: inherit;
-	border-bottom: none;
-}
 .A-bar .grp {
 	display: flex;
 	align-items: center;
@@ -938,9 +927,6 @@ ol.footnotes a.back {
 	.A-bar .type-panel {
 		margin-left: 0;
 	}
-	.A-bar .title {
-		max-width: 100%;
-	}
 	.tl li {
 		grid-template-columns: 4.6rem minmax(0, 1fr);
 		gap: 0.6rem;
@@ -1039,4 +1025,18 @@ figure.diagram .mk-spin { fill: var(--ink-soft); }
 	border-top: 3px solid;
 	margin-right: 0.4em;
 	vertical-align: middle;
+}
+figure.diagram .legbox {
+	fill: var(--paper);
+	stroke: var(--rule);
+	stroke-width: 1;
+}
+figure.diagram .lg {
+	fill: var(--ink);
+	font-size: 11px;
+}
+figure.diagram .lglab {
+	fill: var(--ink-soft);
+	font-size: 10px;
+	letter-spacing: 0.08em;
 }
