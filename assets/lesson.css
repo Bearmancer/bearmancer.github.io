@@ -668,6 +668,55 @@ figure.diagram .elabel {
 	fill: var(--ink-soft);
 	font-size: 11px;
 }
+figure.diagram .node {
+	stroke-width: 2;
+}
+figure.diagram .node.dash {
+	stroke-dasharray: 7 5;
+}
+figure.diagram .fam-col {
+	stroke: var(--d2);
+}
+figure.diagram .fam-vic {
+	stroke: var(--d1);
+}
+figure.diagram .fam-sony {
+	stroke: var(--d4);
+}
+figure.diagram .fam-emi {
+	stroke: var(--d5);
+}
+figure.diagram .fam-oth {
+	stroke: var(--d-neutral);
+}
+figure.diagram .chip {
+	fill: var(--paper);
+	stroke: var(--ink-soft);
+	stroke-width: 1;
+}
+figure.diagram .chipt {
+	fill: var(--ink-soft);
+	font-size: 10px;
+	font-weight: 700;
+}
+figure.diagram .lane {
+	fill: var(--ink-soft);
+	font-size: 11px;
+	letter-spacing: 0.08em;
+}
+figure.diagram .year {
+	fill: var(--accent);
+	font-size: 12px;
+	font-weight: 700;
+}
+figure.diagram .rowlab {
+	font-size: 13px;
+	font-weight: 700;
+}
+figure.diagram .neq {
+	font-size: 22px;
+	font-weight: 700;
+}
 
 /* Status pills and boxes: status words appear only in verify cards, debate blocks and errata (ADR 0014). */
 .pill {
