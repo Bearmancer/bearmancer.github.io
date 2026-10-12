@@ -1,7 +1,7 @@
 /* shell.js — wires the A-bar: topic picker, chapter picker, font menu, size menu.
    Persists font + size in localStorage; every storage access is try/catch
    wrapped since file:// and locked-down browsers can throw. */
-(function() {
+(function () {
 	var FONTS = [
 		["Literata", "Literata:opsz,wght@7..72,400;7..72,600"],
 		["Source Serif 4", "Source+Serif+4:opsz,wght@8..60,400;8..60,600"],
@@ -18,17 +18,17 @@
 	];
 	var root = document.documentElement;
 	var store = {
-		get: function(k) {
+		get: function (k) {
 			try {
 				return localStorage.getItem(k);
 			} catch (e) {
 				return null;
 			}
 		},
-		set: function(k, v) {
+		set: function (k, v) {
 			try {
 				localStorage.setItem(k, v);
-			} catch (e) {}
+			} catch (e) { }
 		},
 	};
 
@@ -39,15 +39,15 @@
 		if (t === "auto") root.removeAttribute("data-theme");
 		else root.setAttribute("data-theme", t);
 		store.set("theme", t);
-		document.querySelectorAll("[data-theme-toggle]").forEach(function(b) {
+		document.querySelectorAll("[data-theme-toggle]").forEach(function (b) {
 			b.textContent = "Theme: " + t;
 			b.setAttribute("aria-label", "Colour theme: " + t + ". Activate to change.");
 			b.setAttribute("aria-pressed", t === "auto" ? "false" : "true");
 		});
 	}
 
-	document.querySelectorAll("[data-theme-toggle]").forEach(function(b) {
-		b.onclick = function() {
+	document.querySelectorAll("[data-theme-toggle]").forEach(function (b) {
+		b.onclick = function () {
 			var cur = store.get("theme") || "auto";
 			setTheme(THEMES[(THEMES.indexOf(cur) + 1) % THEMES.length]);
 		};
@@ -78,13 +78,13 @@
 		store.set("size", s);
 	}
 
-	document.querySelectorAll("[data-font-select]").forEach(function(s) {
-		s.onchange = function(e) {
+	document.querySelectorAll("[data-font-select]").forEach(function (s) {
+		s.onchange = function (e) {
 			loadFont(e.target.value);
 		};
 	});
-	document.querySelectorAll("[data-size-select]").forEach(function(s) {
-		s.onchange = function(e) {
+	document.querySelectorAll("[data-size-select]").forEach(function (s) {
+		s.onchange = function (e) {
 			setSize(e.target.value);
 		};
 	});
@@ -92,14 +92,14 @@
 	var savedFont = store.get("font");
 	if (savedFont) {
 		loadFont(savedFont);
-		document.querySelectorAll("[data-font-select]").forEach(function(s) {
+		document.querySelectorAll("[data-font-select]").forEach(function (s) {
 			s.value = savedFont;
 		});
 	}
 	var savedSize = store.get("size");
 	if (savedSize) {
 		setSize(savedSize);
-		document.querySelectorAll("[data-size-select]").forEach(function(s) {
+		document.querySelectorAll("[data-size-select]").forEach(function (s) {
 			s.value = savedSize;
 		});
 	}
@@ -113,7 +113,7 @@
 			p.textContent = sel.dataset.placeholder;
 			frag.appendChild(p);
 		}
-		entries.forEach(function(c) {
+		entries.forEach(function (c) {
 			var o = document.createElement("option");
 			o.value = base + c.href;
 			o.textContent = c.label;
@@ -122,14 +122,14 @@
 		});
 		sel.appendChild(frag);
 		// A page missing from its own list (a verify page) still shows itself, so the select always names where you are.
-		if (sel.dataset.current && !sel.dataset.placeholder && !entries.some(function(c) { return c.id === sel.dataset.current; })) {
+		if (sel.dataset.current && !sel.dataset.placeholder && !entries.some(function (c) { return c.id === sel.dataset.current; })) {
 			var here = document.createElement("option");
 			here.value = "";
 			here.textContent = document.title;
 			here.selected = true;
 			sel.insertBefore(here, sel.firstChild);
 		}
-		sel.onchange = function(e) {
+		sel.onchange = function (e) {
 			if (e.target.value) location.href = e.target.value;
 		};
 	}
@@ -144,10 +144,10 @@
 			s.remove();
 			done(list);
 		}
-		s.onload = function() {
+		s.onload = function () {
 			finish(window.COURSE_INDEX || []);
 		};
-		s.onerror = function() {
+		s.onerror = function () {
 			finish([]);
 		};
 		s.src = src;
@@ -155,7 +155,7 @@
 	}
 
 	var chapters = window.COURSE_INDEX || [];
-	document.querySelectorAll("[data-index]").forEach(function(sel) {
+	document.querySelectorAll("[data-index]").forEach(function (sel) {
 		if (sel.hasAttribute("data-follows-topic")) {
 			fill(sel, [], "");
 			if (sel.parentNode) sel.parentNode.hidden = true;
@@ -163,15 +163,15 @@
 		}
 		fill(sel, chapters, sel.dataset.base || "");
 	});
-	document.querySelectorAll("[data-topic]").forEach(function(sel) {
+	document.querySelectorAll("[data-topic]").forEach(function (sel) {
 		var base = sel.dataset.base || "";
 		var follower = sel.closest(".A-bar").querySelector("[data-follows-topic]");
 		function ready(topics) {
 			fill(sel, topics, base);
 			if (!follower) return;
 			var holder = follower.parentNode;
-			sel.onchange = function(e) {
-				var entry = topics.filter(function(t) {
+			sel.onchange = function (e) {
+				var entry = topics.filter(function (t) {
 					return base + t.href === e.target.value;
 				})[0];
 				var list = entry && entry.chapters;
