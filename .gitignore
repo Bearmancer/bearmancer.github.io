@@ -5,7 +5,6 @@
 .gemini/
 .agents/
 .codegraph/
-.scratch/
 
 # BEGIN oh-my-opencode-slim worktrees
 .slim/worktrees/

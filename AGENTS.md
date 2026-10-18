@@ -6,7 +6,7 @@ Static GitHub Pages site; layout in `docs/adr/0001-site-structure.md`.
 
 ### Issue tracker
 
-Issues and specs live as local markdown under `.scratch/` (gitignored, created on demand).
+Issues and specs are GitHub issues on `Bearmancer/bearmancer.github.io`, managed with `gh`.
 
 ### Triage labels
 
