@@ -513,7 +513,7 @@ figure.diagram svg text {
 	font-size: var(--size-nav);
 }
 
-/* ---- Layout components (ADR 0005) ---- */
+/* ---- Layout components ---- */
 
 .s {
 	display: inline;
@@ -713,7 +713,7 @@ figure.diagram .neq {
 	font-weight: 700;
 }
 
-/* Status pills and boxes: status words appear only in verify cards, debate blocks and errata (ADR 0014). */
+/* Status pills and boxes: status words appear only in verify cards, debate blocks and errata . */
 .pill {
 	display: inline-block;
 	font-family: var(--font-mono);

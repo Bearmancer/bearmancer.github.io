@@ -1,6 +1,10 @@
+# Local agent and tool state (never published)
 .omc/
-
-# local-markdown issue tracker (local only)
+.omo/
+.opencode/
+.gemini/
+.agents/
+.codegraph/
 .scratch/
 
 # BEGIN oh-my-opencode-slim worktrees
@@ -11,11 +15,15 @@
 # deepwork state (local only)
 .slim/deepwork/
 
-# local codegraph index
-.codegraph/
+# Claude Code per-user and worktree state (.claude/ itself is tracked)
+.claude/settings.local.json
+.claude/worktrees/
 
+# deep-research raw store and drafts (local only; matches at any depth)
 work/
-_ledger/**/work/
 
-# local agent teamwork artifacts (kept local only)
-.agents/
+# OS junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
