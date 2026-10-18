@@ -1,6 +1,6 @@
 # bearmancer.github.io
 
-Static GitHub Pages site: one directory per published piece (course, finding, verdict), a hub `index.html`, shared assets.
+Static GitHub Pages site; layout in `docs/adr/0001-site-structure.md`.
 
 ## Agent skills
 
@@ -14,4 +14,4 @@ Default five-role vocabulary (`needs-triage`, `needs-info`, `ready-for-agent`, `
 
 ### Domain docs
 
-No `GLOSSARY.md` or `docs/adr/` in this repo. Glossary: `C:\Users\Lance\Dev\system-config\CONTEXT.md`. ADRs: `C:\Users\Lance\.claude\skills\deep-research\references\design.md`.
+Decisions are ADRs in `docs/adr/` (site structure: `docs/adr/0001-site-structure.md`). No glossary.
