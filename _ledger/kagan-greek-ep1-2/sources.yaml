@@ -1,0 +1,107 @@
+schema: 1
+sources:
+- id: s1
+  url: https://www.youtube.com/watch?v=9FrHGAd_yto
+  kind: unknown
+  tier: T3
+  publisher: youtube.com
+  status: read
+  retrieved_at: '2026-10-12T22:04:03Z'
+  raw_path: work/kagan-greek-ep1-2/raw/s1.txt
+  content_hash: 9f76d0ffef438e90
+  media:
+    duration: 1983
+    chapters:
+    - start_time: 0
+      title: Chapter 1. Ancient Greece as the Foundation of Western Civilization
+      end_time: 786
+    - start_time: 786
+      title: Chapter 2. The Judeo Christian Tradition
+      end_time: 1490
+    - start_time: 1490
+      title: Chapter 3. Problems Posed by the Western Tradition
+      end_time: 1983
+    description: 'Introduction to Ancient Greek History (CLCV 205)
+
+
+      Professor Donald Kagan explains why people should study the ancient Greeks. He argues that the Greeks
+      are worthy of our study not only because of their vast achievements and contributions to Western
+      civilization (such as in the fields of science, law, and politics) but also because they offer a
+      unique perspective on humanity. To the Greeks, man was both simultaneously capable of the greatest
+      achievements and the worst crimes; he was both great and important, but also mortal and fallible.
+      He was a tragic figure, powerful but limited. Therefore, by studying the Greeks, one gains insight
+      into a tension that has gripped and shaped the West and the rest of the world through its influence.
+      In short, to study the Greeks is to study the nature of human experience.
+
+
+      00:00 - Chapter 1. Ancient Greece as the Foundation of Western Civilization
+
+      13:06 - Chapter 2. The Judeo Christian Tradition
+
+      24:50 - Chapter 3. Problems Posed by the Western Tradition
+
+
+      This course was recorded in Fall 2007.'
+- id: s2
+  url: https://www.youtube.com/watch?v=GDNTsdtbKy8
+  kind: unknown
+  tier: T3
+  publisher: youtube.com
+  status: read
+  retrieved_at: '2026-10-12T22:04:06Z'
+  raw_path: work/kagan-greek-ep1-2/raw/s2.txt
+  content_hash: 8a9a2c6ff9088a9e
+  media:
+    duration: 4091
+    chapters:
+    - start_time: 0
+      title: Chapter 1. The Minoan Civilization
+      end_time: 538
+    - start_time: 538
+      title: Chapter 2. Mycenaean Language and Writing
+      end_time: 967
+    - start_time: 967
+      title: Chapter 3. The Citadel, Farmland, Burials and the Oil Trade
+      end_time: 1589
+    - start_time: 1589
+      title: Chapter 4. Cultural Unity, Agriculture, Religious Authority
+      end_time: 2021
+    - start_time: 2021
+      title: Chapter 5. Society and Economy
+      end_time: 2345
+    - start_time: 2345
+      title: Chapter 6. Theories about the Fall of the Mycenaean World
+      end_time: 3412
+    - start_time: 3412
+      title: Chapter 7. Results of the Fall
+      end_time: 4091
+    description: 'Introduction to Ancient Greek History (CLCV 205)
+
+
+      In this lecture, Professor Donald Kagan explores the earliest history of Greek civilization. He
+      demonstrates how small agricultural enclaves eventually turned into great cities of power and wealth
+      in the Bronze Age, taking as his examples first Minoan Crete and then Mycenaean Greece. He also
+      argues that these civilizations were closely related to the great monarchies of the ancient Near
+      East. He points out that the Mycenaean age eventually came to an abrupt end probably through a process
+      of warfare and migration. Reconstructing the Mycenaean age is possible through archaeological evidence
+      and through epic poetry (Homer). Finally, he provides an account of the collapse of the Mycenaean
+      world, and explains how in its aftermath, the Greeks were poised to start their civilization over
+      on a new slate.
+
+
+      00:00 - Chapter 1. The Minoan Civilization
+
+      08:58 - Chapter 2. Mycenaean Language and Writing
+
+      16:07 - Chapter 3. The Citadel, Farmland, Burials and the Oil Trade
+
+      26:29 - Chapter 4. Cultural Unity, Agriculture, Religious Authority
+
+      33:41 - Chapter 5. Society and Economy
+
+      39:05 - Chapter 6. Theories about the Fall of the Mycenaean World
+
+      56:52 - Chapter 7. Results of the Fall
+
+
+      This course was recorded in Fall 2007.'
