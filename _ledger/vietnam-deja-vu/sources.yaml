@@ -150,8 +150,7 @@ sources:
   tier: T1
   publisher: www.marxists.org
   status: failed
-  fail_reason: 'direct.fetch: page has no readable text (script shell?); wayback.fetch:
-    no archived snapshot'
+  fail_reason: 'direct.fetch: page has no readable text (script shell?); wayback.fetch: no archived snapshot'
 - id: s18
   url: https://www.nationalww2museum.org/war/articles/oss-vietnam-1945-dixee-bartholomew-feis
   kind: unknown
