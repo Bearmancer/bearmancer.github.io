@@ -1,0 +1,47 @@
+run_id: 20261024T041337Z
+topic: bonds-ai-2026
+prompt: 'Create a full narrative learning course: bonds and the 2026 yield story.
+  Start from bond mechanics for a reader who weights examples over abstract terminology:
+  what a bond is, coupons, face value, price-vs-yield, duration, term premium — each
+  introduced through a worked scenario (e.g. ''you buy a ,000 bond at 5% in 2023,
+  rates move 100bp, here is your mark-to-market, here is why the price fell'') before
+  naming the jargon. Then carry the story into 2024-2026: the cheaper-money cycle,
+  fiscal deficits and heavy Treasury issuance, then the AI capex rush of 2026 — hyperscalers
+  and AI data-center borrowing, debt-funded AI buildout, bond and credit market stress,
+  comparisons to the dotcom bubble, rising long-end yields and the ''bond vigilantes''
+  dynamic, the term premium repricing. Next, politics meeting the bond market: Donald
+  Trump''s pressure on the Federal Reserve, rate-cut demands, tariff battles and their
+  yield effects, and Treasury Secretary Scott Bessent''s meddling — issuance strategy,
+  long-bond auctions, buyback/shortening-of-maturity levers, and how far a Treasury
+  Secretary can push yields. Then explain why the bond became the de facto standard
+  for traders: the risk-free benchmark role, collateral in repo, liquidity, why every
+  asset prices off Treasuries, and what happens when that anchor wobbles. Give India
+  one lens among many: G-Sec yields and RBI dynamics, Indian exposure to US debt and
+  dollar assets, no INR price focus unless cost is the topic. Tone: analyst-level
+  but accessible; concrete scenarios and named market events over textbook abstractions.'
+mode: learn
+phase: discover
+status: running
+log:
+- phase: infer_mode
+  at: '2026-10-24T04:13:38Z'
+  data:
+    reason: declared with --mode
+- phase: ingest
+  at: '2026-10-24T04:13:40Z'
+  data:
+    inputs: 0
+    read: 0
+    failed: []
+needs_user: null
+failure: null
+created_at: '2026-10-24T04:13:38Z'
+context:
+  mode_override: learn
+  course_kind: narrative
+  subject: Finance
+  provenance:
+    used: {}
+    fallbacks: []
+  baseline: {}
+  inputs: []
