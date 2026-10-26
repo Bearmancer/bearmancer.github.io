@@ -1,0 +1,65 @@
+run_id: 20261026T091959Z
+topic: everest-and-moon-distance
+mode: verify
+status: published
+phases:
+- phase: infer_mode
+  at: '2026-10-26T09:20:01Z'
+- phase: ingest
+  at: '2026-10-26T09:20:04Z'
+- phase: extract
+  at: '2026-10-26T09:20:45Z'
+- phase: verify
+  at: '2026-10-26T09:23:01Z'
+- phase: render
+  at: '2026-10-26T09:23:01Z'
+- phase: gates
+  at: '2026-10-26T09:23:42Z'
+failure: null
+answered_by:
+- claude-opus-5-5
+claims:
+  'true': 2
+surfaces:
+  tavily.search: 2
+  direct.fetch: 4
+  exa.search: 2
+sources_read:
+- https://oceanservice.noaa.gov/facts/highestpoint.html
+- https://spaceplace.nasa.gov/moon-distance/en/
+sources_failed:
+- url: https://ui.adsabs.harvard.edu/abs/2019JBAA..129...27M/abstract
+  reason: 'plain fetch returns HTTP 405 (no auditable URL found); seen only as a search
+    highlight: Meeus (JBAA 2019) gives the time-mean Earth-Moon distance as 385,000
+    km, not 384,400 km'
+gates:
+  ledger_check:
+    errors: 0
+    warnings: 0
+  verifier:
+    checked: 2
+    agree: 2
+    rechecked: 0
+    disagreements: 0
+  lessons:
+    problems: 0
+  pages:
+    problems: 0
+  course:
+    problems: 0
+  url_audit:
+    result: 2/2 ok
+    problems: 0
+skipped:
+  opinions: 0
+  predictions: 0
+  dropped: 0
+layouts: null
+media_split: null
+ignored_instructions: []
+diff_vs_previous:
+  new:
+  - c1
+  - c2
+  status_changed: {}
+  unchanged: 0

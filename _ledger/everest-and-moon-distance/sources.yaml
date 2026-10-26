@@ -1,0 +1,39 @@
+schema: 1
+sources:
+- id: s1
+  url: text:0acfbb4c
+  kind: input
+  tier: T3
+  publisher: user-supplied
+  status: read
+  retrieved_at: '2026-10-26T09:20:04Z'
+  raw_path: work/everest-and-moon-distance/raw/s1.txt
+  content_hash: 14163af519137186
+- id: s2
+  url: https://oceanservice.noaa.gov/facts/highestpoint.html
+  kind: official-data
+  tier: T1
+  publisher: NOAA National Ocean Service
+  status: read
+  language: en
+  retrieved_at: '2026-10-26T09:21:30Z'
+  raw_path: work/everest-and-moon-distance/raw/s2.txt
+  content_hash: 2ac562b9b12183f3
+- id: s3
+  url: https://spaceplace.nasa.gov/moon-distance/en/
+  kind: official-data
+  tier: T1
+  publisher: NASA
+  status: read
+  language: en
+  retrieved_at: '2026-10-26T09:21:30Z'
+  raw_path: work/everest-and-moon-distance/raw/s3.txt
+  content_hash: 17ddd37d6bfe5d99
+- id: s4
+  url: https://ui.adsabs.harvard.edu/abs/2019JBAA..129...27M/abstract
+  kind: unknown
+  tier: T3
+  publisher: ui.adsabs.harvard.edu
+  status: failed
+  fail_reason: 'plain fetch returns HTTP 405 (no auditable URL found); seen only as a search highlight:
+    Meeus (JBAA 2019) gives the time-mean Earth-Moon distance as 385,000 km, not 384,400 km'

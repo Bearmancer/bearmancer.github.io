@@ -1,0 +1,42 @@
+schema: 1
+claims:
+- id: c1
+  text: Mount Everest is the highest point above global mean sea level.
+  hash: 41246ddb564ca093
+  status: "true"
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s2
+    locator: para 66 (line 66)
+    quote: Everest is indeed the highest point above global mean sea level—the average
+      level for the ocean surface from which elevations are measured.
+    stance: supports
+  - source: s2
+    locator: Infographic Transcript (line 72)
+    quote: Mount Everest's peak is the highest altitude above mean sea level at 29,029
+      feet [8,848 meters].
+    stance: supports
+  cluster: Mount Everest elevation
+  anchors:
+  - paragraph 1, sentence 1
+- id: c2
+  text: The Moon is an average of about 384,400 kilometers from Earth.
+  hash: d453d608ed6649d1
+  status: "true"
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s3
+    locator: section 'You might be surprised', paragraph 2
+    quote: The Moon is an average of 238,855 miles (384,400 km) away.
+    stance: supports
+  cluster: Earth-Moon distance
+  anchors:
+  - paragraph 1, sentence 2
