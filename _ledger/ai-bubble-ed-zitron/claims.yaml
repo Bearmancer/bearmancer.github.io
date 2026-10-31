@@ -1,0 +1,919 @@
+schema: 1
+claims:
+- id: c1
+  text: Nvidia is the largest company in the stock market and makes GPUs used to train
+    AI models and run inference.
+  hash: 8d1b80800992c856
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s4
+    locator: article body para 1
+    quote: 'Training these AI models required a ton of processing power, which is
+      where Nvidia (NASDAQ: NVDA) and its graphics processing units (GPUs) shone.'
+    stance: supports
+  - source: s50
+    locator: article body
+    quote: its market cap is now around $5.2 trillion
+    stance: supports
+  - source: s73
+    locator: article body
+    quote: intraday market cap hit $5.84 trillion, moving closer to the $6 trillion
+      mark
+    stance: supports
+  - source: s73
+    locator: article body
+    quote: company, which designs graphics processing units (GPUs) and their associated
+      networking
+    stance: supports
+  cluster: Nvidia and GPUs
+  anchors:
+  - '[04:20]'
+- id: c2
+  text: Nvidia had an effective monopoly on AI chips until recently because of its
+    CUDA software libraries.
+  hash: 065fabf13ebd01b3
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Nvidia and GPUs
+  anchors:
+  - '[05:03]'
+- id: c3
+  text: Nvidia GPUs cost roughly $50,000 to $60,000 each and are sold in racks costing
+    millions of dollars.
+  hash: b56febbead788b5f
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s8
+    locator: para 4 (article body)
+    quote: fully-equipped server racks reportedly range up to $3,000,000
+    stance: supports
+  - source: s8
+    locator: para 5 (article body)
+    quote: will reportedly cost between $60,000 and $70,000
+    stance: contradicts
+  cluster: Nvidia and GPUs
+  anchors:
+  - '[05:23]'
+  positions:
+  - text: Nvidia's Blackwell GPUs are estimated to cost between $60,000 and $70,000
+      each, with fully-equipped NVL72 server racks reaching up to $3,000,000.
+    holders:
+    - Tom's Hardware
+    - Financial and hardware analysts
+    sources:
+    - s8
+  - text: Individual flagship GPUs cost roughly $50,000 to $60,000 before full server
+      integration and multi-rack scaling.
+    holders:
+    - Hardware industry reporting
+    sources:
+    - s8
+- id: c4
+  text: Nvidia's customers include Microsoft, Google, Meta, Amazon, Oracle, and SpaceX.
+  hash: 53bc1ca1afa4e27d
+  status: "true"
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s49
+    locator: para 15
+    quote: If anything, their growth has helped fuel demand for Nvidia's hardware.
+    stance: supports
+    independence_rationale: Yahoo Finance financial reporting and Epoch AI research
+      methodology are separate, independent publication chains.
+  - source: s51
+    locator: Summary, para 1
+    quote: We estimate Nvidia chip ownership for several hyperscalers and large cloud
+      companies, one frontier AI model developer (xAI, now owned by SpaceX), and Chinese
+      customers.
+    stance: supports
+  - source: s52
+    locator: Rising Customer Concentration
+    quote: the top six customers (Meta, Microsoft, Google, Amazon, Oracle, and xAI)
+      accounted for 63% of sales versus 55% in July 2024
+    stance: contradicts
+  cluster: Nvidia and GPUs
+  anchors:
+  - '[05:43]'
+- id: c5
+  text: These customers have spent $30 to $50 billion per quarter on AI chips and
+    data centers.
+  hash: 887a12a950329167
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Nvidia and GPUs
+  anchors:
+  - '[05:56]'
+- id: c6
+  text: Huawei makes China's own AI chips, but Nvidia GPUs have still reached China
+    for years.
+  hash: 2e9a6988f1ba8e73
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: China and chips
+  anchors:
+  - '[06:59]'
+- id: c7
+  text: None of the hyperscalers except SpaceX disclose their actual AI revenues.
+  hash: d3960b888cc30f80
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Revenue disclosure
+  anchors:
+  - '[08:16]'
+- id: c8
+  text: Meta is doing a $95 billion share sale and Oracle a $50 billion one due to
+    AI spending.
+  hash: e02c8ccbf63a749b
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s5
+    locator: Key Points
+    quote: Meta is planning to raise a total of $95 billion to support its investments
+      in AI infrastructure and superintelligence.
+    stance: supports
+  cluster: Debt and capital raises
+  anchors:
+  - '[08:24]'
+- id: c9
+  text: Torsten Slok of Apollo said there has been no payoff from AI.
+  hash: 3f857de2db2e781e
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s13
+    locator: article body, para 1
+    quote: the technology has delivered zero financial payoff to corporate America
+      outside of tech.
+    stance: supports
+  - source: s13
+    locator: article body, para 1
+    quote: so far, there is no evidence that revenue growth or margins are improving
+      outside the tech sector.
+    stance: supports
+  - source: s14
+    locator: headline
+    quote: AI Has Delivered Zero Payoff Outside of Tech
+    stance: contradicts
+  - source: s14
+    locator: Takeaways para 2
+    quote: Revenue per worker is rising for the Mag 7 but is flat for the S&P 493
+    stance: contradicts
+  cluster: Payoff claims
+  anchors:
+  - '[08:38]'
+  positions:
+  - text: Apollo Chief Economist Torsten Slok concluded that AI has delivered zero
+      measurable financial payoff or margin improvements to corporate America outside
+      of the technology sector.
+    holders:
+    - Torsten Slok (Apollo Global Management)
+    sources:
+    - s13
+    - s14
+  - text: The zero-payoff observation is specifically confined to the S&P 493 outside
+      of tech, whereas the Magnificent Seven tech companies have observed rising revenue
+      per worker.
+    holders:
+    - Bloomberg Economics
+    sources:
+    - s14
+- id: c10
+  text: A token is roughly three quarters of a word used to measure AI model inputs
+    and outputs.
+  hash: ab86eea95b4a152c
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Tokens
+  anchors:
+  - '[11:41]'
+- id: c11
+  text: Anthropic's S-1 filing blanks out the latest quarter's numbers.
+  hash: 1eb088f7dfa871f7
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Anthropic S-1
+  anchors:
+  - '[22:31]'
+- id: c12
+  text: Anthropic scraped by with a light profit in Q2 because Elon Musk discounted
+    their compute for two months.
+  hash: ff3285a594e6d6ba
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s10
+    locator: misswaterfairy comment
+    quote: did Musk — as literally described in its S-1 — have SpaceX charge Anthropic
+      less for two specific months to make the numbers look better?
+    stance: supports
+  - source: s10
+    locator: misswaterfairy comment
+    quote: allowed Anthropic to artificially depress its costs.
+    stance: supports
+  cluster: Anthropic finances
+  anchors:
+  - '[22:55]'
+- id: c13
+  text: Anthropic will pay Elon Musk $3.1 billion per month for compute starting in
+    December.
+  hash: eca3218ac72255bd
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s15
+    locator: para 3 (article body)
+    quote: approximately $3.1 billion in the aggregate per month once all capacity
+      has been delivered, which we expect in December 2026
+    stance: contradicts
+  - source: s16
+    locator: para 1 (lede)
+    quote: paying about $3.1 billion a month starting in December
+    stance: supports
+  - source: s16
+    locator: para 3
+    quote: starting in December this year, that works out to payments of about $3.1
+      billion a month
+    stance: supports
+  - source: s16
+    locator: para 1 (lede)
+    quote: Anthropic is leasing computing power from SpaceX's data center in Memphis,
+      Tennessee
+    stance: contradicts
+  cluster: Anthropic compute
+  anchors:
+  - '[23:36]'
+  positions:
+  - text: Anthropic's compute arrangement involves monthly payments reaching approximately
+      $3.1 billion once full capacity delivery occurs in December 2026.
+    holders:
+    - Yahoo Finance / S-1 filing analysis
+    sources:
+    - s15
+  - text: Anthropic began leasing computing capacity with payments of about $3.1 billion
+      a month starting in December of the initial agreement period.
+    holders:
+    - BigGo Finance
+    sources:
+    - s16
+- id: c14
+  text: Anthropic has $430 billion in non-cancelable commitments with Amazon, Google,
+    Microsoft, and Broadcom.
+  hash: ca9a5cb0343dfa5c
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s34
+    locator: line 91
+    quote: roughly 80% of those commitments either non-cancelable or payable regardless
+      of actual usage
+    stance: contradicts
+  - source: s34
+    locator: line 96
+    quote: Anthropic's commitments include $111.1 billion with Google, $110 billion
+      with Amazon, $31.4 billion with Microsoft and $161.2 billion in largely non-cancelable
+      equipment leases with Broadcom.
+    stance: contradicts
+  - source: s55
+    locator: article body, paragraph beginning 'The bigger numbers'
+    quote: Anthropic has signed four deals it can't cancel worth about $430 billion
+    stance: supports
+  - source: s56
+    locator: Why the totals disagree
+    quote: Yahoo Finance, per PPC Land, summed four non-cancelable lines to $430.6
+      billion.
+    stance: supports
+  cluster: Anthropic commitments
+  anchors:
+  - '[25:34]'
+  positions:
+  - text: Anthropic has committed to approximately $430 billion in non-cancelable
+      computing contracts across four primary cloud and hardware partners.
+    holders:
+    - Yahoo Finance
+    - Financial Analysts
+    sources:
+    - s55
+  - text: Anthropic's total infrastructure commitments span $518 billion with Google,
+      Amazon, Microsoft, and Broadcom, of which approximately 80% (~$414B-$430B) are
+      strictly non-cancelable or minimum-take commitments.
+    holders:
+    - TechTarget
+    sources:
+    - s34
+- id: c15
+  text: Anthropic's commitments are take-or-pay arrangements requiring payment regardless
+    of usage.
+  hash: d3313bc207ce6cfc
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s34
+    locator: para 1 (line 91)
+    quote: roughly 80% of those commitments either non-cancelable or payable regardless
+      of actual usage
+    stance: supports
+  - source: s34
+    locator: section 'Long-term contracts change the financing equation' (line 114)
+    quote: Cloud agreements can include shortfall payments if usage falls below contracted
+      levels.
+    stance: contradicts
+  - source: s34
+    locator: section 'Long-term contracts change the financing equation' (line 114)
+    quote: some compute arrangements can be exited with relatively short notice.
+    stance: contradicts
+  cluster: Anthropic commitments
+  anchors:
+  - '[26:01]'
+  positions:
+  - text: Anthropic's infrastructure contracts operate as take-or-pay commitments,
+      with roughly 80% of overall capacity commitments requiring payment regardless
+      of actual compute usage.
+    holders:
+    - TechTarget
+    - Enterprise Strategy Group
+    sources:
+    - s34
+  - text: Certain cloud infrastructure agreements rely on minimum shortfall fees or
+      include provisions allowing contract exit on short notice rather than universal
+      take-or-pay terms.
+    holders:
+    - Industry infrastructure analysts
+    sources:
+    - s34
+- id: c16
+  text: Anthropic's operating expenses are projected to reach $75-100 billion per
+    year within one to two years.
+  hash: db6c71c7d476a93a
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Anthropic finances
+  anchors:
+  - '[26:22]'
+- id: c17
+  text: Anthropic's valuation depends on reaching $200 billion in annual revenue within
+    two years.
+  hash: 8566209721dee8cd
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s37
+    locator: title
+    quote: Anthropic IPO Valuation May Depend on $200 Billion Revenue Forecast
+    stance: supports
+  - source: s37
+    locator: para 5
+    quote: bankers and investors are using future revenue multiples to assess the
+      company's possible IPO valuation
+    stance: supports
+  - source: s37
+    locator: para 3
+    quote: the company is projecting revenue of roughly $190 billion to $200 billion
+      in 2028
+    stance: supports
+  cluster: Anthropic valuation
+  anchors:
+  - '[27:22]'
+- id: c18
+  text: Anthropic's current revenue is roughly $30-50 billion per year.
+  hash: d0001da9b867d954
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s60
+    locator: para 4
+    quote: its annualized revenue run rate had crossed $30 billion
+    stance: supports
+  - source: s60
+    locator: para 6
+    quote: 'April 2026: $30 billion (announced in Anthropic blog post alongside Broadcom
+      deal)'
+    stance: supports
+  - source: s61
+    locator: revenue ladder
+    quote: 'May 2026: $47bn (reported at the Series H)'
+    stance: supports
+  - source: s61
+    locator: post body
+    quote: Anthropic is now tracking $74bn in annualized revenue.
+    stance: contradicts
+  - source: s61
+    locator: revenue ladder
+    quote: 'Jul 2026: ~$74bn (tracker estimate)'
+    stance: contradicts
+  cluster: Anthropic finances
+  anchors:
+  - '[27:32]'
+- id: c19
+  text: Microsoft has spent over $265 billion on AI GPUs and data centers since 2022.
+  hash: 8779e817651a2f56
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Hyperscaler spending
+  anchors:
+  - '[47:31]'
+- id: c20
+  text: Microsoft has only 2 gigawatts of AI compute capacity operational, with the
+    rest sitting in warehouses.
+  hash: 75a163f6b83c8289
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Compute capacity
+  anchors:
+  - '[47:47]'
+- id: c21
+  text: Anthropic has $430 billion in non-cancelable commitments over 7-10 years and
+    OpenAI is projected to spend $750 billion by 2030.
+  hash: 7053d676dd79900e
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s34
+    locator: line 91
+    quote: Anthropic has reportedly committed at least $518 billion to infrastructure
+      over the next decade
+    stance: contradicts
+  - source: s34
+    locator: line 91
+    quote: roughly 80% of those commitments either non-cancelable or payable regardless
+      of actual usage
+    stance: supports
+  - source: s34
+    locator: line 122
+    quote: Customer contracts can run seven to 10 years
+    stance: supports
+  cluster: AI lab commitments
+  anchors:
+  - '[46:08]'
+  positions:
+  - text: Anthropic has committed to approximately $430 billion in non-cancelable
+      or minimum-take infrastructure contracts running over customer spans of 7 to
+      10 years.
+    holders:
+    - TechTarget
+    - Enterprise Strategy Group
+    sources:
+    - s34
+  - text: Anthropic's total infrastructure commitments reach $518 billion over a decade
+      across multiple hardware and cloud partners, with roughly 80% locked into non-cancelable
+      terms.
+    holders:
+    - Industry analysts
+    sources:
+    - s34
+- id: c22
+  text: Nvidia has been forcing customers to take chips before they are ready via
+    an early rack receipt program.
+  hash: 396f0280dcf14ec2
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Nvidia revenue
+  anchors:
+  - '[50:05]'
+- id: c23
+  text: Deutsche Bank says 50 to 60% of Nvidia's revenue comes from hyperscalers.
+  hash: 7c70b8c830172aa7
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Nvidia revenue
+  anchors:
+  - '[50:28]-[50:33]'
+- id: c24
+  text: 'Three companies make all the world''s RAM: Micron, SK Hynix, and Samsung.'
+  hash: 3ab74e7a31dd859e
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: RAM producers
+  anchors:
+  - '[51:01]-[51:03]'
+- id: c25
+  text: Nvidia's GPUs use high-bandwidth memory, a special kind of RAM.
+  hash: 973c2080b5748a59
+  status: "true"
+  origin: extracted-from-input
+  rounds: 4
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  evidence:
+  - source: s123
+    locator: Abstract
+    quote: Modern NVIDIA GPUs like the H100 (HBM2e) and H200 (HBM3e) share similar
+      compute characteristics but differ significantly in memory interface technology
+    stance: supports
+  cluster: GPU memory
+  anchors:
+  - '[51:10]-[51:16]'
+- id: c26
+  text: Venture capital has been on an insane losing streak since 2017.
+  hash: f136cd9d0e67769f
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: VC performance
+  anchors:
+  - '[53:11]-[53:16]'
+- id: c27
+  text: Since 2017 there have been thousands of zombie unicorns valued at $1 billion.
+  hash: 3001893dd62fc190
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Zombie unicorns
+  anchors:
+  - '[53:16]-[53:21]'
+- id: c28
+  text: The average VC fund since 2017 failed to return more than about $1.30 per
+    dollar invested.
+  hash: 67377e3907007eb8
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: VC performance
+  anchors:
+  - '[53:37]-[53:45]'
+- id: c29
+  text: Harvey raised over a billion dollars and is worth $15.5 billion.
+  hash: da9fc37ac0a70183
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: AI startup valuations
+  anchors:
+  - '[54:38]-[54:52]'
+- id: c30
+  text: Cognition has raised billions and is worth $48 billion.
+  hash: 918e4425d5233413
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: AI startup valuations
+  anchors:
+  - '[54:55]-[55:06]'
+- id: c31
+  text: Perplexity is raising at a $30 billion valuation.
+  hash: 2049f79a4f2bf5ac
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: AI startup valuations
+  anchors:
+  - '[56:31]-[56:43]'
+- id: c32
+  text: Microsoft, Google, Amazon, and Meta do not disclose their AI revenues.
+  hash: ff623929857a9b7f
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s24
+    locator: title
+    quote: Microsoft's AI Sales Mostly Come from OpenAI, Disclosures Show
+    stance: contradicts
+  cluster: AI revenue disclosure
+  anchors:
+  - '[57:32]-[57:40]'
+- id: c33
+  text: Anthropic's S-1 did not give a timetable for when big payments kick in.
+  hash: e345a215b8ba8626
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Anthropic IPO
+  anchors:
+  - '[1:09:21]-[1:09:26]'
+- id: c34
+  text: Blackstone has over $200 billion of data center infrastructure.
+  hash: 44ebe1f50272c2b9
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Blackstone data centers
+  anchors:
+  - '[1:14:59]-[1:15:01]'
+- id: c35
+  text: 20% of stock market volume is retail investors.
+  hash: b3724abc90e3ae61
+  status: interpretive
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s25
+    locator: para 7 (second article)
+    quote: Retail investors now account for roughly 20% of stock-market activity on
+      average
+    stance: supports
+  - source: s26
+    locator: Abstract
+    quote: By 2021, retail investors comprised 25% of total equities trading volume
+    stance: contradicts
+  - source: s66
+    locator: para 3
+    quote: Retail trading activity has recently accounted for only 9% of total US
+      equity trading volume
+    stance: contradicts
+  - source: s67
+    locator: Highlights & Recent Developments
+    quote: Retail investors account for an estimated 30% – 37% of daily equity trading
+      volume
+    stance: contradicts
+  - source: s122
+    locator: Introduction, para 1
+    quote: Retail volume now accounts for 20% of stock market activity, roughly double
+      the rate from a decade ago
+    stance: supports
+  cluster: Retail investors
+  anchors:
+  - '[1:06:14]-[1:06:19]'
+  positions:
+  - text: Retail investors account for approximately 20% of total stock-market trading
+      activity on average, roughly doubling from pre-2020 levels.
+    holders:
+    - Citadel Securities
+    - Markets Insider
+    sources:
+    - s25
+  - text: Retail equity trading share varies widely depending on market conditions,
+      ranging between 9% during market pullbacks and 25% to 37% during high-volatility
+      surges.
+    holders:
+    - UMKC Law / Public.com
+    - Yahoo Finance
+    - MEMX Insights
+    sources:
+    - s26
+    - s66
+    - s67
+- id: c36
+  text: Ed Zitron is CEO of Easy Primary Research.
+  hash: f10669556c3cf5a2
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s28
+    locator: para 151
+    quote: Ed Zitron, CEO at EZ Primary Research, joins 'Squawk on the Street' to
+      discuss OpenAI, Anthropic and more.
+    stance: contradicts
+  cluster: Speaker identity
+  anchors:
+  - '[1:20:29]-[1:20:32]'
