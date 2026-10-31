@@ -1,5 +1,5 @@
 schema: 1
-title: Corporate Earnings Divergence
+title: The French Sovereign Debt Crisis
 topic: ai-debt-yields-eisman
 mode: learn
 subject: Finance
@@ -7,26 +7,34 @@ chapter: 4
 layout: concept
 answer:
   id: s1
-  text: Tech earnings showed sharp divergence as advertising growth accelerated while
-    automotive revenue growth stalled.
+  text: France's debt-to-GDP ratio reaching 120% pushed sovereign bond spreads over
+    German Bunds to 175 basis points, their widest risk premium since the 2011 crisis.
   claims:
-  - c6
-  - c7
+  - c1
+  - c2
+  - c3
   block: plain
 body:
   sections:
-  - heading: Meta Revenue Growth
+  - heading: What the French Sovereign Debt Crisis Is
     sentences:
     - id: s2
-      text: Meta reported 26% year-over-year revenue growth.
+      text: France's debt-to-GDP ratio has reached 120%.
       claims:
-      - c6
+      - c1
       block: plain
-  - heading: Tesla Revenue Growth
-    sentences:
     - id: s3
-      text: Tesla reported 0% year-over-year revenue growth.
+      text: The spread between French 10-year sovereign bonds and German 10-year Bunds
+        widened by 16 basis points to 175 basis points.
       claims:
-      - c7
+      - c2
+      block: plain
+  - heading: Why the French Spread Widened
+    sentences:
+    - id: s4
+      text: The risk premium on French 10-year sovereign bonds reached its highest
+        level since the 2011 European sovereign debt crisis.
+      claims:
+      - c3
       block: plain
 errata: []

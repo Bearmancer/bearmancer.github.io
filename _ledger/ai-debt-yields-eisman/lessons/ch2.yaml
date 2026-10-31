@@ -1,5 +1,5 @@
 schema: 1
-title: United States Debt and Global Sovereign Yields
+title: The AI Infrastructure Debt Problem
 topic: ai-debt-yields-eisman
 mode: learn
 subject: Finance
@@ -7,18 +7,19 @@ chapter: 2
 layout: concept
 answer:
   id: s1
-  text: The United States debt-to-GDP ratio of 120% maintains elevated baseline interest
-    rates across global debt markets.
+  text: Surging borrowing costs for AI cloud providers have elevated data center debt
+    yields to 15%.
   claims:
-  - c4
+  - c5
   block: plain
 body:
   sections:
-  - heading: United States Debt Levels
+  - heading: CoreWeave Debt Spike
     sentences:
     - id: s2
-      text: The United States debt-to-GDP ratio is approximately 120%.
+      text: CoreWeave's cost of borrowing surged with debt yields climbing from approximately
+        9% to 15%.
       claims:
-      - c4
+      - c5
       block: plain
 errata: []
