@@ -1,24 +1,19 @@
 chapter: 3
 topic: ai-debt-yields-eisman
 mode: learn
-title: Corporate Earnings Divergence
+title: The AI Infrastructure Debt Problem
 answer:
-  text: Tech earnings showed sharp divergence as advertising growth accelerated while automotive revenue
-    growth stalled.
-  claims:
-  - c6
-  - c7
-  block: plain
   id: s1
+  text: Surging borrowing costs for AI cloud providers have elevated data center debt
+    yields to 15%.
+  claims:
+  - c5
+  block: plain
 sentences:
-- text: Meta reported 26% year-over-year revenue growth.
+- id: s2
+  text: CoreWeave's cost of borrowing surged with debt yields climbing from approximately
+    9% to 15%.
   claims:
-  - c6
+  - c5
   block: plain
-  id: s2
-- text: Tesla reported 0% year-over-year revenue growth.
-  claims:
-  - c7
-  block: plain
-  id: s3
 errata: []

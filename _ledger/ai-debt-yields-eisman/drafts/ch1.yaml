@@ -1,36 +1,32 @@
 chapter: 1
 topic: ai-debt-yields-eisman
 mode: learn
-title: Sovereign Debt and Bond Market Pressures
+title: The French Sovereign Debt Crisis
 answer:
-  text: Rising debt-to-GDP levels in major economies have pushed sovereign bond spreads to their highest
-    levels since 2011.
-  claims:
-  - c1
-  - c4
-  block: plain
   id: s1
+  text: France's debt-to-GDP ratio reaching 120% pushed sovereign bond spreads over
+    German Bunds to 175 basis points, their widest risk premium since the 2011 crisis.
+  claims:
+  - c1
+  - c2
+  - c3
+  block: plain
 sentences:
-- text: France's debt-to-GDP ratio has reached 120%.
+- id: s2
+  text: France's debt-to-GDP ratio has reached 120%.
   claims:
   - c1
   block: plain
-  id: s2
-- text: The spread between French 10-year sovereign bonds and German 10-year Bunds widened by 16 basis
-    points to 175 basis points.
+- id: s3
+  text: The spread between French 10-year sovereign bonds and German 10-year Bunds
+    widened by 16 basis points to 175 basis points.
   claims:
   - c2
   block: plain
-  id: s3
-- text: The risk premium on French 10-year sovereign bonds reached its highest level since the 2011 European
-    sovereign debt crisis.
+- id: s4
+  text: The risk premium on French 10-year sovereign bonds reached its highest level
+    since the 2011 European sovereign debt crisis.
   claims:
   - c3
   block: plain
-  id: s4
-- text: The United States debt-to-GDP ratio is approximately 120%.
-  claims:
-  - c4
-  block: plain
-  id: s5
 errata: []
