@@ -1,0 +1,51 @@
+chapter: 2
+topic: hitler-vienna-years
+mode: learn
+title: Political Influences, Destitution, and the Men's Home
+answer:
+  text: Hitler studied Schönerer and Lueger before falling into homelessness and moving into the Meldemannstrasse
+    men's home.
+  claims:
+  - c10
+  - c12
+  - c13
+  block: plain
+  id: s1
+sentences:
+- text: Georg Ritter von Schönerer, the founder of the Austrian pan-German movement, was one of the politicians
+    Hitler most admired upon arriving in Vienna.
+  claims:
+  - c10
+  block: plain
+  id: s2
+- text: Vienna Mayor Karl Lueger modernized city infrastructure by municipalizing gas, electricity, and
+    transit networks while expanding social healthcare benefits.
+  claims:
+  - c11
+  block: plain
+  id: s3
+- text: Hitler became completely destitute in the late autumn of 1909 and sought shelter at the Meidling
+    homeless shelter.
+  claims:
+  - c12
+  block: plain
+  id: s4
+- text: Hitler and Reinhold Hanisch moved into the modern municipal men's home on Meldemannstrasse in
+    Brigittenau on February 9, 1910.
+  claims:
+  - c13
+  block: plain
+  id: s5
+- text: Hitler filed a formal complaint at the Brigittenau police station on August 5, 1910, accusing
+    Reinhold Hanisch of withholding revenue from his paintings.
+  claims:
+  - c14
+  block: plain
+  id: s6
+- text: Hitler established an independent living selling his watercolor paintings directly to Jewish picture-frame
+    and art dealers, including Jakob Altenberg and Samuel Morgenstern.
+  claims:
+  - c15
+  block: plain
+  id: s7
+errata: []

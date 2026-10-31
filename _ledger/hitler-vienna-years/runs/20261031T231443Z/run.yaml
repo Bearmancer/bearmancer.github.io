@@ -1,0 +1,210 @@
+run_id: 20261031T231443Z
+topic: hitler-vienna-years
+prompt: /home/ubuntu/bearmancer.github.io/work/hitler_vienna_years.txt
+mode: learn
+phase: done
+status: done
+log:
+- phase: infer_mode
+  at: '2026-10-31T23:14:44Z'
+  data:
+    reason: declared with --mode
+- phase: ingest
+  at: '2026-10-31T23:14:45Z'
+  data:
+    inputs: 1
+    read: 1
+    failed: []
+- phase: discover
+  at: '2026-10-31T23:21:25Z'
+  data:
+    waves: 2
+    clusters: 11
+    claims: 20
+    saturated: true
+- phase: verify
+  at: '2026-10-31T23:22:56Z'
+  data:
+    waves: 1
+    reopened: 0
+    'true': 20
+- phase: write
+  at: '2026-10-31T23:24:32Z'
+  data:
+    chapters: 3
+- phase: conformance
+  at: '2026-10-31T23:25:39Z'
+  data:
+    chapters: 3
+- phase: layout
+  at: '2026-10-31T23:27:24Z'
+  data:
+    layouts: &id001
+      1: concept
+      2: concept
+      3: concept
+- phase: render
+  at: '2026-10-31T23:27:24Z'
+  data:
+    pages: &id002
+    - hitler-vienna-years/lessons/01-ch1-fin-de-si-cle-vienna-and-the-young-bohemian.html
+    - hitler-vienna-years/lessons/02-ch2-political-influences-destitution-and-the-men-s-home.html
+    - hitler-vienna-years/lessons/03-ch3-the-anti-semitism-myth-and-the-flight-to-munich.html
+- phase: gates
+  at: '2026-10-31T23:28:21Z'
+  data: &id003
+    ledger_check:
+      errors: 0
+      warnings: 0
+    verifier:
+      checked: 20
+      agree: 20
+      rechecked: 0
+      disagreements: 0
+    lessons:
+      problems: 0
+    pages:
+      problems: 0
+    course:
+      problems: 0
+    url_audit:
+      result: 0/0 ok
+      problems: 0
+needs_user: null
+failure: null
+created_at: '2026-10-31T23:14:44Z'
+context:
+  mode_override: learn
+  subject: History
+  answered_by: &id004
+  - gemini-3.8-flash
+  baseline: {}
+  inputs:
+  - s1
+  discover:
+    wave: 2
+    quiet: 2
+    mis_done:
+    - home ubuntu bearmancer github io work hitler_vienna_years txt
+    - vienna setting and demographics
+    - stumpergasse and lifestyle
+    - artistic tastes
+    - academy of fine arts
+    - political influences
+    - homelessness and meidling shelter
+    - meldemannstrasse men s home
+    - art dealing and commerce
+    - anti semitism historiography
+    - move to munich
+    - military draft evasion
+    inputs_done: true
+    plans:
+      '1':
+        m1:
+        - mis
+        - /home/ubuntu/bearmancer.github.io/work/hitler_vienna_years.txt
+      '2':
+        m1:
+        - mis
+        - Vienna setting and demographics
+        m2:
+        - mis
+        - Stumpergasse and lifestyle
+        m3:
+        - mis
+        - Artistic tastes
+        m4:
+        - mis
+        - Academy of Fine Arts
+        m5:
+        - mis
+        - Political influences
+        m6:
+        - mis
+        - Homelessness and Meidling shelter
+        m7:
+        - mis
+        - Meldemannstrasse men's home
+        m8:
+        - mis
+        - Art dealing and commerce
+        m9:
+        - mis
+        - Anti-Semitism historiography
+        m10:
+        - mis
+        - Move to Munich
+        m11:
+        - mis
+        - Military draft evasion
+  reopened: true
+  round_failures: {}
+  chapters:
+  - n: 1
+    title: Fin-de-Siècle Vienna and the Young Bohemian
+    clusters:
+    - Vienna setting and demographics
+    - Stumpergasse and lifestyle
+    - Artistic tastes
+    - Academy of Fine Arts
+  - n: 2
+    title: Political Influences, Destitution, and the Men's Home
+    clusters:
+    - Political influences
+    - Homelessness and Meidling shelter
+    - Meldemannstrasse men's home
+    - Art dealing and commerce
+  - n: 3
+    title: The Anti-Semitism Myth and the Flight to Munich
+    clusters:
+    - Anti-Semitism historiography
+    - Move to Munich
+    - Military draft evasion
+  drafts_done:
+  - 1
+  - 2
+  - 3
+  layouts: *id001
+  kind_before: null
+  pages: *id002
+  gates: *id003
+  pre_publish_base: 3a6e75719fab5ca2364bfc41076d6bb309c370fb
+  record:
+    answered_by: *id004
+    claims:
+      'true': 20
+    surfaces:
+      wikipedia.search: 20
+      wikidata.query: 20
+    sources_read:
+    - /home/ubuntu/bearmancer.github.io/work/hitler_vienna_years.txt
+    sources_failed: []
+    gates: *id003
+    skipped: null
+    layouts: *id001
+    media_split: null
+    ignored_instructions: []
+    diff_vs_previous:
+      new:
+      - c1
+      - c2
+      - c3
+      - c4
+      - c5
+      - c6
+      - c7
+      - c8
+      - c9
+      - c10
+      - c11
+      - c12
+      - c13
+      - c14
+      - c15
+      - c16
+      - c17
+      - c18
+      - c19
+      - c20
+      status_changed: {}
+      unchanged: 0

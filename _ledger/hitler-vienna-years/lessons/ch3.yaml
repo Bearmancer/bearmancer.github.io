@@ -1,0 +1,52 @@
+schema: 1
+title: The Anti-Semitism Myth and the Flight to Munich
+topic: hitler-vienna-years
+mode: learn
+subject: History
+chapter: 3
+layout: concept
+answer:
+  id: s1
+  text: Hitler maintained business ties with Jewish acquaintances in Vienna before using an inheritance
+    payout to relocate to Munich.
+  claims:
+  - c16
+  - c18
+  - c19
+  block: plain
+body:
+  sections:
+  - heading: Deconstructing the Vienna Anti-Semitism Myth
+    sentences:
+    - id: s2
+      text: Historian Brigitte Hamann demonstrated that Hitler's claim of an early anti-Semitic conversion
+        in Vienna was a self-invented autobiographical myth.
+      claims:
+      - c17
+      block: plain
+    - id: s3
+      text: Hitler maintained cordial daily interactions and commercial partnerships with Jewish residents
+        in the Meldemannstrasse men's home.
+      claims:
+      - c16
+      block: plain
+  - heading: Relocation to Munich and Draft Exemption
+    sentences:
+    - id: s4
+      text: Hitler collected an inheritance payout of nearly 820 crowns from the district court in Linz
+        on May 16, 1913.
+      claims:
+      - c18
+      block: plain
+    - id: s5
+      text: Hitler moved to Munich on May 25, 1913, renting a fourth-floor room from tailor Joseph Popp
+        on Schleissheimerstrasse with Rudolf Häusler.
+      claims:
+      - c19
+      block: plain
+    - id: s6
+      text: A Salzburg military medical commission declared Hitler physically unfit for combat or auxiliary
+        military service on February 5, 1914.
+      claims:
+      - c20
+      block: plain

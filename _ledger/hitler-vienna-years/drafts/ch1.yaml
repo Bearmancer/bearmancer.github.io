@@ -1,0 +1,67 @@
+chapter: 1
+topic: hitler-vienna-years
+mode: learn
+title: Fin-de-Siècle Vienna and the Young Bohemian
+answer:
+  text: Hitler spent five years in imperial Vienna living on Stumpergasse while being rejected by the
+    Academy of Fine Arts.
+  claims:
+  - c2
+  - c9
+  block: plain
+  id: s1
+sentences:
+- text: Hitler spent five years from 1908 to 1913 living in Vienna, the imperial capital of the Austro-Hungarian
+    Empire.
+  claims:
+  - c2
+  block: plain
+  id: s2
+- text: Hitler described his five years in Vienna from 1908 to 1913 in Mein Kampf as his most difficult
+    and thorough school.
+  claims:
+  - c1
+  block: plain
+  id: s3
+- text: Vienna was a major European metropolis of approximately two million inhabitants, making it Europe's
+    fourth most populous city before World War I.
+  claims:
+  - c3
+  block: plain
+  id: s4
+- text: Vienna's population doubled between 1880 and 1910, with Czech immigrants becoming the largest
+    minority group, representing one-fifth of residents by 1910.
+  claims:
+  - c4
+  block: plain
+  id: s5
+- text: More than 175,000 Jews lived in Vienna in 1910, representing 8.7 percent of the metropolitan population.
+  claims:
+  - c5
+  block: plain
+  id: s6
+- text: Hitler and August Kubizek rented a room together in Maria Zakrey's apartment on Stumpergasse in
+    Vienna starting in late February 1908.
+  claims:
+  - c6
+  block: plain
+  id: s7
+- text: Hitler spent nights reading Germanic mythology, heroic sagas, and architectural histories while
+    living in Vienna.
+  claims:
+  - c7
+  block: plain
+  id: s8
+- text: Hitler rejected Viennese modernism and abstract painting, preferring traditional romantic artists
+    such as Arnold Böcklin and Eduard Grützner.
+  claims:
+  - c8
+  block: plain
+  id: s9
+- text: Hitler applied to the Academy of Fine Arts in Vienna for a second time in September 1908 and was
+    rejected without being invited to test.
+  claims:
+  - c9
+  block: plain
+  id: s10
+errata: []

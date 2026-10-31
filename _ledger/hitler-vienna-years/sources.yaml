@@ -1,0 +1,11 @@
+schema: 1
+sources:
+- id: s1
+  url: /home/ubuntu/bearmancer.github.io/work/hitler_vienna_years.txt
+  kind: original-document
+  tier: T1
+  publisher: user-supplied
+  status: read
+  retrieved_at: '2026-10-31T23:14:45Z'
+  raw_path: work/hitler-vienna-years/raw/s1.txt
+  content_hash: 83089569d71b8269

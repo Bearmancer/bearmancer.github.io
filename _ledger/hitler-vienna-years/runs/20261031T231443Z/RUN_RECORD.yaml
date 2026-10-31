@@ -1,0 +1,83 @@
+run_id: 20261031T231443Z
+topic: hitler-vienna-years
+mode: learn
+status: published
+phases:
+- phase: infer_mode
+  at: '2026-10-31T23:14:44Z'
+- phase: ingest
+  at: '2026-10-31T23:14:45Z'
+- phase: discover
+  at: '2026-10-31T23:21:25Z'
+- phase: verify
+  at: '2026-10-31T23:22:56Z'
+- phase: write
+  at: '2026-10-31T23:24:32Z'
+- phase: conformance
+  at: '2026-10-31T23:25:39Z'
+- phase: layout
+  at: '2026-10-31T23:27:24Z'
+- phase: render
+  at: '2026-10-31T23:27:24Z'
+- phase: gates
+  at: '2026-10-31T23:28:21Z'
+failure: null
+answered_by:
+- gemini-3.8-flash
+claims:
+  'true': 20
+surfaces:
+  wikipedia.search: 20
+  wikidata.query: 20
+sources_read:
+- /home/ubuntu/bearmancer.github.io/work/hitler_vienna_years.txt
+sources_failed: []
+gates:
+  ledger_check:
+    errors: 0
+    warnings: 0
+  verifier:
+    checked: 20
+    agree: 20
+    rechecked: 0
+    disagreements: 0
+  lessons:
+    problems: 0
+  pages:
+    problems: 0
+  course:
+    problems: 0
+  url_audit:
+    result: 0/0 ok
+    problems: 0
+skipped: null
+layouts:
+  1: concept
+  2: concept
+  3: concept
+media_split: null
+ignored_instructions: []
+diff_vs_previous:
+  new:
+  - c1
+  - c2
+  - c3
+  - c4
+  - c5
+  - c6
+  - c7
+  - c8
+  - c9
+  - c10
+  - c11
+  - c12
+  - c13
+  - c14
+  - c15
+  - c16
+  - c17
+  - c18
+  - c19
+  - c20
+  status_changed: {}
+  unchanged: 0

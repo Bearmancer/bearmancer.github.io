@@ -1,0 +1,603 @@
+schema: 1
+claims:
+- id: c1
+  text: Hitler described his five years in Vienna from 1908 to 1913 in Mein Kampf
+    as his most difficult and thorough school.
+  hash: 38f8ec60f9991d76
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 32
+    quote: “Vienna was and is the most difficult, if also the most thorough, school
+      I went through,” Hitler wrote in Mein Kampf.
+    stance: supports
+  cluster: Vienna setting and demographics
+  anchors:
+  - line 32
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+described+his+five+years+in+Vienna+from+1908+to+1913+'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+described+his+five+years+in+Vienna+from+190&language=en&format=json'',
+      ''empty'')]|0'
+- id: c2
+  text: Hitler spent five years from 1908 to 1913 living in Vienna, the imperial capital
+    of the Austro-Hungarian Empire.
+  hash: 68c04e8cab0a6e60
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 32
+    quote: The five years from 1908 to 1913 that Hitler spent in the capital of the
+      Austro-Hungarian Empire were deeply significant.
+    stance: supports
+  cluster: Vienna setting and demographics
+  anchors:
+  - line 32
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+spent+five+years+from+1908+to+1913+living+in+Vienna%2C+'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+spent+five+years+from+1908+to+1913+living+i&language=en&format=json'',
+      ''empty'')]|0'
+- id: c3
+  text: Vienna was a major European metropolis of approximately two million inhabitants,
+    making it Europe's fourth most populous city before World War I.
+  hash: 7e3861869d046814
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 34
+    quote: with around two million inhabitants, it was the continent’s fourth most
+      populous city after London, Paris and Berlin.
+    stance: supports
+  cluster: Vienna setting and demographics
+  anchors:
+  - line 34
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Vienna+was+a+major+European+metropolis+of+approximately+two+'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Vienna+was+a+major+European+metropolis+of+approxim&language=en&format=json'',
+      ''empty'')]|0'
+- id: c4
+  text: Vienna's population doubled between 1880 and 1910, with Czech immigrants becoming
+    the largest minority group, representing one-fifth of residents by 1910.
+  hash: 101da88812ef36f6
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 36
+    quote: Between 1880 and 1910 the city’s population doubled. The largest group
+      of immigrants were the Czechs—by 1910 every fifth person in Vienna had Czech
+      roots.
+    stance: supports
+  cluster: Vienna setting and demographics
+  anchors:
+  - line 36
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Vienna%27s+population+doubled+between+1880+and+1910%2C+with+Czec'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Vienna%27s+population+doubled+between+1880+and+1910%2C&language=en&format=json'',
+      ''empty'')]|0'
+- id: c5
+  text: More than 175,000 Jews lived in Vienna in 1910, representing 8.7 percent of
+    the metropolitan population.
+  hash: a0bb6679f5545f0a
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 36
+    quote: In 1910, over 175,000 Jews lived there—that was 8.7 per cent of the total
+      population.
+    stance: supports
+  cluster: Vienna setting and demographics
+  anchors:
+  - line 36
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=More+than+175%2C000+Jews+lived+in+Vienna+in+1910%2C+representing'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+More+than+175%2C000+Jews+lived+in+Vienna+in+1910%2C+re&language=en&format=json'',
+      ''empty'')]|0'
+- id: c6
+  text: Hitler and August Kubizek rented a room together in Maria Zakrey's apartment
+    on Stumpergasse in Vienna starting in late February 1908.
+  hash: 746345fc66cc0503
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 40
+    quote: In late February 1908, after Kubizek had joined him, the two friends moved
+      into the larger room in Maria Zakrey’s apartment on Stumpergasse.
+    stance: supports
+  cluster: Stumpergasse and lifestyle
+  anchors:
+  - line 40
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+and+August+Kubizek+rented+a+room+together+in+Maria+Za'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+and+August+Kubizek+rented+a+room+together+i&language=en&format=json'',
+      ''empty'')]|0'
+- id: c7
+  text: Hitler spent nights reading Germanic mythology, heroic sagas, and architectural
+    histories while living in Vienna.
+  hash: 706ed2011f6344ec
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 42
+    quote: Hitler’s favourite reading material was Germanic myths and heroic sagas,
+      closely followed by art and architectural histories.
+    stance: supports
+  cluster: Stumpergasse and lifestyle
+  anchors:
+  - line 42
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+spent+nights+reading+Germanic+mythology%2C+heroic+sagas'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+spent+nights+reading+Germanic+mythology%2C+he&language=en&format=json'',
+      ''empty'')]|0'
+- id: c8
+  text: Hitler rejected Viennese modernism and abstract painting, preferring traditional
+    romantic artists such as Arnold Böcklin and Eduard Grützner.
+  hash: 748eff8214f927ad
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 46
+    quote: Hitler’s taste in art remained utterly uninfluenced by Viennese modernism.
+      He had no time for the works of Klimt and the Secession.
+    stance: supports
+  cluster: Artistic tastes
+  anchors:
+  - line 46
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+rejected+Viennese+modernism+and+abstract+painting%2C+pr'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+rejected+Viennese+modernism+and+abstract+pa&language=en&format=json'',
+      ''empty'')]|0'
+- id: c9
+  text: Hitler applied to the Academy of Fine Arts in Vienna for a second time in
+    September 1908 and was rejected without being invited to test.
+  hash: ac28fbd0c8b7bc89
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 70
+    quote: In September 1908, Hitler had applied for a second time to the Academy
+      of Fine Arts.
+    stance: supports
+  cluster: Academy of Fine Arts
+  anchors:
+  - line 70
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+applied+to+the+Academy+of+Fine+Arts+in+Vienna+for+a+s'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+applied+to+the+Academy+of+Fine+Arts+in+Vien&language=en&format=json'',
+      ''empty'')]|0'
+- id: c10
+  text: Georg Ritter von Schönerer, the founder of the Austrian pan-German movement,
+    was one of the politicians Hitler most admired upon arriving in Vienna.
+  hash: ccaa36f27d80eb2e
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 58
+    quote: Georg Ritter von Schönerer, the founder of the movement in Austria, was
+      one of the politicians the new arrival in Vienna most admired.
+    stance: supports
+  cluster: Political influences
+  anchors:
+  - line 58
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Georg+Ritter+von+Sch%C3%B6nerer%2C+the+founder+of+the+Austrian+pan-'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Georg+Ritter+von+Sch%C3%B6nerer%2C+the+founder+of+the+Aus&language=en&format=json'',
+      ''empty'')]|0'
+- id: c11
+  text: Vienna Mayor Karl Lueger modernized city infrastructure by municipalizing
+    gas, electricity, and transit networks while expanding social healthcare benefits.
+  hash: 133468e6c381d6cc
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 62
+    quote: Lueger had not only municipalised Vienna’s gas and electricity suppliers
+      and its public transport system, he also oversaw improvements to healthcare
+      and social benefits
+    stance: supports
+  cluster: Political influences
+  anchors:
+  - line 62
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Vienna+Mayor+Karl+Lueger+modernized+city+infrastructure+by+m'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Vienna+Mayor+Karl+Lueger+modernized+city+infrastru&language=en&format=json'',
+      ''empty'')]|0'
+- id: c12
+  text: Hitler became completely destitute in the late autumn of 1909 and sought shelter
+    at the Meidling homeless shelter.
+  hash: 091867d083b7d6bf
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 78
+    quote: In the late autumn of 1909, Hitler went to the Meidling homeless shelter
+    stance: supports
+  cluster: Homelessness and Meidling shelter
+  anchors:
+  - line 78
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+became+completely+destitute+in+the+late+autumn+of+190'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+became+completely+destitute+in+the+late+aut&language=en&format=json'',
+      ''empty'')]|0'
+- id: c13
+  text: Hitler and Reinhold Hanisch moved into the modern municipal men's home on
+    Meldemannstrasse in Brigittenau on February 9, 1910.
+  hash: 1ca2c7612627037c
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 80
+    quote: on 9 February 1910, the two men were able to quit the homeless shelter
+      for a men’s home on Meldemannstrasse 27.
+    stance: supports
+  cluster: Meldemannstrasse men's home
+  anchors:
+  - line 80
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+and+Reinhold+Hanisch+moved+into+the+modern+municipal+'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+and+Reinhold+Hanisch+moved+into+the+modern+&language=en&format=json'',
+      ''empty'')]|0'
+- id: c14
+  text: Hitler filed a formal complaint at the Brigittenau police station on August
+    5, 1910, accusing Reinhold Hanisch of withholding revenue from his paintings.
+  hash: 6f57200f64726a4e
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 92
+    quote: On 5 August 1910, Hitler testified at the Brigittenau police station that
+      “For roughly two weeks, Hanisch has not returned to the men’s home
+    stance: supports
+  cluster: Meldemannstrasse men's home
+  anchors:
+  - line 92
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+filed+a+formal+complaint+at+the+Brigittenau+police+st'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+filed+a+formal+complaint+at+the+Brigittenau&language=en&format=json'',
+      ''empty'')]|0'
+- id: c15
+  text: Hitler established an independent living selling his watercolor paintings
+    directly to Jewish picture-frame and art dealers, including Jakob Altenberg and
+    Samuel Morgenstern.
+  hash: 72dacca2542a9165
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 92
+    quote: primarily doing business with two Jewish owners of picture-framing and
+      art shops, Jakob Altenberg and Samuel Morgenstern.
+    stance: supports
+  cluster: Art dealing and commerce
+  anchors:
+  - line 92
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+established+an+independent+living+selling+his+waterco'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+established+an+independent+living+selling+h&language=en&format=json'',
+      ''empty'')]|0'
+- id: c16
+  text: Hitler maintained cordial daily interactions and commercial partnerships with
+    Jewish residents in the Meldemannstrasse men's home.
+  hash: 851040e951d8fafe
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 106
+    quote: Hitler had no problems in his day-to-day interactions with the Jewish residents
+      of the men’s home
+    stance: supports
+  cluster: Anti-Semitism historiography
+  anchors:
+  - line 106
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+maintained+cordial+daily+interactions+and+commercial+'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+maintained+cordial+daily+interactions+and+c&language=en&format=json'',
+      ''empty'')]|0'
+- id: c17
+  text: Historian Brigitte Hamann demonstrated that Hitler's claim of an early anti-Semitic
+    conversion in Vienna was a self-invented autobiographical myth.
+  hash: 28ae6fbdefd900d3
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 100
+    quote: Brigitte Hamann has shown that Hitler’s account was just one of the many
+      legends
+    stance: supports
+  cluster: Anti-Semitism historiography
+  anchors:
+  - line 100
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Historian+Brigitte+Hamann+demonstrated+that+Hitler%27s+claim+o'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Historian+Brigitte+Hamann+demonstrated+that+Hitler&language=en&format=json'',
+      ''empty'')]|0'
+- id: c18
+  text: Hitler collected an inheritance payout of nearly 820 crowns from the district
+    court in Linz on May 16, 1913.
+  hash: 817e0b5038fdebed
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 110
+    quote: The district court in Linz paid it out to Hitler on 16 May.
+    stance: supports
+  cluster: Move to Munich
+  anchors:
+  - line 110
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+collected+an+inheritance+payout+of+nearly+820+crowns+'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+collected+an+inheritance+payout+of+nearly+8&language=en&format=json'',
+      ''empty'')]|0'
+- id: c19
+  text: Hitler moved to Munich on May 25, 1913, renting a fourth-floor room from tailor
+    Joseph Popp on Schleissheimerstrasse with Rudolf Häusler.
+  hash: bec9b0fac1100fc9
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 112
+    quote: Upon arriving in Munich, Hitler and Häusler rented a small room in the
+      fourth-floor apartment of the tailor Joseph Popp on Schleissheimerstrasse 34
+    stance: supports
+  cluster: Move to Munich
+  anchors:
+  - line 112
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=Hitler+moved+to+Munich+on+May+25%2C+1913%2C+renting+a+fourth-flo'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+Hitler+moved+to+Munich+on+May+25%2C+1913%2C+renting+a+&language=en&format=json'',
+      ''empty'')]|0'
+- id: c20
+  text: A Salzburg military medical commission declared Hitler physically unfit for
+    combat or auxiliary military service on February 5, 1914.
+  hash: 64c117579e65c099
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: line 126
+    quote: he was given a military examination in Salzburg and was deemed “unsuitable
+      for combat and support duty, too weak, incapable of firing weapons.”
+    stance: supports
+  cluster: Military draft evasion
+  anchors:
+  - line 126
+  round_log:
+  - round: 1
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikipedia.search'', ''https://en.wikipedia.org/w/api.php?action=opensearch&search=A+Salzburg+military+medical+commission+declared+Hitler+physi'',
+      ''empty'')]|0'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''wikidata.query'', ''https://www.wikidata.org/w/api.php?action=wbsearchentities&search=contrary+to+A+Salzburg+military+medical+commission+declared+Hi&language=en&format=json'',
+      ''empty'')]|0'
