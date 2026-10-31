@@ -1,0 +1,2228 @@
+schema: 1
+claims:
+- id: c1
+  text: France's debt-to-GDP ratio has reached 120%.
+  hash: 94fdcd6d9a4fe9dc
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: '[01:55]'
+    quote: France's debt-to-GDP ratio has reached 120%
+    stance: supports
+  - source: s6
+    locator: para 1
+    quote: France's national debt-to-GDP ratio climbed to approximately 120%, driven
+      by persistent fiscal budget deficits and public expenditure exceeding 57% of
+      GDP.
+    stance: supports
+  cluster: French sovereign debt
+  anchors:
+  - '[01:55]'
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', "https://api.exa.ai/search?q=contrary+to+France''s+debt-to-GDP+ratio+has+reached+120%.",
+      ''ok'')]|0'
+- id: c2
+  text: The spread between French 10-year sovereign bonds and German 10-year Bunds
+    widened by 16 basis points to 175 basis points.
+  hash: 482736ecdbb4782e
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: '[01:55]'
+    quote: spread between French 10-year sovereign bonds (OATs) and German 10-year
+      Bunds widened by 16 basis points to 175 basis points
+    stance: supports
+  - source: s6
+    locator: para 1
+    quote: Amid political fragmentation and uncertainty over fiscal consolidation,
+      the yield spread between France's 10-year benchmark government bonds (OATs)
+      and German Bunds widened to 175
+    stance: supports
+  cluster: French sovereign debt
+  anchors:
+  - '[01:55]'
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+The+spread+between+French+10-year+sovereign+bonds+and+German'',
+      ''ok'')]|0'
+- id: c3
+  text: The risk premium on French 10-year sovereign bonds reached its highest level
+    since the 2011 European sovereign debt crisis.
+  hash: b130e9e0aac8503d
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: '[01:55]'
+    quote: highest risk premium since the 2011 European sovereign debt crisis
+    stance: supports
+  - source: s6
+    locator: para 1
+    quote: Amid political fragmentation and uncertainty over fiscal consolidation,
+      the yield spread between France's 10-year benchmark government bonds (OATs)
+      and German Bunds widened to 175
+    stance: supports
+  cluster: French sovereign debt
+  anchors:
+  - '[01:55]'
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+The+risk+premium+on+French+10-year+sovereign+bonds+reached+i'',
+      ''ok'')]|0'
+- id: c4
+  text: The United States debt-to-GDP ratio is approximately 120%.
+  hash: a4bd4c9b7502a654
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: '[01:55]'
+    quote: United States also has a debt-to-GDP ratio of roughly 120%
+    stance: supports
+  - source: s6
+    locator: para 2
+    quote: Unlike the United States, where reserve currency status underpins perpetual
+      demand for Treasuries despite a 120% debt-to-GDP ratio, French sovereign debt
+      does not enjoy
+    stance: supports
+  cluster: US sovereign debt
+  anchors:
+  - '[01:55]'
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+The+United+States+debt-to-GDP+ratio+is+approximately+120%.'',
+      ''ok'')]|0'
+- id: c5
+  text: CoreWeave's cost of borrowing surged with debt yields climbing from approximately
+    9% to 15%.
+  hash: ae9e98a5969235b7
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: '[03:04]'
+    quote: cost of borrowing for specialized AI cloud providers ("neoclouds") like
+      CoreWeave has surged, with debt yields climbing from approximately 9% to 15%
+    stance: supports
+  - source: s3
+    locator: para 1
+    quote: Yields on CoreWeave senior unsecured notes maturing in 2031 and 2032, originally
+      issued with coupon rates around 9.6% to 9.75%, surged into the 15%
+    stance: supports
+  cluster: CoreWeave debt
+  anchors:
+  - '[03:04]'
+  round_log:
+  - round: 1
+    sources:
+    - s3
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.tmcnet.com/topics/articles/2026/10/24/coreweave-bond-yields-spike-16-percent-debt-stress.htm'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', "https://api.exa.ai/search?q=contrary+to+CoreWeave''s+cost+of+borrowing+surged+with+debt+yields+climbi",
+      ''ok'')]|0'
+- id: c6
+  text: Meta reported 26% year-over-year revenue growth.
+  hash: 2e1b494b52f6f22a
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: '[05:32]'
+    quote: 'Meta: Delivered strong 26% year-over-year revenue growth'
+    stance: supports
+  - source: s7
+    locator: para 2
+    quote: Meta reported revenue of $64.6 billion, representing a 26% year-over-year
+      increase driven by strong digital advertising monetization enhanced by AI recommendation
+      algorithms.
+    stance: supports
+  cluster: Meta earnings
+  anchors:
+  - '[05:32]'
+  round_log:
+  - round: 1
+    sources:
+    - s7
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://home.saxo/content/articles/equities/meta-tesla-earnings-ai-capex-divergence-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Meta+reported+26%+year-over-year+revenue+growth.'',
+      ''ok'')]|0'
+- id: c7
+  text: Tesla reported 0% year-over-year revenue growth.
+  hash: dc866bb0c17241a3
+  status: "true"
+  origin: discovered
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s1
+    locator: '[05:32]'
+    quote: 'Tesla: Delivered 0% revenue growth year-over-year'
+    stance: supports
+  - source: s7
+    locator: para 3
+    quote: Tesla reported revenue of $28.05 billion, representing essentially flat
+      (0%) year-over-year growth as core automotive vehicle deliveries plateaued and
+      operating margins compressed to 2.6%
+    stance: supports
+  cluster: Tesla earnings
+  anchors:
+  - '[05:32]'
+  round_log:
+  - round: 1
+    sources:
+    - s7
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://home.saxo/content/articles/equities/meta-tesla-earnings-ai-capex-divergence-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Tesla+reported+0%+year-over-year+revenue+growth.'',
+      ''ok'')]|0'
+- id: c8
+  text: Frontier AI requires gigawatt-scale data centers, heavy electrical switchgear,
+    advanced liquid cooling, and ongoing procurement of depreciating GPUs.
+  hash: c97f6a3478da4c2e
+  status: not-found
+  origin: misconception
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s4
+    locator: para 1
+    quote: In reality, frontier AI requires gigawatt-scale data centers, heavy electrical
+      switchgear, advanced liquid cooling, and ongoing procurement of depreciating
+      GPUs, transforming tech into a
+    stance: supports
+  cluster: AI physical infrastructure requirements
+  anchors:
+  - para. 1
+  round_log:
+  - round: 1
+    sources:
+    - s4
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://forbes.com/sites/forbestechcouncil/2026/10/22/debunking-ai-infrastructure-financing-myths-capital-light-vs-debt-reality'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Frontier+AI+requires+gigawatt-scale+data+centers,+heavy+elec'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Frontier+AI+requires+gigawatt-scale+data+centers,+heavy+elec'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Frontier+AI+requires+gigawatt-scale+data+centers,+heavy+elec'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Frontier+AI+requires+gigawatt-scale+data+centers,+heavy+elec'',
+      ''ok'')]|0'
+- id: c9
+  text: Off-balance-sheet Special Purpose Vehicles insulate headline corporate debt
+    figures while long-term take-or-pay commitments and variable interest entity liabilities
+    create fixed payment obligations.
+  hash: f7ab0439e94df340
+  status: not-found
+  origin: misconception
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s4
+    locator: para 2
+    quote: While SPVs insulate headline corporate debt figures, long-term take-or-pay
+      commitments and variable interest entity liabilities create fixed payment obligations.
+    stance: supports
+  cluster: Off-balance-sheet financing
+  anchors:
+  - para. 2
+  round_log:
+  - round: 1
+    sources:
+    - s4
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://forbes.com/sites/forbestechcouncil/2026/10/22/debunking-ai-infrastructure-financing-myths-capital-light-vs-debt-reality'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Off-balance-sheet+Special+Purpose+Vehicles+insulate+headline'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Off-balance-sheet+Special+Purpose+Vehicles+insulate+headline'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Off-balance-sheet+Special+Purpose+Vehicles+insulate+headline'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Off-balance-sheet+Special+Purpose+Vehicles+insulate+headline'',
+      ''ok'')]|0'
+- id: c10
+  text: Modern AI infrastructure is deeply reliant on private credit, leveraged corporate
+    bonds, and debt syndications, shifting market vulnerability directly to the fixed-income
+    sector.
+  hash: b33bc4b4e2f80eb6
+  status: not-found
+  origin: misconception
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s4
+    locator: para 2
+    quote: A third myth is that the 2026 AI buildout mimics the 2000 Dot-Com equity
+      bubble; in contrast, modern AI infrastructure is deeply reliant on
+    stance: supports
+  cluster: AI debt financing
+  anchors:
+  - para. 2
+  round_log:
+  - round: 1
+    sources:
+    - s4
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://forbes.com/sites/forbestechcouncil/2026/10/22/debunking-ai-infrastructure-financing-myths-capital-light-vs-debt-reality'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Modern+AI+infrastructure+is+deeply+reliant+on+private+credit'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Modern+AI+infrastructure+is+deeply+reliant+on+private+credit'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Modern+AI+infrastructure+is+deeply+reliant+on+private+credit'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Modern+AI+infrastructure+is+deeply+reliant+on+private+credit'',
+      ''ok'')]|0'
+- id: c11
+  text: Building an AI-optimized data center campus at 1-gigawatt scale requires between
+    $38 billion and $55 billion in upfront capital expenditure.
+  hash: 22ed8a6bd4f9605f
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s2
+    locator: paragraph 1
+    quote: Building an AI-optimized data center campus at 1-gigawatt (1 GW) scale
+      requires between $38 billion and $55 billion in upfront capital expenditure.
+    stance: supports
+  - source: s2
+    locator: para 1
+    quote: Building an AI-optimized data center campus at 1-gigawatt (1 GW) scale
+      requires between $38 billion and $55 billion in upfront capital expenditure.
+    stance: supports
+  cluster: AI data center capex
+  anchors:
+  - paragraph 1
+  round_log:
+  - round: 1
+    sources:
+    - s2
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://epoch.ai/blog/cost-of-gigawatt-data-centers'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Building+an+AI-optimized+data+center+campus+at+1-gigawatt+sc'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Building+an+AI-optimized+data+center+campus+at+1-gigawatt+sc'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Building+an+AI-optimized+data+center+campus+at+1-gigawatt+sc'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Building+an+AI-optimized+data+center+campus+at+1-gigawatt+sc'',
+      ''ok'')]|0'
+- id: c12
+  text: Servers and GPU accelerators represent approximately $21 billion to $25 billion
+    of upfront capital outlay for a 1-gigawatt AI data center campus.
+  hash: 67b0b7aef95651be
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s2
+    locator: paragraph 1
+    quote: requiring approximately $21 billion to $25 billion upfront
+    stance: supports
+  - source: s2
+    locator: para 1
+    quote: Servers and GPU accelerators represent the majority of this capital outlay,
+      requiring approximately $21 billion to $25 billion upfront and contributing
+      roughly 60% of
+    stance: supports
+  cluster: AI server and GPU costs
+  anchors:
+  - paragraph 1
+  round_log:
+  - round: 1
+    sources:
+    - s2
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://epoch.ai/blog/cost-of-gigawatt-data-centers'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Servers+and+GPU+accelerators+represent+approximately+$21+bil'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Servers+and+GPU+accelerators+represent+approximately+$21+bil'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Servers+and+GPU+accelerators+represent+approximately+$21+bil'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Servers+and+GPU+accelerators+represent+approximately+$21+bil'',
+      ''ok'')]|0'
+- id: c13
+  text: Servers and GPU accelerators contribute roughly 60% of annualized total cost
+    of ownership for a 1-gigawatt AI data center campus.
+  hash: 620f27604ffcca5b
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s2
+    locator: paragraph 1
+    quote: contributing roughly 60% of annualized total cost of ownership (TCO)
+    stance: supports
+  - source: s2
+    locator: para 1
+    quote: Servers and GPU accelerators represent the majority of this capital outlay,
+      requiring approximately $21 billion to $25 billion upfront and contributing
+      roughly 60% of
+    stance: supports
+  cluster: AI data center TCO
+  anchors:
+  - paragraph 1
+  round_log:
+  - round: 1
+    sources:
+    - s2
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://epoch.ai/blog/cost-of-gigawatt-data-centers'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Servers+and+GPU+accelerators+contribute+roughly+60%+of+annua'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Servers+and+GPU+accelerators+contribute+roughly+60%+of+annua'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Servers+and+GPU+accelerators+contribute+roughly+60%+of+annua'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Servers+and+GPU+accelerators+contribute+roughly+60%+of+annua'',
+      ''ok'')]|0'
+- id: c14
+  text: Facility mechanical and electrical switchgear, including liquid cooling systems,
+    require between $11 billion and $14 billion in capital expenditure.
+  hash: 074a87a98c218d76
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s2
+    locator: paragraph 1
+    quote: Facility mechanical and electrical switchgear (including liquid cooling
+      systems) require an additional $11 billion to $14 billion
+    stance: supports
+  - source: s2
+    locator: para 1
+    quote: Facility mechanical and electrical switchgear (including liquid cooling
+      systems) require an additional $11 billion to $14 billion, while networking
+      fabric accounts for roughly $5
+    stance: supports
+  cluster: AI data center facility costs
+  anchors:
+  - paragraph 1
+  round_log:
+  - round: 1
+    sources:
+    - s2
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://epoch.ai/blog/cost-of-gigawatt-data-centers'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Facility+mechanical+and+electrical+switchgear,+including+liq'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Facility+mechanical+and+electrical+switchgear,+including+liq'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Facility+mechanical+and+electrical+switchgear,+including+liq'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Facility+mechanical+and+electrical+switchgear,+including+liq'',
+      ''ok'')]|0'
+- id: c15
+  text: Networking fabric accounts for roughly $5 billion in capital expenditure for
+    a 1-gigawatt AI data center campus.
+  hash: ee174f95abaa5ad9
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s2
+    locator: paragraph 1
+    quote: while networking fabric accounts for roughly $5 billion
+    stance: supports
+  - source: s2
+    locator: para 1
+    quote: Building an AI-optimized data center campus at 1-gigawatt (1 GW) scale
+      requires between $38 billion and $55 billion in upfront capital expenditure.
+    stance: supports
+  cluster: AI data center networking costs
+  anchors:
+  - paragraph 1
+  round_log:
+  - round: 1
+    sources:
+    - s2
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://epoch.ai/blog/cost-of-gigawatt-data-centers'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Networking+fabric+accounts+for+roughly+$5+billion+in+capital'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Networking+fabric+accounts+for+roughly+$5+billion+in+capital'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Networking+fabric+accounts+for+roughly+$5+billion+in+capital'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Networking+fabric+accounts+for+roughly+$5+billion+in+capital'',
+      ''ok'')]|0'
+- id: c16
+  text: Annualized total cost of ownership for a 1-gigawatt AI data center facility
+    reaches approximately $8.5 billion per year when factoring in 3 to 5 year hardware
+    refresh cycles.
+  hash: e39aeb07cacc2b4c
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s2
+    locator: paragraph 2
+    quote: Annualized TCO for a 1 GW facility reaches approximately $8.5 billion per
+      year when factoring in rapid hardware refresh cycles (3 to 5 years).
+    stance: supports
+  - source: s2
+    locator: para 2
+    quote: Annualized TCO for a 1 GW facility reaches approximately $8.5 billion per
+      year when factoring in rapid hardware refresh cycles (3 to 5 years).
+    stance: supports
+  cluster: AI data center TCO
+  anchors:
+  - paragraph 2
+  round_log:
+  - round: 1
+    sources:
+    - s2
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://epoch.ai/blog/cost-of-gigawatt-data-centers'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Annualized+total+cost+of+ownership+for+a+1-gigawatt+AI+data+'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Annualized+total+cost+of+ownership+for+a+1-gigawatt+AI+data+'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Annualized+total+cost+of+ownership+for+a+1-gigawatt+AI+data+'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Annualized+total+cost+of+ownership+for+a+1-gigawatt+AI+data+'',
+      ''ok'')]|0'
+- id: c17
+  text: CoreWeave senior unsecured notes maturing in 2031 and 2032 were originally
+    issued with coupon rates around 9.6% to 9.75%.
+  hash: 2f6453df97a31901
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s3
+    locator: para. 1
+    quote: originally issued with coupon rates around 9.6% to 9.75%
+    stance: supports
+  - source: s3
+    locator: para 1
+    quote: Yields on CoreWeave senior unsecured notes maturing in 2031 and 2032, originally
+      issued with coupon rates around 9.6% to 9.75%, surged into the 15%
+    stance: supports
+  cluster: CoreWeave bond coupon rates
+  anchors:
+  - para. 1
+  round_log:
+  - round: 1
+    sources:
+    - s3
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.tmcnet.com/topics/articles/2026/10/24/coreweave-bond-yields-spike-16-percent-debt-stress.htm'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+CoreWeave+senior+unsecured+notes+maturing+in+2031+and+2032+w'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=CoreWeave+senior+unsecured+notes+maturing+in+2031+and+2032+w'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=CoreWeave+senior+unsecured+notes+maturing+in+2031+and+2032+w'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=CoreWeave+senior+unsecured+notes+maturing+in+2031+and+2032+w'',
+      ''ok'')]|0'
+- id: c18
+  text: Yields on CoreWeave senior unsecured notes maturing in 2031 and 2032 surged
+    into the 15% to 16% range in October 2026.
+  hash: 3d4ef4e96f83cfbf
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s3
+    locator: para. 1
+    quote: surged into the 15% to 16% range in October 2026
+    stance: supports
+  - source: s3
+    locator: para 1
+    quote: Yields on CoreWeave senior unsecured notes maturing in 2031 and 2032, originally
+      issued with coupon rates around 9.6% to 9.75%, surged into the 15%
+    stance: supports
+  cluster: CoreWeave bond yields
+  anchors:
+  - para. 1
+  round_log:
+  - round: 1
+    sources:
+    - s3
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.tmcnet.com/topics/articles/2026/10/24/coreweave-bond-yields-spike-16-percent-debt-stress.htm'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Yields+on+CoreWeave+senior+unsecured+notes+maturing+in+2031+'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Yields+on+CoreWeave+senior+unsecured+notes+maturing+in+2031+'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Yields+on+CoreWeave+senior+unsecured+notes+maturing+in+2031+'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Yields+on+CoreWeave+senior+unsecured+notes+maturing+in+2031+'',
+      ''ok'')]|0'
+- id: c19
+  text: CoreWeave bond prices plunged to distressed levels, trading at approximately
+    75 to 80 cents on the dollar.
+  hash: dafcf3c4acfaba92
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s3
+    locator: para. 1
+    quote: trading at approximately 75 to 80 cents on the dollar
+    stance: supports
+  - source: s3
+    locator: para 1
+    quote: The bond prices plunged to distressed levels, trading at approximately
+      75 to 80 cents on the dollar.
+    stance: supports
+  cluster: CoreWeave bond prices
+  anchors:
+  - para. 1
+  round_log:
+  - round: 1
+    sources:
+    - s3
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.tmcnet.com/topics/articles/2026/10/24/coreweave-bond-yields-spike-16-percent-debt-stress.htm'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+CoreWeave+bond+prices+plunged+to+distressed+levels,+trading+'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=CoreWeave+bond+prices+plunged+to+distressed+levels,+trading+'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=CoreWeave+bond+prices+plunged+to+distressed+levels,+trading+'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=CoreWeave+bond+prices+plunged+to+distressed+levels,+trading+'',
+      ''ok'')]|0'
+- id: c20
+  text: The cost of credit default swaps insuring against a CoreWeave default escalated
+    toward 1,000 basis points.
+  hash: ddfdac62c2b47bda
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s3
+    locator: para. 1
+    quote: credit default swaps (CDS) insuring against a CoreWeave default escalated
+      toward 1,000 basis points
+    stance: supports
+  - source: s3
+    locator: para 1
+    quote: Alongside the yield spike, the cost of credit default swaps (CDS) insuring
+      against a CoreWeave default escalated toward 1,000 basis points.
+    stance: supports
+  cluster: CoreWeave credit default swaps
+  anchors:
+  - para. 1
+  round_log:
+  - round: 1
+    sources:
+    - s3
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.tmcnet.com/topics/articles/2026/10/24/coreweave-bond-yields-spike-16-percent-debt-stress.htm'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+The+cost+of+credit+default+swaps+insuring+against+a+CoreWeav'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=The+cost+of+credit+default+swaps+insuring+against+a+CoreWeav'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=The+cost+of+credit+default+swaps+insuring+against+a+CoreWeav'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=The+cost+of+credit+default+swaps+insuring+against+a+CoreWeav'',
+      ''ok'')]|0'
+- id: c21
+  text: CoreWeave has accumulated an estimated $50 billion to $52 billion in total
+    debt and lease obligations to finance AI data center expansion and GPU procurement.
+  hash: 4f7b8ab285209db7
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s3
+    locator: para. 2
+    quote: accumulated an estimated $50 billion to $52 billion in total debt and lease
+      obligations
+    stance: supports
+  - source: s3
+    locator: para 2
+    quote: CoreWeave has accumulated an estimated $50 billion to $52 billion in total
+      debt and lease obligations to finance its rapid expansion of AI data
+    stance: supports
+  cluster: CoreWeave debt obligations
+  anchors:
+  - para. 2
+  round_log:
+  - round: 1
+    sources:
+    - s3
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.tmcnet.com/topics/articles/2026/10/24/coreweave-bond-yields-spike-16-percent-debt-stress.htm'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+CoreWeave+has+accumulated+an+estimated+$50+billion+to+$52+bi'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=CoreWeave+has+accumulated+an+estimated+$50+billion+to+$52+bi'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=CoreWeave+has+accumulated+an+estimated+$50+billion+to+$52+bi'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=CoreWeave+has+accumulated+an+estimated+$50+billion+to+$52+bi'',
+      ''ok'')]|0'
+- id: c22
+  text: CoreWeave reports a multi-year contracted revenue backlog exceeding $104 billion.
+  hash: 384e8552f65aeceb
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s3
+    locator: para. 2
+    quote: CoreWeave reports a multi-year contracted revenue backlog exceeding $104
+      billion
+    stance: supports
+  - source: s3
+    locator: para 2
+    quote: While CoreWeave reports a multi-year contracted revenue backlog exceeding
+      $104 billion, credit markets have grown concerned about the duration mismatch
+      between continuous capital expenditure
+    stance: supports
+  cluster: CoreWeave revenue backlog
+  anchors:
+  - para. 2
+  round_log:
+  - round: 1
+    sources:
+    - s3
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.tmcnet.com/topics/articles/2026/10/24/coreweave-bond-yields-spike-16-percent-debt-stress.htm'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+CoreWeave+reports+a+multi-year+contracted+revenue+backlog+ex'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=CoreWeave+reports+a+multi-year+contracted+revenue+backlog+ex'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=CoreWeave+reports+a+multi-year+contracted+revenue+backlog+ex'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=CoreWeave+reports+a+multi-year+contracted+revenue+backlog+ex'',
+      ''ok'')]|0'
+- id: c23
+  text: France's national debt-to-GDP ratio reached approximately 120%.
+  hash: eebe1c139efb82c8
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s6
+    locator: paragraph 1
+    quote: France's national debt-to-GDP ratio climbed to approximately 120%
+    stance: supports
+  - source: s6
+    locator: para 1
+    quote: France's national debt-to-GDP ratio climbed to approximately 120%, driven
+      by persistent fiscal budget deficits and public expenditure exceeding 57% of
+      GDP.
+    stance: supports
+  cluster: French sovereign debt
+  anchors:
+  - paragraph 1
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', "https://api.exa.ai/search?q=contrary+to+France''s+national+debt-to-GDP+ratio+reached+approximately+12",
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', "https://tavily.com/research?q=France''s+national+debt-to-GDP+ratio+reached+approximately+12",
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', "https://api.openalex.org/works?search=France''s+national+debt-to-GDP+ratio+reached+approximately+12",
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', "https://tavily.com/crawl?q=France''s+national+debt-to-GDP+ratio+reached+approximately+12",
+      ''ok'')]|0'
+- id: c24
+  text: French public expenditure exceeded 57% of GDP.
+  hash: f03fc9e944c48d43
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s6
+    locator: paragraph 1
+    quote: public expenditure exceeding 57% of GDP
+    stance: supports
+  - source: s6
+    locator: para 1
+    quote: France's national debt-to-GDP ratio climbed to approximately 120%, driven
+      by persistent fiscal budget deficits and public expenditure exceeding 57% of
+      GDP.
+    stance: supports
+  cluster: French public spending
+  anchors:
+  - paragraph 1
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+French+public+expenditure+exceeded+57%+of+GDP.'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=French+public+expenditure+exceeded+57%+of+GDP.'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=French+public+expenditure+exceeded+57%+of+GDP.'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=French+public+expenditure+exceeded+57%+of+GDP.'',
+      ''ok'')]|0'
+- id: c25
+  text: The yield spread between France's 10-year benchmark government bonds and German
+    Bunds widened to 175 basis points.
+  hash: 983ca16ce65bb6d7
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s6
+    locator: paragraph 1
+    quote: yield spread between France's 10-year benchmark government bonds (OATs)
+      and German Bunds widened to 175 basis points
+    stance: supports
+  - source: s6
+    locator: para 1
+    quote: Amid political fragmentation and uncertainty over fiscal consolidation,
+      the yield spread between France's 10-year benchmark government bonds (OATs)
+      and German Bunds widened to 175
+    stance: supports
+  cluster: OAT-Bund yield spread
+  anchors:
+  - paragraph 1
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', "https://api.exa.ai/search?q=contrary+to+The+yield+spread+between+France''s+10-year+benchmark+governme",
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', "https://tavily.com/research?q=The+yield+spread+between+France''s+10-year+benchmark+governme",
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', "https://api.openalex.org/works?search=The+yield+spread+between+France''s+10-year+benchmark+governme",
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', "https://tavily.com/crawl?q=The+yield+spread+between+France''s+10-year+benchmark+governme",
+      ''ok'')]|0'
+- id: c26
+  text: France's 10-year benchmark bond risk premium reached its widest level since
+    the 2011 European sovereign debt crisis.
+  hash: a4d8481f0e718b4a
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s6
+    locator: paragraph 1
+    quote: widest risk premium since the 2011 European sovereign debt crisis
+    stance: supports
+  - source: s6
+    locator: para 1
+    quote: Amid political fragmentation and uncertainty over fiscal consolidation,
+      the yield spread between France's 10-year benchmark government bonds (OATs)
+      and German Bunds widened to 175
+    stance: supports
+  cluster: OAT-Bund yield spread
+  anchors:
+  - paragraph 1
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', "https://api.exa.ai/search?q=contrary+to+France''s+10-year+benchmark+bond+risk+premium+reached+its+wid",
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', "https://tavily.com/research?q=France''s+10-year+benchmark+bond+risk+premium+reached+its+wid",
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', "https://api.openalex.org/works?search=France''s+10-year+benchmark+bond+risk+premium+reached+its+wid",
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', "https://tavily.com/crawl?q=France''s+10-year+benchmark+bond+risk+premium+reached+its+wid",
+      ''ok'')]|0'
+- id: c27
+  text: French 10-year borrowing costs rose above 5%.
+  hash: 450e8720e37a4b23
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s6
+    locator: paragraph 2
+    quote: French 10-year borrowing costs rose above 5%
+    stance: supports
+  - source: s6
+    locator: para 2
+    quote: French 10-year borrowing costs rose above 5%, causing French sovereign
+      risk premiums to briefly exceed Italian equivalents.
+    stance: supports
+  cluster: French borrowing costs
+  anchors:
+  - paragraph 2
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+French+10-year+borrowing+costs+rose+above+5%.'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=French+10-year+borrowing+costs+rose+above+5%.'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=French+10-year+borrowing+costs+rose+above+5%.'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=French+10-year+borrowing+costs+rose+above+5%.'',
+      ''ok'')]|0'
+- id: c28
+  text: French sovereign risk premiums briefly exceeded Italian equivalents.
+  hash: 1d41669f6e2592da
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s6
+    locator: paragraph 2
+    quote: causing French sovereign risk premiums to briefly exceed Italian equivalents
+    stance: supports
+  - source: s6
+    locator: para 2
+    quote: French 10-year borrowing costs rose above 5%, causing French sovereign
+      risk premiums to briefly exceed Italian equivalents.
+    stance: supports
+  cluster: European sovereign spreads
+  anchors:
+  - paragraph 2
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+French+sovereign+risk+premiums+briefly+exceeded+Italian+equi'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=French+sovereign+risk+premiums+briefly+exceeded+Italian+equi'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=French+sovereign+risk+premiums+briefly+exceeded+Italian+equi'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=French+sovereign+risk+premiums+briefly+exceeded+Italian+equi'',
+      ''ok'')]|0'
+- id: c29
+  text: The United States has a debt-to-GDP ratio of 120%.
+  hash: e8e6d6bafaf875f7
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s6
+    locator: paragraph 2
+    quote: despite a 120% debt-to-GDP ratio
+    stance: supports
+  - source: s6
+    locator: para 2
+    quote: Unlike the United States, where reserve currency status underpins perpetual
+      demand for Treasuries despite a 120% debt-to-GDP ratio, French sovereign debt
+      does not enjoy
+    stance: supports
+  cluster: US sovereign debt
+  anchors:
+  - paragraph 2
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+The+United+States+has+a+debt-to-GDP+ratio+of+120%.'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=The+United+States+has+a+debt-to-GDP+ratio+of+120%.'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=The+United+States+has+a+debt-to-GDP+ratio+of+120%.'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=The+United+States+has+a+debt-to-GDP+ratio+of+120%.'',
+      ''ok'')]|0'
+- id: c30
+  text: Meta reported quarterly revenue of $64.6 billion in October 2026.
+  hash: c7c61bcfcb272e66
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s7
+    locator: paragraph 2
+    quote: Meta reported revenue of $64.6 billion
+    stance: supports
+  - source: s7
+    locator: para 2
+    quote: Meta reported revenue of $64.6 billion, representing a 26% year-over-year
+      increase driven by strong digital advertising monetization enhanced by AI recommendation
+      algorithms.
+    stance: supports
+  cluster: Meta revenue
+  anchors:
+  - paragraph 2
+  round_log:
+  - round: 1
+    sources:
+    - s7
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://home.saxo/content/articles/equities/meta-tesla-earnings-ai-capex-divergence-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Meta+reported+quarterly+revenue+of+$64.6+billion+in+October+'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Meta+reported+quarterly+revenue+of+$64.6+billion+in+October+'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Meta+reported+quarterly+revenue+of+$64.6+billion+in+October+'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Meta+reported+quarterly+revenue+of+$64.6+billion+in+October+'',
+      ''ok'')]|0'
+- id: c31
+  text: Meta's revenue represented a 26% year-over-year increase.
+  hash: a78bba4ad957fbf5
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s7
+    locator: paragraph 2
+    quote: representing a 26% year-over-year increase
+    stance: supports
+  - source: s7
+    locator: para 2
+    quote: Meta reported revenue of $64.6 billion, representing a 26% year-over-year
+      increase driven by strong digital advertising monetization enhanced by AI recommendation
+      algorithms.
+    stance: supports
+  cluster: Meta revenue
+  anchors:
+  - paragraph 2
+  round_log:
+  - round: 1
+    sources:
+    - s7
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://home.saxo/content/articles/equities/meta-tesla-earnings-ai-capex-divergence-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', "https://api.exa.ai/search?q=contrary+to+Meta''s+revenue+represented+a+26%+year-over-year+increase.",
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', "https://tavily.com/research?q=Meta''s+revenue+represented+a+26%+year-over-year+increase.",
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', "https://api.openalex.org/works?search=Meta''s+revenue+represented+a+26%+year-over-year+increase.",
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', "https://tavily.com/crawl?q=Meta''s+revenue+represented+a+26%+year-over-year+increase.",
+      ''ok'')]|0'
+- id: c32
+  text: Meta raised its full-year capital expenditure guidance to between $135 billion
+    and $145 billion.
+  hash: 7bbbe89629c16c1b
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s7
+    locator: paragraph 2
+    quote: Full-year capex guidance was raised to $135 billion to $145 billion
+    stance: supports
+  - source: s7
+    locator: para 2
+    quote: Full-year capex guidance was raised to $135 billion to $145 billion, with
+      quarterly capex reaching $34.91 billion.
+    stance: supports
+  cluster: Meta capex
+  anchors:
+  - paragraph 2
+  round_log:
+  - round: 1
+    sources:
+    - s7
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://home.saxo/content/articles/equities/meta-tesla-earnings-ai-capex-divergence-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Meta+raised+its+full-year+capital+expenditure+guidance+to+be'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Meta+raised+its+full-year+capital+expenditure+guidance+to+be'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Meta+raised+its+full-year+capital+expenditure+guidance+to+be'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Meta+raised+its+full-year+capital+expenditure+guidance+to+be'',
+      ''ok'')]|0'
+- id: c33
+  text: Meta's quarterly capital expenditure reached $34.91 billion.
+  hash: a9c4ef1468c91071
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s7
+    locator: paragraph 2
+    quote: quarterly capex reaching $34.91 billion
+    stance: supports
+  - source: s7
+    locator: para 2
+    quote: Full-year capex guidance was raised to $135 billion to $145 billion, with
+      quarterly capex reaching $34.91 billion.
+    stance: supports
+  cluster: Meta capex
+  anchors:
+  - paragraph 2
+  round_log:
+  - round: 1
+    sources:
+    - s7
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://home.saxo/content/articles/equities/meta-tesla-earnings-ai-capex-divergence-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', "https://api.exa.ai/search?q=contrary+to+Meta''s+quarterly+capital+expenditure+reached+$34.91+billion.",
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', "https://tavily.com/research?q=Meta''s+quarterly+capital+expenditure+reached+$34.91+billion.",
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', "https://api.openalex.org/works?search=Meta''s+quarterly+capital+expenditure+reached+$34.91+billion.",
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', "https://tavily.com/crawl?q=Meta''s+quarterly+capital+expenditure+reached+$34.91+billion.",
+      ''ok'')]|0'
+- id: c34
+  text: Tesla reported quarterly revenue of $28.05 billion in October 2026.
+  hash: 89c589d251734371
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s7
+    locator: paragraph 3
+    quote: Tesla reported revenue of $28.05 billion
+    stance: supports
+  - source: s7
+    locator: para 3
+    quote: Tesla reported revenue of $28.05 billion, representing essentially flat
+      (0%) year-over-year growth as core automotive vehicle deliveries plateaued and
+      operating margins compressed to 2.6%
+    stance: supports
+  cluster: Tesla revenue
+  anchors:
+  - paragraph 3
+  round_log:
+  - round: 1
+    sources:
+    - s7
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://home.saxo/content/articles/equities/meta-tesla-earnings-ai-capex-divergence-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Tesla+reported+quarterly+revenue+of+$28.05+billion+in+Octobe'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Tesla+reported+quarterly+revenue+of+$28.05+billion+in+Octobe'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Tesla+reported+quarterly+revenue+of+$28.05+billion+in+Octobe'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Tesla+reported+quarterly+revenue+of+$28.05+billion+in+Octobe'',
+      ''ok'')]|0'
+- id: c35
+  text: Tesla's revenue growth was flat at 0% year-over-year.
+  hash: 041a09cbe5c9b697
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s7
+    locator: paragraph 3
+    quote: representing essentially flat (0%) year-over-year growth
+    stance: supports
+  - source: s7
+    locator: para 3
+    quote: Tesla reported revenue of $28.05 billion, representing essentially flat
+      (0%) year-over-year growth as core automotive vehicle deliveries plateaued and
+      operating margins compressed to 2.6%
+    stance: supports
+  cluster: Tesla revenue
+  anchors:
+  - paragraph 3
+  round_log:
+  - round: 1
+    sources:
+    - s7
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://home.saxo/content/articles/equities/meta-tesla-earnings-ai-capex-divergence-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', "https://api.exa.ai/search?q=contrary+to+Tesla''s+revenue+growth+was+flat+at+0%+year-over-year.",
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', "https://tavily.com/research?q=Tesla''s+revenue+growth+was+flat+at+0%+year-over-year.",
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', "https://api.openalex.org/works?search=Tesla''s+revenue+growth+was+flat+at+0%+year-over-year.",
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', "https://tavily.com/crawl?q=Tesla''s+revenue+growth+was+flat+at+0%+year-over-year.",
+      ''ok'')]|0'
+- id: c36
+  text: Tesla's operating margins compressed to 2.6%, down from 5.8% in the prior
+    year.
+  hash: 31b46c315a53ce96
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s7
+    locator: paragraph 3
+    quote: operating margins compressed to 2.6% (down from 5.8% in the prior year)
+    stance: supports
+  - source: s7
+    locator: para 3
+    quote: Tesla reported revenue of $28.05 billion, representing essentially flat
+      (0%) year-over-year growth as core automotive vehicle deliveries plateaued and
+      operating margins compressed to 2.6%
+    stance: supports
+  cluster: Tesla margins
+  anchors:
+  - paragraph 3
+  round_log:
+  - round: 1
+    sources:
+    - s7
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://home.saxo/content/articles/equities/meta-tesla-earnings-ai-capex-divergence-2026'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', "https://api.exa.ai/search?q=contrary+to+Tesla''s+operating+margins+compressed+to+2.6%,+down+from+5.8%",
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', "https://tavily.com/research?q=Tesla''s+operating+margins+compressed+to+2.6%,+down+from+5.8%",
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', "https://api.openalex.org/works?search=Tesla''s+operating+margins+compressed+to+2.6%,+down+from+5.8%",
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', "https://tavily.com/crawl?q=Tesla''s+operating+margins+compressed+to+2.6%,+down+from+5.8%",
+      ''ok'')]|0'
+- id: c37
+  text: High-density AI clusters draw 30 kW to over 100 kW per rack compared to 5
+    to 15 kW for traditional IT workloads.
+  hash: af44d0c36ada92e8
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s5
+    locator: para. 1
+    quote: high-density AI clusters drawing 30 kW to over 100 kW per rack compared
+      to 5 to 15 kW for traditional IT workloads
+    stance: supports
+  - source: s5
+    locator: para 1
+    quote: Global data center power consumption is projected to more than double by
+      2030, driven by high-density AI clusters drawing 30 kW to over 100
+    stance: supports
+  cluster: AI rack power density
+  anchors:
+  - para. 1
+  round_log:
+  - round: 1
+    sources:
+    - s5
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.thehindu.com/business/Industry/ai-data-centres-power-demand-grid-constraints-2026/article68792014.ece'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+High-density+AI+clusters+draw+30+kW+to+over+100+kW+per+rack+'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=High-density+AI+clusters+draw+30+kW+to+over+100+kW+per+rack+'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=High-density+AI+clusters+draw+30+kW+to+over+100+kW+per+rack+'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=High-density+AI+clusters+draw+30+kW+to+over+100+kW+per+rack+'',
+      ''ok'')]|0'
+- id: c38
+  text: Data center transmission interconnection queues span 3 to 5 years in North
+    America and Europe.
+  hash: e7ea7cc2564d6049
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s5
+    locator: para. 1
+    quote: Transmission interconnection queues spanning 3 to 5 years
+    stance: supports
+  - source: s5
+    locator: para 1
+    quote: Transmission interconnection queues spanning 3 to 5 years represent the
+      primary binding physical constraint on data center expansion in North America
+      and Europe.
+    stance: supports
+  cluster: Grid interconnection queues
+  anchors:
+  - para. 1
+  round_log:
+  - round: 1
+    sources:
+    - s5
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.thehindu.com/business/Industry/ai-data-centres-power-demand-grid-constraints-2026/article68792014.ece'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Data+center+transmission+interconnection+queues+span+3+to+5+'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Data+center+transmission+interconnection+queues+span+3+to+5+'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Data+center+transmission+interconnection+queues+span+3+to+5+'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Data+center+transmission+interconnection+queues+span+3+to+5+'',
+      ''ok'')]|0'
+- id: c39
+  text: Global tech firms leverage Indian data center capacity in Mumbai, Chennai,
+    Bengaluru, Delhi-NCR, and Hyderabad to service domestic and offshore workloads.
+  hash: 6c114e82b96d7fd0
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s5
+    locator: para. 2
+    quote: global tech firms leverage Indian data center capacity in Mumbai, Chennai,
+      Bengaluru, Delhi-NCR, and Hyderabad
+    stance: supports
+  - source: s5
+    locator: para 2
+    quote: While global tech firms leverage Indian data center capacity in Mumbai,
+      Chennai, Bengaluru, Delhi-NCR, and Hyderabad to service both domestic and offshore
+      workloads, the
+    stance: supports
+  cluster: Indian data center capacity
+  anchors:
+  - para. 2
+  round_log:
+  - round: 1
+    sources:
+    - s5
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.thehindu.com/business/Industry/ai-data-centres-power-demand-grid-constraints-2026/article68792014.ece'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Global+tech+firms+leverage+Indian+data+center+capacity+in+Mu'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Global+tech+firms+leverage+Indian+data+center+capacity+in+Mu'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Global+tech+firms+leverage+Indian+data+center+capacity+in+Mu'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Global+tech+firms+leverage+Indian+data+center+capacity+in+Mu'',
+      ''ok'')]|0'
+- id: c40
+  text: AI data center demand places severe localized pressure on Indian state distribution
+    utilities and transmission corridors during peak afternoon solar-drop windows.
+  hash: f94e6ffb026ad88c
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s5
+    locator: para. 2
+    quote: places severe localized pressure on state distribution utilities (DISCOMs)
+      and transmission corridors during peak afternoon solar-drop windows
+    stance: supports
+  - source: s5
+    locator: para 2
+    quote: While global tech firms leverage Indian data center capacity in Mumbai,
+      Chennai, Bengaluru, Delhi-NCR, and Hyderabad to service both domestic and offshore
+      workloads, the
+    stance: supports
+  cluster: Indian grid load pressure
+  anchors:
+  - para. 2
+  round_log:
+  - round: 1
+    sources:
+    - s5
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://www.thehindu.com/business/Industry/ai-data-centres-power-demand-grid-constraints-2026/article68792014.ece'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+AI+data+center+demand+places+severe+localized+pressure+on+In'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=AI+data+center+demand+places+severe+localized+pressure+on+In'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=AI+data+center+demand+places+severe+localized+pressure+on+In'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=AI+data+center+demand+places+severe+localized+pressure+on+In'',
+      ''ok'')]|0'
+- id: c41
+  text: Tech hyperscalers including Alphabet, Meta, Microsoft, and Amazon historically
+    financed expansions entirely out of organic free cash flow generated by search,
+    digital advertising, and enterprise software.
+  hash: 9f41fabc84323f1d
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s8
+    locator: para. 1
+    quote: hyperscalers (Alphabet, Meta, Microsoft, Amazon) financed expansions entirely
+      out of massive organic free cash flow
+    stance: supports
+  - source: s8
+    locator: para 1
+    quote: Historically, tech hyperscalers (Alphabet, Meta, Microsoft, Amazon) financed
+      expansions entirely out of massive organic free cash flow generated by search,
+      digital advertising, and enterprise
+    stance: supports
+  cluster: Hyperscaler financing
+  anchors:
+  - para. 1
+  round_log:
+  - round: 1
+    sources:
+    - s8
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://factset.com/insight/ai-capex-explosion-balance-sheet-pressures'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Tech+hyperscalers+including+Alphabet,+Meta,+Microsoft,+and+A'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Tech+hyperscalers+including+Alphabet,+Meta,+Microsoft,+and+A'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Tech+hyperscalers+including+Alphabet,+Meta,+Microsoft,+and+A'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Tech+hyperscalers+including+Alphabet,+Meta,+Microsoft,+and+A'',
+      ''ok'')]|0'
+- id: c42
+  text: Generative AI infrastructure has transformed technology into an intensely
+    capital-heavy sector.
+  hash: 244c34d4bc6b229b
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s8
+    locator: para. 1
+    quote: Generative AI infrastructure has transformed technology into an intensely
+      capital-heavy sector
+    stance: supports
+  - source: s8
+    locator: para 1
+    quote: Generative AI infrastructure has transformed technology into an intensely
+      capital-heavy sector, with quarterly capex climbing to unprecedented proportions.
+    stance: supports
+  cluster: AI capital intensity
+  anchors:
+  - para. 1
+  round_log:
+  - round: 1
+    sources:
+    - s8
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://factset.com/insight/ai-capex-explosion-balance-sheet-pressures'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Generative+AI+infrastructure+has+transformed+technology+into'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Generative+AI+infrastructure+has+transformed+technology+into'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Generative+AI+infrastructure+has+transformed+technology+into'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Generative+AI+infrastructure+has+transformed+technology+into'',
+      ''ok'')]|0'
+- id: c43
+  text: Neocloud providers rely almost exclusively on high-yield corporate bonds,
+    debt facilities, and equipment lease-backs to procure Nvidia GPUs.
+  hash: 109c8540e0d6b42f
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s8
+    locator: para. 2
+    quote: rely almost exclusively on high-yield corporate bonds, debt facilities,
+      and equipment lease-backs to procure Nvidia GPUs
+    stance: supports
+  - source: s8
+    locator: para 2
+    quote: Neocloud providers lack diversified high-margin revenue engines, forcing
+      them to rely almost exclusively on high-yield corporate bonds, debt facilities,
+      and equipment lease-backs to procure
+    stance: supports
+  cluster: Neocloud debt dependency
+  anchors:
+  - para. 2
+  round_log:
+  - round: 1
+    sources:
+    - s8
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://factset.com/insight/ai-capex-explosion-balance-sheet-pressures'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Neocloud+providers+rely+almost+exclusively+on+high-yield+cor'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Neocloud+providers+rely+almost+exclusively+on+high-yield+cor'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Neocloud+providers+rely+almost+exclusively+on+high-yield+cor'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Neocloud+providers+rely+almost+exclusively+on+high-yield+cor'',
+      ''ok'')]|0'
+- id: c44
+  text: Hyperscalers maintain fortress balance sheets, investment-grade credit ratings,
+    and substantial cash reserves.
+  hash: 0865a105b5d3b37b
+  status: not-found
+  origin: discovered
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s8
+    locator: para. 2
+    quote: hyperscalers maintain fortress balance sheets, investment-grade credit
+      ratings, and substantial cash reserves
+    stance: supports
+  - source: s8
+    locator: para 2
+    quote: Conversely, hyperscalers maintain fortress balance sheets, investment-grade
+      credit ratings, and substantial cash reserves that allow them to absorb high
+      infrastructure costs without debt-market distress.
+    stance: supports
+  cluster: Hyperscaler balance sheets
+  anchors:
+  - para. 2
+  round_log:
+  - round: 1
+    sources:
+    - s8
+    new_read_sources: 1
+    print: '[(''tavily.search'', ''https://factset.com/insight/ai-capex-explosion-balance-sheet-pressures'',
+      ''ok'')]|1'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''exa.search'', ''https://api.exa.ai/search?q=contrary+to+Hyperscalers+maintain+fortress+balance+sheets,+investment-gr'',
+      ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://tavily.com/research?q=Hyperscalers+maintain+fortress+balance+sheets,+investment-gr'',
+      ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works?search=Hyperscalers+maintain+fortress+balance+sheets,+investment-gr'',
+      ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://tavily.com/crawl?q=Hyperscalers+maintain+fortress+balance+sheets,+investment-gr'',
+      ''ok'')]|0'

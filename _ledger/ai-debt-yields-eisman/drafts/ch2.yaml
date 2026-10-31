@@ -1,0 +1,17 @@
+chapter: 2
+topic: ai-debt-yields-eisman
+mode: learn
+title: The AI Infrastructure Debt Problem
+answer:
+  text: Surging borrowing costs for AI cloud providers have elevated data center debt yields to 15%.
+  claims:
+  - c5
+  block: plain
+  id: s1
+sentences:
+- text: CoreWeave's cost of borrowing surged with debt yields climbing from approximately 9% to 15%.
+  claims:
+  - c5
+  block: plain
+  id: s2
+errata: []

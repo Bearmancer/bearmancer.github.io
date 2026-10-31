@@ -1,0 +1,121 @@
+run_id: 20261031T222700Z
+topic: ai-debt-yields-eisman
+mode: learn
+status: published
+phases:
+- phase: infer_mode
+  at: '2026-10-31T22:27:01Z'
+- phase: ingest
+  at: '2026-10-31T22:27:02Z'
+- phase: discover
+  at: '2026-10-31T22:37:32Z'
+- phase: verify
+  at: '2026-10-31T22:41:49Z'
+- phase: write
+  at: '2026-10-31T22:43:18Z'
+- phase: conformance
+  at: '2026-10-31T22:44:35Z'
+- phase: layout
+  at: '2026-10-31T22:47:07Z'
+- phase: render
+  at: '2026-10-31T22:47:07Z'
+- phase: gates
+  at: '2026-10-31T22:54:40Z'
+failure: null
+answered_by:
+- gemini-3.8-flash
+claims:
+  'true': 7
+  not-found: 37
+surfaces:
+  tavily.search: 85
+  firecrawl.search: 1
+  direct.fetch: 109
+  tavily.extract: 102
+  exa.search: 44
+  tavily.research: 37
+  openalex.search: 37
+  tavily.crawl: 37
+sources_read:
+- /home/ubuntu/bearmancer.github.io/work/eisman_ai_debt.txt
+- https://epoch.ai/blog/cost-of-gigawatt-data-centers
+- https://www.tmcnet.com/topics/articles/2026/10/24/coreweave-bond-yields-spike-16-percent-debt-stress.htm
+- https://forbes.com/sites/forbestechcouncil/2026/10/22/debunking-ai-infrastructure-financing-myths-capital-light-vs-debt-reality
+- https://www.thehindu.com/business/Industry/ai-data-centres-power-demand-grid-constraints-2026/article68792014.ece
+- https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026
+- https://home.saxo/insights
+- https://factset.com/insight/ai-capex-explosion-balance-sheet-pressures
+sources_failed: []
+gates:
+  ledger_check:
+    errors: 0
+    warnings: 0
+  verifier:
+    checked: 44
+    agree: 44
+    rechecked: 0
+    disagreements: 0
+  lessons:
+    problems: 0
+  pages:
+    problems: 0
+  course:
+    problems: 0
+  url_audit:
+    result: 3/3 ok
+    problems: 0
+skipped: null
+layouts:
+  1: concept
+  2: concept
+  3: concept
+media_split: null
+ignored_instructions: []
+diff_vs_previous:
+  new:
+  - c1
+  - c2
+  - c3
+  - c4
+  - c5
+  - c6
+  - c7
+  - c8
+  - c9
+  - c10
+  - c11
+  - c12
+  - c13
+  - c14
+  - c15
+  - c16
+  - c17
+  - c18
+  - c19
+  - c20
+  - c21
+  - c22
+  - c23
+  - c24
+  - c25
+  - c26
+  - c27
+  - c28
+  - c29
+  - c30
+  - c31
+  - c32
+  - c33
+  - c34
+  - c35
+  - c36
+  - c37
+  - c38
+  - c39
+  - c40
+  - c41
+  - c42
+  - c43
+  - c44
+  status_changed: {}
+  unchanged: 0

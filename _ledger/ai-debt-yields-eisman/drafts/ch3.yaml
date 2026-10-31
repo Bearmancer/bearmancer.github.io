@@ -1,0 +1,24 @@
+chapter: 3
+topic: ai-debt-yields-eisman
+mode: learn
+title: Corporate Earnings Divergence
+answer:
+  text: Tech earnings showed sharp divergence as advertising growth accelerated while automotive revenue
+    growth stalled.
+  claims:
+  - c6
+  - c7
+  block: plain
+  id: s1
+sentences:
+- text: Meta reported 26% year-over-year revenue growth.
+  claims:
+  - c6
+  block: plain
+  id: s2
+- text: Tesla reported 0% year-over-year revenue growth.
+  claims:
+  - c7
+  block: plain
+  id: s3
+errata: []

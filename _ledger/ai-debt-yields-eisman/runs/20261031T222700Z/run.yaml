@@ -1,0 +1,358 @@
+run_id: 20261031T222700Z
+topic: ai-debt-yields-eisman
+prompt: /home/ubuntu/bearmancer.github.io/work/eisman_ai_debt.txt
+mode: learn
+phase: done
+status: done
+log:
+- phase: infer_mode
+  at: '2026-10-31T22:27:01Z'
+  data:
+    reason: declared with --mode
+- phase: ingest
+  at: '2026-10-31T22:27:02Z'
+  data:
+    inputs: 1
+    read: 1
+    failed: []
+- phase: discover
+  at: '2026-10-31T22:37:32Z'
+  data:
+    waves: 2
+    clusters: 35
+    claims: 44
+    saturated: false
+- phase: verify
+  at: '2026-10-31T22:41:49Z'
+  data:
+    waves: 1
+    reopened: 0
+    'true': 7
+    not-found: 37
+- phase: write
+  at: '2026-10-31T22:43:18Z'
+  data:
+    chapters: 3
+- phase: conformance
+  at: '2026-10-31T22:44:35Z'
+  data:
+    chapters: 3
+- phase: layout
+  at: '2026-10-31T22:47:07Z'
+  data:
+    layouts: &id001
+      1: concept
+      2: concept
+      3: concept
+- phase: render
+  at: '2026-10-31T22:47:07Z'
+  data:
+    pages: &id002
+    - ai-debt-yields-eisman/lessons/01-ch1-sovereign-debt-and-bond-market-pressures.html
+    - ai-debt-yields-eisman/lessons/02-ch2-the-ai-infrastructure-debt-problem.html
+    - ai-debt-yields-eisman/lessons/03-ch3-corporate-earnings-divergence.html
+- phase: gates
+  at: '2026-10-31T22:54:40Z'
+  data: &id003
+    ledger_check:
+      errors: 0
+      warnings: 0
+    verifier:
+      checked: 44
+      agree: 44
+      rechecked: 0
+      disagreements: 0
+    lessons:
+      problems: 0
+    pages:
+      problems: 0
+    course:
+      problems: 0
+    url_audit:
+      result: 3/3 ok
+      problems: 0
+needs_user: null
+failure: null
+created_at: '2026-10-31T22:27:01Z'
+context:
+  mode_override: learn
+  answered_by: &id004
+  - gemini-3.8-flash
+  baseline: {}
+  inputs:
+  - s1
+  discover:
+    wave: 2
+    quiet: 1
+    mis_done:
+    - home ubuntu bearmancer github io work eisman_ai_debt txt
+    - french sovereign debt
+    - us sovereign debt
+    - coreweave debt
+    - meta earnings
+    - tesla earnings
+    - ai physical infrastructure requirements
+    - off balance sheet financing
+    - ai debt financing
+    - ai data center capex
+    - ai server and gpu costs
+    - ai data center tco
+    - ai data center facility costs
+    - ai data center networking costs
+    - coreweave bond coupon rates
+    - coreweave bond yields
+    - coreweave bond prices
+    - coreweave credit default swaps
+    - coreweave debt obligations
+    - coreweave revenue backlog
+    - french public spending
+    - oat bund yield spread
+    - french borrowing costs
+    - european sovereign spreads
+    - meta revenue
+    - meta capex
+    - tesla revenue
+    - tesla margins
+    - ai rack power density
+    - grid interconnection queues
+    - indian data center capacity
+    - indian grid load pressure
+    - hyperscaler financing
+    - ai capital intensity
+    - neocloud debt dependency
+    - hyperscaler balance sheets
+    inputs_done: true
+    plans:
+      '1':
+        a1:
+        - wave
+        - CoreWeave debt yield spike and financing structure
+        a2:
+        - wave
+        - AI data center capital expenditure requirements and cost of capital
+        a3:
+        - wave
+        - Hyperscaler balance sheet self-funding vs neocloud debt dependency
+        a4:
+        - wave
+        - French sovereign bond spread widening and fiscal deficit pressures
+        a5:
+        - wave
+        - Global AI infrastructure power and capacity constraints
+        a6:
+        - wave
+        - 'Big tech earnings divergence: Meta advertising cash flows vs Tesla automotive
+          margins'
+        m1:
+        - mis
+        - /home/ubuntu/bearmancer.github.io/work/eisman_ai_debt.txt
+      '2':
+        m1:
+        - mis
+        - French sovereign debt
+        m2:
+        - mis
+        - US sovereign debt
+        m3:
+        - mis
+        - CoreWeave debt
+        m4:
+        - mis
+        - Meta earnings
+        m5:
+        - mis
+        - Tesla earnings
+        m6:
+        - mis
+        - AI physical infrastructure requirements
+        m7:
+        - mis
+        - Off-balance-sheet financing
+        m8:
+        - mis
+        - AI debt financing
+        m9:
+        - mis
+        - AI data center capex
+        m10:
+        - mis
+        - AI server and GPU costs
+        m11:
+        - mis
+        - AI data center TCO
+        m12:
+        - mis
+        - AI data center facility costs
+        m13:
+        - mis
+        - AI data center networking costs
+        m14:
+        - mis
+        - CoreWeave bond coupon rates
+        m15:
+        - mis
+        - CoreWeave bond yields
+        m16:
+        - mis
+        - CoreWeave bond prices
+        m17:
+        - mis
+        - CoreWeave credit default swaps
+        m18:
+        - mis
+        - CoreWeave debt obligations
+        m19:
+        - mis
+        - CoreWeave revenue backlog
+        m20:
+        - mis
+        - French public spending
+        m21:
+        - mis
+        - OAT-Bund yield spread
+        m22:
+        - mis
+        - French borrowing costs
+        m23:
+        - mis
+        - European sovereign spreads
+        m24:
+        - mis
+        - Meta revenue
+        m25:
+        - mis
+        - Meta capex
+        m26:
+        - mis
+        - Tesla revenue
+        m27:
+        - mis
+        - Tesla margins
+        m28:
+        - mis
+        - AI rack power density
+        m29:
+        - mis
+        - Grid interconnection queues
+        m30:
+        - mis
+        - Indian data center capacity
+        m31:
+        - mis
+        - Indian grid load pressure
+        m32:
+        - mis
+        - Hyperscaler financing
+        m33:
+        - mis
+        - AI capital intensity
+        m34:
+        - mis
+        - Neocloud debt dependency
+        m35:
+        - mis
+        - Hyperscaler balance sheets
+      '3': {}
+  reopened: true
+  round_failures: {}
+  chapters:
+  - n: 1
+    title: Sovereign Debt and Bond Market Pressures
+    clusters:
+    - French sovereign debt
+    - US sovereign debt
+  - n: 2
+    title: The AI Infrastructure Debt Problem
+    clusters:
+    - CoreWeave debt
+  - n: 3
+    title: Corporate Earnings Divergence
+    clusters:
+    - Meta earnings
+    - Tesla earnings
+  drafts_done:
+  - 1
+  - 2
+  - 3
+  layouts: *id001
+  kind_before: null
+  pages: *id002
+  gates: *id003
+  pre_publish_base: 509379729c1928f94d17b0199fb9d8836b55b314
+  record:
+    answered_by: *id004
+    claims:
+      'true': 7
+      not-found: 37
+    surfaces:
+      tavily.search: 85
+      firecrawl.search: 1
+      direct.fetch: 109
+      tavily.extract: 102
+      exa.search: 44
+      tavily.research: 37
+      openalex.search: 37
+      tavily.crawl: 37
+    sources_read:
+    - /home/ubuntu/bearmancer.github.io/work/eisman_ai_debt.txt
+    - https://epoch.ai/blog/cost-of-gigawatt-data-centers
+    - https://www.tmcnet.com/topics/articles/2026/10/24/coreweave-bond-yields-spike-16-percent-debt-stress.htm
+    - https://forbes.com/sites/forbestechcouncil/2026/10/22/debunking-ai-infrastructure-financing-myths-capital-light-vs-debt-reality
+    - https://www.thehindu.com/business/Industry/ai-data-centres-power-demand-grid-constraints-2026/article68792014.ece
+    - https://fxstreet.com/analysis/france-oat-bund-spread-widens-debt-gdp-stress-2026
+    - https://home.saxo/insights
+    - https://factset.com/insight/ai-capex-explosion-balance-sheet-pressures
+    sources_failed: []
+    gates: *id003
+    skipped: null
+    layouts: *id001
+    media_split: null
+    ignored_instructions: []
+    diff_vs_previous:
+      new:
+      - c1
+      - c2
+      - c3
+      - c4
+      - c5
+      - c6
+      - c7
+      - c8
+      - c9
+      - c10
+      - c11
+      - c12
+      - c13
+      - c14
+      - c15
+      - c16
+      - c17
+      - c18
+      - c19
+      - c20
+      - c21
+      - c22
+      - c23
+      - c24
+      - c25
+      - c26
+      - c27
+      - c28
+      - c29
+      - c30
+      - c31
+      - c32
+      - c33
+      - c34
+      - c35
+      - c36
+      - c37
+      - c38
+      - c39
+      - c40
+      - c41
+      - c42
+      - c43
+      - c44
+      status_changed: {}
+      unchanged: 0
