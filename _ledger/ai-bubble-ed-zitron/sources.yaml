@@ -306,31 +306,40 @@ sources:
   kind: established-outlet
   tier: T2
   publisher: Reuters
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T19:51:04Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s29.txt
   content_hash: fab560e9398a2281
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s30
   url: https://www.reuters.com/business/oracle-shares-fall-investors-assess-up-50-billion-ai-funding-plan-2026-02-02/
   kind: established-outlet
   tier: T2
   publisher: Reuters
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T19:51:05Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s30.txt
   content_hash: c559c2132a7a2b48
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s31
   url: https://www.facebook.com/Stockstoearnpage/videos/these-9-companies-are-nvidias-biggest-customers/1455910616639583
   kind: social
   tier: T3
   publisher: Stockstoearn
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T19:51:09Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s31.txt
   content_hash: 412699e4dadd74e5
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s32
   url: https://www.eetimes.com/the-trillion-dollar-race-to-fragment-the-nvidia-monopoly
   kind: established-outlet
@@ -349,11 +358,14 @@ sources:
   kind: quality-journalism
   tier: T2
   publisher: Reuters
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T19:52:51Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s33.txt
   content_hash: 913a9058538827d3
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s34
   url: https://www.techtarget.com/news/Report-Anthropic-locks-in-518B-AI-infrastructure-commitments/856942
   kind: established-outlet
@@ -376,11 +388,14 @@ sources:
   kind: quality-journalism
   tier: T2
   publisher: Reuters
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T19:52:59Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s36.txt
   content_hash: 8175846a7b3b1ca0
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s37
   url: https://techeconomy.ng/anthropic-ipo-200-billion-2028-revenue-forecast
   kind: established-outlet
@@ -706,11 +721,14 @@ sources:
   kind: forum
   tier: T3
   publisher: Reddit
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T20:39:04Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s69.txt
   content_hash: 442376f929737fe8
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s70
   url: https://4sysops.com/archives/nvidia-cuda-monopoly-faces-competition-from-amds-open-source-alternative-rocm/
   kind: blog
@@ -738,11 +756,14 @@ sources:
   kind: established-outlet
   tier: T2
   publisher: CNN Business
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T20:39:06Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s72.txt
   content_hash: cb923e8e01eba8dc
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s73
   url: https://finance.yahoo.com/technology/article/nvidia-stock-tests-all-time-highs-market-cap-at-57-trillion-141332917.html
   kind: established-outlet
@@ -768,11 +789,14 @@ sources:
   kind: established-outlet
   tier: T2
   publisher: Memphis Business Journal
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T20:39:30Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s75.txt
   content_hash: 7a1cca84a595e6bc
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s76
   url: https://www.wsj.com/tech/openais-planned-cloud-spending-hits-750-billion-as-computing-efforts-ramp-up-6ac3f58a
   kind: quality-journalism
@@ -868,11 +892,14 @@ sources:
   kind: established-outlet
   tier: T2
   publisher: TechCrunch
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T20:54:30Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s86.txt
   content_hash: dd8da5e9ebdaea5f
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s87
   url: https://www.reuters.com/business/oracle-plans-raise-45-billion-50-billion-2026-2026-02-01/
   kind: quality-journalism
@@ -958,11 +985,14 @@ sources:
   kind: quality-journalism
   tier: T2
   publisher: Reuters
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T22:36:04Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s96.txt
   content_hash: a940e8387c9f5fcd
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s97
   url: https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q4
   kind: established-outlet
@@ -1158,21 +1188,27 @@ sources:
   kind: established-outlet
   tier: T2
   publisher: Reuters
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T22:43:55Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s116.txt
   content_hash: a00823def4b70f0c
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s117
   url: https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx
   kind: established-outlet
   tier: T2
   publisher: Meta Investor Relations
-  status: read
+  status: failed
   language: en
   retrieved_at: '2026-10-30T22:43:55Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s117.txt
   content_hash: a43c33c989ceb355
+  fail_reason: 'not read: the stored body is the fetcher''s own failed-extraction report (205-254 bytes,
+    ''Failed extractions: ... Failed to fetch url''), not the article; the direct fetch was blocked or
+    404 on every attempt'
 - id: s118
   url: https://www.cnbc.com/2026/09/28/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-reuters.html
   kind: established-outlet
@@ -1229,6 +1265,6 @@ sources:
   publisher: arXiv
   status: read
   language: en
-  retrieved_at: '2026-10-30T23:26:59Z'
+  retrieved_at: '2026-10-31T14:57:46Z'
   raw_path: work/ai-bubble-ed-zitron/raw/s123.txt
-  content_hash: a054674b2a81d5c7
+  content_hash: 9a970edca60c76eb

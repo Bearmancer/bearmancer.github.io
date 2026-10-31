@@ -17,10 +17,16 @@ phases:
   at: '2026-10-30T23:37:17Z'
 - phase: publish
   at: '2026-10-30T23:37:17Z'
+- phase: publish
+  at: '2026-10-31T06:23:59Z'
 - phase: render
   at: '2026-10-31T06:22:54Z'
 - phase: gates
   at: '2026-10-31T06:23:11Z'
+- phase: render
+  at: '2026-10-31T14:58:05Z'
+- phase: gates
+  at: '2026-10-31T14:58:22Z'
 failure: null
 answered_by:
 - alibaba-token-plan/qwen3.8-flash
@@ -76,12 +82,7 @@ sources_read:
 - https://irlaw.umkc.edu/faculty_works/928
 - https://en.wikipedia.org/wiki/Ed_Zitron
 - https://www.cnbc.com/video/2026/07/02/watch-cnbcas-full-interview-with-ez-primary-research-ceo-ed-zitron.html
-- https://www.reuters.com/world/asia-pacific/chinas-huawei-launch-two-new-ai-chips-2027-2026-09-17
-- https://www.reuters.com/business/oracle-shares-fall-investors-assess-up-50-billion-ai-funding-plan-2026-02-02/
-- https://www.facebook.com/Stockstoearnpage/videos/these-9-companies-are-nvidias-biggest-customers/1455910616639583
-- https://www.reuters.com/business/anthropics-518-billion-ai-buildout-hinges-largely-deals-that-cannot-be-canceled-2026-09-29/
 - https://www.techtarget.com/news/Report-Anthropic-locks-in-518B-AI-infrastructure-commitments/856942
-- https://www.reuters.com/business/anthropic-ipo-valuation-hinges-190-200-billion-2028-revenue-forecast-sources-say-2026-08-15/
 - https://techeconomy.ng/anthropic-ipo-200-billion-2028-revenue-forecast
 - https://diversedaily.com/memory-subsystem-of-nvidia-gpus-gddr6x-hbm-and-memory-bandwidth-optimization
 - https://jefftech.substack.com/p/understanding-high-bandwidth-memory
@@ -114,12 +115,9 @@ sources_read:
 - https://finance.yahoo.com/markets/article/why-retail-investor-trading-has-fallen-off-a-cliff-152604818.html
 - https://memx.com/insights/retail-trading-insights
 - https://www.wikidata.org/wiki/Q57747258
-- https://www.reddit.com/r/hardware/comments/1ahgu7q/nvidias_h100_ai_gpus_cost_up_to_four_times_more/
 - https://4sysops.com/archives/nvidia-cuda-monopoly-faces-competition-from-amds-open-source-alternative-rocm/
-- https://edition.cnn.com/2026-02-07/business/nvidia-trillion-valuation-ai-chips-vis
 - https://finance.yahoo.com/technology/article/nvidia-stock-tests-all-time-highs-market-cap-at-57-trillion-141332917.html
 - https://thelatent.co/data/demand/hyperscaler-quarterly-capex
-- https://www.bizjournals.com/memphis/news/2026-10-27/spacexai-gpu-deal-with-anthropic-more-for-compute.html
 - https://www.wsj.com/tech/openais-planned-cloud-spending-hits-750-billion-as-computing-efforts-ramp-up-6ac3f58a
 - https://podkey.fm/stories/amazon-s-nvidia-racks-await-data-center
 - https://drops.mts.now/ai-capex/wiki/operators/hyperscalers/
@@ -129,7 +127,6 @@ sources_read:
 - https://www.sec.gov/Archives/edgar/data/1181412/000162828026039278/filename1.htm
 - https://anthropic.soundcast.cc/
 - https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm
-- https://techcrunch.com/2026-07-22/openais-ai-spending-spree-has-ballooned-to-750b/
 - https://www.reuters.com/business/oracle-plans-raise-45-billion-50-billion-2026-2026-02-01/
 - https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx
 - https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/exhibit45-sx1.htm
@@ -138,7 +135,6 @@ sources_read:
 - https://www.cnbc.com/2025-11-21/nvidia-gpus-google-tpus-aws-trainium-comparing-the-top-ai-chips.html
 - https://www.cnas.org/publications/reports/countering-ai-chip-smuggling-has-become-a-national-security-priority
 - https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them
-- https://www.reuters.com/business/anthropic-nears-first-quarterly-profit-agrees-pay-spacex-125-billion-monthly-2026-05-21/
 - https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q4
 - https://aidatacenterindex.com/reports/operator/microsoft/
 - https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share
@@ -158,8 +154,6 @@ sources_read:
 - https://www.bloomberg.com/news/articles/2026-01-26/samsung-nears-nvidia-s-approval-for-key-hbm4-ai-memory-chips
 - https://valor.globo.com/empresas/noticia/2026/08/24/nvidia-negocia-investimento-em-rodada-que-pode-avaliar-startup-perplexity-em-mais-de-us-30-bi.ghtml
 - https://www.cnbc.com/2025/11/21/nvidia-gpus-google-tpus-aws-trainium-comparing-the-top-ai-chips.html
-- https://www.reuters.com/world/asia-pacific/chinas-huawei-launch-two-new-ai-chips-sources-say-2025-09-18/
-- https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx
 - https://www.cnbc.com/2026/09/28/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-reuters.html
 - https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth
 - https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence
@@ -167,15 +161,63 @@ sources_read:
 - https://www.sciencedirect.com/science/article/abs/pii/S0304405X22001726
 - https://arxiv.org/abs/2604.11391
 sources_failed:
+- url: https://www.reuters.com/world/asia-pacific/chinas-huawei-launch-two-new-ai-chips-2027-2026-09-17
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
+- url: https://www.reuters.com/business/oracle-shares-fall-investors-assess-up-50-billion-ai-funding-plan-2026-02-02/
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
+- url: https://www.facebook.com/Stockstoearnpage/videos/these-9-companies-are-nvidias-biggest-customers/1455910616639583
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
 - url: https://www.eetimes.com/the-trillion-dollar-race-to-fragment-the-nvidia-monopoly
   reason: plain GET to www.eetimes.com times out and curl gets a connection reset;
     the article was read during discovery through a vendor fetcher but the recorded
     URL cannot be audited, and no same-item live copy was found
+- url: https://www.reuters.com/business/anthropics-518-billion-ai-buildout-hinges-largely-deals-that-cannot-be-canceled-2026-09-29/
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
 - url: https://x.com/edzitron/status/2097344302972076473
   reason: not scraped; search snippet only
+- url: https://www.reuters.com/business/anthropic-ipo-valuation-hinges-190-200-billion-2028-revenue-forecast-sources-say-2026-08-15/
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
+- url: https://www.reddit.com/r/hardware/comments/1ahgu7q/nvidias_h100_ai_gpus_cost_up_to_four_times_more/
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
 - url: https://www.facebook.com/Reuters/posts/ai-infrastructure-spending-by-the-five-largest-us-hyperscalers-is-set-to-more-th/1684572476866811/
   reason: facebook.com returns HTTP 400 for the recorded post URL (slug truncated
     in the record); the underlying Reuters clip is not reachable for audit
+- url: https://edition.cnn.com/2026-02-07/business/nvidia-trillion-valuation-ai-chips-vis
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
+- url: https://www.bizjournals.com/memphis/news/2026-10-27/spacexai-gpu-deal-with-anthropic-more-for-compute.html
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
+- url: https://techcrunch.com/2026-07-22/openais-ai-spending-spree-has-ballooned-to-750b/
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
+- url: https://www.reuters.com/business/anthropic-nears-first-quarterly-profit-agrees-pay-spacex-125-billion-monthly-2026-05-21/
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
+- url: https://www.reuters.com/world/asia-pacific/chinas-huawei-launch-two-new-ai-chips-sources-say-2025-09-18/
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
+- url: https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx
+  reason: 'not read: the stored body is the fetcher''s own failed-extraction report
+    (205-254 bytes, ''Failed extractions: ... Failed to fetch url''), not the article;
+    the direct fetch was blocked or 404 on every attempt'
 gates:
   ledger_check:
     errors: 0
