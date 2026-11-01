@@ -1,0 +1,203 @@
+run_id: 20261101T190808Z
+topic: josh-brown-ai-bubble
+mode: verify
+status: published
+phases:
+- phase: infer_mode
+  at: '2026-11-01T19:08:10Z'
+- phase: ingest
+  at: '2026-11-01T19:08:26Z'
+- phase: extract
+  at: '2026-11-01T19:18:05Z'
+- phase: verify
+  at: '2026-11-01T20:17:51Z'
+- phase: render
+  at: '2026-11-01T20:17:51Z'
+- phase: gates
+  at: '2026-11-01T20:23:16Z'
+failure: null
+answered_by:
+- antigravity-gemini-3.8-flash-high
+claims:
+  not-found: 42
+  'true': 1
+surfaces:
+  ytdlp.transcript: 9
+  tavily.search: 43
+  direct.fetch: 416
+  tavily.extract: 240
+  dappier.search: 43
+  firecrawl.scrape: 166
+  tavily.research: 42
+  exa.fetch: 120
+  wayback.fetch: 56
+  openalex.search: 42
+  scrapegraph.scrape: 73
+  tavily.crawl: 42
+  apify.rag-web-browser: 32
+  agentql.extract: 19
+  browserbase.session: 12
+sources_read:
+- https://www.understandingai.org/p/anthropics-financials-are-surprisingly
+- https://blog.tickertrends.io/p/anthropics-q3-revenue-growth-slowed
+- https://qz.com/elon-musk-neocloud-failure-spacex-debt-gpu-102626
+- https://en.wikipedia.org/wiki/Anthropic
+- https://www.fool.com/investing/2026/10/28/anthropic-s-first-half-revenue-rose-1-300-should-you-buy-the-stock-when-it-starts-trading
+- https://x.com/AnthropicAI/status/2114705042817110293
+- https://finance.yahoo.com/technology/ai/articles/anthropic-tells-investors-q3-revenue-030140226.html
+- https://tomtunguz.com/anthropics-s1-grew-eleven-fold
+- https://www.cnbc.com/2026/10/28/anthropic-pbc-what-its-structure-means-for-investors-.html
+- https://www.linkedin.com/posts/anthropicresearch_anthropic-files-s-1-with-the-sec-for-proposed-activity-7520470783689658368-nzNV
+- https://www.moaf.org/about/people/josh-brown
+- https://www.cnbc.com/joshua-brown
+- https://www.bignewsnetwork.com/news/279398778/anthropic-ipo-filing-reveals-1300-revenue-growth-usd-1329-billion-accumulated-deficit
+- https://www.linkedin.com/posts/priscilla-sau-ma_anthropic-reportedly-lost-807-billion-in-activity-7519072944485212160-HDsm
+- https://en.wikipedia.org/wiki/Bud_Light_boycott
+- https://fortune.com/2026/10/26/anthropics-s1-ipo-reveals-the-inner-workings-of-its-fast-evolving-compute-strategy
+- https://adolfocarreno.com/2024/12/02/analyzing-amazons-evolution-from-an-online-bookstore-to-a-global-tech-giant
+- https://measuredai.substack.com/p/anthropic-data-centers
+- https://zerodhavarsity.substack.com/p/when-jeff-bezos-did-not-care-about
+- https://www.youtube.com/watch?v=IJ3WmmbYHpo
+- https://inbeat.agency/blog/meta-statistics
+- https://fortune.com/2026/10/27/anthropic-s1-ipo-filing-financials-profits
+- https://orbitalradar.com/satellites/operator/spacex
+- https://www.openingbelldailynews.com/p/anthropic-adjusted-operating-income-s1-oct-26-2026
+- https://qz.com/anthropic-ipo-filing-417-billion-compute-spending-102726
+- https://www.techbuzz.ai/articles/openai-ipo-delayed-until-ai-safety-goals-met-altman-says
+- https://fortune.com/2026/09/12/sam-altman-openai-ipo-delay-ill-advised-moment-safety-concerns
+- https://en.wikipedia.org/wiki/Starlink
+- https://www.edwardconard.com/macro-roundup/circularity-in-ai-shows-up-in-token-spending-too
+- https://www.theglobeandmail.com/investing/markets/stocks/AVGO/pressreleases/8481428/anthropics-ipo-filing-reveals-a-massive-opportunity-for-ai-infrastructure-giants
+- https://sociallyin.com/meta-statistics
+- https://www.apollo.com/wealth/insights-news/insights/daily-spark/circularity-in-ai-shows-up-in-token-spending-too
+- https://smartasset.com/investing/anthropic-ipo
+- https://www.zacks.com/stock/research/ORCL/earnings-calendar
+- https://daytradingtoolkit.com/market-insights/how-stocks-qualify-sp500-inclusion-criteria
+- https://qz.com/ken-griffin-ai-bubble-almost-certainly-citadel-102126
+- https://en.wikipedia.org/wiki/Timeline_of_Amazon_Web_Services
+- https://finance.yahoo.com/markets/stocks/articles/oracle-orcl-beats-q1-earnings-212001843.html
+- https://shattered.io/nvidia-17x-forward-earnings-cheap-multiple-half-story-2026
+- https://finance.yahoo.com/technology/ai/articles/ken-griffin-says-almost-certainly-150007415.html
+- https://www.wallstreetprep.com/knowledge/sp-500-index
+- https://tech-insider.org/meta-enterprise-platform-ai-neocloud-2026
+- https://public.com/stocks/mu/pe-ratio
+- https://fullratio.com/stocks/nasdaq-nvda/pe-ratio
+- https://tradingeconomics.com/wdc:us:eps/news/594342
+- https://www.datacenterfrontier.com/hyperscale/article/55411534/ocp-2026-agentic-ai-pushes-the-data-center-from-chip-to-grid
+- https://finance.yahoo.com/quote/MU/key-statistics
+- https://www.youtube.com/watch?v=WtzF6-tPGAI
+- https://www.bottlerocketcontent.com/youtube-record-tv-share-nielsen-gauge-august-2026
+- https://qz.com/netflix-content-spending-135-billion-decade-review-051226
+- https://join1440.com/r/12923
+- https://www.kff.org/health-costs/americans-challenges-with-health-care-costs
+- https://variety.com/2026/tv/news/netflix-q4-2025-financial-earnings-subscribers-1236635615
+- https://news.gallup.com/poll/266807/percentage-americans-owns-stock.aspx
+- https://finance.yahoo.com/markets/article/anthropic-makes-more-per-employee-than-every-magnificent-seven-company-but-nvidia-171110780.html
+- https://www.kff.org/health-costs/kff-health-care-debt-survey
+- https://www.investmentnews.com/companies/ritholtz-wealth-management/265375
+- https://en.wikipedia.org/wiki/Netflix
+- https://www.vdocipher.com/blog/history-of-neflix
+- https://medium.com/@david.j.sea/anthropic-just-passed-openai-in-revenue-here-is-why-it-matters-e3dd9bb04069
+- https://www.facebook.com/100086466374322/videos/why-did-elon-musk-tweet-thischeck-out-the-whole-reel-to-knowthe-debt-market-is-t/2971301110045506
+- https://www.instagram.com/p/DfF-AWZEWHw
+- https://www.rttnews.com/amp/3703062/neocloud-stocks-fall-after-musk-warns-of-consolidation-and-failures.aspx
+- https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm
+- https://gadgetsnow.indiatimes.com/tech-news/how-anthropic-built-a-132-billion-cash-pile-through-ai-and-big-tech-investments/articleshow/135356642.cms
+- https://medium.com/activated-thinker/anthropic-reported-an-80-7-billion-loss-af44d863c682
+- https://www.wsj.com/business/earnings/bud-brewer-ab-inbev-misses-sales-expectations-ad26da2e
+- https://pinggy.io/blog/openai_anthropic_funding_history
+- http://forum.nekls.org/gx/XG84377287261016/KINDLE/cable_cowboy_john-malone__and__the__rise_of-the__modern__cable_business.pdf
+- https://www.threads.com/@carnage4life/post/DcztZZ4FNnF/according-to-ara-kharazian-ramps-chief-economist-their-data-shows-that-of?hl=en
+- https://www.pymnts.com/news/artificial-intelligence/2026/openai-and-anthropic-get-80percent-of-revenue-from-1percent-of-customers
+- https://www.mexc.com/learn/article/where-is-anthropics-s-1-inside-the-anthropic-ipo-filing-june-2026/1
+- https://www.investing.com/equities/western-digital-earnings
+- https://www.stocktitan.net/sec-filings/NFLX/10-q-netflix-inc-quarterly-earnings-report-85c366bdd1f0.html
+- https://www.aa.com.tr/en/economy/netflix-beats-3rd-quarter-earnings-estimates-says-viewer-engagement-remains-healthy/4095125
+- https://www.facebook.com/einsteinofwallstreet/posts/market-update-since-the-march-30th-low-the-sp-500-has-gained-over-12-trillion-in/1613926790521173
+- https://www.facebook.com/PeanutGalleryMedia/posts/youtube-has-overtaken-netflix-in-us-tv-viewing-time-and-emerged-as-the-leading-s/122226668810392503
+- https://www.macrotrends.net/2526/sp-500-historical-annual-returns
+- https://www.kcic.com/trending/feed/book-value-bites-the-dust-at-berkshire-hathaway
+- https://newsletter.rationalwalk.com/p/warren-buffett-on-berkshires-valuation
+- https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here
+- https://www.youtube.com/watch?v=v0NBQTnvgfA
+- https://www.businesswire.com/news/home/20260130831655/en/Ritholtz-Wealth-Management-Executes-Employee-led-Succession-Plan-to-Create-Industrys-Most-Visible-Dominant-Forever-Firm
+- https://www.facebook.com/Local4/posts/building-trades-unions-emerge-as-a-key-ally-of-tech-giants-in-push-for-ai-data-c/1413196574186241
+- https://phenomenalworld.org/analysis/constructions-data-center-gamble
+- https://www.bloomberg.com/opinion/articles/2026-10-27/ai-infrastructure-bubble-economics
+sources_failed: []
+gates:
+  ledger_check:
+    errors: 0
+    warnings: 0
+  verifier:
+    checked: 43
+    agree: 43
+    rechecked: 0
+    disagreements: 0
+  lessons:
+    problems: 0
+  pages:
+    problems: 0
+  course:
+    problems: 0
+  url_audit:
+    result: 2/2 ok
+    problems: 0
+skipped:
+  opinions: 102
+  predictions: 38
+  dropped: 8
+layouts: null
+media_split:
+- source: s1
+  basis: metadata
+  reason: the recording's own chapters
+  chapters: 17
+ignored_instructions: []
+diff_vs_previous:
+  new:
+  - c1
+  - c2
+  - c3
+  - c4
+  - c5
+  - c6
+  - c7
+  - c8
+  - c9
+  - c10
+  - c11
+  - c12
+  - c13
+  - c14
+  - c15
+  - c16
+  - c17
+  - c18
+  - c19
+  - c20
+  - c21
+  - c22
+  - c23
+  - c24
+  - c25
+  - c26
+  - c27
+  - c28
+  - c29
+  - c30
+  - c31
+  - c32
+  - c33
+  - c34
+  - c35
+  - c36
+  - c37
+  - c38
+  - c39
+  - c40
+  - c41
+  - c42
+  - c43
+  status_changed: {}
+  unchanged: 0

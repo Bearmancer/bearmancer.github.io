@@ -1,0 +1,2204 @@
+schema: 1
+claims:
+- id: c1
+  text: Anthropic filed an S-1 registration statement.
+  hash: c3c8d0c89443cbf1
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s7
+    locator: para 5
+    quote: 'Anthropic on X: ''Anthropic has filed an S-1 registration statement with
+      the SEC related to its proposed IPO.'
+    stance: supports
+  - source: s11
+    locator: para 18
+    quote: Anthropic has filed an S-1 registration statement with the SEC related
+      to its proposed IPO.
+    stance: supports
+  cluster: Anthropic S-1 Filing
+  anchors:
+  - '[02:11]'
+  round_log:
+  - round: 1
+    sources:
+    - s11
+    - s7
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c2
+  text: Elon Musk posted that more than 200 neocloud companies are vulnerable to failure
+    and consolidation.
+  hash: 180504af433a1e21
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s4
+    locator: para 57
+    quote: Elon Musk, the CEO of SpaceX and Tesla $TSLA, predicted in a post on X
+      $TWTR on Sunday that the more than 200 neocloud
+    stance: supports
+  - source: s63
+    locator: para 16
+    quote: Elon Musk has warned that more than 200 AI-focused cloud providers, often
+      called neoclouds, could face a wave of failures and consolidation as access
+    stance: supports
+  cluster: Neocloud Industry
+  anchors:
+  - '[02:36]'
+  round_log:
+  - round: 1
+    sources:
+    - s4
+    - s63
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources:
+    - s87
+    new_read_sources: 1
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|1'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c3
+  text: CoreWeave and Nebius both fell more than 30 percent over the past month.
+  hash: 2a53121123a5ceb5
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s62
+    locator: para 17
+    quote: Why did Elon Musk tweet this? Check out the whole reel to know! The debt
+      market is turning against AI cloud companies, also known
+    stance: supports
+  - source: s64
+    locator: para 16
+    quote: CoreWeave, Nebius, Applied Digital and TeraWulf have reported quarterly
+      losses over the past year, while IREN has remained unprofitable for the past
+      three quarters.
+    stance: supports
+  cluster: AI Infrastructure Stocks
+  anchors:
+  - '[02:54]'
+  round_log:
+  - round: 1
+    sources:
+    - s62
+    - s64
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c4
+  text: Josh Brown is co-founder and CEO of Ritholtz Wealth Management.
+  hash: 9d73d8338a45a8df
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s12
+    locator: para 65
+    quote: Josh Brown is the CEO and co-founder of Ritholtz Wealth Management, a New
+      York City-based firm with offices and professionals across the country. He
+    stance: supports
+  - source: s13
+    locator: para 119
+    quote: Joshua Brown is co-founder and CEO of Ritholtz Wealth Management, a New
+      York City-based investment advisory firm managing over $7.6 billion for high
+      net
+    stance: supports
+  cluster: Speaker Background
+  anchors:
+  - '[03:11]'
+  round_log:
+  - round: 1
+    sources:
+    - s12
+    - s13
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c5
+  text: Anthropic reported a 1,300 percent revenue increase for the first six months
+    of the current year compared to the first six months of the prior year.
+  hash: b3fcc56ba773aa86
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s6
+    locator: para 151
+    quote: The company behind Claude finally showed investors its numbers this week.
+      Artificial intelligence (AI) company Anthropic (NASDAQ:ANT) filed publicly for
+      its initial public offering
+    stance: supports
+  - source: s9
+    locator: para 16
+    quote: Anthropic generated $16.3B of revenue in the first six months of 2026,
+      a fourteen-fold increase over the $1.2B of the first half of 2025.
+    stance: supports
+  cluster: Anthropic Revenue Growth
+  anchors:
+  - '[04:02]'
+  round_log:
+  - round: 1
+    sources:
+    - s6
+    - s9
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c6
+  text: Anthropic's revenue grew from 1.2 billion to 16.3 billion across the comparable
+    six-month period.
+  hash: 1b6bb9c661be8d25
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s2
+    locator: para 15
+    quote: Anthropic hasn’t officially reported its third quarter revenue, but media
+      reports suggest a modest slowdown in revenue growth. Revenue surged from $4.7
+      billion in
+    stance: supports
+  - source: s61
+    locator: para 29
+    quote: For context, OpenAI’s annualized revenue grew from roughly $13 billion
+      in 2025 to $25 billion by February 2026. Strong by any standard. But Anthropic’s
+    stance: supports
+  cluster: Anthropic Revenue Growth
+  anchors:
+  - '[04:08]'
+  round_log:
+  - round: 1
+    sources:
+    - s2
+    - s61
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c7
+  text: Anthropic began operations as a public benefit corporation.
+  hash: 59079a57397f2682
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s5
+    locator: para 217
+    quote: Anthropic, PBC[10][11] is an American artificial intelligence (AI) public
+      benefit corporation headquartered in San Francisco, California.[12] Its flagship
+      product is Claude, a series of
+    stance: supports
+  - source: s10
+    locator: para 123
+    quote: Anthropic is aiming to go public as a public benefit corporation, a rare
+      structure for publicly traded companies.
+    stance: supports
+  - source: s5
+    locator: para 525
+    quote: Public benefit corporations based in California
+    stance: supports
+  cluster: Anthropic Corporate Structure
+  anchors:
+  - '[04:18]'
+  round_log:
+  - round: 1
+    sources:
+    - s10
+    - s5
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c8
+  text: Anthropic's third-quarter revenue growth slowed to approximately 40 to 50
+    percent.
+  hash: 1ad610ec8a339fe9
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s3
+    locator: para 3
+    quote: Anthropic’s Q3 Revenue Growth Slowed, Consistent With TickerTrends’ ARR
+      Tracking
+    stance: supports
+  - source: s8
+    locator: para 264
+    quote: Investing.com-- Anthropic told investors its third-quarter revenue rose
+      sharply and that the company was profitable, the Financial Times reported on
+      Wednesday, citing people familiar
+    stance: supports
+  cluster: Anthropic Revenue Growth
+  anchors:
+  - '[05:40]'
+  round_log:
+  - round: 1
+    sources:
+    - s3
+    - s8
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources:
+    - s87
+    new_read_sources: 1
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|1'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c9
+  text: Anthropic reported an 80.7 billion dollar headline loss in its filing related
+    to financing expenses.
+  hash: 84ebaf382296dbb1
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s15
+    locator: para 233
+    quote: Anthropic also reported an $80.7 billion net loss, approximately $72.4
+      billion of which reflected non-cash accounting charges linked to the rising
+      valuation of convertible
+    stance: supports
+  - source: s67
+    locator: para 4
+    quote: '[Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2Factivated-thinker%2Fanthropic-reported-an-80-7-billion-loss-af44d863c682&source=post_page---top_nav_layout_nav-----------------------global_nav--------------------)'
+    stance: supports
+  cluster: Anthropic Accounting Net Loss
+  anchors:
+  - '[09:13]'
+  round_log:
+  - round: 1
+    sources:
+    - s15
+    - s67
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources:
+    - s87
+    new_read_sources: 1
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|1'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c10
+  text: Anthropic entered into compute purchasing agreements for future infrastructure
+    capacity.
+  hash: ae96b64f9c5c75ce
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s17
+    locator: para 43
+    quote: The company’s future computing costs are potentially massive and could
+      swamp Anthropic’s ability to pay for them. In total, the company has committed
+      to
+    stance: supports
+  - source: s19
+    locator: para 22
+    quote: Claude initially ran on rented accelerator capacity inside Amazon Web Services
+      (AWS) and Google Cloud, making the underlying infrastructure largely invisible
+      at the individual
+    stance: supports
+  cluster: Anthropic Compute Commitments
+  anchors:
+  - '[08:42]'
+  round_log:
+  - round: 1
+    sources:
+    - s17
+    - s19
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c11
+  text: Warren Buffett spent decades using book value per share as Berkshire Hathaway's
+    core performance metric before dropping it.
+  hash: 4493f5aeb140cfab
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s80
+    locator: para 22
+    quote: Warren Buffett released his highly-anticipated [letter](https://www.berkshirehathaway.com/letters/letters.html)
+      to the shareholders of Berkshire Hathaway on February 22nd. I have been a lot
+      slower than usual in
+    stance: supports
+  - source: s81
+    locator: para 13
+    quote: When I read Warren Buffett’s letter to shareholders a decade ago, the passage
+      reproduced above struck me as particularly important. Mr. Buffett is not
+    stance: supports
+  cluster: Accounting Standards & Book Value
+  anchors:
+  - '[10:02]'
+  round_log:
+  - round: 1
+    sources:
+    - s80
+    - s81
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c12
+  text: John Malone prioritized acquiring independent regional cable systems to reach
+    scale before generating profitability.
+  hash: 1b117aa09fffe80f
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: Historical Precedents & Land Grab
+  anchors:
+  - '[10:01]'
+  round_log:
+  - round: 1
+    sources:
+    - s21
+    - s70
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c13
+  text: Jeff Bezos scaled Amazon's e-commerce operations before generating consistent
+    accounting profits.
+  hash: 6d8ecfb7d4442fca
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s18
+    locator: para 18
+    quote: Amazon’s transformation from a small online bookstore into one of the most
+      influential global technology companies stands as a defining example of modern
+      business
+    stance: supports
+  - source: s20
+    locator: para 26
+    quote: When Amazon survived the dot-com bubble burst, Bezos shifted gears to improve
+      efficiency and achieve positive free cash flow. They spent nearly two years
+    stance: supports
+  - source: s18
+    locator: para 17
+    quote: Free Malaysia Today. (2021, February 3). Jeff Bezos on life beyond Amazon.
+      Retrieved from https://www.freemalaysiatoday.com/category/leisure/2021/02/03/jeff-bezos-on-life-beyond-amazon/
+    stance: supports
+  cluster: Historical Precedents & Land Grab
+  anchors:
+  - '[10:38]'
+  round_log:
+  - round: 1
+    sources:
+    - s18
+    - s20
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c14
+  text: Anheuser-Busch InBev wrote off unsold Bud Light inventory after boycotts reduced
+    sales.
+  hash: 4b14dc6712dc6368
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s16
+    locator: para 151
+    quote: In the week ending April 8, 2023, Bud Light had reportedly experienced
+      an 11% drop in sales, and a 21% drop in the week
+    stance: supports
+  - source: s68
+    locator: para 1
+    quote: After over a year of seeing its American sales hammered by a boycott, Anheuser-Busch
+      InBev said its U.S. sales had bounced back, helping the
+    stance: supports
+  cluster: Inventory Write-Downs vs Non-Cash Losses
+  anchors:
+  - '[17:31]'
+  round_log:
+  - round: 1
+    sources:
+    - s16
+    - s68
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c15
+  text: Anthropic reported 112.4 billion dollars in cash and cash equivalents as of
+    June 30.
+  hash: 94db0eba2a8e0fb3
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s14
+    locator: para 14
+    quote: The filing said Anthropic had raised a total of USD 141.1 billion in capital
+      as of June 30, 2026. Its cash and cash equivalents
+    stance: supports
+  - source: s66
+    locator: para 76
+    quote: As of June 30, 2026, Anthropic reported a total of $131.7 billion in cash
+      and short-term investments, including $112.4 billion in cash and cash
+    stance: supports
+  cluster: Anthropic Balance Sheet
+  anchors:
+  - '[25:12]'
+  round_log:
+  - round: 1
+    sources:
+    - s14
+    - s66
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c16
+  text: Anthropic raised a cumulative 141 billion dollars across the six years following
+    its founding.
+  hash: a4219bc9cd0ae292
+  status: "true"
+  origin: extracted-from-input
+  rounds: 2
+  paradigms_tried:
+  - keyword
+  - semantic
+  evidence:
+  - source: s65
+    locator: para 574
+    quote: raised an aggregate of $141.1 billion of capital and had cash and cash
+      equivalents of $112.4 billion and short-
+    stance: supports
+  - source: s69
+    locator: para 40
+    quote: On May 28, 2026, Anthropic closed a $65 billion Series H at a $965 billion
+      post-money valuation - briefly making it the most valuable
+    stance: supports
+  - source: s65
+    locator: para 322
+    quote: raised an aggregate of $141.1 billion of capital and had cash and cash
+      equivalents of $112.4 billion and short-
+    stance: supports
+  cluster: Anthropic Fundraising
+  anchors:
+  - '[25:17]'
+  suspect_empty:
+  - s65
+  round_log:
+  - round: 1
+    sources:
+    - s65
+    - s69
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+- id: c17
+  text: Anthropic reported holding 19 billion dollars in marketable securities and
+    short-term investments.
+  hash: f2b82afcdc23e9c2
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s34
+    locator: para 197
+    quote: Computing and infrastructure spending nearly tripled in 2025, accounting
+      for more than half of Anthropic’s $12.65 billion in total operating expenses,
+      which helps put
+    stance: supports
+  - source: s73
+    locator: para 124
+    quote: 'Financials: revenue of $4.59 billion for 2025 and $16.29 billion for the
+      first half of 2026, against $1.16 billion a year earlier; an operating'
+    stance: supports
+  cluster: Anthropic Balance Sheet
+  anchors:
+  - '[25:30]'
+  round_log:
+  - round: 1
+    sources:
+    - s34
+    - s73
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c18
+  text: Anthropic stated in its filing that building compute infrastructure requires
+    substantial capital expenditures that will alter cash flows.
+  hash: 8b944379151071f7
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s26
+    locator: para 57
+    quote: Since the end of 2025, Anthropic has taken on roughly $417 billion in minimum
+      future payments tied to compute and data center infrastructure, the
+    stance: supports
+  - source: s31
+    locator: para 57
+    quote: One of the most revealing metrics buried within the filing is not the equity
+      valuation but the scale of the vendor commitments. Anthropic secured
+    stance: supports
+  cluster: Anthropic Capex Commitments
+  anchors:
+  - '[28:04]'
+  round_log:
+  - round: 1
+    sources:
+    - s26
+    - s31
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c19
+  text: Ramp transaction data indicated 80 percent of spending on OpenAI and Anthropic
+    originated from 1 percent of customer companies.
+  hash: 6534ebc888aa1448
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s71
+    locator: para 13
+    quote: According to Ara Kharazian, Ramp’s chief economist, their data shows that
+      80% of spending on Anthropic & OpenAI come from 1% of their customers.
+    stance: supports
+  - source: s72
+    locator: para 103
+    quote: Enterprise artificial intelligence adoption is spreading, but the money
+      is piling up fast among a small group of companies. New data from Ramp shows
+    stance: supports
+  cluster: AI Customer Concentration
+  anchors:
+  - '[33:25]'
+  round_log:
+  - round: 1
+    sources:
+    - s71
+    - s72
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c20
+  text: Among the top 1 percent of AI spenders tracked by Ramp, 80 percent were venture-backed
+    startups.
+  hash: dd9bd87895b604de
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s30
+    locator: para 147
+    quote: Ramp data show that 80% of the top 1% of AI spenders are VC-backed, compared
+      with only 13% of the median spender, suggesting that
+    stance: supports
+  - source: s33
+    locator: para 180
+    quote: Ramp data show that 80% of the top 1% of AI spenders are VC-backed, compared
+      with only 13% of the median spender, suggesting that
+    stance: supports
+  cluster: AI Customer Concentration
+  anchors:
+  - '[33:31]'
+  round_log:
+  - round: 1
+    sources:
+    - s30
+    - s33
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c21
+  text: SpaceX develops orbital rockets, payload delivery systems, and the Starlink
+    satellite communications network.
+  hash: 4060bd68f5b8fcab
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s24
+    locator: para 24
+    quote: SpaceX, founded by Elon Musk in 2002, operates the largest satellite constellation
+      in history. The Starlink broadband internet constellation accounts for roughly
+      52% of
+    stance: supports
+  - source: s29
+    locator: para 355
+    quote: Starlink Services, LLC is a telecommunications subsidiary of the American
+      spaceflight company SpaceX,[2] providing broadband Internet service in approximately
+      160 countries and territories.[3][4] It
+    stance: supports
+  - source: s29
+    locator: para 160
+    quote: In March 2017, SpaceX filed plans with the FCC to field a second orbital
+      shell of more than 7,500 'V-band satellites in non-geosynchronous orbits
+    stance: supports
+  - source: s29
+    locator: para 188
+    quote: ↑ Alleven, Monica (February 22, 2015). 'In 5G proceeding, SpaceX urges
+      FCC to protect future satellite ventures'. FierceWirelessTech. Archived from
+      the original on February
+    stance: supports
+  - source: s29
+    locator: para 6
+    quote: ↑ 'SpaceX Starlink satellites made 50,000 collision-avoidance maneuvers
+      in the past 6 months. What does that mean for space safety?'. Space.com. July
+      23, 2024.
+    stance: supports
+  cluster: SpaceX Infrastructure Moat
+  anchors:
+  - '[20:16]'
+  round_log:
+  - round: 1
+    sources:
+    - s24
+    - s29
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c22
+  text: Anthropic reported positive adjusted operating income after excluding stock-based
+    compensation.
+  hash: 6bb38fc11fd12174
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s23
+    locator: para 45
+    quote: Let’s start with the positive operating news. For the first six months
+      of 2026, revenues exploded 14x from $1.16 billion to $16.3 billion over
+    stance: supports
+  - source: s25
+    locator: para 17
+    quote: Anthropic swings to $1.6 billion of first-half adjusted operating income
+    stance: supports
+  cluster: Anthropic Adjusted Earnings
+  anchors:
+  - '[39:08]'
+  round_log:
+  - round: 1
+    sources:
+    - s23
+    - s25
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c23
+  text: Meta connects approximately 500 million business accounts with 3 billion consumers
+    across its platforms.
+  hash: 3d4e3ea0a39a2ee7
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s22
+    locator: para 83
+    quote: As of August 31, 2026, Meta Platforms holds a market capitalization of
+      approximately $1.46 trillion, down from $1.93 trillion a year earlier amid investor
+    stance: supports
+  - source: s32
+    locator: para 102
+    quote: Consumer adoption of Meta’s artificial intelligence assistant demonstrates
+      explosive growth that rivals the fastest-scaling products in tech history. According
+      to SQ Magazine, Meta AI
+    stance: supports
+  cluster: Big Tech Platform Reach
+  anchors:
+  - '[40:22]'
+  round_log:
+  - round: 1
+    sources:
+    - s22
+    - s32
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c24
+  text: Sam Altman stated OpenAI would delay going public until addressing safety
+    concerns.
+  hash: cfcc8b7ca3b5cd04
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s27
+    locator: para 101
+    quote: OpenAI is delaying its IPO to prioritize AI safety. Sam Altman stated the
+      company must develop rock-solid safety protocols before going public, as rapid
+    stance: supports
+  - source: s28
+    locator: para 26
+    quote: Sam Altman confirms OpenAI won’t go public this year, saying an IPO now
+      would come at an ‘ill-advised moment’ given AI safety concerns
+    stance: supports
+  cluster: OpenAI IPO Strategy
+  anchors:
+  - '[42:41]'
+  round_log:
+  - round: 1
+    sources:
+    - s27
+    - s28
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c25
+  text: Ken Griffin and Ray Dalio publicly suggested the market was experiencing an
+    AI bubble.
+  hash: 8740a09fda6d0642
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s37
+    locator: para 57
+    quote: Investors are 'almost certainly' in the midst of an AI bubble, said Ken
+      Griffin, whose empire spans hedge fund Citadel and market-maker Citadel Securities,
+    stance: supports
+  - source: s41
+    locator: para 258
+    quote: 'Ken Griffin Says We’re ‘Almost Certainly’ in an AI Bubble, Recalls How
+      Past Bubbles Created Market Leaders for Decades: ‘I Just Wish I’d Kept'
+    stance: supports
+  cluster: AI Bubble Discourse
+  anchors:
+  - '[45:01]'
+  round_log:
+  - round: 1
+    sources:
+    - s37
+    - s41
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources:
+    - s87
+    new_read_sources: 1
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|1'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c26
+  text: Western Digital reported quarterly earnings of 4.64 dollars per share versus
+    4.11 dollars expected.
+  hash: 32b99f81ab5055af
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s46
+    locator: para 98
+    quote: Western Digital (WDC) released earnings per share at 4.64 USD, compared
+      to market expectations of 3.75 USD.
+    stance: supports
+  - source: s74
+    locator: para 448
+    quote: '| Oct 22, 2026 | 09/2026 | 4.64 | /4.08 | 4.38B | /4.14B | +13.73% | +5.8%
+      | [Free Sign Up](https://www.investing.com/equities/western-digital-earnings#)
+      |'
+    stance: supports
+  - source: s74
+    locator: para 1
+    quote: '![Image 40](https://secure.adnxs.com/getuid?https://mm-ssp.voltaxam.com/cookieSync?voltaxRTBUserID=01m6ac9e0nbp2hqta96zybjtrz&xandr_uid=$UID&gdpr=0&gdpr_consent=&us_privacy=)![Image
+      41](https://eb2.3lift.com/getuid?gdpr=0&cmp_cs=&us_privacy=&redir=https%3A%2F%2Fmm-ssp.voltaxam.com%2FcookieSync%3FvoltaxRTBUserID%3D01m6ac9e0nbp2hqta96zybjtrz%26triplelift_uid%3D$UID)![Image
+      42](https://sync.go.sonobi.com/us?gdpr=0&consent_string=&us_privacy=&loc=https%3A%2F%2Fmm-ssp.voltaxam.com%2FcookieSync%3FvoltaxRTBUserID%3D01m6ac9e0nbp2hqta96zybjtrz%26sonobi_uid%3D%5BUID%5D)![Image
+      43](https://image8.pubmatic.com/AdServer/ImgSync?p=163062&gdpr=0&gdpr_consent=&us_privacy=&pu=https%3A%2F%2Fimage4.pubmatic.com%2FAdServer%2FSPug%3FpartnerID%3D163062%26pmc%3DPM_PMC%26pr%3Dhttps%253A%252F%252Fmm-ssp.voltaxam.com%252FcookieSync%253FvoltaxRTBUserID%253D01m6ac9e0nbp2hqta96zybjtrz%2526pubmatic_uid%253D%2523PMUID%2526redir2%253Dtrue)![Image
+      44](https://ap.lijit.com/pixel?gdpr=0&gdpr_consent=&us_privacy=&redir=https%3A%2F%2Fmm-ssp.voltaxam.com%2FcookieSync%3FvoltaxRTBUserID%3D01m6ac9e0nbp2hqta96zybjtrz%26sovrn_uid%3D%24UID)![Image
+      45](https://ads.yieldmo.com/pbsync?is=MMED_Voltax&gdpr=0&gdpr_consent=&us_privacy=&redirectUri=https%3A%2F%2Fmm-ssp.voltaxam.com%2FcookieSync%3FvoltaxRTBUserID%3D01m6ac9e0nbp2hqta96zybjtrz%26yieldmo_uid%3D%24UID)![Image
+      46](https://sync.1rx.io/usersync2/rmpssp?sub=sportority&gdpr=0&gdpr_consent=&us_privacy=&redir=https%3A%2F%2Fmm-ssp.voltaxam.com%2FcookieSync%3FvoltaxRTBUserID%3D01m6ac9e0nbp2hqta96zybjtrz%26unruly_uid%3D%5BRX_UUID%5D)![Image
+      47](https://u.openx.net/w/1.0/cm?id=6667519e-f89c-40a7-9fb6-e7217998098f&gdpr=0&gdpr_consent=&us_privacy=&r=https%3A%2F%2Fmm-ssp.voltaxam.com%2FcookieSync%3FvoltaxRTBUserID%3D01m6ac9e0nbp2hqta96zybjtrz%26openx_uid%3D%7BOPENX_ID%7D%20)![Image
+      48](https://cs.media.net/cksync.php?cs=81&type=vol&gdpr=0&gdpr_consent=&redirect=https%3A%2F%2Fmm-ssp.voltaxam.com%2FcookieSync%3FvoltaxRTBUserID%3D01m6ac9e0nbp2hqta96zybjtrz%26medianet_uid%3D%3Cvsid%3E)![Image
+      49](https://ssbsync.smartadserver.com/api/sync?callerId=129&gdpr=0&gdpr_consent=&redirectUri=https%3A%2F%2Fmm-ssp.voltaxam.com%2FcookieSync%3FvoltaxRTBUserID%3D01m6ac9e0nbp2hqta96zybjtrz%26smartadserver_uid%3D%5Bssb_sync_pid%5D)![Image
+      50](https://ids.ad.gt/api/v1/halo_match?id=AU1D-0100-001793497283-WRBF6V8O-VER2&halo_id=060ixfiju6a659d979c9e66666666666666uoouwi0e0y6k626i6m000000000000)![Image
+      51](https://ids4.ad.gt/api/v1/ip_match?id=AU1D-0100-001793497283-WRBF6V8O-VER2)![Image
+      52](https://secure.adnxs.com/getuid?https://ids.ad.gt/api/v1/match?id=AU1D-0100-001793497283-WRBF6V8O-VER2&adnxs_id=$UID&gdpr=0)![Image
+      53](https://u.openx.net/w/1.0/cm?id=998eaf06-9905-4eae-9e26-9fac75960c53&r=https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Fopenx%3Fopenx_id%3D%7BOPENX_ID%7D%26id%3DAU1D-0100-001793497283-WRBF6V8O-VER2%26auid%3DAU1D-0100-001793497283-WRBF6V8O-VER2&gdpr=0)![Image
+      54](https://image2.pubmatic.com/AdServer/UCookieSetPug?rd=https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Fpbm_match%3Fpbm%3D%23PM_USER_ID%26id%3DAU1D-0100-001793497283-WRBF6V8O-VER2&gdpr=0)![Image
+      55](https://token.rubiconproject.com/token?pid=50242&puid=AU1D-0100-001793497283-WRBF6V8O-VER2&gdpr=0)![Image
+      56](https://match.adsrvr.org/track/cmf/generic?ttd_pid=8gkxb6n&ttd_tpi=1&ttd_puid=AU1D-0100-001793497283-WRBF6V8O-VER2&gdpr=0)![Image
+      57](https://pixel.tapad.com/idsync/ex/receive?partner_id=3185&partner_device_id=AU1D-0100-001793497283-WRBF6V8O-VER2&partner_url=https://ids.ad.gt%2Fapi%2Fv1%2Ftapad_match%3Fid%3DAU1D-0100-001793497283-WRBF6V8O-VER2%26tapad_id%3D%24%7BTA_DEVICE_ID%7D&gdpr=0)![Image
+      58](https://cm.g.doubleclick.net/pixel?google_cm&google_nid=audigent_dmp&google_hm=QVUxRC0wMTAwLTAwMTc5MzQ5NzI4My1XUkJGNlY4Ty1WRVIy&id=AU1D-0100-001793497283-WRBF6V8O-VER2&gdpr=0)![Image
+      59](https://d.turn.com/r/dd/id/L2NzaWQvMS9jaWQvMTc0ODI0MTY1OC90LzA/url/https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Famo_match%3Fturn_id%3D%24!%7BTURN_UUID%7D%26id%3DAU1D-0100-001793497283-WRBF6V8O-VER2)![Image
+      60](https://sync.go.sonobi.com/us?https://ids.ad.gt/api/v1/son_match?id=AU1D-0100-001793497283-WRBF6V8O-VER2&uid=[UID]&gdpr=0)![Image
+      61](https://ad.360yield.com/ux?&publisher_dmp_id=15&r=https%3A%2F%2Fids.ad.gt%2Fapi%2Fv1%2Fimpr_match%3Fid%3DAU1D-0100-001793497283-WRBF6V8O-VER2%26impr_uid%3D%7BPUB_USER_ID%7D&gdpr=0)![Image
+      62](https://ids.ad.gt/api/v1/halo_match?id=AU1D-0100-001793497283-WRBF6V8O-VER2&halo_id=060ixfiju6a659d979c9e66666666666666uoouwi0e0y6k626i6m000000000000)![Image'
+    stance: supports
+  cluster: Semiconductor Earnings Surprises
+  anchors:
+  - '[46:26]'
+  round_log:
+  - round: 1
+    sources:
+    - s46
+    - s74
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c27
+  text: Oracle reported earnings of 1.92 dollars per share compared to consensus expectations
+    of 1.74 dollars.
+  hash: 9af903387c27f0bb
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s39
+    locator: para 263
+    quote: Oracle (ORCL) came out with quarterly earnings of $1.92 per share, beating
+      the Zacks Consensus Estimate of $1.74 per share. This compares to earnings
+    stance: supports
+  cluster: Enterprise Tech Earnings Surprises
+  anchors:
+  - '[46:31]'
+  round_log:
+  - round: 1
+    sources:
+    - s35
+    - s39
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c28
+  text: Micron traded at five times price-to-earnings.
+  hash: 0bcb24200825318f
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s44
+    locator: para 41
+    quote: Micron Technology P/E Ratio Formula = Stock Price ÷ Earnings Per Share
+      (EPS)
+    stance: supports
+  cluster: Semiconductor Valuation Multiples
+  anchors:
+  - '[47:27]'
+  round_log:
+  - round: 1
+    sources:
+    - s44
+    - s48
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c29
+  text: Nvidia traded at a forward price-to-earnings ratio of 15 times.
+  hash: 4ff98db22b4324fa
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s40
+    locator: para 95
+    quote: A forward price-to-earnings ratio divides today’s share price by the earnings
+      per share analysts expect over the next 12 months. When the ratio falls
+    stance: supports
+  - source: s45
+    locator: para 322
+    quote: You can calculate the PE ratio by dividing the most recent stock price
+      by the trailing twelve months EPS. As of today (Oct 30,
+    stance: supports
+  cluster: Nvidia Valuation Multiples
+  anchors:
+  - '[47:36]'
+  round_log:
+  - round: 1
+    sources:
+    - s40
+    - s45
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c30
+  text: Alphabet and Meta develop frontier models while operating proprietary internal
+    compute infrastructure.
+  hash: b29d298b4999a53b
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s43
+    locator: para 98
+    quote: That framing puts Meta in the same conversation as Google’s Project Suncatcher
+      orbital compute push and other hyperscalers racing to monetize AI infrastructure
+      beyond
+    stance: supports
+  - source: s47
+    locator: para 260
+    quote: Matt Vincent is Editor in Chief of Data Center Frontier, where he leads
+      editorial strategy and coverage focused on the infrastructure powering cloud
+      computing,
+    stance: supports
+  cluster: Vertical AI Integration
+  anchors:
+  - '[50:22]'
+  round_log:
+  - round: 1
+    sources:
+    - s43
+    - s47
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c31
+  text: Amazon Web Services was initially designed for internal operational infrastructure
+    before opening to outside customers.
+  hash: e75556b23c82ea1f
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s38
+    locator: para 87
+    quote: 2000PreludeAmazon.com, the parent company of the as yet nonexistent Amazon
+      Web Services (AWS), begins work on merchant.com, an e-commerce platform intended
+      for use by
+    stance: supports
+  - source: s38
+    locator: para 18
+    quote: '↑ ''Launch of the AWS Asia Pacific Region: What Does it Mean for our Public
+      Sector Customers?''. Amazon Web Services. July 6, 2016. Archived'
+    stance: supports
+  cluster: Cloud Infrastructure Evolution
+  anchors:
+  - '[54:54]'
+  round_log:
+  - round: 1
+    sources:
+    - s38
+    - s49
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c32
+  text: S&P 500 index eligibility requires companies to demonstrate positive cumulative
+    accounting earnings.
+  hash: 4d3366015ca249f4
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s36
+    locator: para 26
+    quote: The S&P 500 isn't a list of the 500 biggest US companies. It's a curated
+      index with a two-part GAAP earnings test, a moving
+    stance: supports
+  - source: s42
+    locator: para 113
+    quote: 'SPX Index: Which Companies are in the S&P 500?'
+    stance: supports
+  cluster: S&P 500 Inclusion Criteria
+  anchors:
+  - '[56:40]'
+  round_log:
+  - round: 1
+    sources:
+    - s36
+    - s42
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c33
+  text: Anthropic employs approximately 5,300 workers compared to over 100,000 at
+    legacy corporate enterprises.
+  hash: 61cda1b18f0ecec1
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s5
+    locator: para 233
+    quote: On April 7, 2026, Anthropic announced Claude Mythos as its most advanced
+      model. With capabilities in cybersecurity and biosecurity, it was not planned
+      for
+    stance: supports
+  - source: s56
+    locator: para 271
+    quote: That pushed the AI lab's revenue per employee over the past year to more
+      than $6.6 million, up from $1.4 million a year earlier,
+    stance: supports
+  - source: s5
+    locator: para 4
+    quote: ↑ Spirlet, Thibault. 'The CEO of Anthropic is doubling down on his AI warning
+      to entry-level workers'. Business Insider. Archived from the original on
+    stance: supports
+  cluster: AI Headcount & Labor Efficiency
+  anchors:
+  - '[1:02:19]'
+  round_log:
+  - round: 1
+    sources:
+    - s5
+    - s56
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c34
+  text: Approximately 40 percent of American households hold medical or dental debt.
+  hash: 165742b510520804
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s53
+    locator: para 136
+    quote: Health care debt is a burden for a large share of Americans. In 2022, about
+      four in ten adults (41%) reported having debt due
+    stance: supports
+  - source: s57
+    locator: para 287
+    quote: The consequences of health care debt are not limited to finances. For many,
+      taking on health care debt can affect their ability to get
+    stance: supports
+  cluster: US Household Debt
+  anchors:
+  - '[1:03:09]'
+  round_log:
+  - round: 1
+    sources:
+    - s53
+    - s57
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources:
+    - s87
+    new_read_sources: 1
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|1'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c35
+  text: The top ten percent of Americans own the vast majority of publicly traded
+    equities in the United States.
+  hash: 4fabfd5164bc132a
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s52
+    locator: para 39
+    quote: The wealthiest Americans own the vast majority of the stock market
+    stance: supports
+  - source: s55
+    locator: para 262
+    quote: What Percentage of Americans Own Stock?
+    stance: supports
+  cluster: Equity Ownership Distribution
+  anchors:
+  - '[1:03:23]'
+  round_log:
+  - round: 1
+    sources:
+    - s52
+    - s55
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c36
+  text: AI data center development generates ongoing work for construction trade unions.
+  hash: 83a69022f2461dae
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence: []
+  cluster: AI Infrastructure Labor Ripple Effects
+  anchors:
+  - '[1:04:11]'
+  round_log:
+  - round: 1
+    sources:
+    - s85
+    - s86
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c37
+  text: The Economist reported that artificial intelligence created approximately
+    one million jobs while displacing 100,000.
+  hash: 0083f0a8c8888327
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s82
+    locator: para 137
+    quote: PERHAPS machines will make [many humans unemployable](https://www.economist.com/leaders/2026/05/14/prepare-for-an-ai-jobs-apocalypse)
+      eventually—but there is no sign of it yet. On September 4th the Bureau of Labour
+      Statistics reported
+    stance: supports
+  cluster: AI Employment Impact
+  anchors:
+  - '[1:05:35]'
+  round_log:
+  - round: 1
+    sources:
+    - s82
+    - s83
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c38
+  text: Viewer watch time on YouTube reached approximately twice the total time spent
+    watching Netflix.
+  hash: 03c5e9ed6b74cb10
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s50
+    locator: para 31
+    quote: YouTube’s growth puts it in direct competition with streaming services
+      for viewers’ time. Creators are increasingly moving between platforms, with
+      some striking deals with
+    stance: supports
+  - source: s78
+    locator: para 6
+    quote: YouTube has overtaken Netflix in US TV viewing time and emerged as the
+      leading streaming platform by audience reach in the PH.
+    stance: supports
+  cluster: Streaming Video Engagement Metrics
+  anchors:
+  - '[1:06:39]'
+  round_log:
+  - round: 1
+    sources:
+    - s50
+    - s78
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c39
+  text: Netflix operates an annual film and television production budget of approximately
+    20 billion dollars.
+  hash: fc614e04b5037465
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s51
+    locator: para 56
+    quote: Netflix $NFLX says it invested more than $135 billion in films and television
+      series over the past decade, a figure the company is highlighting
+    stance: supports
+  - source: s54
+    locator: para 78
+    quote: “Together, Netflix and Warner Bros. will deliver broader choice and greater
+      value to audiences worldwide, enhancing access to world-class television and
+      film both at
+    stance: supports
+  cluster: Streaming Content Production Spend
+  anchors:
+  - '[1:07:33]'
+  round_log:
+  - round: 1
+    sources:
+    - s51
+    - s54
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c40
+  text: Netflix generates approximately 3 billion dollars in earnings per quarter.
+  hash: a683721dd9f319fd
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s75
+    locator: para 28
+    quote: For the first nine months, revenue was **$37.684 billion**, up 14%, and
+      operating cash flow was $10.196 billion. The period included a $2.8 billion
+    stance: supports
+  - source: s76
+    locator: para 51
+    quote: Net income climbed to $3.66 billion from $2.55 billion a year earlier,
+      while earnings per share increased from 59 cents. Netflix said the rise
+    stance: supports
+  - source: s75
+    locator: para 154
+    quote: On February 27, 2026, WBD provided notice to the Company that it had terminated
+      the Amended and Restated Merger Agreement in accordance with its
+    stance: supports
+  - source: s75
+    locator: para 415
+    quote: '* Oct 20, 2026 [Netflix Reports Q3 2026 Earnings: Revenue Rises 12% to
+      $12.87 Billion, Operating Margin 34.6%](/news/NFLX/netflix-q3-2026-earnings-revenue-12-billion-35pct-margin.html)'
+    stance: supports
+  cluster: Netflix Profitability
+  anchors:
+  - '[1:07:11]'
+  suspect_empty:
+  - s76
+  round_log:
+  - round: 1
+    sources:
+    - s75
+    - s76
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c41
+  text: Netflix debuted House of Cards in 2013, launching its proprietary content
+    distribution strategy.
+  hash: b217219e411869a2
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s59
+    locator: para 393
+    quote: Netflix had long closely analyzed its customers' preferences. Watch Now
+      gave the company real-time data on their behavior, such as scenes that customers
+      replayed
+    stance: supports
+  - source: s60
+    locator: para 139
+    quote: In 2011, initiating its strategy to differentiate itself from other services.
+      Netflix started outlaying budget for original programming, with their first
+      original series House
+    stance: supports
+  - source: s59
+    locator: para 95
+    quote: On July 18, 2013, Netflix earned the first Primetime Emmy Awards nominations
+      for original streaming programs at the 65th Primetime Emmy Awards. Three of
+    stance: supports
+  - source: s59
+    locator: para 228
+    quote: ↑ Szalai, Georg (December 5, 2012). 'Netflix's Ted Sarandos Calls Disney
+      Content Deal a 'Game Changer''. The Hollywood Reporter. Archived from the original
+      on
+    stance: supports
+  - source: s59
+    locator: para 327
+    quote: House of Cards (2013–2018)
+    stance: supports
+  cluster: Streaming Industry History
+  anchors:
+  - '[1:09:12]'
+  suspect_empty:
+  - s60
+  - s59
+  round_log:
+  - round: 1
+    sources:
+    - s59
+    - s60
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c42
+  text: Ritholtz Wealth Management manages 9.5 billion dollars in assets across individual
+    and corporate accounts.
+  hash: c39fb88a9ab56fb4
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s84
+    locator: para 5
+    quote: Ritholtz, a national RIA overseeing more than $7.6 billion in assets
+    stance: supports
+  cluster: Ritholtz Wealth Management Assets
+  anchors:
+  - '[1:13:41]'
+  round_log:
+  - round: 1
+    sources:
+    - s58
+    - s84
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'
+- id: c43
+  text: The S&P 500 had gained 12 percent year-to-date at the time of the broadcast.
+  hash: f3318ea740901872
+  status: not-found
+  origin: extracted-from-input
+  rounds: 5
+  paradigms_tried:
+  - keyword
+  - semantic
+  - answer-agent
+  - scholarly-archive
+  - crawl-map
+  evidence:
+  - source: s77
+    locator: para 1
+    quote: '[Log In](https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&next=%2Feinsteinofwallstreet%2Fposts%2Fmarket-update-since-the-march-30th-low-the-sp-500-has-gained-over-12-trillion-in%2F1613926790521173)'
+    stance: supports
+  - source: s79
+    locator: para 20
+    quote: Interactive chart showing the annual percentage change of the S&P 500 index
+      back to 1927. Performance is calculated as the % change from the
+    stance: supports
+  cluster: Equities Year-To-Date Performance
+  anchors:
+  - '[1:10:56]'
+  round_log:
+  - round: 1
+    sources:
+    - s77
+    - s79
+    new_read_sources: 2
+    print: '[(''tavily.search'', ''https://api.tavily.com/search'', ''ok'')]|2'
+  - round: 2
+    sources: []
+    new_read_sources: 0
+    print: '[(''dappier.search'', ''https://api.dappier.com/search'', ''ok'')]|0'
+  - round: 3
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.research'', ''https://api.tavily.com/research'', ''ok'')]|0'
+  - round: 4
+    sources: []
+    new_read_sources: 0
+    print: '[(''openalex.search'', ''https://api.openalex.org/works'', ''ok'')]|0'
+  - round: 5
+    sources: []
+    new_read_sources: 0
+    print: '[(''tavily.crawl'', ''https://api.tavily.com/crawl'', ''ok'')]|0'

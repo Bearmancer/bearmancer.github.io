@@ -357,15 +357,13 @@ figure.diagram svg {
 }
 
 /* Lists */
-ul,
-ol {
+ul, ol {
 	padding-left: 1.2rem;
 }
 li {
 	margin: 0.3rem 0;
 }
-ul.tight li,
-ol.tight li {
+ul.tight li, ol.tight li {
 	margin: 0.25rem 0;
 }
 
@@ -459,8 +457,7 @@ ol.tight li {
 	font-family: var(--font-body);
 	font-weight: 600;
 }
-select,
-button {
+select, button {
 	font: inherit;
 	color: var(--ink);
 	background: var(--paper);
@@ -889,8 +886,7 @@ ol.footnotes a.back {
 
 /* Print */
 @media print {
-	html,
-	body {
+	html, body {
 		background: #fff;
 		color: #000;
 	}
@@ -903,10 +899,7 @@ ol.footnotes a.back {
 		color: #000;
 		border-bottom: none;
 	}
-	.box,
-	.card,
-	aside,
-	details {
+	.box, .card, aside, details {
 		break-inside: avoid;
 	}
 	h2 {
