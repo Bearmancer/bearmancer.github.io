@@ -1,0 +1,49 @@
+schema: 1
+title: Psilocybin
+topic: cannabis
+mode: learn
+subject: Health
+chapter: 2
+layout: concept
+answer:
+  id: s1
+  text: In one small trial, psilocybin-assisted therapy was linked to lasting improvements in depression,
+    but the study was too small to prove it works generally.
+  claims:
+  - c4
+  - c5
+  - c6
+  block: plain
+body:
+  sections:
+  - heading: The trial
+    sentences:
+    - id: s2
+      text: A randomized, waiting-list study enrolled 27 adults aged 21 to 75 with moderate-to-severe
+        depression.
+      claims:
+      - c4
+      block: plain
+  - heading: Results at 12 months
+    sentences:
+    - id: s3
+      text: Of the participants followed for 12 months, 75% met the study's response threshold and 58%
+        were in remission.
+      claims:
+      - c5
+      block: plain
+    - id: s4
+      text: These are results from a small trial, not proof that the treatment works for depression in
+        general.
+      claims:
+      - c5
+      block: plain
+  - heading: Safety
+    sentences:
+    - id: s5
+      text: No serious adverse events were judged related to psilocybin during the long-term follow-up,
+        but only 24 participants were followed.
+      claims:
+      - c6
+      block: plain
+errata: []

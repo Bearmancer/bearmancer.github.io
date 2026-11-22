@@ -1,0 +1,27 @@
+chapter: 1
+topic: cannabis
+mode: learn
+title: Cannabis
+answer:
+  text: Cannabis use in young people is linked to lower school grades, but the studies show association, not proof of cause.
+  claims: [c1]
+  block: plain
+  id: s1
+sentences:
+- text: Among adolescents and young adults, cannabis use was probably associated with lower school grades.
+  claims: [c1]
+  block: plain
+  id: s2
+- text: These were observational studies, so they cannot show that cannabis itself caused the lower grades.
+  claims: [c1]
+  block: plain
+  id: s3
+- text: The pooled studies also linked cannabis use with higher rates of school dropout and absenteeism.
+  claims: [c2]
+  block: plain
+  id: s4
+- text: 'Confidence in these links is limited: 51 of the 53 studies assessed (96%) had a high risk of bias on at least one criterion.'
+  claims: [c3]
+  block: plain
+  id: s5
+errata: []

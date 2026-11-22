@@ -1,0 +1,23 @@
+chapter: 5
+topic: cannabis
+mode: learn
+title: LSD
+answer:
+  text: LSD remains a Schedule I drug, and early trial results suggest possible benefits for anxiety.
+  claims: [c13, c14]
+  block: plain
+  id: s1
+sentences:
+- text: LSD remains a Schedule I substance, and that classification continues to hinder large-scale clinical trials and broader medical acceptance.
+  claims: [c13]
+  block: plain
+  id: s2
+- text: In a Phase IIb trial with 198 participants, a single 100 microgram dose produced symptom remission in 50% of those with generalized anxiety disorder.
+  claims: [c14]
+  block: plain
+  id: s3
+- text: Reported safety concerns include cardiovascular risks, emotional vulnerability, and the potential for hallucinogen-persisting perception disorder (HPPD).
+  claims: [c15]
+  block: plain
+  id: s4
+errata: []

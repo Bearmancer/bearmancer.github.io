@@ -1,0 +1,95 @@
+run_id: 20261122T152941Z
+topic: cannabis
+mode: learn
+status: published
+phases:
+- phase: infer_mode
+  at: '2026-11-22T15:29:44Z'
+- phase: ingest
+  at: '2026-11-22T15:29:58Z'
+- phase: discover
+  at: '2026-11-22T15:49:15Z'
+- phase: verify
+  at: '2026-11-22T15:51:12Z'
+- phase: write
+  at: '2026-11-22T15:58:57Z'
+- phase: conformance
+  at: '2026-11-22T16:05:36Z'
+- phase: layout
+  at: '2026-11-22T16:10:56Z'
+- phase: render
+  at: '2026-11-22T16:10:56Z'
+- phase: gates
+  at: '2026-11-22T16:14:40Z'
+failure: null
+answered_by:
+- openai/gpt-6-luna
+claims:
+  'true': 21
+surfaces:
+  direct.fetch: 7
+  tavily.search: 21
+  exa.search: 21
+sources_read:
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC11459363/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC8864328/
+- https://download.open.fda.gov/crl/CRL_NDA215455_20240808.pdf
+- https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/211243s016lbl.pdf
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC12030196/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC9292417/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC6182612/
+sources_failed: []
+gates:
+  ledger_check:
+    errors: 0
+    warnings: 0
+  verifier:
+    checked: 21
+    agree: 21
+    rechecked: 0
+    disagreements: 0
+  lessons:
+    problems: 0
+  pages:
+    problems: 0
+  course:
+    problems: 0
+  url_audit:
+    result: 7/7 ok
+    problems: 0
+skipped: null
+layouts:
+  1: concept
+  2: concept
+  3: concept
+  4: concept
+  5: concept
+  6: concept
+  7: concept
+media_split: null
+ignored_instructions: []
+diff_vs_previous:
+  new:
+  - c1
+  - c2
+  - c3
+  - c4
+  - c5
+  - c6
+  - c7
+  - c8
+  - c9
+  - c10
+  - c11
+  - c12
+  - c13
+  - c14
+  - c15
+  - c16
+  - c17
+  - c18
+  - c19
+  - c20
+  - c21
+  status_changed: {}
+  unchanged: 0

@@ -1,0 +1,23 @@
+chapter: 6
+topic: cannabis
+mode: learn
+title: Ibogaine
+answer:
+  text: Ibogaine is being studied for opioid addiction, but a small monitored study found serious, reversible effects on heart rhythm and balance.
+  claims: [c16, c17, c18]
+  block: plain
+  id: s1
+sentences:
+- text: In an open-label observational study, 14 patients with opioid use disorder received a single 10 mg/kg dose of ibogaine hydrochloride and were monitored for at least 24 hours.
+  claims: [c16]
+  block: plain
+  id: s2
+- text: Ibogaine lengthened the heart's QTc interval by an average of 95 milliseconds, and half of the 14 patients briefly exceeded a QTc of 500 milliseconds; no torsades de pointes occurred.
+  claims: [c17]
+  block: plain
+  id: s3
+- text: The study concluded ibogaine can cause clinically relevant but reversible QTc prolongation, slow heart rate, and severe loss of balance in people with opioid use disorder.
+  claims: [c18]
+  block: plain
+  id: s4
+errata: []

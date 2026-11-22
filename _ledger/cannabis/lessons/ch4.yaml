@@ -1,0 +1,44 @@
+schema: 1
+title: Ketamine
+topic: cannabis
+mode: learn
+subject: Health
+chapter: 4
+layout: concept
+answer:
+  id: s1
+  text: SPRAVATO (esketamine nasal spray) is FDA-approved for certain depression treatments, with strict
+    safety rules.
+  claims:
+  - c10
+  - c11
+  block: plain
+body:
+  sections:
+  - heading: Approved uses
+    sentences:
+    - id: s2
+      text: SPRAVATO is FDA-approved for treatment-resistant depression in adults, alone or with an oral
+        antidepressant, and for depressive symptoms in major depression with acute suicidal thoughts or
+        behavior.
+      claims:
+      - c10
+      block: plain
+  - heading: Safety rules
+    sentences:
+    - id: s3
+      text: Because of sedation, dissociation and breathing-slowing risks, patients must be monitored
+        for at least 2 hours after each dose, and the drug is only available through a restricted safety
+        program (REMS).
+      claims:
+      - c11
+      block: plain
+  - heading: What it has not been shown to do
+    sentences:
+    - id: s4
+      text: Its effectiveness in preventing suicide or reducing suicidal thoughts or behavior has not
+        been demonstrated.
+      claims:
+      - c12
+      block: plain
+errata: []

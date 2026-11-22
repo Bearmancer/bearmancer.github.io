@@ -1,0 +1,23 @@
+chapter: 7
+topic: cannabis
+mode: learn
+title: DMT and ayahuasca
+answer:
+  text: Ayahuasca showed short-term mood improvements in a small observational study, with no controlled proof of lasting benefit.
+  claims: [c20, c21]
+  block: plain
+  id: s1
+sentences:
+- text: A study of 57 ayahuasca ceremony attendants in the Netherlands and Colombia measured mood and thinking before the ceremony, the day after, and 4 weeks later.
+  claims: [c19]
+  block: plain
+  id: s2
+- text: Self-rated depression and stress decreased after the ceremony and stayed lower at the 4-week check-in, in this small study of mostly healthy volunteers.
+  claims: [c20]
+  block: plain
+  id: s3
+- text: 'The evidence is limited: a small observational study without a control group, in which only 31 of the 57 participants completed the 4-week follow-up.'
+  claims: [c21]
+  block: plain
+  id: s4
+errata: []
