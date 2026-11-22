@@ -1,0 +1,21 @@
+run_id: 20261012T220353Z
+topic: kagan-greek-ep1-2
+mode: learn
+status: failed
+phases:
+- phase: infer_mode
+  at: '2026-10-12T22:03:54Z'
+- phase: ingest
+  at: '2026-10-12T22:04:06Z'
+failure:
+  phase: discover
+  reason: 'OpencodeError: opencode run failed (1): Agent not found: "deep-research-extractor"'
+  problems:
+  - '  File "C:\Users\Lance\.omo\skills\deep-research\scripts\driver.py", line 627,
+    in _opencode_run'
+  - '    text = self._once(role, prompt, files, None)'
+  - '           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+  - '  File "C:\Users\Lance\.omo\skills\deep-research\scripts\driver.py", line 504,
+    in _once'
+  - '    raise OpencodeError(proc.returncode, error, proc.stderr)'
+  - 'scripts.driver.OpencodeError: opencode run failed (1): Agent not found: "deep-research-extractor"'
